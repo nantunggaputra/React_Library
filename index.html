@@ -1,16 +1,57 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <title>Belajar React</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   </head>
 
   <body>
     <div id="root"></div>
 
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-    <script type="text/javascript">
+    <!-- DOM manipulation using React and JSX (Babel) -->
+    <script type="text/babel">
+      // DOM always using camelCase
+      // DOM always using closing tag
+      // DOM class rename with className
+      // DOM always update when it's redeclare
       const container = document.getElementById("root");
+      const element = ReactDOM.createRoot(container);
+
+      // Components // Props // State
+      // Components example
+      // function always using PascalCase
+      function Header() {
+        return <h1>Belajar React</h1>;
+      }
+      function HeroSection() {
+        return (
+          <>
+            <Header />
+            <img
+              className="profile-photo"
+              src="https://nantunggaputra.github.io/HTML/dist/img/nantunggaputra-background.png"
+              alt="Nantungga Putra"
+            />
+            <p>Belajar React untuk PEMULA</p>
+            <button
+              onClick={(e) => {
+                alert("Nantungga Putra");
+              }}
+            >
+              WHO IS HE?
+            </button>
+          </>
+        );
+      }
+      // DOM manipulation container declare to creating single element
+      element.render(<Header />);
+      // DOM manipulation container redeclare to updating multiple elements
+      element.render(<HeroSection />);
+
+      // Components // Props // State
+      // Props example
     </script>
   </body>
 </html>
