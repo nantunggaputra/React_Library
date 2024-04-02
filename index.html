@@ -42,6 +42,7 @@
             >
               WHO IS HE?
             </button>
+            <br />
           </>
         );
       }
@@ -52,6 +53,98 @@
 
       // Components // Props // State
       // Props example
+      function Profile() {
+        return (
+          <img
+            className="profile-photo"
+            src="https://nantunggaputra.github.io/HTML/dist/img/nantunggaputra-background.png"
+            alt="Nantungga Putra"
+          />
+        );
+      }
+      function Description(props) {
+        return (
+          <>
+            <p>Belajar React untuk {props.skill}</p>
+            <button
+              onClick={(e) => {
+                alert("Nantungga Putra");
+              }}
+            >
+              {props.question}?
+            </button>
+            <br />
+          </>
+        );
+      }
+      function HeroSectionUpdate() {
+        return (
+          <>
+            <Header />
+            <Profile />
+            <Description skill="PEMULA" question="SIAPA DIA" />
+            <Description skill="NEWCOMER" question="WHO IS HE" />
+          </>
+        );
+      }
+      // DOM manipulation container redeclare to updating multiple elements twice, skill dan question
+      element.render(<HeroSectionUpdate />);
+
+      // Props refactor example
+      function Greeting({ author }) {
+        return (
+          <>
+            <p>
+              <i>Selamat belajar, {author ? author : "Nantungga Putra"}</i>
+            </p>
+            <hr></hr>
+          </>
+        );
+      }
+      function HeroSectionUpdate2() {
+        return (
+          <>
+            <Header />
+            <Profile />
+            <Description skill="PEMULA" question="SIAPA DIA" />
+            <Greeting />
+            <Description skill="NEWCOMER" question="WHO IS HE" />
+            <Greeting author="semuanya" />
+          </>
+        );
+      }
+      // DOM manipulation container redeclare to updating multiple elements twice, author
+      element.render(<HeroSectionUpdate2 />);
+
+      // Props .map example
+      function ProjectPortfolio() {
+        const projects = [
+          "Tic Tac Toe",
+          "Shopping List",
+          "Box Office Movie",
+          "JS Framework Portfolio",
+        ];
+        return (
+          <>
+            <h4>Project Portfolio</h4>
+            <ul>
+              {projects.map((project) => (
+                <li key={project}>{project}</li>
+              ))}
+            </ul>
+          </>
+        );
+      }
+      function HeroSectionUpdate3() {
+        return (
+          <>
+            <HeroSectionUpdate2 />
+            <ProjectPortfolio />
+          </>
+        );
+      }
+      // DOM manipulation container redeclare to updating multiple elements twice, li
+      element.render(<HeroSectionUpdate3 />);
     </script>
   </body>
 </html>
