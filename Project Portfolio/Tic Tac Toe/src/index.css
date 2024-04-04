@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif, Verdana, Geneva, Tahoma;
+  color: #ffffff;
+  background-color: #252525;
+  margin: 20px;
+  padding: 0;
+}
+
+.square {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #fcbe14;
+  border: 1px solid #ffffff;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 144px;
+  height: 144px;
+}
