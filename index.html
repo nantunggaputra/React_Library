@@ -145,6 +145,71 @@
       }
       // DOM manipulation container redeclare to updating multiple elements twice, li
       element.render(<HeroSectionUpdate3 />);
+
+      // State & Hooks example using destructuring
+      // State & Hooks useState() always name with set
+      // likes variable with value 1 & state updater function
+      function LikeButton() {
+        const [likes, setLikes] = React.useState(1);
+        function handleClick() {
+          setLikes(likes + 1);
+        }
+        return (
+          <>
+            <button onClick={handleClick}>LIKE ({likes})</button>
+            <br />
+          </>
+        );
+      }
+      function HeroSectionUpdate4() {
+        return (
+          <>
+            <HeroSectionUpdate2 />
+            <ProjectPortfolio />
+            <LikeButton />
+          </>
+        );
+      }
+      // DOM manipulation container redeclare to updating multiple elements twice, likes
+      element.render(<HeroSectionUpdate4 />);
+
+      // counter variable with value 0 & state updater function
+      function Counter({ result }) {
+        return <span> {result ? result : "1"} </span>;
+      }
+      function CounterButton() {
+        const [result, setCounter] = React.useState(1);
+        function handlePlus() {
+          setCounter(result + 1);
+        }
+        function handleMinus() {
+          setCounter(result - 1);
+        }
+        function handleReset() {
+          setCounter(0);
+        }
+        return (
+          <>
+            <button onClick={handleMinus}>-</button>
+            <Counter result={result} />
+            <button onClick={handlePlus}>+</button>
+            <br />
+            <button onClick={handleReset}>RESET</button>
+          </>
+        );
+      }
+      function HeroSectionUpdate5() {
+        return (
+          <>
+            <HeroSectionUpdate2 />
+            <ProjectPortfolio />
+            <LikeButton />
+            <CounterButton />
+          </>
+        );
+      }
+      // DOM manipulation container redeclare to updating multiple elements twice, likes
+      element.render(<HeroSectionUpdate5 />);
     </script>
   </body>
 </html>
