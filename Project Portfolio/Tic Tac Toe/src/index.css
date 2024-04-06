@@ -27,3 +27,39 @@ body {
   width: 144px;
   height: 144px;
 }
+
+h1 {
+  color: #fcbe14;
+}
+
+.status {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.game-travel {
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.game-travel:hover {
+  font-weight: bold;
+  color: #fcbe14;
+}
+
+ul {
+  list-style: "»";
+  margin-left: -30px;
+}
+
+footer {
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
