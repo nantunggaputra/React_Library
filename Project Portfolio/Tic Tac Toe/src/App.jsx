@@ -77,7 +77,7 @@ function Game() {
     if (move > 0) {
       description = `Go to move #${move}`;
     } else {
-      description = "Game Start";
+      description = "Start Game";
     }
     return (
       <li key={move}>

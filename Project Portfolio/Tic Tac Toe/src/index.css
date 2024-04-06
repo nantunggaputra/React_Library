@@ -16,25 +16,39 @@ body {
   color: #ffffff;
   background-color: #fcbe14;
   border: 1px solid #ffffff;
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   cursor: pointer;
 }
 
 .board {
   display: flex;
   flex-wrap: wrap;
-  width: 144px;
-  height: 144px;
+  width: 192px;
+  height: 192px;
 }
 
 h1 {
   color: #fcbe14;
+  margin: 25px 0;
 }
 
 .status {
   font-weight: bold;
   margin-bottom: 20px;
+  animation: blink 2s ease infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
 }
 
 .game-travel {
@@ -62,4 +76,9 @@ footer {
 footer a {
   text-decoration: none;
   color: #ffffff;
+}
+
+footer a:hover {
+  font-weight: bold;
+  color: #fcbe14;
 }
