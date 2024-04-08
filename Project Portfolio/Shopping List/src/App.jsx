@@ -6,7 +6,7 @@ function Header() {
   return <h1>Shopping List</h1>;
 }
 
-function Form() {
+function Form({ onAddItem }) {
   const [quantity, setQuantity] = useState(1);
   const [name, setName] = useState("");
   const handleQuantityChange = (e) => {
@@ -22,12 +22,16 @@ function Form() {
       id: (name.length + quantity) * Math.random() * Date.now() * 1000000,
     };
     console.log(newItem);
+    onAddItem(newItem);
     setName("");
     setQuantity(1);
   }
   return (
     <>
       <form className="add-form" onSubmit={handleSubmit}>
+        <p className="report">
+          <a href="#">Bug Report</a>
+        </p>
         <h3>What do you like to buy the most today?</h3>
         <div>
           <input
@@ -71,27 +75,36 @@ const groceryItems = [
   },
 ];
 
-function Item({ item }) {
+function Item({ item, onDeleteItem, onToggleItem }) {
   return (
     <>
       <li key={item.id}>
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          checked={item.checked}
+          onChange={() => onToggleItem(item.id)}
+        />
         <span
           style={item.checked ? { textDecoration: "line-through" } : {}}
         >{`${item.quantity} ${item.name}`}</span>
-        <button>&times;</button>
+        <button onClick={() => onDeleteItem(item.id)}>&times;</button>
       </li>
     </>
   );
 }
 
-function GroceryList() {
+function GroceryList({ items, onDeleteItem, onToggleItem }) {
   return (
     <>
       <div className="list">
         <ul>
-          {groceryItems.map((item) => (
-            <Item item={item} key={item.id} />
+          {items.map((item) => (
+            <Item
+              item={item}
+              key={item.id}
+              onDeleteItem={onDeleteItem}
+              onToggleItem={onToggleItem}
+            />
           ))}
         </ul>
       </div>
@@ -116,11 +129,29 @@ function Footer() {
 }
 
 function App() {
+  const [items, setItems] = useState(groceryItems);
+  function handleAddItem(item) {
+    setItems([...items, item]);
+  }
+  function handleDeleteItem(id) {
+    setItems((items) => items.filter((item) => item.id !== id));
+  }
+  function handleToggleItem(id) {
+    setItems((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, checked: !item.checked } : item
+      )
+    );
+  }
   return (
     <div className="app">
       <Header />
-      <Form />
-      <GroceryList />
+      <Form onAddItem={handleAddItem} />
+      <GroceryList
+        items={items}
+        onDeleteItem={handleDeleteItem}
+        onToggleItem={handleToggleItem}
+      />
       <Footer />
     </div>
   );

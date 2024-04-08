@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #ffffff;
+  background-color: #252525;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px 0;
+}
+
+h1 {
+  color: #fcbe14;
+  margin: 25px 20px;
+}
+
+h3 {
+  padding: 15px 0;
+}
+
+.add-form {
+  background-color: #171717;
+  padding: 0 20px;
+}
+
+.add-form .report {
+  font-weight: bold;
+  animation: blink 2s ease infinite;
+}
+
+.add-form .report a {
+  color: #dc2626;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.add-form input {
+  color: #252525;
+  background-color: #ffffff;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  padding: 7px 12px;
+  margin-right: 12px;
+}
+
+.add-form input:first-child {
+  width: 56px;
+}
+.add-form input:last-child {
+  width: 236px;
+}
+
+.add-form button {
+  width: 80px;
+  margin: 20px 0;
+}
+
+button {
+  color: #ffffff;
+  background-color: #0377b9;
+  font-weight: bold;
+  border: none;
+  border-radius: 36px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.list {
+  background-color: #252525;
+  max-height: 36vh;
+  margin: 20px 0;
+  overflow: scroll;
+  padding: 0 20px;
+}
+
+.list ul {
+  font-size: 0.9rem;
+  font-weight: bold;
+  list-style: none;
+}
+
+.list input {
+  margin-right: 12px;
+}
+
+.list button {
+  width: 36px;
+  margin: 10px;
+}
+
+.actions {
+  padding: 0 20px;
+}
+
+.actions select {
+  color: #252525;
+  background-color: #ffffff;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  padding: 7px 12px;
+  margin-right: 12px;
+}
+
+.actions button {
+  width: 120px;
+  margin: 10px 0;
+}
+
+footer {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 20px;
+}
