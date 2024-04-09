@@ -30,7 +30,7 @@ h3 {
 }
 
 .add-form .report a {
-  color: #dc2626;
+  color: #737373;
   font-size: 0.8rem;
   text-decoration: none;
 }
@@ -81,11 +81,11 @@ button {
 }
 
 .list {
-  background-color: #252525;
+  background-image: linear-gradient(180deg, #25252570, #40404070, #25252570);
   max-height: 36vh;
   margin: 20px 0;
   overflow: scroll;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 
 .list ul {
@@ -96,6 +96,7 @@ button {
 
 .list input {
   margin-right: 12px;
+  cursor: pointer;
 }
 
 .list button {
@@ -104,7 +105,8 @@ button {
 }
 
 .actions {
-  padding: 0 20px;
+  background-color: #171717;
+  padding: 10px 20px;
 }
 
 .actions select {
@@ -124,7 +126,8 @@ button {
 }
 
 footer {
+  background-color: #171717;
   font-size: 0.9rem;
   font-weight: bold;
-  padding: 20px;
+  padding: 5px 20px 20px 20px;
 }

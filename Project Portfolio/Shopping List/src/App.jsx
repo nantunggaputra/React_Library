@@ -1,9 +1,58 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Header() {
   return <h1>Shopping List</h1>;
+}
+
+function ReportLink() {
+  const [clickCount, setClickCount] = useState(0);
+  const [disabled, setDisabled] = useState(false);
+  const handleClick = () => {
+    if (clickCount < 3) {
+      setClickCount(clickCount + 1);
+    }
+  };
+  useEffect(() => {
+    const savedClickCount = parseInt(localStorage.getItem("clickCount"));
+    const lastClickedTime = parseInt(localStorage.getItem("lastClickedTime"));
+    if (savedClickCount && lastClickedTime) {
+      const currentTime = new Date().getTime();
+      const elapsedTime = currentTime - lastClickedTime;
+      if (elapsedTime < 24 * 60 * 60 * 1000) {
+        setClickCount(savedClickCount);
+        setDisabled(true);
+      } else {
+        localStorage.removeItem("clickCount");
+        localStorage.removeItem("lastClickedTime");
+      }
+    }
+  }, []);
+  useEffect(() => {
+    if (clickCount >= 3) {
+      localStorage.setItem("clickCount", clickCount.toString());
+      localStorage.setItem("lastClickedTime", new Date().getTime().toString());
+      setDisabled(true);
+    } else {
+      localStorage.setItem("clickCount", clickCount.toString());
+    }
+  }, [clickCount]);
+  return (
+    <p className="report">
+      <a
+        href={
+          disabled
+            ? "#"
+            : "mailto:anggunnantunggaputra@gmail.com?&subject=Bug%20report&body=Hi%20Nantungga%20Putra,%20I%20have%20found..."
+        }
+        onClick={handleClick}
+        disabled={disabled}
+      >
+        Bug report
+      </a>
+    </p>
+  );
 }
 
 function Form({ onAddItem }) {
@@ -29,9 +78,7 @@ function Form({ onAddItem }) {
   return (
     <>
       <form className="add-form" onSubmit={handleSubmit}>
-        <p className="report">
-          <a href="#">Bug Report</a>
-        </p>
+        <ReportLink />
         <h3>What do you like to buy the most today?</h3>
         <div>
           <input
@@ -43,7 +90,8 @@ function Form({ onAddItem }) {
           />
           <input
             type="text"
-            placeholder="add item..."
+            maxLength="25"
+            placeholder="Add item..."
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
