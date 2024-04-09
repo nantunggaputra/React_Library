@@ -141,12 +141,35 @@ function Item({ item, onDeleteItem, onToggleItem }) {
   );
 }
 
-function GroceryList({ items, onDeleteItem, onToggleItem }) {
+function GroceryList({ items, onDeleteItem, onToggleItem, onClearItems }) {
+  const [sortBy, setSortBy] = useState("input");
+  let sortedItems;
+  switch (sortBy) {
+    case "name":
+      sortedItems = items.slice().sort((a, b) => {
+        const regex = /^\d+\s+/;
+        const nameA = a.name.replace(regex, "");
+        const nameB = b.name.replace(regex, "");
+        return nameA.localeCompare(nameB);
+      });
+      break;
+    case "checked":
+      sortedItems = items.slice().sort((a, b) => {
+        const regex = /^\d+\s+/;
+        const nameA = a.name.replace(regex, "");
+        const nameB = b.name.replace(regex, "");
+        return nameA.localeCompare(nameB);
+      });
+      sortedItems = sortedItems.slice().sort((a, b) => a.checked - b.checked);
+      break;
+    default:
+      sortedItems = items;
+  }
   return (
     <>
       <div className="list">
         <ul>
-          {items.map((item) => (
+          {sortedItems.map((item) => (
             <Item
               item={item}
               key={item.id}
@@ -157,21 +180,33 @@ function GroceryList({ items, onDeleteItem, onToggleItem }) {
         </ul>
       </div>
       <div className="actions">
-        <select>
+        <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
           <option value="input">Sort list by input</option>
           <option value="name">Sort list by name</option>
           <option value="checked">Sort list by checked</option>
         </select>
-        <button>CLEAR ALL</button>
+        <button onClick={onClearItems}>CLEAR ALL</button>
       </div>
     </>
   );
 }
 
-function Footer() {
+function Footer({ items }) {
+  if (items.length === 0)
+    return (
+      <footer className="stats">
+        <p>Your shopping list is no item.</p>
+      </footer>
+    );
+  const totalItems = items.length;
+  const checkedItems = items.filter((item) => item.checked).length;
+  let percentage = Math.round((checkedItems / totalItems) * 100);
   return (
     <footer className="stats">
-      There are 4 items in the shopping list, 1 item has been purchased (25%)
+      <p>
+        There are {totalItems} items in the shopping list, {checkedItems} item{" "}
+        <span>({isNaN(percentage) ? 0 : percentage}%)</span> has been purchased.
+      </p>
     </footer>
   );
 }
@@ -191,6 +226,9 @@ function App() {
       )
     );
   }
+  function handleClearItems() {
+    setItems([]);
+  }
   return (
     <div className="app">
       <Header />
@@ -199,8 +237,9 @@ function App() {
         items={items}
         onDeleteItem={handleDeleteItem}
         onToggleItem={handleToggleItem}
+        onClearItems={handleClearItems}
       />
-      <Footer />
+      <Footer items={items} />
     </div>
   );
 }
