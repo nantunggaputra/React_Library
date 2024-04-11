@@ -18,6 +18,8 @@ function ReportLink() {
         setClickCount(savedClickCount);
         setDisabled(true);
       } else {
+        setClickCount(0);
+        setDisabled(false);
         localStorage.removeItem("clickCount");
         localStorage.removeItem("lastClickedTime");
       }
@@ -28,6 +30,13 @@ function ReportLink() {
       localStorage.setItem("clickCount", clickCount.toString());
       localStorage.setItem("lastClickedTime", new Date().getTime().toString());
       setDisabled(true);
+      const timer = setTimeout(() => {
+        setClickCount(0);
+        setDisabled(false);
+        localStorage.removeItem("clickCount");
+        localStorage.removeItem("lastClickedTime");
+      }, 24 * 60 * 60 * 1000);
+      return () => clearTimeout(timer);
     } else {
       localStorage.setItem("clickCount", clickCount.toString());
     }

@@ -70,6 +70,10 @@ h3 {
   margin: 20px 0;
 }
 
+.add-form button:hover {
+  background-color: #025585;
+}
+
 button {
   color: #ffffff;
   background-color: #0377b9;
@@ -94,14 +98,23 @@ button {
   list-style: none;
 }
 
-.list input {
+.list li {
+  display: flex;
+  align-items: center;
+}
+
+.list li input {
   margin-right: 12px;
   cursor: pointer;
 }
 
-.list button {
+.list li button {
   width: 36px;
   margin: 10px;
+}
+
+.list li button:hover {
+  background-color: #dc2626;
 }
 
 .actions {
@@ -123,6 +136,10 @@ button {
 .actions button {
   width: 120px;
   margin: 10px 0;
+}
+
+.actions button:hover {
+  background-color: #dc2626;
 }
 
 .stats {
