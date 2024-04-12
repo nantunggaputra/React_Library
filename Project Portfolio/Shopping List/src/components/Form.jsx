@@ -9,7 +9,7 @@ function Form({ onAddItem }) {
   };
   function handleSubmit(e) {
     e.preventDefault();
-    if (!name) return;
+    if (!name || !name.trim() || /\s{3,}/.test(name)) return;
     const newItem = {
       name,
       quantity,
