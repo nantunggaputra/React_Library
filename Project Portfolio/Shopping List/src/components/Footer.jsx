@@ -2,7 +2,7 @@ function Footer({ items }) {
   if (items.length === 0)
     return (
       <footer>
-        <p className="stats">Oops, your shopping list is no item.</p>
+        <p className="stats">Oops, your shopping list has no item.</p>
         <p className="author">
           Created by{" "}
           <a

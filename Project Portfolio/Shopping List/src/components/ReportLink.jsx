@@ -9,8 +9,9 @@ function ReportLink() {
     }
   };
   useEffect(() => {
-    const savedClickCount = parseInt(localStorage.getItem("clickCount"));
-    const lastClickedTime = parseInt(localStorage.getItem("lastClickedTime"));
+    const savedClickCount = parseInt(localStorage.getItem("clickCount")) || 0;
+    const lastClickedTime =
+      parseInt(localStorage.getItem("lastClickedTime")) || 0;
     if (savedClickCount && lastClickedTime) {
       const currentTime = new Date().getTime();
       const elapsedTime = currentTime - lastClickedTime;
@@ -30,6 +31,7 @@ function ReportLink() {
       localStorage.setItem("clickCount", clickCount.toString());
       localStorage.setItem("lastClickedTime", new Date().getTime().toString());
       setDisabled(true);
+      console.log("You have exceeded the bug report limit.");
       const timer = setTimeout(() => {
         setClickCount(0);
         setDisabled(false);
