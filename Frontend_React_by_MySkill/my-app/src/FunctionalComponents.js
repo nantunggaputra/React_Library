@@ -1,9 +1,10 @@
 import React from "react";
 
+const Text = () => <u>This text is made in Functional Components</u>;
 function FunctiopnalComponents() {
   return (
     <p>
-      <u>This text is made in Functional Components</u>
+      <Text />
     </p>
   );
 }

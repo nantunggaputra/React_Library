@@ -54,10 +54,10 @@ a {
 }
 
 .chattbox {
-  border-radius: 30px;
+  border-radius: 20px;
   background-color: #ffffff;
   color: #282c34;
-  padding: 10px 50px;
+  padding: 10px 20px;
   margin: 30px;
 }
 
@@ -72,4 +72,5 @@ a {
 
 .message p {
   color: #61dafb;
+  padding: 10px 0 20px 0;
 }
