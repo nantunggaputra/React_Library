@@ -16,7 +16,7 @@ const eBookData = [
   },
   {
     name: "eBook CSS from Zero to Hero",
-    url: "https://simpleicons.org/icons/html5.svg",
+    url: "https://simpleicons.org/icons/css3.svg",
     price: 90000,
     discount: 20,
   },
@@ -32,7 +32,20 @@ const eBookData = [
     price: 100000,
   },
 ];
-
+const messages = [
+  "Anyone here?",
+  "Hi, welcome to the chat. You can build this feature using React state.",
+];
+function Messages(props) {
+  const messages = props.messages;
+  return (
+    <>
+      {messages.length > 0 && (
+        <h6>You have {messages.length} messages in your conversation.</h6>
+      )}
+    </>
+  );
+}
 function App() {
   return (
     <div className="App">
@@ -51,6 +64,7 @@ function App() {
         >
           Learn React
         </a>
+        <Messages messages={messages} />
         <Chatbox />
         <h2>PDF Front-End Development</h2>
         {eBookData.map((pdf, id) => (
@@ -59,6 +73,7 @@ function App() {
             url={pdf.url}
             price={pdf.price}
             discount={pdf.discount}
+            key={id}
           />
         ))}
         {/* <Product

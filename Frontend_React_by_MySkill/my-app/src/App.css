@@ -43,8 +43,8 @@ button {
   background-color: #61dafb;
   color: #282c34;
   font-weight: bold;
-  padding: 5px;
-  cursor: pointer;
+  padding: 7px 14px;
+  margin: 15px 5px 5px 5px;
 }
 
 p,
@@ -56,7 +56,7 @@ a {
 .chattbox {
   border-radius: 20px;
   background-color: #ffffff;
-  color: #282c34;
+  color: #000000;
   padding: 10px 20px;
   margin: 30px;
 }
