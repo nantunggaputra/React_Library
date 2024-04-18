@@ -6,6 +6,7 @@ import ClassComponents from "./ClassComponents";
 import FunctiopnalComponents from "./FunctionalComponents";
 import Chatbox from "./Chatbox";
 import Product from "./Product";
+import Products from "./Products";
 
 const eBookData = [
   {
@@ -47,6 +48,9 @@ function Messages(props) {
   );
 }
 function App() {
+  const fontTimes = {
+    fontFamily: "Helvetica, Arial, 'Times New Roman'",
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -67,14 +71,17 @@ function App() {
         <Messages messages={messages} />
         <Chatbox />
         <h2>PDF Front-End Development</h2>
+        <Products />
         {eBookData.map((pdf, id) => (
-          <Product
-            name={pdf.name}
-            url={pdf.url}
-            price={pdf.price}
-            discount={pdf.discount}
-            key={id}
-          />
+          <div className="product" style={fontTimes}>
+            <Product
+              name={pdf.name}
+              url={pdf.url}
+              price={pdf.price}
+              discount={pdf.discount}
+              key={id}
+            />
+          </div>
         ))}
         {/* <Product
           name="eBook HTML from Zero to Hero"

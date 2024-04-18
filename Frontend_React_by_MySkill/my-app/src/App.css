@@ -75,6 +75,13 @@ a {
   padding: 10px 0 20px 0;
 }
 
+li {
+  text-align: left;
+  list-style: lower-roman;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
 .product {
   border-radius: 20px;
   background-color: #ffffff;

@@ -2,7 +2,7 @@ import React from "react";
 
 function Product({ price, name, url, discount }) {
   return (
-    <div className="product">
+    <>
       <h5>{name}</h5>
       <img src={url} alt={Math.random()} />
       <br />
@@ -27,7 +27,7 @@ function Product({ price, name, url, discount }) {
           </b>
         </small>
       )}
-    </div>
+    </>
   );
 }
 
