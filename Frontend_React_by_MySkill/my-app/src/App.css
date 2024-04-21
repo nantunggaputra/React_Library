@@ -1,4 +1,29 @@
-.App {
+.navbar {
+  background-color: #282c34;
+  text-align: right;
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+}
+
+.navbar ul {
+  padding-right: 20px;
+}
+
+.navbar li {
+  color: #ffffff;
+  text-align: right;
+  list-style: none;
+  display: inline;
+}
+
+.navbar li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.App,
+.All-page {
   text-align: center;
 }
 
@@ -13,15 +38,16 @@
   }
 }
 
-.App-header {
+.App-header,
+.All-page {
   background-color: #282c34;
-  min-height: 100vh;
+  color: white;
+  font-size: calc(10px + 2vmin);
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 50px;
 }
 
 .App-link {
