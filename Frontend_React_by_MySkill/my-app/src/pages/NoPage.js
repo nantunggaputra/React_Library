@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Page404() {
   const [noPage, setNoPage] = useState("404");
@@ -51,10 +51,39 @@ function Page404() {
   );
 }
 
+function Timers() {
+  const [count, setCount] = useState(0);
+  const [calculation, setCalculation] = useState(0);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setCount((count) => count + 1);
+  //   });
+  // });
+  // // update count once
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setCount((count) => count + 1);
+  //   }, 1000);
+  // }, []);
+  // update calculation based on count
+  useEffect(() => {
+    setCalculation(() => count * 404);
+  }, [count]);
+  // return <p>{count}</p>;
+  return (
+    <>
+      <button onClick={() => setCount((count) => count + 1)}>+</button>
+      <small>Count : {count}</small>
+      <small>Calculation : {calculation}</small>
+    </>
+  );
+}
+
 function NoPage() {
   return (
     <div className="All-page">
       <Page404 />
+      <Timers />
     </div>
   );
 }
