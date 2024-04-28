@@ -79,11 +79,35 @@ function Timers() {
   );
 }
 
+function Form() {
+  const [problem404, setProblem404] = useState("");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`Your message "${problem404.trim()}" has been submited.`);
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <br />
+      <label>
+        <small>Enter your problem : </small>
+      </label>
+      <input
+        type="text"
+        value={problem404}
+        onChange={(e) => setProblem404(e.target.value)}
+        required
+      />
+      <button type="submit">Send</button>
+    </form>
+  );
+}
+
 function NoPage() {
   return (
     <div className="All-page">
       <Page404 />
       <Timers />
+      <Form />
     </div>
   );
 }
