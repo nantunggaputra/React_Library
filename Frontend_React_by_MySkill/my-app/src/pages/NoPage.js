@@ -80,23 +80,48 @@ function Timers() {
 }
 
 function Form() {
-  const [problem404, setProblem404] = useState("");
+  const [problem404, setProblem404] = useState({});
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setProblem404((values) => ({ ...values, [name]: value }));
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`Your message "${problem404.trim()}" has been submited.`);
+    console.log(problem404);
   };
   return (
     <form onSubmit={handleSubmit}>
+      <br />
+      <label>
+        <small>Enter your name : </small>
+      </label>
+      <input
+        type="text"
+        name="username"
+        value={problem404.username || ""}
+        onChange={handleChange}
+        required
+      />
       <br />
       <label>
         <small>Enter your problem : </small>
       </label>
       <input
         type="text"
-        value={problem404}
-        onChange={(e) => setProblem404(e.target.value)}
+        name="problem"
+        value={problem404.problem || ""}
+        onChange={handleChange}
         required
       />
+      <br />
+      <textarea
+        name="message"
+        value={problem404.message || ""}
+        onChange={handleChange}
+        placeholder="Your Message..."
+      />
+      <br />
       <button type="submit">Send</button>
     </form>
   );
