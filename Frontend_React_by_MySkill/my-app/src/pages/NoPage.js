@@ -101,6 +101,7 @@ function Form() {
         name="username"
         value={problem404.username || ""}
         onChange={handleChange}
+        style={{ fontFamily: "inherit" }}
         required
       />
       <br />
@@ -112,6 +113,7 @@ function Form() {
         name="problem"
         value={problem404.problem || ""}
         onChange={handleChange}
+        style={{ fontFamily: "inherit" }}
         required
       />
       <br />
@@ -120,10 +122,32 @@ function Form() {
         value={problem404.message || ""}
         onChange={handleChange}
         placeholder="Your Message..."
+        style={{ fontFamily: "inherit" }}
       />
       <br />
       <button type="submit">Send</button>
     </form>
+  );
+}
+
+function Language() {
+  const [language, setLanguage] = useState("English");
+  const handleChange = (event) => {
+    setLanguage(event.target.value);
+  };
+  return (
+    <>
+      <select
+        value={language}
+        onChange={handleChange}
+        style={{ fontFamily: "inherit" }}
+      >
+        <option value="English" selected>
+          English
+        </option>
+        <option value="Indonesia">Indonesia</option>
+      </select>
+    </>
   );
 }
 
@@ -133,6 +157,7 @@ function NoPage() {
       <Page404 />
       <Timers />
       <Form />
+      <Language />
     </div>
   );
 }
