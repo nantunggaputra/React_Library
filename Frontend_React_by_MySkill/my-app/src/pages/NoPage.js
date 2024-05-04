@@ -117,6 +117,8 @@ function Form() {
         required
       />
       <br />
+      <small>Message : </small>
+      <br />
       <textarea
         name="message"
         value={problem404.message || ""}
