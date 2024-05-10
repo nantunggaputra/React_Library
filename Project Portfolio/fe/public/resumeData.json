@@ -1,0 +1,135 @@
+{
+    "main": {
+        "name": "Nantungga Putra",
+        "description": "Hello there, I'm an enthusiastic newcomer to the world of programming and web development.",
+        "project": "https://nantunggaputra.github.io/HTML/",
+        "github": "https://github.com/nantunggaputra",
+        "bio": "Hello there, I'm Nantungga Putra, an enthusiastic newcomer to the world of programmingand web development. Since May 2023, I'm inspired to continually learn and enhance mytechnical skills. With 1 year experience in Front-End Web Development, I'll have a solidfoundation for understanding logic and project planning. I learned React and JavaScriptprogramming languages, algorithms, and software development methodologies. I seized theopportunity to expand my knowledge through online courses and hands-on projects,resulting in a portfolio that showcases my capabilities and dedication to mastering these newskills: Front-End Web Development.",
+        "image": "profilepic.jpg",
+        "contactmessage": "Contact Me",
+        "phone": "",
+        "email": "anggunnantunggaputra@gmail.com",
+        "address": {
+            "street": "Ciledug",
+            "city": "Kota Tangerang",
+            "state": "Banten",
+            "zip": "15152"
+        },
+        "website": "https://nantunggaputra.github.io/HTML/",
+        "resumedownload": "https://www.jobstreet.co.id/profile/nantungga-putra-80CR8dBXjq",
+        "social":[
+            {
+                "name":"github",
+                "url":"https://github.com/nantunggaputra",
+                "className":"fa fa-github"
+            },
+            {
+                "name":"linkedin",
+                "url":"https://www.linkedin.com/in/nantungga-putra-451779116/",
+                "className":"fa fa-linkedin"
+            },
+            {
+                "name": "facebook",
+                "url": "https://web.facebook.com/",
+                "className": "fa fa-facebook"
+            },
+            {
+                "name":"instagram",
+                "url":"https://www.instagram.com/",
+                "className":"fa fa-instagram"
+            },
+            {
+                "name":"twitter",
+                "url":"https://twitter.com/",
+                "className":"fa fa-twitter"
+            }
+
+        ],
+        "resume": {
+            "skillmessage": "My Skills, Framework, and Tools",
+            "education": [
+                {
+                    "school": "SMA Negeri 2 Kebumen",
+                    "degree": "Completed High School",
+                    "graduated": "Jul 2012 - May 2015",
+                    "description": "Program Ilmu Pengetahuan Alam"
+                }
+            ],
+            "work": [
+                {
+                    "company": "Self Employed",
+                    "title": "Front End Web Developer",
+                    "years": "May 2023 - Present",
+                    "description": "I decided to take a career transition for programming. I committed myself to a period of learning and skill development. I learned React and JavaScript programming languages, algorithms, and software development methodologies, equipping myself with the technical expertise necessary. I seized the opportunity to expand my knowledge through online courses and hands-on projects, resulting in a portfolio that showcases my capabilities and dedication to mastering these new skills: Front-End Web Development."
+                }
+            ],
+            "skills": [
+                {
+                    "name": "",
+                    "level": ""
+                }
+            ]
+        },
+        "portofolio": {
+            "projects": [
+                {
+                    "id": "1",
+                    "title": "Kedai Teh Solo Gen-Z",
+                    "category": "E-Commerce Webpage",
+                    "image": "Kedai Teh Solo Gen-Z.png",
+                    "url": "https://nantunggaputra.github.io/kedaitehsologenz/"
+                },
+                {
+                    "id": "2",
+                    "title": "Adlan Muslim",
+                    "category": "E-Commerce Webpage",
+                    "image": "Adlan Muslim.png",
+                    "url": "https://nantunggaputra.github.io/merchadlanmuslim/"
+                },
+                {
+                    "id": "3",
+                    "title": "Personal Portfolio",
+                    "category": "Personal Portfolio Webpage",
+                    "image": "Personal Portfolio.png",
+                    "url": "https://nantunggaputra.github.io/HTML/Personal%20Portfolio%20Webpage/"
+                },
+                {
+                    "id": "4",
+                    "title": "freeCodeCamp Survey Form",
+                    "category": "Survey Form",
+                    "image": "freeCodeCamp Survey Form.png",
+                    "url": "https://nantunggaputra.github.io/HTML/Survey%20Form/"
+                },
+                {
+                    "id": "5",
+                    "title": "Biografi Ir. Soekarno",
+                    "category": "Tribute Page",
+                    "image": "Biografi Ir. Soekarno.png",
+                    "url": "https://nantunggaputra.github.io/HTML/Tribute%20Page/"
+                },
+                {
+                    "id": "6",
+                    "title": "JavaScript Classes",
+                    "category": "Technical Documentation Page",
+                    "image": "JavaScript Classes.png",
+                    "url": "https://nantunggaputra.github.io/HTML/Documentation%20Page/"
+                },
+                {
+                    "id": "7",
+                    "title": "Original Flutes",
+                    "category": "Product Landing Page",
+                    "image": "Original Flutes.png",
+                    "url": "https://nantunggaputra.github.io/HTML/Product%20Landing%20Page/"
+                },
+                {
+                    "id": "8",
+                    "title": "Homepage Portfolio",
+                    "category": "Homepage Portfolio",
+                    "image": "Homepage Portfolio.png",
+                    "url": "https://nantunggaputra.github.io/HTML/"
+                }
+            ]
+        }
+
+    }
+}
