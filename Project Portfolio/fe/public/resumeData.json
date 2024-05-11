@@ -65,8 +65,32 @@
             ],
             "skills": [
                 {
-                    "name": "",
-                    "level": ""
+                    "name": "HTML 5",
+                    "level": "90%"
+                },
+                {
+                    "name": "CSS 3",
+                    "level": "90%"
+                },
+                {
+                    "name": "JavaScript",
+                    "level": "67%"
+                },
+                {
+                    "name": "Tailwind CSS",
+                    "level": "75%"
+                },
+                {
+                    "name": "React.js",
+                    "level": "67%"
+                },
+                {
+                    "name": "Microsoft Visual Studio Code",
+                    "level": "81%"
+                },
+                {
+                    "name": "Git, GitHub",
+                    "level": "75%"
                 }
             ]
         },
@@ -127,6 +151,34 @@
                     "category": "Homepage Portfolio",
                     "image": "Homepage Portfolio.png",
                     "url": "https://nantunggaputra.github.io/HTML/"
+                },
+                {
+                    "id": "9",
+                    "title": "Mini Project Calculator",
+                    "category": "Calculator",
+                    "image": "Mini Project Calculator.png",
+                    "url": "https://nantunggaputra.github.io/JavaScript/Frontend_JavaScript_by_MySkill/Mini%20Project%20Calculator/"
+                },
+                {
+                    "id": "10",
+                    "title": "Simple Weather App",
+                    "category": "Weather App",
+                    "image": "Simple Weather App.png",
+                    "url": "https://nantunggaputra.github.io/JavaScript/Frontend_JavaScript_by_MySkill/Mini%20Project%20Weather%20App/"
+                },
+                {
+                    "id": "11",
+                    "title": "Tic Tac Toe",
+                    "category": "Tic Tac Toe",
+                    "image": "Tic Tac Toe.png",
+                    "url": "https://nantunggaputra.github.io/React_Library/Project%20Portfolio/Tic%20Tac%20Toe/dist/"
+                },
+                {
+                    "id": "12",
+                    "title": "Shopping List",
+                    "category": "Shopping List",
+                    "image": "Shopping List.png",
+                    "url": "https://nantunggaputra.github.io/React_Library/Project%20Portfolio/Shopping%20List/dist/"
                 }
             ]
         }

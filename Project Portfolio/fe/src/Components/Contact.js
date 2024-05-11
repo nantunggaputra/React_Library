@@ -29,11 +29,11 @@ class Contact extends Component {
         <div className="row">
           <Slide left duration={1300}>
             <div className=" eight columns">
-              <form action="" method="post" id="contactForm">
+              <form id="contactForm">
                 <fieldset>
                   <div>
                     <label htmlFor="contactName">
-                      Name <span className="require">*</span>
+                      Name <span className="required">*</span>
                     </label>
                     <input
                       type="text"
@@ -45,10 +45,10 @@ class Contact extends Component {
                   </div>
                   <div>
                     <label htmlFor="contactEmail">
-                      Email <span className="require">*</span>
+                      Email <span className="required">*</span>
                     </label>
                     <input
-                      type="text"
+                      type="email"
                       defaultValue=""
                       size="35"
                       id="contactEmail"
@@ -58,7 +58,7 @@ class Contact extends Component {
                   </div>
                   <div>
                     <label htmlFor="contactSubject">
-                      Subject <span className="require">*</span>{" "}
+                      Subject <span className="required">*</span>{" "}
                     </label>
                     <input
                       type="text"
@@ -71,7 +71,7 @@ class Contact extends Component {
                   </div>
                   <div>
                     <label htmlFor="contactMessage">
-                      Message <span className="require">*</span>{" "}
+                      Message <span className="required">*</span>{" "}
                     </label>
                     <textarea
                       cols="50"
@@ -82,7 +82,7 @@ class Contact extends Component {
                     ></textarea>
                   </div>
                   <div>
-                    <button className="submit">Submit</button>
+                    <button className="submit">Submit (Demo)</button>
                     <span id="image-loader">
                       <img src="images/loader.gif" alt="Submit" />
                     </span>
@@ -101,7 +101,7 @@ class Contact extends Component {
           <Slide right duration={1000}>
             <aside className="four columns footer-widgets">
               <div className="widget widget_contact">
-                <h4>Address and Phone</h4>
+                <h4>Address</h4>
                 <p className="address">
                   {name}
                   <br />

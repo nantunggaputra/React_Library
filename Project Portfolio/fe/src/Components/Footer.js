@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
 import { Fade } from "react-awesome-reveal";
 
@@ -23,10 +24,21 @@ class Footer extends Component {
             <div className="twelve columns">
               <ul className="social-links">{networks}</ul>
               <ul className="copyright">
-                <li>&copy;2024</li>
+                <li>
+                  Created by{" "}
+                  <a title="Nantungga Putra" href="">
+                    Nantungga Putra
+                  </a>{" "}
+                  | &copy;2024
+                </li>
                 <li>
                   Design by {""}
-                  <a title="Styleshout" href="http://www.styleshout.com/">
+                  <a
+                    title="Styleshout"
+                    href="http://www.styleshout.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Styleshout
                   </a>
                 </li>

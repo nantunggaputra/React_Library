@@ -16,14 +16,13 @@ class Resume extends Component {
 
     const { resume } = this.props.data;
 
-    // const skillmessage = this.props.data.resume.skillmessage
     const education = resume.education.map((education) => {
       return (
         <div key={education.school}>
           <h3>{education.school}</h3>
           <p className="info">
             {education.degree}
-            <span>&bull;</span>
+            <span> &bull; </span>
             <em className="date">{education.graduated}</em>
           </p>
           <p>{education.description}</p>
@@ -37,7 +36,7 @@ class Resume extends Component {
           <h3>{work.company}</h3>
           <p className="info">
             {work.title}
-            <span>&bull;</span>
+            <span> &bull; </span>
             <em className="date">{work.years}</em>
           </p>
           <p>{work.description}</p>
