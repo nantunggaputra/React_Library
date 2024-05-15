@@ -5,6 +5,7 @@ import axios from "axios";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import Separator from "./components/Separator";
 
 const animesData = [
   {
@@ -49,6 +50,7 @@ export default function App() {
         selectedAnime={selectedAnime}
         onSelectedAnime={handleSelectedAnime}
       />
+      <Separator />
       <Footer />
     </>
   );

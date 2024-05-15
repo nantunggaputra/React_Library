@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;700&display=swap");
 
 :root {
-  --color-primary: #0377b9;
+  --color-primary: #016ead;
   --color-primary-light: #0377b9;
   --color-text: #ffffff;
   --color-text-dark: #000000;
@@ -111,8 +111,8 @@ body {
   width: 40rem;
   max-width: 85vw;
   transition: all 0.3s;
-  color: var(--color-text);
-  background-color: var(--color-primary);
+  color: var(--color-background-light);
+  background-color: var(--color-primary-light);
   animation: blink 2s ease infinite;
 }
 
@@ -131,7 +131,7 @@ body {
 }
 
 .nav-bar .search-btn {
-  padding: 0.5rem;
+  padding: 0.5rem 1.3rem;
   border: none;
   border-radius: 0.5rem;
   background-color: var(--color-background-light);
@@ -154,14 +154,29 @@ body {
 }
 
 .nav-bar .search-results {
-  margin-top: 1rem;
+  margin-top: 3rem;
+  color: var(--color-background-light);
   font-size: 1.5rem;
   text-align: justify;
 }
 
 .nav-bar .search-results span {
   color: var(--color-orange);
-  font-weight: 900;
+  font-weight: 400;
+  animation: letter 1s ease infinite;
+}
+
+@keyframes letter {
+  0% {
+    letter-spacing: initial;
+  }
+  50% {
+    letter-spacing: 1px;
+    font-weight: 900;
+  }
+  100% {
+    letter-spacing: initial;
+  }
 }
 
 /* Main */
@@ -233,7 +248,7 @@ body {
 
 .list.list-anime p {
   margin-top: 1rem;
-  padding: 0.3rem;
+  padding: 0.3rem 0.8rem;
   background-color: var(--color-background-light);
   border-radius: 0.3rem;
   color: var(--color-red);
@@ -297,7 +312,8 @@ body {
 .details header {
   margin-right: 2rem;
   display: flex;
-  color: var(--color-primary);
+  font-size: 1.2rem;
+  color: var(--color-red);
 }
 
 .details section {
@@ -309,9 +325,11 @@ body {
 
 .details img {
   max-width: 150px;
+  border-radius: 1rem 0;
 }
 
-.details p {
+.details p:nth-child(1) {
+  color: var(--color-background-light);
   text-align: justify;
 }
 
@@ -329,12 +347,25 @@ body {
   line-height: 1.1;
 }
 
+.details-overview h2 a {
+  color: var(--color-primary-light);
+  text-decoration: none;
+}
+
+.details-overview h2 a:hover {
+  color: var(--color-background-light);
+}
+
 .details-overview small {
   display: flex;
   color: var(--color-orange);
   font-size: 1.3rem;
   align-items: center;
   gap: 0.8rem;
+}
+
+.list-popular {
+  display: none;
 }
 
 .footer {
@@ -379,15 +410,20 @@ body {
 }
 
 .social-icons a {
-  margin: 0 1rem;
+  margin: 1rem;
+  padding: 3px 2px 0 5px;
   color: var(--color-text);
   font-size: 2rem;
   font-weight: 600;
   transition: transform 0.3s ease;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-radius: 1rem;
 }
 
 .social-icons a:hover {
-  color: #808080e8;
+  border-top: 2px solid var(--color-red);
+  border-left: 2px solid var(--color-red);
 }
 
 .footer p {
@@ -432,7 +468,7 @@ body {
 }
 
 .footer:hover .social-icons {
-  bottom: 5rem;
+  bottom: 5.5rem;
   transform: translate(-50%, 50%);
   animation: upmoving 0.3s ease;
 }
@@ -454,6 +490,7 @@ body {
   }
 
   .main .box {
+    display: block;
     margin: auto;
     margin-bottom: 2rem;
     min-width: 80vw;
@@ -461,7 +498,28 @@ body {
     max-height: 55rem;
   }
 
+  .list h3 {
+    font-size: 1.7rem;
+  }
+
+  .list.list-anime p {
+    font-size: 1.2rem;
+  }
+
   .details img {
-    max-width: 150px;
+    max-width: 145px;
+  }
+
+  .details-overview h2 {
+    font-size: 1.7rem;
+  }
+
+  .details-overview small {
+    font-size: 1.2rem;
+  }
+
+  .list-popular {
+    display: block;
+    margin-bottom: 50.4rem;
   }
 }

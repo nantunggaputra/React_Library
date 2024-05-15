@@ -25,7 +25,16 @@ export default function AnimeDetail({ selectedAnime }) {
           })
         )}
         <div className="details-overview">
-          <h2>{selectedAnime.title}</h2>
+          <h2>
+            <a
+              href={`https://www.youtube.com/results?search_query=Anime ${selectedAnime.title}`}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              {selectedAnime.title}
+            </a>
+          </h2>
+
           <small>
             {selectedAnime.aired.prop.from.year
               ? selectedAnime.aired.prop.from.year
@@ -37,10 +46,12 @@ export default function AnimeDetail({ selectedAnime }) {
               ? "IMDb ★ " + selectedAnime.score.toFixed(1) + "/10"
               : ""}
             <br />
-            {selectedAnime.rating ? selectedAnime.rating : ""}
+            {selectedAnime.rating ? "Rating for " + selectedAnime.rating : ""}
           </small>
           <p>
-            {selectedAnime.status ? "Status : " + selectedAnime.status : ""}
+            <strong>
+              {selectedAnime.status ? "Status: " + selectedAnime.status : ""}
+            </strong>
           </p>
         </div>
       </header>
