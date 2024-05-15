@@ -1,5 +1,6 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+import React from "react";
 import { useState } from "react";
 import Anime from "./Anime";
 import AnimeDetail from "./AnimeDetail";
@@ -36,18 +37,13 @@ function SelectedBox({ selectedAnime }) {
   );
 }
 
-export default function Main({ animes }) {
-  const [selectedAnime, setSelectedAnime] = useState(animes[0]);
-
-  function handleSelectedAnime(id) {
-    const newAnime = animes.filter((anime) => anime.mal_id === id);
-    setSelectedAnime(newAnime[0]);
-  }
-
+export default function Main({ animes, selectedAnime, onSelectedAnime }) {
   return (
     <main className="main">
-      <ListBox animes={animes} onSelectedAnime={handleSelectedAnime} />
-      <SelectedBox selectedAnime={selectedAnime} />
+      {animes.length > 0 && (
+        <ListBox animes={animes} onSelectedAnime={onSelectedAnime} />
+      )}
+      {selectedAnime && <SelectedBox selectedAnime={selectedAnime} />}
     </main>
   );
 }

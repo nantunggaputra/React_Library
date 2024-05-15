@@ -1,14 +1,35 @@
 /* eslint-disable react/prop-types */
 function AnimeList({ anime, onSelectedAnime }) {
   return (
-    <li onClick={() => onSelectedAnime(anime.mal_id)}>
-      <img src={anime.image} alt={`${anime.title} cover`} />
-      <h3>{anime.title}</h3>
-      <div>
-        <p>
-          <span>{anime.year.split(" ")[0]}</span>
-        </p>
-      </div>
+    <li onClick={() => onSelectedAnime(anime)}>
+      {anime.images && anime.images.jpg && anime.images.jpg.large_image_url ? (
+        <>
+          <img
+            src={anime.images.jpg.large_image_url}
+            alt={`${anime.title} Cover`}
+          />
+          <h3>{anime.title}</h3>
+          <div>
+            <p>
+              <span>
+                {anime.aired.prop.from.year
+                  ? anime.aired.prop.from.year
+                  : "Year"}
+              </span>
+            </p>
+          </div>
+        </>
+      ) : (
+        <>
+          <img src={anime.image} alt="Anime Cover" />
+          <h3>{anime.title}</h3>
+          <div>
+            <p>
+              <span>{anime.year}</span>
+            </p>
+          </div>
+        </>
+      )}
     </li>
   );
 }

@@ -61,6 +61,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   padding: 2rem;
   transition-duration: 0.3s;
   cursor: pointer;
@@ -112,6 +113,7 @@ body {
   transition: all 0.3s;
   color: var(--color-text);
   background-color: var(--color-primary);
+  animation: blink 2s ease infinite;
 }
 
 .nav-bar .search::placeholder {
@@ -123,9 +125,20 @@ body {
 
 .nav-bar .search:focus {
   outline: none;
+  animation: none;
   box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
   transform: translateY(-2px) scale(1.03);
-  animation: blink 2s ease infinite;
+}
+
+.nav-bar .search-btn {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--color-background-light);
+  color: var(--color-red);
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 @keyframes blink {
@@ -141,6 +154,7 @@ body {
 }
 
 .nav-bar .search-results {
+  margin-top: 1rem;
   font-size: 1.5rem;
   text-align: justify;
 }
@@ -164,6 +178,7 @@ body {
   width: 42rem;
   max-width: 80vw;
   min-height: 6rem;
+  max-height: 55rem;
   background-color: var(--color-background-100);
   border-bottom: 2.5rem solid var(--color-background-100);
   border-radius: 1rem;
@@ -217,6 +232,7 @@ body {
 }
 
 .list.list-anime p {
+  margin-top: 1rem;
   padding: 0.3rem;
   background-color: var(--color-background-light);
   border-radius: 0.3rem;
@@ -235,6 +251,7 @@ body {
 }
 
 .list h3 {
+  margin-right: 2rem;
   font-size: 1.8rem;
 }
 
@@ -278,6 +295,7 @@ body {
 }
 
 .details header {
+  margin-right: 2rem;
   display: flex;
   color: var(--color-primary);
 }
@@ -290,7 +308,7 @@ body {
 }
 
 .details img {
-  width: 40%;
+  max-width: 150px;
 }
 
 .details p {
@@ -319,14 +337,131 @@ body {
   gap: 0.8rem;
 }
 
+.footer {
+  margin: 4rem auto 2rem;
+  position: relative;
+  width: 80vw;
+  max-width: 42rem;
+  height: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  padding-bottom: 48rem;
+  border-radius: 1rem;
+  background-image: url("Mook Detective Conan Secret Archives Kaito Kid.jpg");
+  opacity: 0.9;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.footer:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background-900);
+  opacity: 0.3;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.footer:hover .social-icons {
+  opacity: 1;
+}
+
+.social-icons a {
+  margin: 0 1rem;
+  color: var(--color-text);
+  font-size: 2rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #808080e8;
+}
+
+.footer p {
+  position: absolute;
+  bottom: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.footer a:hover span {
+  color: #3b969b;
+}
+
+.footer a:hover {
+  color: #808080e8;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.footer:hover p {
+  bottom: 1.5rem;
+  animation: fadein 0.5s ease;
+}
+
+.footer:hover .social-icons {
+  bottom: 5rem;
+  transform: translate(-50%, 50%);
+  animation: upmoving 0.3s ease;
+}
+
+@keyframes upmoving {
+  0% {
+    bottom: -5rem;
+  }
+  100% {
+    bottom: 6rem;
+  }
+}
+
 /* MEDIA QUERY */
 
 @media (max-width: 768px) {
   .main {
-    flex-direction: column;
+    display: block;
   }
+
   .main .box {
     margin: auto;
-    width: 40rem;
+    margin-bottom: 2rem;
+    min-width: 80vw;
+    min-height: 6rem;
+    max-height: 55rem;
+  }
+
+  .details img {
+    max-width: 150px;
   }
 }

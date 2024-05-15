@@ -2,11 +2,11 @@
 import Logo from "./Logo";
 import Search from "./Search";
 
-export default function Navbar({ animes }) {
+export default function Navbar({ fetchAnime }) {
   return (
     <nav className="nav-bar">
       <Logo />
-      <Search animes={animes} />
+      <Search fetchAnime={fetchAnime} />
     </nav>
   );
 }
