@@ -1,4 +1,8 @@
 /* eslint-disable react/prop-types */
+function IndentedText({ children }) {
+  return <span style={{ paddingLeft: "3em" }}>{children}</span>;
+}
+
 export default function AnimeDetail({ selectedAnime }) {
   return (
     <div className="details">
@@ -13,7 +17,10 @@ export default function AnimeDetail({ selectedAnime }) {
       </header>
       <section>
         <p>
-          <em>{selectedAnime.synopsis}</em>
+          <em>
+            <IndentedText></IndentedText>
+            {selectedAnime.synopsis}
+          </em>
         </p>
       </section>
     </div>
