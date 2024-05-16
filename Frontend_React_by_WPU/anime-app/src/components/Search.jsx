@@ -4,8 +4,8 @@ import { useState } from "react";
 function NumResult({ count }) {
   return (
     <p className="search-results">
-      <span>\(≧▽≦)/</span> Subarashii! Wee found <strong>{count}</strong> anime
-      results:
+      <span>\(≧▽≦)/</span> Subarashii, Sensei! Wee found this{" "}
+      <strong>{count}</strong> anime results:
     </p>
   );
 }

@@ -27,7 +27,8 @@ export default function AnimeDetail({ selectedAnime }) {
         <div className="details-overview">
           <h2>
             <a
-              href={`https://www.youtube.com/results?search_query=Anime ${selectedAnime.title}`}
+              href={`https://www.bilibili.tv/id/search-result?q=${selectedAnime.title}`}
+              title="Search in BiliBili | Bstation"
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
@@ -49,18 +50,31 @@ export default function AnimeDetail({ selectedAnime }) {
             {selectedAnime.rating ? "Rating for " + selectedAnime.rating : ""}
           </small>
           <p>
-            <strong>
+            <b>
               {selectedAnime.status ? "Status: " + selectedAnime.status : ""}
-            </strong>
+            </b>
           </p>
         </div>
       </header>
       <section>
         <p>
+          <em>{selectedAnime.synopsis}</em>
+          <br />
+          <br />
           <em>
             <IndentedText> </IndentedText>
-            {selectedAnime.synopsis}
+            Warning: Wee strongly advise against watching the listed anime
+            titles through illegal means. Engaging in piracy harms the creators
+            and the industry as a whole. Please support the hardworking creators
+            by purchasing the original DVDs or subscribing to official streaming
+            services. Sensei, your support ensures the continued production of
+            quality content. Sankyuu~
           </em>
+          <br />
+          <br />
+          <p style={{ textAlign: "right" }}>
+            <em>WeeBoo</em>
+          </p>
         </p>
       </section>
     </div>

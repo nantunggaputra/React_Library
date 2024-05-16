@@ -171,7 +171,7 @@ body {
     letter-spacing: initial;
   }
   50% {
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     font-weight: 900;
   }
   100% {
@@ -183,7 +183,7 @@ body {
 
 .main {
   margin-top: 2.4rem;
-  max-height: calc(100vh - 12rem - 3 * 5rem);
+  max-height: 55rem;
   display: flex;
   justify-content: center;
   gap: 2.4rem;
@@ -193,7 +193,7 @@ body {
   width: 42rem;
   max-width: 80vw;
   min-height: 6rem;
-  max-height: 55rem;
+  max-height: 75rem;
   background-color: var(--color-background-100);
   border-bottom: 2.5rem solid var(--color-background-100);
   border-radius: 1rem;
@@ -333,6 +333,13 @@ body {
   text-align: justify;
 }
 
+.details p:nth-child(1)::first-letter {
+  float: left;
+  font-size: 3em;
+  line-height: 3em;
+  padding: 0.1em 0.3em 0 1em;
+}
+
 .details-overview {
   width: 100%;
   padding: 2rem 2.4rem;
@@ -364,12 +371,29 @@ body {
   gap: 0.8rem;
 }
 
-.list-popular {
-  display: none;
+.separator {
+  margin: 4rem auto 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  max-width: 42rem;
+  height: 35.5rem;
+  background-image: radial-gradient(#000000, #25252585, #25252528, #25252510);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.separator img {
+  margin: auto;
+  filter: grayscale(1);
+  max-width: 100%;
+  opacity: 0.5;
 }
 
 .footer {
-  margin: 4rem auto 2rem;
+  margin: 4rem auto 1rem;
   position: relative;
   width: 80vw;
   max-width: 42rem;
@@ -487,6 +511,7 @@ body {
 @media (max-width: 768px) {
   .main {
     display: block;
+    max-height: calc(100vh - 12rem - 3 * 3rem);
   }
 
   .main .box {
@@ -518,8 +543,7 @@ body {
     font-size: 1.2rem;
   }
 
-  .list-popular {
-    display: block;
-    margin-bottom: 50.4rem;
+  .separator img {
+    max-width: 70%;
   }
 }

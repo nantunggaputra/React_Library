@@ -10,7 +10,7 @@ import Separator from "./components/Separator";
 const animesData = [
   {
     mal_id: 1000000000,
-    title: "What is the best anime for you? Let's Search",
+    title: "Sensei? What is the best anime for you? Let's Search",
     year: 2024,
     image: "https://cdn.myanimelist.net/images/anime/7/75199.jpg",
     score: 10,
