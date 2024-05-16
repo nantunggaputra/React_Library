@@ -3,7 +3,7 @@
 import React from "react";
 
 function IndentedText({ children }) {
-  return <span style={{ paddingLeft: "3rem" }}>{children}</span>;
+  return <span style={{ paddingLeft: "33px" }}>{children}</span>;
 }
 
 export default function AnimeDetail({ selectedAnime }) {

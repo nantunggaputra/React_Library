@@ -4,8 +4,8 @@ import { useState, useRef } from "react";
 function NumResult({ count }) {
   return (
     <p className="search-results">
-      <span>\(≧▽≦)/</span> Subarashii, Sensei! Wee found this{" "}
-      <strong>{count}</strong> anime results:
+      <span>\(≧▽≦)/</span> Subarashii, Sensei! Wee found this breathtaking{" "}
+      <strong>{count}</strong> anime...
     </p>
   );
 }
@@ -23,10 +23,7 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
       const results = await fetchAnime(query);
       setResultCount(results.length);
       setLoading(false);
-      // if (audioRef.current) {
-      //   audioRef.current.pause();
-      //   audioRef.current.currentTime = 0;
-      // }
+      setQuery("");
     }
   };
 
