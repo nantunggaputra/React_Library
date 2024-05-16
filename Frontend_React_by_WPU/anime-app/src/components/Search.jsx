@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function NumResult({ count }) {
   return (
@@ -12,18 +12,27 @@ function NumResult({ count }) {
 
 function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
   const [query, setQuery] = useState("");
+  const audioRef = useRef(null);
 
   const handleSearch = async () => {
     if (query.trim()) {
       setLoading(true);
+      if (audioRef.current) {
+        audioRef.current.play();
+      }
       const results = await fetchAnime(query);
       setResultCount(results.length);
       setLoading(false);
+      // if (audioRef.current) {
+      //   audioRef.current.pause();
+      //   audioRef.current.currentTime = 0;
+      // }
     }
   };
 
   return (
     <div className="search-container">
+      <audio ref={audioRef} src="There is Always Only One Truth.mp3" />
       <input
         className="search"
         type="text"
@@ -37,7 +46,7 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
         }}
       />
       <button className="search-btn" onClick={() => handleSearch()}>
-        {loading ? "Loading..." : "Search"}
+        {loading ? "Please wait..." : "Search"}
       </button>
     </div>
   );

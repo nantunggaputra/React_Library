@@ -5,11 +5,11 @@
   --color-primary-light: #0377b9;
   --color-text: #ffffff;
   --color-text-dark: #000000;
-  --color-background-light: #e6ebee;
+  --color-background-light: #e1e8ed;
   --color-background-100: #171717;
   --color-background-500: #0a0a0a;
   --color-background-900: #252525;
-  --color-red: #ca6eb0;
+  --color-red: #d372b8;
   --color-red-dark: #aa3d8b;
   --color-orange: #fcbe14;
 }
@@ -335,9 +335,9 @@ body {
 
 .details p:nth-child(1)::first-letter {
   float: left;
-  font-size: 3em;
-  line-height: 3em;
-  padding: 0.1em 0.3em 0 1em;
+  font-size: 3.6rem;
+  line-height: 0.1rem;
+  padding: 0.8rem 1rem 0 3rem;
 }
 
 .details-overview {
@@ -380,7 +380,13 @@ body {
   width: 80vw;
   max-width: 42rem;
   height: 35.5rem;
-  background-image: radial-gradient(#000000, #25252585, #25252528, #25252510);
+  background-image: radial-gradient(
+    #25252528,
+    #000000,
+    #25252528,
+    #25252510,
+    #25252500
+  );
   opacity: 0.1;
   z-index: -1;
 }
@@ -544,6 +550,6 @@ body {
   }
 
   .separator img {
-    max-width: 70%;
+    max-width: 80%;
   }
 }
