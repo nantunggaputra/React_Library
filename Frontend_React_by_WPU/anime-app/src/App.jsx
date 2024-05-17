@@ -55,6 +55,9 @@ export default function App() {
 
   return (
     <>
+      <div className="background-container">
+        <div className="clouds"></div>
+      </div>
       <Navbar fetchAnime={fetchAnime} />
       <Main
         animes={animes}
