@@ -13,6 +13,7 @@
     "@icons-pack/react-simple-icons": "^9.5.0",
     "axios": "^1.6.8",
     "react": "^18.2.0",
+    "react-awesome-reveal": "^4.2.10",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

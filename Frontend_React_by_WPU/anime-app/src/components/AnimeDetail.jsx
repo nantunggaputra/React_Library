@@ -60,7 +60,7 @@ export default function AnimeDetail({ selectedAnime }) {
         <p>
           <em>{selectedAnime.synopsis}</em>
           <br />
-          <br />
+          <br style={{ marginTop: "1.6rem" }} />
           <em>
             <IndentedText> </IndentedText>
             Warning: Wee strongly advise against watching the listed anime

@@ -18,7 +18,7 @@ export default function Router() {
             <a href="#">Bstation</a>
           </div>
         ) : (
-          <div className="arrow">▼</div>
+          <div className="arrow">⮟</div>
         )}
       </div>
     </div>

@@ -45,6 +45,50 @@ body {
   color: var(--color-text);
   background-color: var(--color-background-900);
   padding: 2.4rem;
+  animation: change 180s infinite 2.7s;
+}
+
+@keyframes change {
+  0% {
+    background-color: var(--color-background-900);
+  }
+  100% {
+    background-image: linear-gradient(
+      var(--color-background-100),
+      var(--color-text)
+    );
+    background-size: auto;
+    background-position: center;
+  }
+}
+
+/* Load */
+
+.loading-page {
+  position: fixed;
+  margin-top: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  padding-bottom: 120vh;
+  background: linear-gradient(to top, #17171700, #000000),
+    url("../Detective Conan Case Closed Brick Background.jpg");
+  background-position: center;
+  filter: grayscale(1) contrast(0.7);
+  z-index: 1000;
+  animation: show 1.7s ease;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* NavBar */
@@ -116,6 +160,7 @@ body {
 .nav-bar .links {
   display: block;
   align-items: center;
+  letter-spacing: 0.05px;
   margin-top: 0.5rem;
 }
 
@@ -173,6 +218,7 @@ body {
   color: var(--color-red);
   font-size: 1.3rem;
   font-weight: 600;
+  letter-spacing: 0.3px;
   cursor: pointer;
 }
 
@@ -341,7 +387,7 @@ body {
 
 .details {
   line-height: 1.4;
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 
 .details header {
@@ -373,8 +419,8 @@ body {
 .details p:nth-child(1)::first-letter {
   float: left;
   font-size: 42px;
-  line-height: 42px;
-  padding: 5px 12px 0 33px;
+  line-height: normal;
+  padding: 5px 15px 0 33px;
 }
 
 .details-overview {
@@ -432,7 +478,7 @@ body {
   margin: auto;
   filter: grayscale(1);
   max-width: 100%;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .footer {
@@ -446,7 +492,7 @@ body {
   text-transform: uppercase;
   padding-bottom: 48rem;
   border-radius: 1rem;
-  background-image: url("Mook Detective Conan Secret Archives Kaito Kid.jpg");
+  background-image: url("../Mook Detective Conan Secret Archives Kaito Kid.jpg");
   opacity: 0.9;
   background-size: cover;
   background-position: center;
@@ -576,6 +622,10 @@ body {
 
   .details img {
     max-width: 145px;
+  }
+
+  .details p:nth-child(1) {
+    font-size: 12px;
   }
 
   .details-overview h2 {

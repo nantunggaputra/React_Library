@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useRef } from "react";
+import { Fade } from "react-awesome-reveal";
 
 function NumResult({ count }) {
   return (
@@ -55,13 +56,15 @@ export default function Search({ fetchAnime }) {
 
   return (
     <div className="search-container">
-      <SearchInput
-        fetchAnime={fetchAnime}
-        setResultCount={setResultCount}
-        setLoading={setLoading}
-        loading={loading}
-      />
-      {resultCount > 0 && <NumResult count={resultCount} />}
+      <Fade durations={2000}>
+        <SearchInput
+          fetchAnime={fetchAnime}
+          setResultCount={setResultCount}
+          setLoading={setLoading}
+          loading={loading}
+        />
+        {resultCount > 0 && <NumResult count={resultCount} />}
+      </Fade>
     </div>
   );
 }

@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { useState } from "react";
+import { Fade } from "react-awesome-reveal";
 import Anime from "./Anime";
 import AnimeDetail from "./AnimeDetail";
 
@@ -39,11 +40,13 @@ function SelectedBox({ selectedAnime }) {
 
 export default function Main({ animes, selectedAnime, onSelectedAnime }) {
   return (
-    <main className="main">
-      {animes.length > 0 && (
-        <ListBox animes={animes} onSelectedAnime={onSelectedAnime} />
-      )}
-      {selectedAnime && <SelectedBox selectedAnime={selectedAnime} />}
-    </main>
+    <Fade durations={2000}>
+      <main className="main">
+        {animes.length > 0 && (
+          <ListBox animes={animes} onSelectedAnime={onSelectedAnime} />
+        )}
+        {selectedAnime && <SelectedBox selectedAnime={selectedAnime} />}
+      </main>
+    </Fade>
   );
 }

@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import Navbar from "./components/Navbar";
@@ -21,6 +20,7 @@ const animesData = [
 export default function App() {
   const [animes, setAnimes] = useState(animesData);
   const [selectedAnime, setSelectedAnime] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchAnime = async (query) => {
     try {
@@ -40,6 +40,18 @@ export default function App() {
   const handleSelectedAnime = (anime) => {
     setSelectedAnime(anime);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <div className="loading-page"></div>;
+  }
 
   return (
     <>
