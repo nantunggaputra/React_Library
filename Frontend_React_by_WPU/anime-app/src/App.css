@@ -420,7 +420,7 @@ body {
   float: left;
   font-size: 42px;
   line-height: normal;
-  padding: 5px 15px 0 33px;
+  margin: 5px 15px 0 33px;
 }
 
 .details-overview {
@@ -629,7 +629,7 @@ body {
   }
 
   .details p:nth-child(1)::first-letter {
-    padding: -3px 15px 0 33px;
+    margin: 0 10px -10px 33px;
   }
 
   .details-overview h2 {
