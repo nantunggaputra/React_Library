@@ -8,10 +8,10 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="audio-background">
-        <audio src="TheFatRat - Xenogenesis (Outro Song).mp3" autoPlay></audio>
         <audio
-          src="Heiji calling Conan Kudo in front of Ran.mp3"
+          src="Detective Conan feat TheFatRat - Xenogenesis (Outro Song).mp3"
           autoPlay
+          loop
         ></audio>
       </div>
       <div className="social-icons">
