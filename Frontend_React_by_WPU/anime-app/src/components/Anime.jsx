@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 function AnimeList({ anime, onSelectedAnime }) {
   return (
-    <li onClick={() => onSelectedAnime(anime)}>
+    <li tabIndex={anime.mal_id} onClick={() => onSelectedAnime(anime)}>
       {anime.images && anime.images.jpg && anime.images.jpg.large_image_url ? (
         <>
           <img

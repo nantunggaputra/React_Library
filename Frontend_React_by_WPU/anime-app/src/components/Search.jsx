@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 function NumResult({ count }) {
   return (
     <p className="search-results">
-      <span>\(≧▽≦)/</span> Subarashii, Sensei! Wee found this breathtaking{" "}
+      <span>\(≧▽≦)/</span> Subarashii, Sensei! Wee found breathtaking{" "}
       <strong>{count}</strong> anime...
     </p>
   );
@@ -30,7 +30,7 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
 
   return (
     <div className="search-container">
-      <audio ref={audioRef} src="There is Always Only One Truth.mp3" />
+      <audio ref={audioRef} src="../There is Always Only One Truth.mp3" />
       <input
         className="search"
         type="text"
@@ -46,6 +46,11 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
       <button className="search-btn" onClick={() => handleSearch()}>
         {loading ? "Please wait..." : "Search"}
       </button>
+      <div className="search-icon">
+        <a href="#">
+          <img src="../Conan Edogawa Search.png" alt=" "></img>
+        </a>
+      </div>
     </div>
   );
 }

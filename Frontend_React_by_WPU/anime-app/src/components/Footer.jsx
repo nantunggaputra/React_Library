@@ -7,6 +7,16 @@ import { SiReact } from "@icons-pack/react-simple-icons";
 export default function Footer() {
   return (
     <div className="footer">
+      <div className="audio-background">
+        <audio
+          src="../TheFatRat - Xenogenesis (Outro Song).mp3"
+          autoPlay
+        ></audio>
+        <audio
+          src="../Heiji calling Conan Kudo in front of Ran.mp3"
+          autoPlay
+        ></audio>
+      </div>
       <div className="social-icons">
         <a
           href="https://nantunggaputra.vercel.app/"

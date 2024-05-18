@@ -14,10 +14,17 @@ export default function AnimeDetail({ selectedAnime }) {
         selectedAnime.images.jpg &&
         selectedAnime.images.jpg.large_image_url &&
         selectedAnime.aired ? (
-          <img
-            src={selectedAnime.images.jpg.large_image_url}
-            alt={`${selectedAnime.title} Cover`}
-          />
+          <a
+            href={`https://myanimelist.net/search/all?q=${selectedAnime.title}&cat=all`}
+            title="Search in My Anime List"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            <img
+              src={selectedAnime.images.jpg.large_image_url}
+              alt={`${selectedAnime.title} Cover`}
+            />
+          </a>
         ) : (
           setTimeout(() => {
             alert("Sensei? What is the best anime for you? Let's Search");
