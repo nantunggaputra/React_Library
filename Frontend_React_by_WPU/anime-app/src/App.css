@@ -547,7 +547,6 @@ body {
 }
 
 .love-overview button {
-  padding-top: 0.5rem;
   border: none;
   border-radius: 0.5rem;
   background-color: var(--color-background-light);

@@ -103,7 +103,7 @@ export default function AnimeLove() {
     <div className="love">
       <div className="love-overview">
         <button tabIndex="up" onClick={handlePrev}>
-          ⯅
+          ⥣
         </button>
         <div className="love-image">
           <img
@@ -112,11 +112,11 @@ export default function AnimeLove() {
           />
         </div>
         <p>
-          Wee ♥︎{" "}
+          Wee ♡{" "}
           <span style={{ color: "#0377b9" }}>{images[currentIndex].title}</span>
         </p>
         <button className="arrow" tabIndex="down" onClick={handleNext}>
-          ⯆
+          ⥥
         </button>
       </div>
     </div>
