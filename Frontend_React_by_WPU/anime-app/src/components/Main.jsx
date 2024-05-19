@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import Anime from "./Anime";
 import AnimeDetail from "./AnimeDetail";
+import AnimeLove from "./AnimeLove";
 
 function ListBox({ animes, onSelectedAnime }) {
   const [isOpen1, setIsOpen1] = useState(true);
@@ -40,13 +41,16 @@ function SelectedBox({ selectedAnime }) {
 
 export default function Main({ animes, selectedAnime, onSelectedAnime }) {
   return (
-    <Fade durations={2000}>
-      <main className="main">
-        {animes.length > 0 && (
-          <ListBox animes={animes} onSelectedAnime={onSelectedAnime} />
-        )}
-        {selectedAnime && <SelectedBox selectedAnime={selectedAnime} />}
-      </main>
-    </Fade>
+    <>
+      <Fade durations={2000}>
+        <main className="main">
+          {animes.length > 0 && (
+            <ListBox animes={animes} onSelectedAnime={onSelectedAnime} />
+          )}
+          {selectedAnime && <SelectedBox selectedAnime={selectedAnime} />}
+        </main>
+      </Fade>
+      <AnimeLove />
+    </>
   );
 }
