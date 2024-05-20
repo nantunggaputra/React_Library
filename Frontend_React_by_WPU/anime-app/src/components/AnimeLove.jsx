@@ -100,25 +100,32 @@ export default function AnimeLove() {
   };
 
   return (
-    <div className="love">
-      <div className="love-overview">
-        <button tabIndex="up" onClick={handlePrev}>
-          ⥣
-        </button>
-        <div className="love-image">
-          <img
-            src={images[currentIndex].src}
-            alt={images[currentIndex].title}
-          />
-        </div>
-        <p>
-          Wee ♡{" "}
-          <span style={{ color: "#0377b9" }}>{images[currentIndex].title}</span>
-        </p>
-        <button className="arrow" tabIndex="down" onClick={handleNext}>
-          ⥥
-        </button>
+    <>
+      <div className="choice">
+        <h2>Editor&apos;s Choice Anime</h2>
       </div>
-    </div>
+      <div className="love">
+        <div className="love-overview">
+          <button tabIndex="up" onClick={handlePrev}>
+            ⥣
+          </button>
+          <div className="love-image">
+            <img
+              src={images[currentIndex].src}
+              alt={images[currentIndex].title}
+            />
+          </div>
+          <p>
+            Wee ♡{" "}
+            <span style={{ color: "#0377b9" }}>
+              {images[currentIndex].title}
+            </span>
+          </p>
+          <button className="arrow" tabIndex="down" onClick={handleNext}>
+            ⥥
+          </button>
+        </div>
+      </div>
+    </>
   );
 }

@@ -157,6 +157,10 @@ body {
   padding: 0 1rem;
 }
 
+.nav-bar .logo span {
+  transform: scale(0.6);
+}
+
 .nav-bar .logo h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2.6rem;
@@ -201,6 +205,9 @@ body {
 
 .nav-bar .links {
   display: block;
+  color: var(--color-red);
+  font-size: 1.2rem;
+  font-weight: 600;
   align-items: center;
   letter-spacing: 0.05px;
   margin-top: 0.5rem;
@@ -228,7 +235,7 @@ body {
   top: -11rem;
   left: 50%;
   transform: translateX(-50%);
-  height: 4rem;
+  height: 4.5rem;
   filter: brightness(0.65) contrast(0.85) grayscale(1);
   z-index: 2;
 }
@@ -239,6 +246,30 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.nav-bar .search-kanji {
+  position: absolute;
+  padding-right: 100%;
+  transform: scale(0.3);
+  opacity: 0;
+  z-index: -2;
+  animation: kanji 1s ease;
+}
+
+@keyframes kanji {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 0.1;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
 }
 
 .nav-bar .search {
@@ -526,10 +557,29 @@ body {
   gap: 0.8rem;
 }
 
+.box-separator {
+  display: block;
+  margin: auto;
+  width: 42rem;
+  max-width: 80vw;
+}
+
+.choice {
+  display: block;
+  margin: 2.4rem auto 0;
+  width: 42rem;
+  max-width: 80vw;
+  padding: 2rem 2.4rem;
+  background-color: var(--color-background-100);
+  border-radius: 1rem;
+  color: var(--color-background-light);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 .love {
   display: block;
-  margin: 2rem auto;
-  margin-bottom: 2rem;
+  margin: 2.4rem auto;
   width: 42rem;
   max-width: 80vw;
   height: 42rem;
@@ -549,6 +599,7 @@ body {
 .love-overview button {
   border: none;
   border-radius: 0.5rem;
+  padding: 0.2rem 0;
   background-color: var(--color-background-light);
   color: var(--color-red);
   font-size: 1.5rem;
@@ -725,6 +776,12 @@ body {
 
 /* MEDIA QUERY */
 
+@media (max-width: 1024px) {
+  .nav-bar .search-kanji {
+    padding: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .main {
     display: block;
@@ -773,12 +830,14 @@ body {
     font-size: 1.2rem;
   }
 
-  .love {
-    display: block;
-    margin: auto;
-    margin-bottom: 2rem;
+  .box-separator {
     min-width: 80vw;
-    z-index: -1;
+    height: 42rem;
+  }
+
+  .choice,
+  .love {
+    min-width: 80vw;
   }
 
   .separator img {
