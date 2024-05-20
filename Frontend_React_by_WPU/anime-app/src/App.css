@@ -254,7 +254,7 @@ body {
   transform: scale(0.3);
   opacity: 0;
   z-index: -2;
-  animation: kanji 1s ease;
+  animation: kanji 1s ease 0.1s;
 }
 
 @keyframes kanji {
@@ -579,7 +579,7 @@ body {
 
 .love {
   display: block;
-  margin: 2.4rem auto;
+  margin: 2rem auto;
   width: 42rem;
   max-width: 80vw;
   height: 42rem;
@@ -613,11 +613,31 @@ body {
 .love-image {
   min-height: 24rem;
   margin: 2rem auto 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .love-image img {
   max-height: 24rem;
   border-radius: 1rem;
+  z-index: 3;
+  position: relative;
+}
+
+.love-image img:hover {
+  z-index: 1;
+}
+
+.love-image canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.3rem 0.5rem;
+  pointer-events: none;
+  opacity: 0.8;
+  z-index: 2;
 }
 
 .love-overview p {
@@ -714,8 +734,17 @@ body {
 }
 
 .social-icons a:hover {
-  border-top: 2px solid var(--color-red);
-  border-left: 2px solid var(--color-red);
+  border-top: 2px solid #808080e8;
+  border-left: 2px solid #808080e8;
+}
+
+.footer h3 a {
+  position: absolute;
+  top: 2.5rem;
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
 }
 
 .footer p {

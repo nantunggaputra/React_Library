@@ -47,6 +47,15 @@ export default function Footer() {
           <SiReact color="#ffffff" size={24} />
         </a>
       </div>
+      <h3>
+        <a
+          href="https://nantunggaputra.github.io/HTML/"
+          target="_blank"
+          rel="noopener"
+        >
+          web<span>dev</span>el<span>op</span>er
+        </a>
+      </h3>
       <p>
         Created by{" "}
         <a
