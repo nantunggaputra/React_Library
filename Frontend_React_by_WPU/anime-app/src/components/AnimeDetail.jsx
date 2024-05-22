@@ -79,6 +79,16 @@ export default function AnimeDetail({ selectedAnime }) {
           </em>
           <br />
           <br />
+          <img
+            src="WeeBoo.ico"
+            style={{
+              width: "100%",
+              margin: "-7rem",
+              transform: "translateX(3rem) scale(1.3)",
+              opacity: "0.2",
+              filter: "grayscale(1)",
+            }}
+          />
           <p style={{ textAlign: "right" }}>
             <em>WeeBoo</em>
           </p>

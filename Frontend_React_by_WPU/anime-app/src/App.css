@@ -564,7 +564,8 @@ body {
   max-width: 80vw;
 }
 
-.choice {
+.choice,
+.featured {
   display: block;
   margin: 2.4rem auto 0;
   width: 42rem;
@@ -577,7 +578,8 @@ body {
   text-align: center;
 }
 
-.love {
+.love,
+.winter {
   display: block;
   margin: 2rem auto;
   width: 42rem;
@@ -585,7 +587,12 @@ body {
   height: 42rem;
 }
 
-.love-overview {
+.winter {
+  max-height: 32rem;
+}
+
+.love-overview,
+.winter-overview {
   width: 100%;
   height: 100%;
   padding: 2rem 2.4rem;
@@ -594,6 +601,10 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.winter-overview {
+  padding: 2rem 2.4rem 0;
 }
 
 .love-overview button {
@@ -610,25 +621,33 @@ body {
   color: var(--color-background-900);
 }
 
-.love-image {
+.love-image,
+.winter-image {
   min-height: 24rem;
   margin: 2rem auto 0;
   position: relative;
   overflow: hidden;
 }
 
-.love-image img {
+.winter-image {
+  margin: 0 auto;
+}
+
+.love-image img,
+.winter-image img {
   max-height: 24rem;
   border-radius: 1rem;
   z-index: 3;
   position: relative;
 }
 
-.love-image img:hover {
+.love-image img:hover,
+.winter-image img:hover {
   z-index: 1;
 }
 
-.love-image canvas {
+.love-image canvas,
+.winter-image canvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -640,7 +659,8 @@ body {
   z-index: 2;
 }
 
-.love-overview p {
+.love-overview p,
+.winter-overview p {
   margin: auto;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1.5rem;
@@ -865,7 +885,8 @@ body {
   }
 
   .choice,
-  .love {
+  .love,
+  .winter {
     min-width: 80vw;
   }
 

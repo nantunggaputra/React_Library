@@ -6,6 +6,7 @@ import { Fade } from "react-awesome-reveal";
 import Anime from "./Anime";
 import AnimeDetail from "./AnimeDetail";
 import AnimeLove from "./AnimeLove";
+import AnimeWinter from "./AnimeWinter";
 
 function ListBox({ animes, onSelectedAnime }) {
   const [isOpen1, setIsOpen1] = useState(true);
@@ -53,6 +54,7 @@ export default function Main({ animes, selectedAnime, onSelectedAnime }) {
         </main>
         {selectedAnime && <div className="box-separator"></div>}
         <AnimeLove />
+        <AnimeWinter />
       </Fade>
     </>
   );
