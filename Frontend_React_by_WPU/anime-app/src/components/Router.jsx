@@ -12,8 +12,8 @@ export default function Router() {
       <div className="toggle-div" onClick={handleToggle}>
         {showLinks ? (
           <div className="links">
-            <a href="">Home</a>|<a href="">Genre</a>|<a href="">Category</a>|
-            <a href="">Bstation</a>
+            <a>Home</a>|<a>Genre</a>|<a href="#choice">Favorite</a>|
+            <a href="#choose">Category</a>
           </div>
         ) : (
           <div className="arrow">▼</div>

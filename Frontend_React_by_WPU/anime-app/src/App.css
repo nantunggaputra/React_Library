@@ -219,7 +219,11 @@ body {
   color: var(--color-red);
   font-size: 1.2rem;
   font-weight: 600;
-  transition: color 0.3s;
+}
+
+.nav-bar .arrow:hover,
+.nav-bar .links a:hover {
+  color: var(--color-background-100);
 }
 
 .nav-bar .search-icon {
@@ -311,6 +315,10 @@ body {
   font-weight: 600;
   letter-spacing: 0.3px;
   cursor: pointer;
+}
+
+.nav-bar .search-btn:hover {
+  color: var(--color-background-100);
 }
 
 @keyframes blink {
@@ -440,6 +448,11 @@ body {
   font-size: 1.3rem;
 }
 
+.list.list-anime p:hover {
+  background-color: var(--color-red);
+  color: var(--color-background-light);
+}
+
 .list.list-movies li:hover {
   background-color: var(--color-background-100);
 }
@@ -565,7 +578,8 @@ body {
 }
 
 .choice,
-.featured {
+.featured,
+.choose {
   display: block;
   margin: 2.4rem auto 0;
   width: 42rem;
@@ -579,7 +593,8 @@ body {
 }
 
 .love,
-.winter {
+.winter,
+.category {
   display: block;
   margin: 2rem auto;
   width: 42rem;
@@ -591,8 +606,41 @@ body {
   max-height: 32rem;
 }
 
+.category-all {
+  display: block;
+  margin: -1rem auto 1rem;
+  width: 42rem;
+  max-width: 80vw;
+  padding: 1.5rem;
+  background-color: var(--color-background-100);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.category-all button {
+  padding: 0.5rem 1.3rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--color-background-light);
+  color: var(--color-red);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+}
+
+.category-all button:hover {
+  background-color: var(--color-red);
+  color: var(--color-background-light);
+}
+
 .love-overview,
-.winter-overview {
+.winter-overview,
+.category-overview {
   width: 100%;
   height: 100%;
   padding: 2rem 2.4rem;
@@ -607,7 +655,8 @@ body {
   padding: 2rem 2.4rem 0;
 }
 
-.love-overview button {
+.love-overview button,
+.category-overview button {
   border: none;
   border-radius: 0.5rem;
   padding: 0.2rem 0;
@@ -617,15 +666,24 @@ body {
   cursor: pointer;
 }
 
-.love-overview button:hover {
+.love-overview button:hover,
+.category-overview button:hover {
   color: var(--color-background-900);
 }
 
 .love-image,
-.winter-image {
+.winter-image,
+.category-image {
   min-height: 24rem;
   margin: 2rem auto 0;
   position: relative;
+  overflow: hidden;
+}
+
+.category-image {
+  min-height: 32rem;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -634,7 +692,8 @@ body {
 }
 
 .love-image img,
-.winter-image img {
+.winter-image img,
+.category-image img {
   max-height: 24rem;
   border-radius: 1rem;
   z-index: 3;
@@ -660,7 +719,8 @@ body {
 }
 
 .love-overview p,
-.winter-overview p {
+.winter-overview p,
+.category-overview p {
   margin: auto;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1.5rem;
@@ -694,6 +754,41 @@ body {
   filter: grayscale(1);
   max-width: 100%;
   opacity: 0.7;
+}
+
+.gototop {
+  position: fixed;
+  bottom: 2rem;
+  right: 0;
+  z-index: 1000;
+}
+
+.gototop .container {
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  box-shadow: 2rem 0 3rem var(--color-background-500);
+  background-color: var(--color-background-100);
+  border-radius: 1rem 0 0 1rem;
+  cursor: pointer;
+}
+
+.gototop .container a {
+  text-decoration: none;
+}
+
+.gototop .container button {
+  display: block;
+  margin: auto;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-background-900);
+  color: var(--color-text);
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .footer {
@@ -754,8 +849,8 @@ body {
 }
 
 .social-icons a:hover {
-  border-top: 2px solid #808080e8;
-  border-left: 2px solid #808080e8;
+  border-top: 2px solid #7f7f7fec;
+  border-left: 2px solid #7f7f7fec;
 }
 
 .footer h3 a {
@@ -784,11 +879,11 @@ body {
 }
 
 .footer a:hover span {
-  color: #3b969b;
+  color: #2e888d;
 }
 
 .footer a:hover {
-  color: #808080e8;
+  color: #7f7f7fec;
 }
 
 @keyframes fadein {
@@ -886,7 +981,11 @@ body {
 
   .choice,
   .love,
-  .winter {
+  .featured,
+  .winter,
+  .choose,
+  .category,
+  .category-all {
     min-width: 80vw;
   }
 

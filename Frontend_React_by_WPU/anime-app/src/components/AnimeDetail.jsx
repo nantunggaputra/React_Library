@@ -29,7 +29,7 @@ export default function AnimeDetail({ selectedAnime }) {
           setTimeout(() => {
             alert("Sensei? What is the best anime for you? Let's Search");
             window.location.reload();
-          })
+          }, 1000)
         )}
         <div className="details-overview">
           <h2>
@@ -85,8 +85,8 @@ export default function AnimeDetail({ selectedAnime }) {
               width: "100%",
               margin: "-7rem",
               transform: "translateX(3rem) scale(1.3)",
-              opacity: "0.2",
-              filter: "grayscale(1)",
+              opacity: "0.1",
+              filter: "grayscale(1) brightness(0.5) contrast(2)",
             }}
           />
           <p style={{ textAlign: "right" }}>

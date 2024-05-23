@@ -67,6 +67,13 @@ export default function App() {
       />
       <Separator />
       <Footer />
+      <div className="gototop">
+        <div className="container">
+          <a href="#">
+            <button>🠅</button>
+          </a>
+        </div>
+      </div>
     </>
   );
 }

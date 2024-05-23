@@ -261,7 +261,7 @@ export default function AnimeLove() {
 
   return (
     <>
-      <div className="choice">
+      <div id="choice" className="choice">
         <h2>
           <span style={{ color: "#d372b8" }}>Editor&apos;s</span> Choice Anime
         </h2>
