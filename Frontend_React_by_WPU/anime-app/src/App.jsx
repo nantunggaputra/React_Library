@@ -70,7 +70,7 @@ export default function App() {
       <div className="gototop">
         <div className="container">
           <a href="#">
-            <button>🠅</button>
+            <button>^</button>
           </a>
         </div>
       </div>

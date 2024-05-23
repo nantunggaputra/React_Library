@@ -782,6 +782,7 @@ body {
   margin: auto;
   width: 2rem;
   height: 2rem;
+  padding-top: 0.2rem;
   border-radius: 50%;
   border: none;
   background-color: var(--color-background-900);
