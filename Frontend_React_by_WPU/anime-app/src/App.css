@@ -181,8 +181,8 @@ body {
 }
 
 .nav-bar .arrow {
-  margin-top: 0.1rem;
-  font-size: 1.7rem;
+  margin-top: 0.2rem;
+  font-size: 1.55rem;
   color: var(--color-red);
 }
 
@@ -223,7 +223,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   height: 4.5rem;
-  filter: brightness(0.65) contrast(0.85) grayscale(1);
+  filter: brightness(0.25) contrast(0.85) grayscale(1);
   z-index: 2;
 }
 
@@ -401,7 +401,7 @@ body {
   border-radius: 50%;
   border: none;
   background-color: var(--color-background-900);
-  color: var(--color-text);
+  color: var(--color-background-light);
   font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
@@ -612,7 +612,7 @@ body {
 }
 
 .category {
-  margin: 2rem auto 8rem;
+  margin: 2rem auto 7rem;
 }
 
 .category-all {
@@ -796,7 +796,7 @@ body {
   border-radius: 50%;
   border: none;
   background-color: var(--color-background-900);
-  color: var(--color-text);
+  color: var(--color-background-light);
   font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
@@ -829,7 +829,7 @@ body {
   border-radius: 50%;
   border: none;
   background-color: var(--color-background-900);
-  color: var(--color-text);
+  color: var(--color-background-light);
   font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
@@ -986,7 +986,7 @@ body {
   .aside.right {
     max-width: 42rem;
     right: 0;
-    margin-bottom: 12rem;
+    margin-bottom: 8rem;
   }
 }
 
