@@ -52,11 +52,11 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
           }
         }}
       />
-      <button className="search-btn" onClick={() => handleSearch()}>
+      <button className="search-btn" onClick={handleSearch}>
         {loading ? "Please wait..." : "Search"}
       </button>
       <div className="search-icon">
-        <img src="Conan Edogawa Search.png" alt=" "></img>
+        <img src="Conan Edogawa Search.png" alt=" " />
       </div>
     </div>
   );

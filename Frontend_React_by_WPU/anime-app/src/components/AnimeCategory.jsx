@@ -22,7 +22,6 @@ export default function AnimeByCategory() {
           `https://api.jikan.moe/v4/top/characters`);
 
       const response = await axios.get(url);
-      console.log(response.data);
       if (response.data.data) {
         setAnimeList(response.data.data);
         setCurrentIndex(0);

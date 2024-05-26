@@ -84,14 +84,14 @@ export default function AnimeDetail({ selectedAnime }) {
             style={{
               width: "100%",
               margin: "-7rem",
-              transform: "translateX(3rem) scale(1.3)",
+              transform: "translateX(3rem) scale(3)",
               opacity: "0.1",
               filter: "grayscale(1) brightness(0.5) contrast(2)",
             }}
           />
-          <p style={{ textAlign: "right" }}>
-            <em>WeeBoo</em>
-          </p>
+        </p>
+        <p style={{ textAlign: "right" }}>
+          <em>WeeBoo</em>
         </p>
       </section>
     </div>

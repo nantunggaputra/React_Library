@@ -14,22 +14,6 @@
   --color-orange: #fcbe14;
 }
 
-::-webkit-scrollbar {
-  width: 9px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary-light);
-  border-radius: 20px;
-  border: transparent;
-}
-
-::-webkit-scrollbar-corner {
-  background-color: transparent;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -45,7 +29,8 @@ body {
   color: var(--color-text);
   background-color: var(--color-background-900);
   padding: 2.4rem;
-  animation: change 120s infinite 2.7s;
+  animation: change 600s infinite 2.7s;
+  overflow-x: hidden;
 }
 
 @keyframes change {
@@ -57,8 +42,6 @@ body {
       var(--color-background-100),
       var(--color-text)
     );
-    background-size: auto;
-    background-position: center;
   }
 }
 
@@ -362,6 +345,30 @@ body {
   }
 }
 
+/* Aside */
+
+.aside {
+  width: 100%;
+  height: 50rem;
+  top: 95rem;
+  position: absolute;
+  background: #e1e8ed25;
+  border-radius: 1rem;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(0.8rem);
+  z-index: -1;
+}
+
+.aside.left {
+  max-width: 45rem;
+  left: -2rem;
+}
+
+.aside.right {
+  max-width: 45rem;
+  right: -2rem;
+}
+
 /* Main */
 
 .main {
@@ -380,7 +387,7 @@ body {
   background-color: var(--color-background-100);
   border-bottom: 2.5rem solid var(--color-background-100);
   border-radius: 1rem;
-  overflow: scroll;
+  overflow: auto;
   scrollbar-color: var(--color-orange) transparent;
   position: relative;
 }
@@ -404,7 +411,7 @@ body {
 .list {
   list-style: none;
   padding: 0.8rem 0;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .list-watched {
@@ -498,8 +505,6 @@ body {
 .btn-delete:hover {
   background-color: var(--color-red-dark);
 }
-
-/* ******* */
 
 .details {
   line-height: 1.4;
@@ -705,8 +710,7 @@ body {
   z-index: 1;
 }
 
-.love-image canvas,
-.winter-image canvas {
+.love-image canvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -728,6 +732,8 @@ body {
   text-align: center;
   color: var(--color-red);
 }
+
+/* Accessories */
 
 .separator {
   margin: 4rem auto 1rem;
@@ -791,6 +797,8 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* Footer */
 
 .footer {
   margin: 4rem auto 1rem;
@@ -920,6 +928,32 @@ body {
 }
 
 /* MEDIA QUERY */
+
+@media (max-width: 1280px) {
+  .aside {
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-bottom: 2rem;
+    width: 80vw;
+    max-width: 42rem;
+    max-height: 55rem;
+    height: 50rem;
+    top: 7rem;
+    z-index: 1;
+  }
+
+  .aside.left {
+    max-width: 42rem;
+    left: 0;
+  }
+
+  .aside.right {
+    max-width: 42rem;
+    right: 0;
+    margin-bottom: 10rem;
+  }
+}
 
 @media (max-width: 1024px) {
   .nav-bar .search-kanji {

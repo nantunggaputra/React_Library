@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import Separator from "./components/Separator";
+import Aside from "./components/Aside";
 
 const animesData = [
   {
@@ -65,6 +66,7 @@ export default function App() {
         selectedAnime={selectedAnime}
         onSelectedAnime={handleSelectedAnime}
       />
+      <Aside />
       <Separator />
       <Footer />
       <div className="gototop">
