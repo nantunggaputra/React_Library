@@ -939,7 +939,7 @@ body {
     max-width: 42rem;
     max-height: 55rem;
     height: 50rem;
-    top: 7rem;
+    top: 8rem;
     z-index: 1;
   }
 
@@ -951,7 +951,7 @@ body {
   .aside.right {
     max-width: 42rem;
     right: 0;
-    margin-bottom: 10rem;
+    margin-bottom: 12rem;
   }
 }
 
