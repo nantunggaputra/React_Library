@@ -189,6 +189,7 @@ body {
 }
 
 .nav-bar .arrow {
+  margin-top: 0.2rem;
   font-size: 1.55rem;
   color: var(--color-red);
 }
@@ -801,6 +802,7 @@ body {
   margin: auto;
   width: 2rem;
   height: 2rem;
+  padding-top: -0.2rem;
   border-radius: 50%;
   border: none;
   background-color: var(--color-background-900);
@@ -1003,6 +1005,7 @@ body {
 .foot-menu .left-menu a {
   color: var(--color-background-light);
   text-decoration: none;
+  font-weight: 900;
 }
 
 .foot-menu .left-menu p {
@@ -1024,7 +1027,7 @@ body {
 }
 
 .foot-menu .right-menu input {
-  width: 24rem;
+  width: 22rem;
   padding: 0.2rem 0.5rem;
   margin: 0 0.5rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -1038,11 +1041,11 @@ body {
 }
 
 .foot-menu .right-menu button {
-  margin-left: 0.2rem;
+  margin-left: 0.1rem;
   border: none;
   background-color: transparent;
-  filter: grayscale(1) brightness(1.2);
-  transform: scale(1.2);
+  filter: grayscale(1) brightness(1.1);
+  transform: scale(1.1);
   cursor: pointer;
 }
 

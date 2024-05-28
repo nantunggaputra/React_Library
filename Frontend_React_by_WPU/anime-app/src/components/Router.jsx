@@ -16,7 +16,7 @@ export default function Router() {
             <a href="#choose">Category</a>
           </div>
         ) : (
-          <div className="arrow">⯆</div>
+          <div className="arrow">▼</div>
         )}
       </div>
     </div>

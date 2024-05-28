@@ -31,17 +31,17 @@ export default function Footer() {
       <div className="gototop">
         <div className="container">
           <a href="#">
-            <button title="Go to top">🠅</button>
+            <button title="Go to top">⥣</button>
           </a>
         </div>
       </div>
       <div className="music">
         <div className="container">
           <button
-            title={isPlaying ? "Pause Backsound" : "Play Backsound"}
+            title={isPlaying ? "Backsound on" : "Backsound off"}
             onClick={togglePlayPause}
           >
-            {isPlaying ? "♪" : "⯈"}
+            {isPlaying ? "♪" : "!"}
           </button>
         </div>
       </div>
@@ -124,7 +124,7 @@ export default function Footer() {
               <small
                 style={{
                   textTransform: "none",
-                  color: "#7f7f7fec",
+                  color: "#868686",
                   cursor: "text",
                 }}
               >
@@ -135,7 +135,7 @@ export default function Footer() {
               <p>About Us</p>
               <p>Contact Us</p>
               <p className="fs">Fans Screening</p>
-              <p className="afa">Anime Festival Asia (AFA)</p>
+              <p className="afa">Anime Festival Asia (ID)</p>
             </div>
             <div>
               <p>Sitemap</p>
@@ -146,6 +146,7 @@ export default function Footer() {
           <div className="right-menu">
             <p
               style={{
+                fontSize: "1.4rem",
                 textTransform: "none",
                 textAlign: "right",
                 margin: "0.4rem 0",
@@ -154,11 +155,7 @@ export default function Footer() {
               Subscribe to anime newsletter
             </p>
             <form onSubmit={handleSubmit}>
-              <input
-                type="email"
-                placeholder="Sensei! Submit your email"
-                required
-              />
+              <input type="email" required />
               <button type="submit" title="Submit (Demo)">
                 &#128276;
               </button>
