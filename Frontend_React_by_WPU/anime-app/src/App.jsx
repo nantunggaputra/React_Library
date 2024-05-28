@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
@@ -56,9 +57,7 @@ export default function App() {
 
   return (
     <>
-      <div className="background-container">
-        <div className="clouds"></div>
-      </div>
+      <Background />
       <Navbar fetchAnime={fetchAnime} />
       <Main
         animes={animes}
@@ -69,13 +68,6 @@ export default function App() {
       <Aside />
       <Separator />
       <Footer />
-      <div className="gototop">
-        <div className="container">
-          <a href="#">
-            <button>^</button>
-          </a>
-        </div>
-      </div>
     </>
   );
 }

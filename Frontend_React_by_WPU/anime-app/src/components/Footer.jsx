@@ -22,11 +22,27 @@ export default function Footer() {
     }
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <>
+      <div className="gototop">
+        <div className="container">
+          <a href="#">
+            <button title="Go to top">🠅</button>
+          </a>
+        </div>
+      </div>
       <div className="music">
         <div className="container">
-          <button onClick={togglePlayPause}>{isPlaying ? "♪" : "~"}</button>
+          <button
+            title={isPlaying ? "Pause Backsound" : "Play Backsound"}
+            onClick={togglePlayPause}
+          >
+            {isPlaying ? "♪" : "⯈"}
+          </button>
         </div>
       </div>
       <div className="footer">
@@ -91,6 +107,64 @@ export default function Footer() {
           </a>{" "}
           | &copy;2024
         </p>
+      </div>
+      <div className="foot">
+        <div className="foot-menu">
+          <div className="left-menu">
+            <div>
+              <h2>
+                <a
+                  href="https://nantunggaputra.github.io/HTML/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  WEBDEVELOPER
+                </a>
+              </h2>
+              <small
+                style={{
+                  textTransform: "none",
+                  color: "#7f7f7fec",
+                  cursor: "text",
+                }}
+              >
+                anggunnantunggaputra@gmail.com
+              </small>
+              <br />
+              <br />
+              <p>About Us</p>
+              <p>Contact Us</p>
+              <p className="fs">Fans Screening</p>
+              <p className="afa">Anime Festival Asia (AFA)</p>
+            </div>
+            <div>
+              <p>Sitemap</p>
+              <p>Privacy Policy</p>
+              <p>Terms & Conditions</p>
+            </div>
+          </div>
+          <div className="right-menu">
+            <p
+              style={{
+                textTransform: "none",
+                textAlign: "right",
+                margin: "0.4rem 0",
+              }}
+            >
+              Subscribe to anime newsletter
+            </p>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="email"
+                placeholder="Sensei! Submit your email"
+                required
+              />
+              <button type="submit" title="Submit (Demo)">
+                &#128276;
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </>
   );
