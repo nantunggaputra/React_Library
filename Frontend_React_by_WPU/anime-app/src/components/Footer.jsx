@@ -31,7 +31,7 @@ export default function Footer() {
       <div className="gototop">
         <div className="container">
           <a href="#">
-            <button title="Go to top">⥣</button>
+            <button title="Go to top">⇑</button>
           </a>
         </div>
       </div>
@@ -41,7 +41,7 @@ export default function Footer() {
             title={isPlaying ? "Backsound on" : "Backsound off"}
             onClick={togglePlayPause}
           >
-            {isPlaying ? "♪" : "!"}
+            {isPlaying ? "♪" : "ᯤ"}
           </button>
         </div>
       </div>
@@ -138,7 +138,8 @@ export default function Footer() {
               <p className="afa">Anime Festival Asia (ID)</p>
             </div>
             <div>
-              <p>Sitemap</p>
+              <p className="rss">RSS</p>
+              <p className="sitemap">Sitemap</p>
               <p>Privacy Policy</p>
               <p>Terms & Conditions</p>
             </div>
@@ -148,7 +149,7 @@ export default function Footer() {
               style={{
                 fontSize: "1.4rem",
                 textTransform: "none",
-                textAlign: "right",
+                letterSpacing: "1.14px",
                 margin: "0.4rem 0",
               }}
             >

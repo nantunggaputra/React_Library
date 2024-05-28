@@ -778,7 +778,7 @@ body {
 
 .gototop {
   position: fixed;
-  bottom: 2rem;
+  bottom: 3.35rem;
   right: 0;
   z-index: 1000;
 }
@@ -814,7 +814,7 @@ body {
 
 .music {
   position: fixed;
-  bottom: 2rem;
+  bottom: 3.35rem;
   left: 0;
   z-index: 1000;
 }
@@ -991,7 +991,7 @@ body {
   letter-spacing: 1.25px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 3rem 2rem;
+  padding: 3rem;
   cursor: pointer;
 }
 
@@ -1040,6 +1040,10 @@ body {
   border-radius: 0.5rem;
 }
 
+.foot-menu .right-menu {
+  text-align: right;
+}
+
 .foot-menu .right-menu button {
   margin-left: 0.1rem;
   border: none;
@@ -1086,6 +1090,11 @@ body {
 @media (max-width: 926px) {
   .foot-menu .left-menu {
     display: block;
+  }
+
+  .foot-menu .left-menu .rss,
+  .foot-menu .left-menu .sitemap {
+    display: none;
   }
 }
 
@@ -1168,9 +1177,12 @@ body {
 
   .foot-menu .right-menu {
     margin-top: 4rem;
+    text-align: center;
   }
 
-  .foot-menu .right-menu form {
-    text-align: right;
+  .foot-menu .right-menu button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
   }
 }
