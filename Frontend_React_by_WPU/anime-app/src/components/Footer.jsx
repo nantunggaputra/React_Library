@@ -162,6 +162,7 @@ export default function Footer() {
               </button>
             </form>
           </div>
+          <img src="./Kaito Kid Logo 3D.png" alt=" " />
         </div>
       </div>
     </>

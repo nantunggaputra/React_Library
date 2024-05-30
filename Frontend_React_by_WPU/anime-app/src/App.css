@@ -93,7 +93,7 @@ body {
 }
 
 .clouds {
-  width: 100%;
+  width: 300%;
   height: 100%;
   background: transparent url("../Clouds.png");
   position: absolute;
@@ -375,6 +375,15 @@ body {
 .aside.right {
   max-width: 45rem;
   right: -2rem;
+}
+
+.aside.right img {
+  top: 3rem;
+  right: 3rem;
+  position: absolute;
+  transform: scale(1.1);
+  filter: contrast(0.7);
+  opacity: 0.25;
 }
 
 /* Main */
@@ -975,6 +984,7 @@ body {
   margin: 3rem auto 0;
   max-width: 94rem;
   padding: 1rem 3.2rem;
+  position: relative;
 }
 
 .foot-menu {
@@ -1053,6 +1063,15 @@ body {
   cursor: pointer;
 }
 
+.foot-menu img {
+  position: absolute;
+  right: -1.5rem;
+  bottom: -3.5rem;
+  transform: scale(0.45);
+  filter: grayscale(1);
+  opacity: 0.9;
+}
+
 /* Media Query */
 
 @media (max-width: 1280px) {
@@ -1079,11 +1098,22 @@ body {
     right: 0;
     margin-bottom: 8rem;
   }
+
+  .aside.right img {
+    top: 8rem;
+    right: -6rem;
+    transform: scale(0.8);
+  }
 }
 
 @media (max-width: 1024px) {
   .nav-bar .search-kanji {
     padding: 0;
+  }
+
+  .foot-menu .left-menu .rss,
+  .foot-menu .left-menu .sitemap {
+    display: none;
   }
 }
 
@@ -1184,5 +1214,9 @@ body {
     display: block;
     width: 100%;
     padding: 0.5rem;
+  }
+
+  .foot-menu img {
+    top: 7rem;
   }
 }
