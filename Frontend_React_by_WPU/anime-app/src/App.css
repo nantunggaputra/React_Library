@@ -93,7 +93,7 @@ body {
 }
 
 .clouds {
-  width: 300%;
+  width: 125%;
   height: 100%;
   background: transparent url("../Clouds.png");
   position: absolute;
@@ -1100,9 +1100,7 @@ body {
   }
 
   .aside.right img {
-    top: 8rem;
-    right: -6rem;
-    transform: scale(0.8);
+    display: none;
   }
 }
 
@@ -1217,6 +1215,6 @@ body {
   }
 
   .foot-menu img {
-    top: 7rem;
+    display: none;
   }
 }
