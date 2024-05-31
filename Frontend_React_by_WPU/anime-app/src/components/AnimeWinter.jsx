@@ -32,7 +32,7 @@ export default function AnimeWinter() {
     <>
       <div className="featured">
         <h2>
-          <span style={{ color: "#d372b8" }}>Featured</span> Winter Anime
+          <span style={{ color: "#d372b8" }}>Featured</span> in Winter Anime
         </h2>
       </div>
       <div className="winter">

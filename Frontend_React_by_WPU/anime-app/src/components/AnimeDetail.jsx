@@ -86,7 +86,7 @@ export default function AnimeDetail({ selectedAnime }) {
               margin: "-7rem",
               transform: "translateX(3rem) scale(2.5)",
               opacity: "0.05",
-              filter: "grayscale(1) brightness(0.5) contrast(1.5)",
+              filter: "grayscale(1) brightness(0.75) contrast(2.75)",
             }}
           />
         </p>

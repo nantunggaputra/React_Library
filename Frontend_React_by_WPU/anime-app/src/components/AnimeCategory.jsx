@@ -78,7 +78,7 @@ export default function AnimeByCategory() {
               color: "#e1e8ed",
               position: "absolute",
               left: "50%",
-              transform: "translateX(-50%) translateY(18rem)",
+              transform: "translateX(-50%) translateY(22rem)",
             }}
           >
             {selectedCategory

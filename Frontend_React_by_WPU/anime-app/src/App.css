@@ -29,23 +29,23 @@ body {
   color: var(--color-text);
   background-color: var(--color-background-900);
   padding: 2.4rem;
-  animation: change 1800s infinite 6s;
   overflow-x: hidden;
+}
+
+.body-transition {
+  animation: change 180s infinite 6s;
 }
 
 @keyframes change {
   0% {
     background-color: var(--color-background-900);
   }
-  25% {
+  50% {
     background-image: linear-gradient(
       var(--color-background-100),
-      var(--color-text),
+      #eeeeee,
       var(--color-text)
     );
-  }
-  50% {
-    background-color: var(--color-background-900);
   }
   100% {
     background-color: var(--color-background-900);
@@ -93,10 +93,10 @@ body {
 }
 
 .clouds {
-  width: 125%;
-  height: 100%;
+  width: 120%;
+  height: 120%;
   background: transparent url("../Clouds.png");
-  position: absolute;
+  position: fixed;
   opacity: 0;
   animation: move 25s ease-in-out infinite;
 }
@@ -248,7 +248,7 @@ body {
   padding-right: 100%;
   transform: scale(0.3);
   opacity: 0;
-  z-index: -2;
+  z-index: 1000;
   animation: kanji 1s ease 0.1s;
 }
 
@@ -358,7 +358,7 @@ body {
 .aside {
   width: 100%;
   height: 50rem;
-  top: 95rem;
+  top: 102.25rem;
   position: absolute;
   background: #e1e8ed25;
   border-radius: 1rem;
@@ -384,6 +384,28 @@ body {
   transform: scale(1.1);
   filter: contrast(0.7);
   opacity: 0.25;
+  animation: invert 180s infinite 4.25s;
+}
+
+@keyframes invert {
+  0% {
+    opacity: 0.25;
+  }
+  12.5% {
+    opacity: 0.25;
+  }
+  20% {
+    opacity: 0.05;
+  }
+  62.5% {
+    opacity: 0.05;
+  }
+  70% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0.25;
+  }
 }
 
 /* Main */
@@ -482,7 +504,8 @@ body {
 }
 
 .list img {
-  width: 100%;
+  margin-left: -1rem;
+  width: 150%;
   grid-row: 1 / -1;
 }
 
@@ -603,7 +626,7 @@ body {
 .featured,
 .choose {
   display: block;
-  margin: 2.4rem auto 0;
+  margin: 2.4rem auto -1rem;
   width: 42rem;
   max-width: 80vw;
   padding: 2rem 2.4rem;
@@ -621,11 +644,11 @@ body {
   margin: 2rem auto;
   width: 42rem;
   max-width: 80vw;
-  height: 42rem;
+  height: 50rem;
 }
 
 .winter {
-  max-height: 32rem;
+  max-height: 40rem;
 }
 
 .category {
@@ -700,14 +723,14 @@ body {
 .love-image,
 .winter-image,
 .category-image {
-  min-height: 24rem;
+  min-height: 32rem;
   margin: 2rem auto 0;
   position: relative;
   overflow: hidden;
 }
 
 .category-image {
-  min-height: 32rem;
+  min-height: 39rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -720,10 +743,12 @@ body {
 .love-image img,
 .winter-image img,
 .category-image img {
-  max-height: 24rem;
+  min-height: 32rem;
+  max-height: 32rem;
   border-radius: 1rem;
   z-index: 3;
   position: relative;
+  cursor: pointer;
 }
 
 .love-image img:hover,
@@ -739,7 +764,7 @@ body {
   height: 100%;
   padding: 0.3rem 0.5rem;
   pointer-events: none;
-  opacity: 0.8;
+  opacity: 0.95;
   z-index: 2;
 }
 
@@ -752,6 +777,7 @@ body {
   font-weight: 600;
   text-align: center;
   color: var(--color-red);
+  cursor: pointer;
 }
 
 /* Accessories */
@@ -811,7 +837,9 @@ body {
   margin: auto;
   width: 2rem;
   height: 2rem;
-  padding-top: -0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   border: none;
   background-color: var(--color-background-900);
@@ -821,14 +849,26 @@ body {
   cursor: pointer;
 }
 
-.music {
+.music,
+.transitions,
+.animations {
   position: fixed;
   bottom: 3.35rem;
   left: 0;
   z-index: 1000;
 }
 
-.music .container {
+.transitions {
+  bottom: 13.35rem;
+}
+
+.animations {
+  bottom: 8.35rem;
+}
+
+.music .container,
+.transitions .container,
+.animations .container {
   width: 4rem;
   height: 4rem;
   padding: 1rem;
@@ -838,11 +878,15 @@ body {
   cursor: pointer;
 }
 
-.music .container button {
-  display: block;
+.music .container button,
+.transitions .container button,
+.animations .container button {
   margin: auto;
   width: 2rem;
   height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   border: none;
   background-color: var(--color-background-900);
@@ -1044,10 +1088,11 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   outline-style: none;
-  background-color: #7f7f7fec;
+  background-color: #767676;
   color: var(--color-background-100);
   border: none;
   border-radius: 0.5rem;
+  opacity: 0.85;
 }
 
 .foot-menu .right-menu {
@@ -1065,11 +1110,11 @@ body {
 
 .foot-menu img {
   position: absolute;
-  right: -1.5rem;
-  bottom: -3.5rem;
+  right: -7.5rem;
+  top: -3.5rem;
   transform: scale(0.45);
-  filter: grayscale(1);
-  opacity: 0.9;
+  filter: grayscale(1) contrast(1.15);
+  opacity: 0.85;
 }
 
 /* Media Query */
@@ -1079,12 +1124,12 @@ body {
     display: block;
     position: relative;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 2.4rem;
     width: 80vw;
     max-width: 42rem;
     max-height: 55rem;
     height: 50rem;
-    top: 3rem;
+    top: 5.5rem;
     z-index: 1;
   }
 
@@ -1121,7 +1166,8 @@ body {
   }
 
   .foot-menu .left-menu .rss,
-  .foot-menu .left-menu .sitemap {
+  .foot-menu .left-menu .sitemap,
+  .foot-menu img {
     display: none;
   }
 }

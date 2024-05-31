@@ -38,7 +38,7 @@ export default function Footer() {
       <div className="music">
         <div className="container">
           <button
-            title={isPlaying ? "Backsound on" : "Backsound off"}
+            title={isPlaying ? "Backsound on (Outro Song)" : "Backsound off"}
             onClick={togglePlayPause}
           >
             {isPlaying ? "♪" : "ᯤ"}
@@ -124,7 +124,7 @@ export default function Footer() {
               <small
                 style={{
                   textTransform: "none",
-                  color: "#868686",
+                  color: "#767676",
                   cursor: "text",
                 }}
               >
@@ -145,24 +145,27 @@ export default function Footer() {
             </div>
           </div>
           <div className="right-menu">
-            <p
-              style={{
-                fontSize: "1.4rem",
-                textTransform: "none",
-                letterSpacing: "1.14px",
-                margin: "0.4rem 0",
-              }}
-            >
-              Subscribe to anime newsletter
-            </p>
             <form onSubmit={handleSubmit}>
-              <input type="email" required />
-              <button type="submit" title="Submit (Demo)">
+              <label htmlFor="subs">
+                <p
+                  style={{
+                    fontSize: "1.4rem",
+                    textTransform: "none",
+                    letterSpacing: "1.14px",
+                    margin: "0.4rem 0",
+                    cursor: "pointer",
+                  }}
+                >
+                  Subscribe to anime newsletter
+                </p>
+              </label>
+              <input type="email" id="subs" required />
+              <button type="submit" title="Subscribe">
                 &#128276;
+                <img src="./Kaito Kid Logo 3D.png" alt=" " />
               </button>
             </form>
           </div>
-          <img src="./Kaito Kid Logo 3D.png" alt=" " />
         </div>
       </div>
     </>
