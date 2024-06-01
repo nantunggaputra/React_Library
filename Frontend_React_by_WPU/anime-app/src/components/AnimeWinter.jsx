@@ -41,7 +41,7 @@ export default function AnimeWinter() {
             <img src={image[0].src} alt={image[0].title} />
           </div>
           <p>
-            <span style={{ color: "#0377b9" }}>{image[0].title}</span>
+            <span>{image[0].title}</span>
           </p>
         </div>
       </div>

@@ -79,6 +79,7 @@ export default function AnimeByCategory() {
               position: "absolute",
               left: "50%",
               transform: "translateX(-50%) translateY(22rem)",
+              cursor: "default",
             }}
           >
             {selectedCategory
@@ -110,7 +111,7 @@ export default function AnimeByCategory() {
                         animeList[currentIndex].name
                       }
                     />
-                    <p style={{ color: "#0377b9" }}>
+                    <p>
                       {animeList[currentIndex].title ||
                         animeList[currentIndex].name}
                     </p>

@@ -263,7 +263,7 @@ export default function AnimeLove() {
     <>
       <div id="choice" className="choice">
         <h2>
-          <span style={{ color: "#d372b8" }}>Editor&apos;s</span> Choice Anime
+          <span style={{ color: "#0377b9" }}>Editor</span>&apos;s Choice Anime
         </h2>
       </div>
       <div className="love">
@@ -281,10 +281,8 @@ export default function AnimeLove() {
             />
           </div>
           <p>
-            Wee ♡{" "}
-            <span style={{ color: "#0377b9" }}>
-              {images[currentIndex].title}
-            </span>
+            <span style={{ color: "#d372b8" }}>Wee ♡ </span>
+            {images[currentIndex].title}
           </p>
           <button className="arrow" tabIndex="down" onClick={handleNext}>
             ⥥

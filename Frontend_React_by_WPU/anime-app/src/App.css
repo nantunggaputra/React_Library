@@ -142,35 +142,43 @@ body {
 }
 
 .nav-bar .logo span {
-  font-size: 3.2rem;
+  font-size: 3rem;
   padding: 0 1rem;
-}
-
-.nav-bar .logo span {
-  transform: scale(0.6);
+  transform: scale(0.65);
 }
 
 .nav-bar .logo h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 2.6rem;
+  font-size: 3.5rem;
   font-weight: 600;
   text-align: center;
   color: var(--color-background-light);
+  animation: lamp 1s ease infinite;
 }
 
 .nav-bar .logo h1 span {
   padding: 0;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 2.6rem;
+  font-size: 3.25rem;
   font-weight: 600;
   text-align: center;
   color: var(--color-red);
 }
 
-.nav-bar .logo:hover,
-.nav-bar .logo h1:hover {
-  text-shadow: 0 -2px 5px var(--color-background-light);
-  transition-duration: 0.3s;
+.nav-bar .logo:hover h1 {
+  animation: none;
+}
+
+@keyframes lamp {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 -2px 5px var(--color-background-light);
+  }
+  100% {
+    text-shadow: none;
+  }
 }
 
 .nav-bar .container {
@@ -275,7 +283,7 @@ body {
   font-size: 1.6rem;
   border-radius: 0.5rem;
   width: 40rem;
-  max-width: 85vw;
+  max-width: 80vw;
   transition: all 0.3s;
   color: var(--color-background-light);
   background-color: var(--color-primary-light);
@@ -293,7 +301,7 @@ body {
   outline: none;
   animation: none;
   box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px) scale(1.03);
+  transform: translateY(-2px) scaleX(0.975);
 }
 
 .nav-bar .search-btn {
@@ -635,6 +643,7 @@ body {
   color: var(--color-background-light);
   font-size: 1.2rem;
   text-align: center;
+  cursor: default;
 }
 
 .love,
@@ -729,15 +738,15 @@ body {
   overflow: hidden;
 }
 
+.winter-image {
+  margin: 0 auto;
+}
+
 .category-image {
   min-height: 39rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-}
-
-.winter-image {
-  margin: 0 auto;
 }
 
 .love-image img,
@@ -778,6 +787,16 @@ body {
   text-align: center;
   color: var(--color-red);
   cursor: pointer;
+}
+
+.love-overview p {
+  color: var(--color-primary-light);
+}
+
+.love-overview p:hover,
+.winter-overview p:hover,
+.category-overview p:hover {
+  color: var(--color-background-light);
 }
 
 /* Accessories */
@@ -912,7 +931,7 @@ body {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  cursor: pointer;
+  cursor: default;
 }
 
 .footer:hover::before {
@@ -1046,7 +1065,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   padding: 3rem;
-  cursor: pointer;
+  cursor: default;
 }
 
 .foot-menu .left-menu {
@@ -1065,6 +1084,7 @@ body {
 .foot-menu .left-menu p {
   margin-top: 0.5rem;
   font-size: 1.4rem;
+  cursor: pointer;
 }
 
 .foot-menu .left-menu a:hover,
