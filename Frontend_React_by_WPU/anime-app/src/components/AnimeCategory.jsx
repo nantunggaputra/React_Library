@@ -53,6 +53,18 @@ export default function AnimeByCategory() {
     );
   };
 
+  let currentRank = "";
+
+  if (currentIndex + 1 == 1 || currentIndex + 1 == 21) {
+    currentRank = "ˢᵗ";
+  } else if (currentIndex + 1 == 2 || currentIndex + 1 == 22) {
+    currentRank = "ⁿᵈ";
+  } else if (currentIndex + 1 == 3 || currentIndex + 1 == 23) {
+    currentRank = "ʳᵈ";
+  } else {
+    currentRank = "ᵗʰ";
+  }
+
   return (
     <>
       <div id="choose" className="choose">
@@ -94,6 +106,11 @@ export default function AnimeByCategory() {
                     ⥣
                   </button>
                   <div className="category-image">
+                    <small>
+                      {selectedCategory == "Season Now"
+                        ? "▸"
+                        : `${currentIndex + 1}${currentRank}`}
+                    </small>
                     <img
                       style={
                         selectedCategory == "Top Characters"

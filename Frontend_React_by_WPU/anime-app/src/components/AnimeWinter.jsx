@@ -38,6 +38,7 @@ export default function AnimeWinter() {
       <div className="winter">
         <div className="winter-overview">
           <div className="winter-image">
+            <small>❄</small>
             <img src={image[0].src} alt={image[0].title} />
           </div>
           <p>

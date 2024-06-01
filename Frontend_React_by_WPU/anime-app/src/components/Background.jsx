@@ -24,13 +24,23 @@ export default function Background() {
   useEffect(() => {
     if (isTransitionActive) {
       document.body.classList.add("body-transition");
+      document.querySelector(".silhouette-off").classList.add("silhouette-on");
     } else {
       document.body.classList.remove("body-transition");
+      document
+        .querySelector(".silhouette-off")
+        .classList.remove("silhouette-on");
     }
   }, [isTransitionActive]);
 
   return (
     <>
+      <img
+        src="./Silhouette Kaito Kid.png"
+        alt=" "
+        className="silhouette-off"
+      />
+      <div className="background-container"></div>
       <div className="transitions">
         <div className="container">
           <button
@@ -59,7 +69,6 @@ export default function Background() {
           </button>
         </div>
       </div>
-      <div className="background-container"></div>
     </>
   );
 }

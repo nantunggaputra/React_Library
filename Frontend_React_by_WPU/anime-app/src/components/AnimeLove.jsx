@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 
@@ -184,10 +185,13 @@ export default function AnimeLove() {
     );
   };
 
+  let canvas = null;
+  let c = null;
+
   useEffect(() => {
     if (isHovered) {
-      const canvas = document.getElementById("canvas");
-      const c = canvas.getContext("2d");
+      canvas = document.getElementById("canvas");
+      c = canvas.getContext("2d");
       canvas.width = canvas.offsetWidth;
       canvas.height = canvas.offsetHeight;
 
@@ -229,7 +233,7 @@ export default function AnimeLove() {
         }
 
         let raindrops = [];
-        for (let i = 0; i < 13; i++) {
+        for (let i = 0; i < 15; i++) {
           let x = Math.random() * canvas.width;
           let y = Math.random() * canvas.height;
           raindrops.push(new RainDrop(x, y));
@@ -256,6 +260,7 @@ export default function AnimeLove() {
   };
 
   const handleMouseLeave = () => {
+    canvas = null;
     setIsHovered(false);
   };
 

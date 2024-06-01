@@ -33,7 +33,7 @@ body {
 }
 
 .body-transition {
-  animation: change 180s infinite 6s;
+  animation: change 120s infinite 6s;
 }
 
 @keyframes change {
@@ -385,14 +385,17 @@ body {
   right: -2rem;
 }
 
-.aside.right img {
-  top: 3rem;
-  right: 3rem;
+.silhouette-off {
+  top: 105rem;
+  right: 1rem;
   position: absolute;
   transform: scale(1.1);
   filter: contrast(0.7);
   opacity: 0.25;
-  animation: invert 180s infinite 4.25s;
+}
+
+.silhouette-on {
+  animation: invert 120s infinite 4.25s;
 }
 
 @keyframes invert {
@@ -557,6 +560,7 @@ body {
 .details {
   line-height: 1.4;
   font-size: 14px;
+  cursor: default;
 }
 
 .details header {
@@ -749,6 +753,28 @@ body {
   overflow: hidden;
 }
 
+.winter-image small,
+.category-image small {
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 1rem;
+  color: var(--color-background-light);
+  font-size: 7rem;
+  font-weight: 900;
+  text-align: center;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.winter-image:hover small,
+.category-image:hover small {
+  animation: blink 2s ease infinite;
+}
+
 .love-image img,
 .winter-image img,
 .category-image img {
@@ -760,20 +786,33 @@ body {
   cursor: pointer;
 }
 
-.love-image img:hover,
-.winter-image img:hover {
-  z-index: 1;
+.love-image img:hover {
+  animation: hide 1s infinite 0.25s;
+}
+
+@keyframes hide {
+  0% {
+    z-index: 1;
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+.winter-image img:hover,
+.category-image img:hover {
+  opacity: 0.35;
 }
 
 .love-image canvas {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 98.5%;
   padding: 0.3rem 0.5rem;
   pointer-events: none;
-  opacity: 0.95;
+  opacity: 0.85;
   z-index: 2;
 }
 
@@ -793,10 +832,16 @@ body {
   color: var(--color-primary-light);
 }
 
-.love-overview p:hover,
-.winter-overview p:hover,
-.category-overview p:hover {
+.love-overview p:hover {
   color: var(--color-background-light);
+}
+
+.category-overview p {
+  color: var(--color-background-light);
+}
+
+.category-overview p:hover {
+  color: var(--color-red);
 }
 
 /* Accessories */
@@ -1164,7 +1209,7 @@ body {
     margin-bottom: 8rem;
   }
 
-  .aside.right img {
+  .silhouette-off {
     display: none;
   }
 }
