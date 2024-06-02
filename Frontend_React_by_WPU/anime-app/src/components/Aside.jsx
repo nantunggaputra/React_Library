@@ -1,8 +1,8 @@
 export default function Aside() {
   return (
     <>
-      <div className="aside left"></div>
-      <div className="aside right"></div>
+      <div id="check" className="aside left"></div>
+      <div id="blog" className="aside right"></div>
     </>
   );
 }

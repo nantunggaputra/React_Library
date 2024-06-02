@@ -196,6 +196,56 @@ body {
   max-width: 60vw;
 }
 
+.nav-bar .hamburger-menu {
+  position: fixed;
+  top: 3.35rem;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-bar .hamburger-menu .container {
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: -2rem 0 3rem var(--color-background-500);
+  background-color: var(--color-background-100);
+  border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+}
+
+.nav-bar .hamburger-menu .container .button-parrent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  color: var(--color-background-light);
+  cursor: pointer;
+}
+
+.nav-bar .hamburger-menu .container .button-child {
+  display: block;
+  margin: auto;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-background-900);
+  color: var(--color-background-light);
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-bar .hamburger-menu .container .button-child a {
+  color: var(--color-background-light);
+  text-decoration: none;
+}
+
 .nav-bar .arrow {
   margin-top: 0.2rem;
   font-size: 1.55rem;
