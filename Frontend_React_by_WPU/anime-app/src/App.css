@@ -237,7 +237,7 @@ body {
   background-color: var(--color-background-900);
   color: var(--color-background-light);
   font-size: 1.4rem;
-  font-weight: bold;
+  font-weight: bolder;
   cursor: pointer;
 }
 
@@ -1244,7 +1244,7 @@ body {
     max-width: 42rem;
     max-height: 55rem;
     height: 50rem;
-    top: 5.5rem;
+    top: 3.4rem;
     z-index: 1;
   }
 

@@ -31,7 +31,7 @@ export default function Footer() {
       <div className="gototop">
         <div className="container">
           <a href="#">
-            <button title="Go to top">⇑</button>
+            <button title="Go to top">⥣</button>
           </a>
         </div>
       </div>

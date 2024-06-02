@@ -43,7 +43,7 @@ export default function HamburgerMenu() {
               onClick={handleChildButtonClick}
               title="Home"
             >
-              <a href="#">⌂</a>
+              <a href="#">♤</a>
             </button>
           </div>
           <div className="container">
@@ -52,7 +52,7 @@ export default function HamburgerMenu() {
               onClick={handleChildButtonClick}
               title="Genre"
             >
-              <a href="#check">★</a>
+              <a href="#check">♧</a>
             </button>
           </div>
           <div className="container">
@@ -61,7 +61,7 @@ export default function HamburgerMenu() {
               onClick={handleChildButtonClick}
               title="Favorite"
             >
-              <a href="#choice">❤︎</a>
+              <a href="#choice">♡</a>
             </button>
           </div>
           <div className="container">
@@ -70,7 +70,7 @@ export default function HamburgerMenu() {
               onClick={handleChildButtonClick}
               title="Category"
             >
-              <a href="#choose">🎖</a>
+              <a href="#choose">♢</a>
             </button>
           </div>
         </>
