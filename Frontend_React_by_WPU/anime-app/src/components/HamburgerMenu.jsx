@@ -18,7 +18,7 @@ export default function HamburgerMenu() {
         <div className="container">
           <button
             className="button-parrent"
-            style={{ fontWeight: "bolder", fontSize: "2.5rem" }}
+            style={{ fontWeight: "bolder", fontSize: "2.85rem" }}
             onClick={handleMainButtonClick}
             title="Menu"
           >
@@ -30,7 +30,7 @@ export default function HamburgerMenu() {
           <div className="container">
             <button
               className="button-parrent"
-              style={{ fontWeight: "lighter", fontSize: "1.5rem" }}
+              style={{ fontWeight: "lighter", fontSize: "1.85rem" }}
               onClick={handleChildButtonClick}
               title="Close"
             >

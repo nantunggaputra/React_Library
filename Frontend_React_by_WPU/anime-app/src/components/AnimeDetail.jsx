@@ -70,12 +70,16 @@ export default function AnimeDetail({ selectedAnime }) {
           <br style={{ marginTop: "1.6rem" }} />
           <em>
             <IndentedText> </IndentedText>
-            Warning: Wee strongly advise against watching the listed anime
-            titles through illegal means. Engaging in piracy harms the creators
-            and the industry as a whole. Please support the hardworking creators
-            by purchasing the original DVDs or subscribing to official streaming
-            services. Sensei, your support ensures the continued production of
-            quality content. Sankyuu~
+            <strong>Warning: </strong>
+            <span style={{ color: "#ef4444" }}>
+              Wee strongly advise against watching the listed anime titles
+              through illegal means.
+            </span>{" "}
+            Engaging in piracy harms the creators and the industry as a whole.
+            Please support the hardworking creators by purchasing the original
+            {" DVDs " + selectedAnime.title + " "}
+            or subscribing to official streaming services. Sensei, your support
+            ensures the continued production of quality content. Sankyuu~
           </em>
           <br />
           <br />

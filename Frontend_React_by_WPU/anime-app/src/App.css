@@ -204,14 +204,13 @@ body {
 }
 
 .nav-bar .hamburger-menu .container {
-  width: 4rem;
-  height: 4rem;
-  padding: 1rem;
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 1.1rem;
   margin-bottom: 1rem;
   box-shadow: -2rem 0 3rem var(--color-background-500);
   background-color: var(--color-background-100);
   border-radius: 0 1rem 1rem 0;
-  cursor: pointer;
 }
 
 .nav-bar .hamburger-menu .container .button-parrent {
@@ -227,8 +226,8 @@ body {
 .nav-bar .hamburger-menu .container .button-child {
   display: block;
   margin: auto;
-  width: 2rem;
-  height: 2rem;
+  width: 2.2rem;
+  height: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -496,8 +495,11 @@ body {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  width: 2rem;
-  height: 2rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   border: none;
   background-color: var(--color-background-900);
@@ -933,13 +935,12 @@ body {
 }
 
 .gototop .container {
-  width: 4rem;
-  height: 4rem;
-  padding: 1rem;
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 1.1rem;
   box-shadow: 2rem 0 3rem var(--color-background-500);
   background-color: var(--color-background-100);
   border-radius: 1rem 0 0 1rem;
-  cursor: pointer;
 }
 
 .gototop .container a {
@@ -949,8 +950,8 @@ body {
 .gototop .container button {
   display: block;
   margin: auto;
-  width: 2rem;
-  height: 2rem;
+  width: 2.2rem;
+  height: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -983,21 +984,20 @@ body {
 .music .container,
 .transitions .container,
 .animations .container {
-  width: 4rem;
-  height: 4rem;
-  padding: 1rem;
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 1.1rem;
   box-shadow: -2rem 0 3rem var(--color-background-500);
   background-color: var(--color-background-100);
   border-radius: 0 1rem 1rem 0;
-  cursor: pointer;
 }
 
 .music .container button,
 .transitions .container button,
 .animations .container button {
   margin: auto;
-  width: 2rem;
-  height: 2rem;
+  width: 2.2rem;
+  height: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
