@@ -35,6 +35,12 @@ export default function App() {
       return fetchedAnimes;
     } catch (error) {
       console.error("Error fetching data:", error);
+      setTimeout(() => {
+        alert(
+          `${error}\nSensei! An error occurred in the result data. Please enter another anime title or try again later.`
+        );
+        window.location.reload();
+      });
       return [];
     }
   };

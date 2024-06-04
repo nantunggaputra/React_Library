@@ -33,7 +33,7 @@ body {
 }
 
 .body-transition {
-  animation: change 120s infinite 6s;
+  animation: change 180s infinite 6s;
 }
 
 @keyframes change {
@@ -339,6 +339,33 @@ body {
   animation: blink 2s ease infinite;
 }
 
+.nav-bar .search-label {
+  position: fixed;
+  top: 3.35rem;
+  right: 0;
+  z-index: 1000;
+}
+
+.nav-bar .search-label .container {
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 0.6rem 0.6rem 1.1rem 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2rem 0 3rem var(--color-background-500);
+  background-color: var(--color-background-100);
+  border-radius: 1rem 0 0 1rem;
+}
+
+.nav-bar .search-label .container span {
+  color: var(--color-background-light);
+  font-size: 2.85rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
 .nav-bar .search::placeholder {
   color: var(--color-text);
   filter: brightness(80%);
@@ -444,7 +471,7 @@ body {
 }
 
 .silhouette-on {
-  animation: invert 120s infinite 4.25s;
+  animation: invert 180s infinite 4.25s;
 }
 
 @keyframes invert {

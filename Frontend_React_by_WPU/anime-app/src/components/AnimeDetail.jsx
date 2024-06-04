@@ -29,7 +29,7 @@ export default function AnimeDetail({ selectedAnime }) {
           setTimeout(() => {
             alert("Sensei? What is the best anime for you? Let's Search");
             window.location.reload();
-          }, 1000)
+          })
         )}
         <div className="details-overview">
           <h2>

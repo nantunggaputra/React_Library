@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useState, useRef } from "react";
-import { Fade } from "react-awesome-reveal";
 
 function NumResult({ count }) {
   return (
@@ -40,8 +39,16 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
     <div className="search-container">
       <audio ref={audioRef} src="There is Always Only One Truth.mp3" />
       {loading && <Kanji />}
+      <div className="search-label">
+        <div className="container">
+          <label htmlFor="search-anime">
+            <span title="Search">⌕</span>
+          </label>
+        </div>
+      </div>
       <input
         className="search"
+        id="search-anime"
         type="text"
         placeholder="Search anime..."
         value={query}
@@ -68,7 +75,7 @@ export default function Search({ fetchAnime }) {
 
   return (
     <div className="search-container">
-      <Fade durations={2000}>
+      <>
         <SearchInput
           fetchAnime={fetchAnime}
           setResultCount={setResultCount}
@@ -76,7 +83,7 @@ export default function Search({ fetchAnime }) {
           loading={loading}
         />
         {resultCount > 0 && <NumResult count={resultCount} />}
-      </Fade>
+      </>
     </div>
   );
 }

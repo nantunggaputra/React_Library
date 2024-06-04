@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const images = [
   {
@@ -172,6 +173,7 @@ const images = [
 export default function AnimeLove() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const animationRef = useRef(null);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
@@ -185,18 +187,18 @@ export default function AnimeLove() {
     );
   };
 
-  let canvas = null;
-  let c = null;
-
   useEffect(() => {
+    const canvas = document.getElementById("canvas");
+    const c = canvas.getContext("2d");
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+
+    const cleanup = () => {
+      cancelAnimationFrame(animationRef.current);
+      c.clearRect(0, 0, canvas.width, canvas.height);
+    };
+
     if (isHovered) {
-      canvas = document.getElementById("canvas");
-      c = canvas.getContext("2d");
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-
-      let animationId;
-
       const img = new Image();
       img.src = images[currentIndex].src;
       img.onload = () => {
@@ -242,16 +244,15 @@ export default function AnimeLove() {
         const animate = () => {
           c.clearRect(0, 0, canvas.width, canvas.height);
           raindrops.forEach((drop) => drop.update());
-          animationId = requestAnimationFrame(animate);
+          animationRef.current = requestAnimationFrame(animate);
         };
 
         animate();
-
-        return () => {
-          cancelAnimationFrame(animationId);
-          c.clearRect(0, 0, canvas.width, canvas.height);
-        };
       };
+
+      return cleanup;
+    } else {
+      cleanup();
     }
   }, [currentIndex, isHovered]);
 
@@ -260,7 +261,6 @@ export default function AnimeLove() {
   };
 
   const handleMouseLeave = () => {
-    canvas = null;
     setIsHovered(false);
   };
 
