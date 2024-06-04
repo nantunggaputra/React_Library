@@ -207,7 +207,7 @@ body {
   width: 4.4rem;
   height: 4.4rem;
   padding: 1.1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.55rem;
   box-shadow: -2rem 0 3rem var(--color-background-500);
   background-color: var(--color-background-100);
   border-radius: 0 1rem 1rem 0;
@@ -349,7 +349,7 @@ body {
 .nav-bar .search-label .container {
   width: 4.4rem;
   height: 4.4rem;
-  padding: 0.6rem 0.6rem 1.1rem 1.1rem;
+  padding: 0.9rem 0.9rem 1.1rem 1.1rem;
   margin-bottom: 1rem;
   display: flex;
   justify-content: center;
@@ -445,20 +445,22 @@ body {
   top: 102.25rem;
   position: absolute;
   background: #e1e8ed25;
-  border-radius: 1rem;
   backdrop-filter: blur(1rem);
   -webkit-backdrop-filter: blur(0.8rem);
-  z-index: -1;
+  z-index: 1;
 }
 
 .aside.left {
-  max-width: 45rem;
-  left: -2rem;
+  border-radius: 0 1rem 1rem 0;
+  max-width: 42rem;
+  left: 0;
 }
 
 .aside.right {
-  max-width: 45rem;
-  right: -2rem;
+  border-radius: 1rem 0 0 1rem;
+  max-width: 42rem;
+  right: 0;
+  z-index: -1;
 }
 
 .silhouette-off {
@@ -715,7 +717,8 @@ body {
 
 .choice,
 .featured,
-.choose {
+.choose,
+.check {
   display: block;
   margin: 2.4rem auto -1rem;
   width: 42rem;
@@ -731,7 +734,8 @@ body {
 
 .love,
 .winter,
-.category {
+.category,
+.genre {
   display: block;
   margin: 2rem auto;
   width: 42rem;
@@ -747,7 +751,8 @@ body {
   margin: 2rem auto 7rem;
 }
 
-.category-all {
+.category-all,
+.genre-all {
   display: block;
   margin: -1rem auto 1rem;
   width: 42rem;
@@ -757,12 +762,29 @@ body {
   border-radius: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 0.5rem;
   overflow: hidden;
 }
 
-.category-all button {
+.check,
+.genre-all {
+  margin: 2.4rem auto -1.4rem;
+  width: 31rem;
+  background: #17171725;
+  backdrop-filter: blur(1rem);
+}
+
+.genre-all {
+  max-height: 38rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.category-all button,
+.genre-all button {
   padding: 0.5rem 1.3rem;
   border: none;
   border-radius: 0.5rem;
@@ -774,7 +796,8 @@ body {
   cursor: pointer;
 }
 
-.category-all button:hover {
+.category-all button:hover,
+.genre-all button:hover {
   background-color: var(--color-red);
   color: var(--color-background-light);
 }
@@ -1265,6 +1288,7 @@ body {
   .aside {
     display: block;
     position: relative;
+    padding: 0.5rem 1.5rem;
     margin: auto;
     margin-bottom: 2.4rem;
     width: 80vw;
@@ -1276,14 +1300,27 @@ body {
   }
 
   .aside.left {
+    border-radius: 1rem;
     max-width: 42rem;
     left: 0;
   }
 
   .aside.right {
+    border-radius: 1rem;
     max-width: 42rem;
     right: 0;
     margin-bottom: 8rem;
+  }
+
+  .check,
+  .genre-all {
+    width: 100%;
+    background: #17171725;
+    backdrop-filter: blur(1rem);
+  }
+
+  .genre-all {
+    justify-content: space-between;
   }
 
   .silhouette-off {
