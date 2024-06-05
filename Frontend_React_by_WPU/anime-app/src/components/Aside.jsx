@@ -24,7 +24,7 @@ export default function Aside() {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://api.jikan.moe/v4/anime?genres=${genreId}&limit=24`
+        `https://api.jikan.moe/v4/anime?genres=${genreId}&limit=25`
       );
       const data = await response.json();
       const filteredAnimes = data.data.filter(
@@ -76,49 +76,52 @@ export default function Aside() {
             <span style={{ color: "#0377b9" }}>Genre</span> and Anime
           </h2>
         </div>
-        {loading ? (
-          <h2
-            style={{
-              color: "#e1e8ed",
-              position: "absolute",
-              left: "50%",
-              transform: "translateX(-50%) translateY(20rem)",
-              cursor: "default",
-            }}
-          >
-            Please wait...
-          </h2>
-        ) : animeList.length > 0 ? (
-          <div className="genre-list">
-            <div className="genre-list-overview">
-              <button tabIndex="up" onClick={handlePrev}>
-                ⥣
-              </button>
-              <div className="genre-list-image">
-                <img
-                  src={animeList[currentIndex].images.jpg.image_url}
-                  alt={animeList[currentIndex].title}
-                />
-              </div>
-              <p>{animeList[currentIndex].title}</p>
-              <button className="arrow" tabIndex="down" onClick={handleNext}>
-                ⥥
-              </button>
-            </div>
+        <div className="genre-list">
+          <div className="genre-list-overview">
+            {loading ? (
+              <h2
+                style={{
+                  color: "#e1e8ed",
+                  position: "absolute",
+                  left: "50%",
+                  transform: "translateX(-50%) translateY(16.5rem)",
+                  cursor: "default",
+                }}
+              >
+                Please wait...
+              </h2>
+            ) : animeList.length > 0 ? (
+              <>
+                <button tabIndex="up" onClick={handlePrev}>
+                  ⥣
+                </button>
+                <div className="genre-list-image">
+                  <small>☆</small>
+                  <img
+                    src={animeList[currentIndex].images.jpg.image_url}
+                    alt={animeList[currentIndex].title}
+                  />
+                </div>
+                <p>{animeList[currentIndex].title}</p>
+                <button className="arrow" tabIndex="down" onClick={handleNext}>
+                  ⥥
+                </button>
+              </>
+            ) : (
+              <h2
+                style={{
+                  color: "#e1e8ed",
+                  position: "absolute",
+                  left: "50%",
+                  transform: "translateX(-50%) translateY(16.5rem)",
+                  cursor: "default",
+                }}
+              >
+                Sensei! Select Genre
+              </h2>
+            )}
           </div>
-        ) : (
-          <h2
-            style={{
-              color: "#e1e8ed",
-              position: "absolute",
-              left: "50%",
-              transform: "translateX(-50%) translateY(20rem)",
-              cursor: "default",
-            }}
-          >
-            Sensei! Select a genre
-          </h2>
-        )}
+        </div>
       </div>
     </>
   );

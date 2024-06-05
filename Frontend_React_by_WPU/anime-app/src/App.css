@@ -207,7 +207,7 @@ body {
   width: 4.4rem;
   height: 4.4rem;
   padding: 1.1rem;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.6rem;
   box-shadow: -2rem 0 3rem var(--color-background-500);
   background-color: var(--color-background-100);
   border-radius: 0 1rem 1rem 0;
@@ -570,11 +570,9 @@ body {
 
 .list.list-anime li:hover {
   color: var(--color-primary-light);
-  background-color: #0a0a0a80;
 }
 
 .list.list-anime li:focus {
-  color: var(--color-primary-light);
   background-color: var(--color-background-500);
 }
 
@@ -754,6 +752,7 @@ body {
 }
 
 .genre-list {
+  min-height: 38rem;
   max-height: 38rem;
 }
 
@@ -777,7 +776,7 @@ body {
 .genre-all {
   margin: 2.4rem auto -1.4rem;
   width: 31rem;
-  background: #17171725;
+  background: #17171797;
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.25rem);
 }
@@ -840,7 +839,7 @@ body {
   width: 31rem;
   padding: 1.5rem;
   margin: 2.4rem auto -1.4rem;
-  background: #17171725;
+  background: #17171797;
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.25rem);
   overflow-x: hidden;
@@ -893,7 +892,8 @@ body {
 }
 
 .winter-image small,
-.category-image small {
+.category-image small,
+.genre-list-image small {
   width: 100%;
   padding: 1rem;
   position: absolute;
@@ -909,8 +909,22 @@ body {
   cursor: pointer;
 }
 
-.winter-image:hover small,
-.category-image:hover small {
+.winter-image:hover small {
+  left: 0%;
+  animation: blink 2s ease infinite, spin 20s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.category-image:hover small,
+.genre-list-image:hover small {
   animation: blink 2s ease infinite;
 }
 
@@ -939,14 +953,16 @@ body {
   }
 }
 
-.winter-image img:hover,
-.category-image img:hover {
-  opacity: 0.35;
-}
-
 .genre-list-image img {
+  max-width: 28rem;
   min-height: 22rem;
   max-height: 22rem;
+}
+
+.winter-image img:hover,
+.category-image img:hover,
+.genre-list-image img:hover {
+  opacity: 0.35;
 }
 
 .love-image canvas {

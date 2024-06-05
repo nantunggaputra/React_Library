@@ -16,13 +16,13 @@ export default function AnimeByCategory() {
     try {
       const url =
         (category === "Season Now" &&
-          `https://api.jikan.moe/v4/seasons/now?limit=24`) ||
+          `https://api.jikan.moe/v4/seasons/now?limit=25`) ||
         (category === "Top Anime" &&
-          `https://api.jikan.moe/v4/top/anime?limit=24`) ||
+          `https://api.jikan.moe/v4/top/anime?limit=25`) ||
         (category === "Top Manga" &&
-          `https://api.jikan.moe/v4/top/manga?limit=24`) ||
+          `https://api.jikan.moe/v4/top/manga?limit=25`) ||
         (category === "Top Characters" &&
-          `https://api.jikan.moe/v4/top/characters?limit=24`);
+          `https://api.jikan.moe/v4/top/characters?limit=25`);
 
       const response = await axios.get(url);
       if (response.data.data) {
@@ -99,7 +99,7 @@ export default function AnimeByCategory() {
           >
             {selectedCategory
               ? loading && "Please wait..."
-              : "Sensei! Select a category"}
+              : "Sensei! Select Category"}
           </h2>
           {loading
             ? ""
