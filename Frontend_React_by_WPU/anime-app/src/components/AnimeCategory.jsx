@@ -15,11 +15,14 @@ export default function AnimeByCategory() {
     setLoading(true);
     try {
       const url =
-        (category === "Season Now" && `https://api.jikan.moe/v4/seasons/now`) ||
-        (category === "Top Anime" && `https://api.jikan.moe/v4/top/anime`) ||
-        (category === "Top Manga" && `https://api.jikan.moe/v4/top/manga`) ||
+        (category === "Season Now" &&
+          `https://api.jikan.moe/v4/seasons/now?limit=24`) ||
+        (category === "Top Anime" &&
+          `https://api.jikan.moe/v4/top/anime?limit=24`) ||
+        (category === "Top Manga" &&
+          `https://api.jikan.moe/v4/top/manga?limit=24`) ||
         (category === "Top Characters" &&
-          `https://api.jikan.moe/v4/top/characters`);
+          `https://api.jikan.moe/v4/top/characters?limit=24`);
 
       const response = await axios.get(url);
       if (response.data.data) {

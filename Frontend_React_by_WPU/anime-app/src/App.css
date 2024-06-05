@@ -33,7 +33,7 @@ body {
 }
 
 .body-transition {
-  animation: change 180s infinite 6s;
+  animation: change 180s infinite 8s;
 }
 
 @keyframes change {
@@ -207,7 +207,7 @@ body {
   width: 4.4rem;
   height: 4.4rem;
   padding: 1.1rem;
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.65rem;
   box-shadow: -2rem 0 3rem var(--color-background-500);
   background-color: var(--color-background-100);
   border-radius: 0 1rem 1rem 0;
@@ -445,8 +445,8 @@ body {
   top: 102.25rem;
   position: absolute;
   background: #e1e8ed25;
-  backdrop-filter: blur(1rem);
-  -webkit-backdrop-filter: blur(0.8rem);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.25rem);
   z-index: 1;
 }
 
@@ -454,13 +454,14 @@ body {
   border-radius: 0 1rem 1rem 0;
   max-width: 42rem;
   left: 0;
+  z-index: 2;
 }
 
 .aside.right {
   border-radius: 1rem 0 0 1rem;
   max-width: 42rem;
   right: 0;
-  z-index: -1;
+  z-index: 2;
 }
 
 .silhouette-off {
@@ -468,32 +469,32 @@ body {
   right: 1rem;
   position: absolute;
   transform: scale(1.1);
-  filter: contrast(0.7);
-  opacity: 0.25;
+  filter: contrast(0.8) brightness(0.3);
+  opacity: 0.5;
 }
 
 .silhouette-on {
-  animation: invert 180s infinite 4.25s;
+  animation: invert 180s infinite 6s;
 }
 
 @keyframes invert {
   0% {
-    opacity: 0.25;
+    filter: contrast(0.8) brightness(0.3);
   }
-  12.5% {
-    opacity: 0.25;
+  15% {
+    filter: contrast(0.8) brightness(0.3);
   }
   20% {
-    opacity: 0.05;
+    filter: contrast(0.8) brightness(4.4);
   }
   62.5% {
-    opacity: 0.05;
+    filter: contrast(0.8) brightness(4.4);
   }
-  70% {
-    opacity: 0.25;
+  67.5% {
+    filter: contrast(0.8) brightness(0.3);
   }
   100% {
-    opacity: 0.25;
+    filter: contrast(0.8) brightness(0.3);
   }
 }
 
@@ -569,6 +570,7 @@ body {
 
 .list.list-anime li:hover {
   color: var(--color-primary-light);
+  background-color: #0a0a0a80;
 }
 
 .list.list-anime li:focus {
@@ -735,7 +737,7 @@ body {
 .love,
 .winter,
 .category,
-.genre {
+.genre-list {
   display: block;
   margin: 2rem auto;
   width: 42rem;
@@ -749,6 +751,10 @@ body {
 
 .category {
   margin: 2rem auto 7rem;
+}
+
+.genre-list {
+  max-height: 38rem;
 }
 
 .category-all,
@@ -772,15 +778,25 @@ body {
   margin: 2.4rem auto -1.4rem;
   width: 31rem;
   background: #17171725;
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.25rem);
+}
+
+.genre-all {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 38rem;
+  flex-wrap: wrap;
+  border-top: 1.5rem solid transparent;
+  border-bottom: 1.5rem solid transparent;
 }
 
 .genre-all {
   max-height: 38rem;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   overflow-x: hidden;
   overflow-y: auto;
+  scrollbar-color: var(--color-background-light) transparent;
+  justify-content: flex-start;
 }
 
 .category-all button,
@@ -804,7 +820,8 @@ body {
 
 .love-overview,
 .winter-overview,
-.category-overview {
+.category-overview,
+.genre-list-overview {
   width: 100%;
   height: 100%;
   padding: 2rem 2.4rem;
@@ -819,8 +836,21 @@ body {
   padding: 2rem 2.4rem 0;
 }
 
+.genre-list-overview {
+  width: 31rem;
+  padding: 1.5rem;
+  margin: 2.4rem auto -1.4rem;
+  background: #17171725;
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.25rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: var(--color-background-light) transparent;
+}
+
 .love-overview button,
-.category-overview button {
+.category-overview button,
+.genre-list-overview button {
   border: none;
   border-radius: 0.5rem;
   padding: 0.2rem 0;
@@ -831,13 +861,15 @@ body {
 }
 
 .love-overview button:hover,
-.category-overview button:hover {
+.category-overview button:hover,
+.genre-list-overview button:hover {
   color: var(--color-background-900);
 }
 
 .love-image,
 .winter-image,
-.category-image {
+.category-image,
+.genre-list-image {
   min-height: 32rem;
   margin: 2rem auto 0;
   position: relative;
@@ -853,6 +885,11 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.genre-list-image {
+  min-height: 22rem;
+  margin: 1.5rem auto 0;
 }
 
 .winter-image small,
@@ -879,7 +916,8 @@ body {
 
 .love-image img,
 .winter-image img,
-.category-image img {
+.category-image img,
+.genre-list-image img {
   min-height: 32rem;
   max-height: 32rem;
   border-radius: 1rem;
@@ -906,6 +944,11 @@ body {
   opacity: 0.35;
 }
 
+.genre-list-image img {
+  min-height: 22rem;
+  max-height: 22rem;
+}
+
 .love-image canvas {
   position: absolute;
   top: 0;
@@ -920,7 +963,8 @@ body {
 
 .love-overview p,
 .winter-overview p,
-.category-overview p {
+.category-overview p,
+.genre-list-overview p {
   margin: auto;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1.5rem;
@@ -938,11 +982,13 @@ body {
   color: var(--color-background-light);
 }
 
-.category-overview p {
+.category-overview p,
+.genre-list-overview p {
   color: var(--color-background-light);
 }
 
-.category-overview p:hover {
+.category-overview p:hover,
+.genre-list-overview p:hover {
   color: var(--color-red);
 }
 
@@ -1296,27 +1342,29 @@ body {
     max-height: 55rem;
     height: 50rem;
     top: 3.4rem;
-    z-index: 1;
   }
 
   .aside.left {
     border-radius: 1rem;
     max-width: 42rem;
-    left: 0;
   }
 
   .aside.right {
     border-radius: 1rem;
     max-width: 42rem;
-    right: 0;
     margin-bottom: 8rem;
   }
 
   .check,
-  .genre-all {
+  .genre-all,
+  .genre-list {
     width: 100%;
-    background: #17171725;
-    backdrop-filter: blur(1rem);
+  }
+
+  .genre-all,
+  .genre-list {
+    min-height: 37.25rem;
+    max-height: 37.25rem;
   }
 
   .genre-all {

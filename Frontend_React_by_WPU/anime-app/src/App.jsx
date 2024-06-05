@@ -27,7 +27,7 @@ export default function App() {
   const fetchAnime = async (query) => {
     try {
       const response = await axios.get(
-        `https://api.jikan.moe/v4/anime?q=${query}`
+        `https://api.jikan.moe/v4/anime?q=${query}&limit=24`
       );
       const fetchedAnimes = response.data.data;
       setAnimes(fetchedAnimes);
