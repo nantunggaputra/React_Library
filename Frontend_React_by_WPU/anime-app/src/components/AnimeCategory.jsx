@@ -72,7 +72,10 @@ export default function AnimeByCategory() {
     <>
       <div id="choose" className="choose">
         <h2>
-          <span style={{ color: "#fcbe14" }}>Recommended</span> for you
+          <span style={{ color: "#fcbe14" }}>
+            {selectedCategory ? selectedCategory : "Recommended"}
+          </span>{" "}
+          for you
         </h2>
       </div>
       <div className="category" style={{ minHeight: "43rem" }}>
@@ -80,7 +83,9 @@ export default function AnimeByCategory() {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={
+                !loading ? () => setSelectedCategory(category) : undefined
+              }
               className={category === selectedCategory ? "selected" : ""}
             >
               {category}
@@ -99,7 +104,7 @@ export default function AnimeByCategory() {
           >
             {selectedCategory
               ? loading && "Please wait..."
-              : "Sensei! Select Category"}
+              : "Minna! Select Category"}
           </h2>
           {loading
             ? ""

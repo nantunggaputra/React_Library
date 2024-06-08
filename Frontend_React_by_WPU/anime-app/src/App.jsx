@@ -11,7 +11,7 @@ import Aside from "./components/Aside";
 const animesData = [
   {
     mal_id: 1000000000,
-    title: "Sensei? What is the best anime for you? Let's Search",
+    title: "Minna? What is the best anime for you? Let's Search",
     year: 2024,
     image: "https://cdn.myanimelist.net/images/anime/7/75199.jpg",
     score: 10,
@@ -37,7 +37,7 @@ export default function App() {
       console.error("Error fetching data:", error);
       setTimeout(() => {
         alert(
-          `${error}\nSensei! An error occurred in the result data. Please enter another anime title or try again later.`
+          `${error}\nMinna-San! An error occurred in the result data. Please enter another anime title or try again later.`
         );
         window.location.reload();
       });

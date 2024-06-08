@@ -27,7 +27,7 @@ export default function AnimeDetail({ selectedAnime }) {
           </a>
         ) : (
           setTimeout(() => {
-            alert("Sensei? What is the best anime for you? Let's Search");
+            alert("Minna? What is the best anime for you? Let's Search");
             window.location.reload();
           })
         )}
@@ -78,7 +78,7 @@ export default function AnimeDetail({ selectedAnime }) {
             Engaging in piracy harms the creators and the industry as a whole.
             Please support the hardworking creators by purchasing the original
             {" DVDs " + selectedAnime.title + " "}
-            or subscribing to official streaming services. Sensei, your support
+            or subscribing to official streaming services. Minna, your support
             ensures the continued production of quality content. Sankyuu~
           </em>
           <br />

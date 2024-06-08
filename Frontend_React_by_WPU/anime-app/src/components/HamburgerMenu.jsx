@@ -48,15 +48,6 @@ export default function HamburgerMenu() {
           </div>
           <div className="container">
             <button
-              className="button-child button-genre"
-              onClick={handleChildButtonClick}
-              title="Genre"
-            >
-              <a href="#check">♧</a>
-            </button>
-          </div>
-          <div className="container">
-            <button
               className="button-child button-favorite"
               onClick={handleChildButtonClick}
               title="Favorite"
@@ -71,6 +62,15 @@ export default function HamburgerMenu() {
               title="Category"
             >
               <a href="#choose">♢</a>
+            </button>
+          </div>
+          <div className="container">
+            <button
+              className="button-child button-genre"
+              onClick={handleChildButtonClick}
+              title="Genre"
+            >
+              <a href="#check">♧</a>
             </button>
           </div>
         </>

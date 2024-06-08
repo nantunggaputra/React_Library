@@ -235,7 +235,7 @@ export default function AnimeLove() {
         }
 
         let raindrops = [];
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < 25; i++) {
           let x = Math.random() * canvas.width;
           let y = Math.random() * canvas.height;
           raindrops.push(new RainDrop(x, y));
