@@ -15,7 +15,7 @@ function NumResult({ count }) {
 function Kanji() {
   return (
     <div className="search-kanji">
-      <img src="Success.png" />
+      <img src="Success.png" alt=" " />
     </div>
   );
 }
@@ -40,6 +40,11 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
   return (
     <div className="search-container">
       <audio ref={audioRef} src="There is Always Only One Truth.mp3" />
+      <img
+        src="Success.png"
+        alt=" "
+        style={{ width: "0", height: "0", zIndex: "-999" }}
+      />
       {loading && <Kanji />}
       <div className="search-label">
         <div className="container">

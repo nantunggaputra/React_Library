@@ -62,7 +62,7 @@ body {
   width: 100vw;
   padding-bottom: 120vh;
   background: linear-gradient(to top, #17171700, #000000),
-    url("../Detective Conan Case Closed Brick Background.jpg");
+    url("../Detective\ Conan\ Case\ Closed\ Brick\ Background.jpg");
   background-position: center;
   filter: grayscale(1) contrast(0.7);
   z-index: 1000;
@@ -1160,7 +1160,7 @@ body {
   text-transform: uppercase;
   padding-bottom: 48rem;
   border-radius: 1rem;
-  background-image: url("../Mook Detective Conan Secret Archives Kaito Kid.jpg");
+  background-image: url("../Mook\ Detective\ Conan\ Secret\ Archives\ Kaito\ Kid.jpg");
   opacity: 0.9;
   background-size: cover;
   background-position: center;
