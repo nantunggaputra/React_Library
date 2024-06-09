@@ -7,6 +7,7 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 import Separator from "./components/Separator";
 import Aside from "./components/Aside";
+import Channels from "./components/Channels";
 
 const animesData = [
   {
@@ -52,7 +53,7 @@ export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -72,6 +73,7 @@ export default function App() {
         onSelectedAnime={handleSelectedAnime}
       />
       <Aside />
+      <Channels />
       <Separator />
       <Footer />
     </>
