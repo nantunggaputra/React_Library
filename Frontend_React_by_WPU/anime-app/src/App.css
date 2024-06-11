@@ -604,6 +604,7 @@ body {
   background-color: var(--color-background-100);
   border-bottom: 2.5rem solid var(--color-background-100);
   border-radius: 1rem;
+  overflow-x: hidden;
   overflow-y: scroll;
   scrollbar-color: var(--color-orange) transparent;
   position: relative;
@@ -1452,7 +1453,7 @@ body {
     max-width: 42rem;
     max-height: 55rem;
     height: 50rem;
-    top: 3rem;
+    top: 2.6rem;
   }
 
   .aside.left,
@@ -1534,16 +1535,16 @@ body {
 @media (max-width: 768px) {
   .main {
     display: block;
-    max-height: 24rem;
+    max-height: 43rem;
   }
 
   .main .box {
     display: block;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     min-width: 80vw;
     min-height: 6rem;
-    max-height: 32rem;
+    max-height: 42rem;
   }
 
   .list h3 {
