@@ -49,7 +49,7 @@ export default function Footer() {
         <div className="audio-background">
           <audio
             ref={audioRef}
-            src="Detective Conan feat TheFatRat - Xenogenesis (Outro Song).mp3"
+            src="Detective Conan feat TheFatRat - Xenogenesis (Outro Song).aac"
             autoPlay
             loop
           ></audio>
@@ -162,7 +162,7 @@ export default function Footer() {
               <input type="email" id="subs" required />
               <button type="submit" title="Subscribe">
                 &#128276;
-                <img src="Kaito Kid Logo 3D.png" alt=" " />
+                <img src="Kaito Kid Logo 3D.webp" alt=" " />
               </button>
             </form>
           </div>

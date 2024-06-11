@@ -124,7 +124,7 @@ export default function AnimeDetail({ selectedAnime }) {
           <br />
           <br />
           <img
-            src="WeeBoo.ico"
+            src="WeeBoo.png"
             style={{
               width: "100%",
               margin: "-7rem",

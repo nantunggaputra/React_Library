@@ -41,7 +41,7 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
 
   return (
     <div className="search-container">
-      <audio ref={audioRef} src="There is Always Only One Truth.mp3" />
+      <audio ref={audioRef} src="There is Always Only One Truth.aac" />
       {loading && <Kanji />}
       <div className="search-label">
         <div className="container">
@@ -67,7 +67,7 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
         {loading ? "Please wait..." : "Search"}
       </button>
       <div className="search-icon">
-        <img src="Conan Edogawa Search.png" alt=" " />
+        <img src="Conan Edogawa Search.webp" alt=" " />
       </div>
     </div>
   );

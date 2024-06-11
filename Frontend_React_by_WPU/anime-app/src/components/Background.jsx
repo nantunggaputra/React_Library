@@ -35,7 +35,7 @@ export default function Background() {
 
   return (
     <>
-      <img src="Silhouette Kaito Kid.png" alt=" " className="silhouette-off" />
+      <img src="Silhouette Kaito Kid.webp" alt=" " className="silhouette-off" />
       <div className="background-container"></div>
       <div className="transitions">
         <div className="container">
