@@ -1451,7 +1451,7 @@ body {
     max-width: 42rem;
     max-height: 55rem;
     height: 50rem;
-    top: 2rem;
+    top: 3rem;
   }
 
   .aside.left,
@@ -1469,7 +1469,7 @@ body {
 
   .aside.top-left,
   .aside.top-right {
-    top: -3rem;
+    top: -3.4rem;
     height: 18.5rem;
   }
 
