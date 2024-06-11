@@ -556,8 +556,9 @@ body {
   right: 1rem;
   position: absolute;
   transform: scale(1.1);
-  filter: contrast(0.8) brightness(0.25);
-  opacity: 0.5;
+  filter: contrast(0.4) brightness(0.25);
+  opacity: 0.8;
+  z-index: -3;
 }
 
 .silhouette-on {
@@ -566,22 +567,22 @@ body {
 
 @keyframes invert {
   0% {
-    filter: contrast(0.8) brightness(0.25);
+    filter: contrast(0.4) brightness(0.25);
   }
   15% {
-    filter: contrast(0.8) brightness(0.25);
+    filter: contrast(0.4) brightness(0.25);
   }
   20% {
-    filter: contrast(0.8) brightness(1.25);
+    filter: contrast(0.4) brightness(1.25);
   }
   62.5% {
-    filter: contrast(0.8) brightness(1.25);
+    filter: contrast(0.4) brightness(1.25);
   }
   67.5% {
-    filter: contrast(0.8) brightness(0.25);
+    filter: contrast(0.4) brightness(0.25);
   }
   100% {
-    filter: contrast(0.8) brightness(0.25);
+    filter: contrast(0.4) brightness(0.25);
   }
 }
 
@@ -603,7 +604,7 @@ body {
   background-color: var(--color-background-100);
   border-bottom: 2.5rem solid var(--color-background-100);
   border-radius: 1rem;
-  overflow: auto;
+  overflow-y: scroll;
   scrollbar-color: var(--color-orange) transparent;
   position: relative;
 }
@@ -630,7 +631,7 @@ body {
 .list {
   list-style: none;
   padding: 0.8rem 0;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .list-watched {
@@ -880,7 +881,7 @@ body {
 .genre-all {
   max-height: 38rem;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   scrollbar-color: var(--color-background-light) transparent;
   justify-content: flex-start;
 }
@@ -936,7 +937,7 @@ body {
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.25rem);
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   scrollbar-color: var(--color-background-light) transparent;
 }
 
@@ -1533,7 +1534,7 @@ body {
 @media (max-width: 768px) {
   .main {
     display: block;
-    max-height: calc(100vh - 12rem - 3 * 3rem);
+    max-height: 24rem;
   }
 
   .main .box {
@@ -1542,7 +1543,7 @@ body {
     margin-bottom: 2rem;
     min-width: 80vw;
     min-height: 6rem;
-    max-height: 55rem;
+    max-height: 32rem;
   }
 
   .list h3 {

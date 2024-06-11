@@ -42,8 +42,8 @@ export default function AnimeDetail({ selectedAnime }) {
                 selectedAnime.rating === "Rx - Hentai" ||
                 selectedAnime.rating === "R+ - Mild Nudity"
                   ? {
-                      filter: "grayscale(1) brightness(0.2) contrast(0.2)",
-                      opacity: "0.2",
+                      filter: "grayscale(1) brightness(0.3) contrast(0.3)",
+                      opacity: "0.7",
                     }
                   : {}
               }

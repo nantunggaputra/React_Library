@@ -2,7 +2,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { useState } from "react";
-import { Fade } from "react-awesome-reveal";
 import Anime from "./Anime";
 import AnimeDetail from "./AnimeDetail";
 import AnimeLove from "./AnimeLove";
@@ -13,7 +12,10 @@ function ListBox({ animes, onSelectedAnime }) {
   const [isOpen1, setIsOpen1] = useState(true);
 
   return (
-    <div className="box">
+    <div
+      className="box"
+      style={animes.length > 1 ? {} : { overflow: "hidden" }}
+    >
       <button
         className="btn-toggle"
         onClick={() => setIsOpen1((open) => !open)}
@@ -46,18 +48,16 @@ function SelectedBox({ selectedAnime }) {
 export default function Main({ animes, selectedAnime, onSelectedAnime }) {
   return (
     <>
-      <Fade durations={2000}>
-        <main className="main">
-          {animes.length > 0 && (
-            <ListBox animes={animes} onSelectedAnime={onSelectedAnime} />
-          )}
-          {selectedAnime && <SelectedBox selectedAnime={selectedAnime} />}
-        </main>
-        {selectedAnime && <div className="box-separator"></div>}
-        <AnimeLove />
-        <AnimeWinter />
-        <AnimeByCategory />
-      </Fade>
+      <main className="main">
+        {selectedAnime && <SelectedBox selectedAnime={selectedAnime} />}
+        {animes.length > 0 && (
+          <ListBox animes={animes} onSelectedAnime={onSelectedAnime} />
+        )}
+      </main>
+      {selectedAnime && <div className="box-separator"></div>}
+      <AnimeLove />
+      <AnimeWinter />
+      <AnimeByCategory />
     </>
   );
 }
