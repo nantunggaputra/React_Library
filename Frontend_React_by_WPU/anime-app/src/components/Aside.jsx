@@ -30,7 +30,11 @@ export default function Aside() {
       );
       const data = await response.json();
       const filteredAnimes = data.data.filter(
-        (anime) => anime.type === "TV" || anime.type !== "Movie"
+        (anime) =>
+          (anime.type == "TV" &&
+            anime.type !== "Movie" &&
+            anime.type !== "OVA") ||
+          anime.type === "OVA"
       );
       setAnimeList(filteredAnimes);
       setCurrentIndex(0);
@@ -110,6 +114,16 @@ export default function Aside() {
                   <img
                     src={animeList[currentIndex].images.jpg.image_url}
                     alt={animeList[currentIndex].title}
+                    style={
+                      animeList[currentIndex].rating === "Rx - Hentai" ||
+                      animeList[currentIndex].rating === "R+ - Mild Nudity"
+                        ? {
+                            filter:
+                              "grayscale(1) brightness(0.2) contrast(0.2)",
+                            opacity: "0.2",
+                          }
+                        : {}
+                    }
                   />
                 </div>
                 <p>{animeList[currentIndex].title}</p>

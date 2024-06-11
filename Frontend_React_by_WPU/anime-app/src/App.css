@@ -308,11 +308,12 @@ body {
 
 .nav-bar .search-kanji {
   position: absolute;
+  top: 24.5rem;
   padding: 0;
   transform: scale(3);
   opacity: 0;
   z-index: 1000;
-  animation: kanji 0.75s ease;
+  animation: kanji 1s ease infinite;
 }
 
 .nav-bar .search-kanji h6 {
@@ -320,7 +321,7 @@ body {
   color: var(--color-background-500);
   font-family: "Times New Roman", Times, serif;
   font-weight: 900;
-  text-shadow: 0 0 5px var(--color-background-light);
+  text-shadow: 0 0 10px var(--color-background-light);
   cursor: default;
 }
 
@@ -329,8 +330,16 @@ body {
     opacity: 0.85;
     transform: scale(3);
   }
-  50% {
+  40% {
     opacity: 0.25;
+    transform: scale(9);
+  }
+  60% {
+    opacity: 0.1;
+    transform: scale(9);
+  }
+  80% {
+    opacity: 0.05;
     transform: scale(9);
   }
   100% {
@@ -1442,7 +1451,7 @@ body {
     max-width: 42rem;
     max-height: 55rem;
     height: 50rem;
-    top: 3.4rem;
+    top: 2rem;
   }
 
   .aside.left,
@@ -1460,15 +1469,17 @@ body {
 
   .aside.top-left,
   .aside.top-right {
-    top: -1.4rem;
+    top: -3rem;
     height: 18.5rem;
   }
 
   .channels {
     width: 100%;
-    padding: 1.5rem;
-    margin: 2.4rem auto;
     justify-content: center;
+  }
+
+  .channels img {
+    filter: grayscale(1) contrast(1.1) blur(0);
   }
 
   .closing {
