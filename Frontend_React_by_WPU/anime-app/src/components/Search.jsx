@@ -6,7 +6,7 @@ function NumResult({ count }) {
     <p className="search-results">
       <span>\(≧▽≦)/</span>{" "}
       <strong>
-        Subarashii, Minna! Wee found breathtaking {count} anime...
+        Subarashii, Minna! Wee found Breathtaking {count} results anime...
       </strong>
     </p>
   );

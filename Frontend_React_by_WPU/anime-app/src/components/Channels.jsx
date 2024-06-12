@@ -45,22 +45,85 @@ const channelsNow = [
   },
 ];
 
+const channelsThen = [
+  {
+    src: "watch-anime-in-then/ANTV.webp",
+    alt: "ANTV",
+    size: "M",
+  },
+  {
+    src: "watch-anime-in-then/GLOBALTV.webp",
+    alt: "GLOBALTV",
+    size: "M",
+  },
+  {
+    src: "watch-anime-in-then/INDOSIAR.webp",
+    alt: "INDOSIAR",
+    size: "L",
+  },
+  {
+    src: "watch-anime-in-then/RCTI.webp",
+    alt: "RCTI",
+    size: "M",
+  },
+  {
+    src: "watch-anime-in-then/SCTV.webp",
+    alt: "SCTV",
+    size: "L",
+  },
+  {
+    src: "watch-anime-in-then/SPACETOON.webp",
+    alt: "SPACETOON",
+    size: "L",
+  },
+  {
+    src: "watch-anime-in-then/TPI.webp",
+    alt: "TPI",
+    size: "XL",
+  },
+  {
+    src: "watch-anime-in-then/TRANSTV.webp",
+    alt: "TRANSTV",
+    size: "XL",
+  },
+  {
+    src: "watch-anime-in-then/TV7.webp",
+    alt: "TV7",
+    size: "XL",
+  },
+];
+
 export default function Channels() {
   return (
     <>
       <div className="aside top-left">
-        <div className="channels">
+        <div className="channels stream">
           {channelsNow.map((stream) => (
-            <img
-              src={stream.src}
-              alt={stream.alt}
-              title={stream.alt}
-              key={stream.alt}
-            />
+            <div className="frame" key={stream.alt} title={stream.alt}>
+              <img src={stream.src} alt={stream.alt} />
+            </div>
           ))}
         </div>
       </div>
-      <div className="aside top-right"></div>
+      <div className="aside top-right">
+        <div className="channels tv">
+          {channelsThen.map((tv) => (
+            <div className="frame" key={tv.alt} title={tv.alt}>
+              <img
+                src={tv.src}
+                alt={tv.alt}
+                style={
+                  tv.size === "L"
+                    ? { width: "73.5%" }
+                    : tv.size === "XL"
+                    ? { width: "65%" }
+                    : {}
+                }
+              />
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 }

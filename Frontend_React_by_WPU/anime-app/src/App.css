@@ -80,13 +80,14 @@ body {
   font-size: 9rem;
   text-align: center;
   letter-spacing: 3px;
-  opacity: 0.85;
+  opacity: 0;
   z-index: 3;
+  animation: show 4.25s ease;
 }
 
 .loading-page h1 span {
   color: var(--color-background-100);
-  animation: lamp 1s ease infinite;
+  animation: show 4.25s ease, lamp 1s ease 1.5s;
 }
 
 @keyframes show {
@@ -97,7 +98,7 @@ body {
     opacity: 0;
   }
   50% {
-    opacity: 1;
+    opacity: 0.85;
   }
   95% {
     opacity: 0;
@@ -452,7 +453,7 @@ body {
   }
 }
 
-.nav-bar .search-results {
+.search-results {
   max-width: 35rem;
   margin-top: 3rem;
   padding: 0.5rem 0.8rem;
@@ -463,7 +464,7 @@ body {
   text-align: justify;
 }
 
-.nav-bar .search-results span {
+.search-results span {
   color: var(--color-orange);
   font-weight: 400;
   animation: letter 1s ease infinite;
@@ -527,6 +528,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-items: center;
   border-radius: 1rem;
   background: #17171797;
   backdrop-filter: blur(0.5rem);
@@ -539,15 +541,30 @@ body {
   filter: grayscale(1) contrast(1.1) blur(0);
 }
 
-.channels img {
-  margin: 0.39rem 0.36rem;
+.channels .frame {
+  width: 3.9rem;
   height: 3.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.channels.stream .frame {
+  margin: 0.39rem 0.38rem;
+}
+
+.channels.tv .frame {
+  margin: 0 0.38rem;
+}
+
+.channels img {
+  width: 100%;
   filter: grayscale(1) contrast(1.1) blur(1px);
   opacity: 0.39;
   cursor: default;
 }
 
-.channels img:hover {
+.channels .frame:hover img {
   filter: grayscale(0);
   opacity: 1;
 }
@@ -1025,7 +1042,7 @@ body {
 
 .winter-image:hover small {
   left: 0%;
-  animation: blink 1s ease infinite, spin 20s ease-in-out infinite;
+  animation: blink 1s ease infinite, spin 20s ease infinite;
 }
 
 @keyframes spin {
@@ -1033,7 +1050,7 @@ body {
     transform: rotate(0deg) scale(1);
   }
   50% {
-    transform: rotate(180deg) scale(0.85);
+    transform: rotate(180deg) scale(0.75);
   }
   100% {
     transform: rotate(360deg) scale(1);
@@ -1473,7 +1490,7 @@ body {
     max-width: 42rem;
     max-height: 55rem;
     height: 50rem;
-    top: 2.6rem;
+    top: 2.8rem;
   }
 
   .aside.left,
@@ -1491,7 +1508,7 @@ body {
 
   .aside.top-left,
   .aside.top-right {
-    top: -2.6rem;
+    top: -2.8rem;
     height: 18.5rem;
   }
 
@@ -1625,6 +1642,10 @@ body {
   .category,
   .category-all {
     min-width: 80vw;
+  }
+
+  .choose {
+    margin-top: 43.3rem;
   }
 
   .separator img {
