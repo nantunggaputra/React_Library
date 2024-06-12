@@ -10,7 +10,7 @@ const images = [
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/1138/133101l.jpg",
-    title: "Meitantei Conan Movie 26: Black Iron Submarine",
+    title: "Detective Conan Movie 26: Black Iron Submarine",
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/1765/135099l.jpg",
@@ -26,7 +26,7 @@ const images = [
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/1744/120789l.jpg",
-    title: "Meitantei Conan Movie 25: The Bride of Halloween",
+    title: "Detective Conan Movie 25: The Bride of Halloween",
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/1908/135431l.jpg",
@@ -46,7 +46,7 @@ const images = [
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/1306/112616l.jpg",
-    title: "Meitantei Conan Movie 24: The Scarlet Bullet",
+    title: "Detective Conan Movie 24: The Scarlet Bullet",
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/1245/116760l.jpg",
@@ -70,7 +70,7 @@ const images = [
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/1010/98309l.jpg",
-    title: "Meitantei Conan Movie 23: The Fist of Blue Sapphire",
+    title: "Detective Conan Movie 23: The Fist of Blue Sapphire",
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/1221/100550l.jpg",
@@ -82,7 +82,7 @@ const images = [
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/12/90104l.jpg",
-    title: "Meitantei Conan Movie 22: Zero the Enforcer",
+    title: "Detective Conan Movie 22: Zero the Enforcer",
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/1575/93498l.jpg",
@@ -110,7 +110,7 @@ const images = [
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/10/78894l.jpg",
-    title: "Meitantei Conan Movie 20: The Darkest Nightmare",
+    title: "Detective Conan Movie 20: The Darkest Nightmare",
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/6/77678l.jpg",
@@ -134,7 +134,7 @@ const images = [
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/11/60289l.jpg",
-    title: "Meitantei Conan Movie 18: The Sniper from Another Dimension",
+    title: "Detective Conan Movie 18: The Sniper from Another Dimension",
   },
   {
     src: "https://cdn.myanimelist.net/images/anime/10/62337l.jpg",

@@ -56,7 +56,7 @@ body {
 
 .loading-page {
   position: fixed;
-  margin-top: -6rem;
+  margin-top: -10vw;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
@@ -67,6 +67,26 @@ body {
   filter: grayscale(1) contrast(0.7);
   z-index: 1000;
   animation: show 4.25s ease;
+}
+
+.loading-page h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100vw;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 9rem;
+  text-align: center;
+  letter-spacing: 3px;
+  opacity: 0.85;
+  z-index: 3;
+}
+
+.loading-page h1 span {
+  color: var(--color-background-100);
+  animation: lamp 1s ease infinite;
 }
 
 @keyframes show {
@@ -1277,8 +1297,8 @@ body {
 }
 
 .social-icons a:hover {
-  border-top: 2px solid #7f7f7fec;
-  border-left: 2px solid #7f7f7fec;
+  border-top: 2px solid #7f7f7fdc;
+  border-left: 2px solid #7f7f7fdc;
 }
 
 .footer h3 a {
@@ -1307,11 +1327,11 @@ body {
 }
 
 .footer a:hover span {
-  color: #2e888d;
+  color: #2e888df8;
 }
 
 .footer a:hover {
-  color: #7f7f7fec;
+  color: #7f7f7fdc;
 }
 
 @keyframes fadein {
@@ -1514,6 +1534,10 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .loading-page h1 {
+    font-size: 7rem;
+  }
+
   .foot-menu .left-menu .rss,
   .foot-menu .left-menu .sitemap {
     display: none;
@@ -1521,6 +1545,10 @@ body {
 }
 
 @media (max-width: 926px) {
+  .loading-page h1 {
+    font-size: 6rem;
+  }
+
   .foot-menu .left-menu {
     display: block;
   }
@@ -1533,6 +1561,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .loading-page h1 {
+    font-size: 4rem;
+  }
+
   .main {
     display: block;
     max-height: 43rem;

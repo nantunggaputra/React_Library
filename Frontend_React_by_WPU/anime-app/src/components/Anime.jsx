@@ -14,8 +14,7 @@ function AnimeList({ anime, onSelectedAnime, isSelected }) {
             src={anime.images.jpg.large_image_url}
             alt={`${anime.title} Cover`}
             style={
-              anime.rating === "Rx - Hentai" ||
-              anime.rating === "R+ - Mild Nudity"
+              anime.rating === "Rx - Hentai"
                 ? {
                     filter: "grayscale(1) brightness(0.3) contrast(0.3)",
                     opacity: "0.7",

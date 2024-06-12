@@ -16,22 +16,17 @@ export default function AnimeDetail({ selectedAnime }) {
         selectedAnime.aired ? (
           <a
             href={
-              selectedAnime.rating === "Rx - Hentai" ||
-              selectedAnime.rating === "R+ - Mild Nudity"
+              selectedAnime.rating === "Rx - Hentai"
                 ? undefined
                 : `https://myanimelist.net/search/all?q=${selectedAnime.title}&cat=all`
             }
             title={
-              selectedAnime.rating === "Rx - Hentai" ||
-              selectedAnime.rating === "R+ - Mild Nudity"
+              selectedAnime.rating === "Rx - Hentai"
                 ? undefined
                 : "Search in My Anime List"
             }
             target={
-              selectedAnime.rating === "Rx - Hentai" ||
-              selectedAnime.rating === "R+ - Mild Nudity"
-                ? undefined
-                : "_blank"
+              selectedAnime.rating === "Rx - Hentai" ? undefined : "_blank"
             }
             rel="noopener noreferrer nofollow"
           >
@@ -39,8 +34,7 @@ export default function AnimeDetail({ selectedAnime }) {
               src={selectedAnime.images.jpg.large_image_url}
               alt={`${selectedAnime.title} Cover`}
               style={
-                selectedAnime.rating === "Rx - Hentai" ||
-                selectedAnime.rating === "R+ - Mild Nudity"
+                selectedAnime.rating === "Rx - Hentai"
                   ? {
                       filter: "grayscale(1) brightness(0.3) contrast(0.3)",
                       opacity: "0.7",
@@ -59,22 +53,17 @@ export default function AnimeDetail({ selectedAnime }) {
           <h2>
             <a
               href={
-                selectedAnime.rating === "Rx - Hentai" ||
-                selectedAnime.rating === "R+ - Mild Nudity"
+                selectedAnime.rating === "Rx - Hentai"
                   ? undefined
                   : `https://www.bilibili.tv/id/search-result?q=${selectedAnime.title}`
               }
               title={
-                selectedAnime.rating === "Rx - Hentai" ||
-                selectedAnime.rating === "R+ - Mild Nudity"
+                selectedAnime.rating === "Rx - Hentai"
                   ? undefined
                   : "Search in BiliBili | Bstation"
               }
               target={
-                selectedAnime.rating === "Rx - Hentai" ||
-                selectedAnime.rating === "R+ - Mild Nudity"
-                  ? undefined
-                  : "_blank"
+                selectedAnime.rating === "Rx - Hentai" ? undefined : "_blank"
               }
               rel="noopener noreferrer nofollow"
               style={{ cursor: "pointer" }}

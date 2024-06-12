@@ -31,10 +31,15 @@ export default function Aside() {
       const data = await response.json();
       const filteredAnimes = data.data.filter(
         (anime) =>
-          (anime.type == "TV" &&
+          (anime.rating !== "R+ - Mild Nudity" &&
+            anime.rating !== "R - 17+ (violence & profanity)" &&
+            anime.type !== "OVA" &&
             anime.type !== "Movie" &&
-            anime.type !== "OVA") ||
-          anime.type === "OVA"
+            anime.type === "TV") ||
+          (anime.rating !== "R+ - Mild Nudity" &&
+            anime.rating !== "R - 17+ (violence & profanity)" &&
+            anime.type === "OVA" &&
+            anime.type !== "Movie")
       );
       setAnimeList(filteredAnimes);
       setCurrentIndex(0);
@@ -115,8 +120,7 @@ export default function Aside() {
                     src={animeList[currentIndex].images.jpg.image_url}
                     alt={animeList[currentIndex].title}
                     style={
-                      animeList[currentIndex].rating === "Rx - Hentai" ||
-                      animeList[currentIndex].rating === "R+ - Mild Nudity"
+                      animeList[currentIndex].rating === "Rx - Hentai"
                         ? {
                             filter:
                               "grayscale(1) brightness(0.3) contrast(0.3)",

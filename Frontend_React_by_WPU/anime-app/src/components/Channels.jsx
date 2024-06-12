@@ -1,46 +1,46 @@
 const channelsNow = [
   {
-    src: "watch-anime-in-now/BSTATION.png",
+    src: "watch-anime-in-now/BSTATION.webp",
     alt: "Bstation",
   },
   {
-    src: "watch-anime-in-now/CRUNCHYROLL.png",
+    src: "watch-anime-in-now/CRUNCHYROLL.webp",
     alt: "Crunchyroll",
   },
   {
-    src: "watch-anime-in-now/DISNEYPLUSHOTSTAR.png",
+    src: "watch-anime-in-now/DISNEYPLUSHOTSTAR.webp",
     alt: "Disney+ Hotstar",
   },
   {
-    src: "watch-anime-in-now/FUNIMATION.png",
+    src: "watch-anime-in-now/FUNIMATION.webp",
     alt: "Funimation",
   },
   {
-    src: "watch-anime-in-now/GENFLIX.png",
+    src: "watch-anime-in-now/GENFLIX.webp",
     alt: "Genflix",
   },
   {
-    src: "watch-anime-in-now/IQIYI.png",
+    src: "watch-anime-in-now/IQIYI.webp",
     alt: "iQIYI",
   },
   {
-    src: "watch-anime-in-now/NETFLIX.png",
+    src: "watch-anime-in-now/NETFLIX.webp",
     alt: "Netflix",
   },
   {
-    src: "watch-anime-in-now/PRIMEVIDEO.png",
+    src: "watch-anime-in-now/PRIMEVIDEO.webp",
     alt: "Prime Video",
   },
   {
-    src: "watch-anime-in-now/VIDIO.png",
+    src: "watch-anime-in-now/VIDIO.webp",
     alt: "Vidio",
   },
   {
-    src: "watch-anime-in-now/VIU.png",
+    src: "watch-anime-in-now/VIU.webp",
     alt: "Viu",
   },
   {
-    src: "watch-anime-in-now/WETV.png",
+    src: "watch-anime-in-now/WETV.webp",
     alt: "WeTV",
   },
 ];

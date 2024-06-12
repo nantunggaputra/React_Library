@@ -59,7 +59,15 @@ export default function App() {
   }, []);
 
   if (isLoading) {
-    return <div className="loading-page"></div>;
+    return (
+      <div className="loading-page">
+        <h1>
+          <strong>
+            UNDER DEV<span>EL</span>OP<span>MENT</span>
+          </strong>
+        </h1>
+      </div>
+    );
   }
 
   return (

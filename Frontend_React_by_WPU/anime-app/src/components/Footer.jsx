@@ -49,7 +49,7 @@ export default function Footer() {
         <div className="audio-background">
           <audio
             ref={audioRef}
-            src="Detective Conan feat TheFatRat - Xenogenesis (Outro Song).aac"
+            src="Detective Conan feat TheFatRat - Xenogenesis (Outro Song).mp3"
             autoPlay
             loop
           ></audio>
