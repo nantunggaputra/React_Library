@@ -1,10 +1,10 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import AnimeLegacy from "./AnimeLegacy";
 import AnimeDetailLegacy from "./AnimeDetailLegacy";
 
-function TextResult() {
+function TextReminder() {
   return (
     <>
       <br />
@@ -19,21 +19,20 @@ function TextResult() {
   );
 }
 
+const toggleOpen = (setIsOpen) => () => setIsOpen((open) => !open);
+
 function ListBox({ animesLegacy, onSelectedAnimeLegacy }) {
-  const [isOpen1, setIsOpen1] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div
       className="box"
       style={animesLegacy.length > 1 ? {} : { overflow: "hidden" }}
     >
-      <button
-        className="btn-toggle"
-        onClick={() => setIsOpen1((open) => !open)}
-      >
-        {isOpen1 ? "+" : "±"}
+      <button className="btn-toggle" onClick={toggleOpen(setIsOpen)}>
+        {isOpen ? "+" : "±"}
       </button>
-      {isOpen1 && (
+      {isOpen && (
         <AnimeLegacy
           animesLegacy={animesLegacy}
           onSelectedAnimeLegacy={onSelectedAnimeLegacy}
@@ -44,17 +43,14 @@ function ListBox({ animesLegacy, onSelectedAnimeLegacy }) {
 }
 
 function SelectedBox({ selectedAnimeLegacy }) {
-  const [isOpen2, setIsOpen2] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className="box">
-      <button
-        className="btn-toggle"
-        onClick={() => setIsOpen2((open) => !open)}
-      >
-        {isOpen2 ? "+" : "±"}
+      <button className="btn-toggle" onClick={toggleOpen(setIsOpen)}>
+        {isOpen ? "+" : "±"}
       </button>
-      {isOpen2 && (
+      {isOpen && (
         <AnimeDetailLegacy selectedAnimeLegacy={selectedAnimeLegacy} />
       )}
     </div>
@@ -68,7 +64,7 @@ export default function MainLegacy({
 }) {
   return (
     <>
-      <TextResult />
+      <TextReminder />
       <div className="main">
         {selectedAnimeLegacy && (
           <SelectedBox selectedAnimeLegacy={selectedAnimeLegacy} />

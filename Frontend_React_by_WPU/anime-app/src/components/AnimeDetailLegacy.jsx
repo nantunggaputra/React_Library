@@ -1,109 +1,58 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
 
-/* eslint-disable react/prop-types */
 function IndentedText({ children }) {
   return <span style={{ paddingLeft: "33px" }}>{children}</span>;
 }
 
 export default function AnimeDetailLegacy({ selectedAnimeLegacy }) {
+  const { title, images, aired, score, rating, status, synopsis } =
+    selectedAnimeLegacy;
+
+  const largeImageUrl = images?.jpg?.large_image_url;
+  const airedYear = aired?.prop?.from?.year;
+
   return (
     <div className="details">
       <header>
-        {selectedAnimeLegacy.images &&
-        selectedAnimeLegacy.images.jpg &&
-        selectedAnimeLegacy.images.jpg.large_image_url &&
-        selectedAnimeLegacy.aired ? (
+        {largeImageUrl && aired && (
           <a
-            href={
-              selectedAnimeLegacy.rating === "Rx - Hentai"
-                ? undefined
-                : `https://myanimelist.net/search/all?q=${selectedAnimeLegacy.title}&cat=all`
-            }
-            title={
-              selectedAnimeLegacy.rating === "Rx - Hentai"
-                ? undefined
-                : "Search in My Anime List"
-            }
-            target={
-              selectedAnimeLegacy.rating === "Rx - Hentai"
-                ? undefined
-                : "_blank"
-            }
+            href={`https://myanimelist.net/search/all?q=${title}&cat=all`}
+            title="Search in My Anime List"
+            target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <img
-              src={selectedAnimeLegacy.images.jpg.large_image_url}
-              alt={`${selectedAnimeLegacy.title} Cover`}
-              style={
-                selectedAnimeLegacy.rating === "Rx - Hentai"
-                  ? {
-                      filter: "grayscale(1) brightness(0.3) contrast(0.3)",
-                      opacity: "0.7",
-                    }
-                  : {}
-              }
-            />
+            <img src={largeImageUrl} alt={`${title} Cover`} />
           </a>
-        ) : (
-          setTimeout(() => {
-            alert("Minna? What is the best anime for you? Let's Search");
-            window.location.reload();
-          })
         )}
         <div className="details-overview">
           <h2>
             <a
-              href={
-                selectedAnimeLegacy.rating === "Rx - Hentai"
-                  ? undefined
-                  : `https://www.bilibili.tv/id/search-result?q=${selectedAnimeLegacy.title}`
-              }
-              title={
-                selectedAnimeLegacy.rating === "Rx - Hentai"
-                  ? undefined
-                  : "Search in BiliBili | Bstation"
-              }
-              target={
-                selectedAnimeLegacy.rating === "Rx - Hentai"
-                  ? undefined
-                  : "_blank"
-              }
+              href={`https://www.bilibili.tv/id/search-result?q=${title}`}
+              title="Search in BiliBili | Bstation"
+              target="_blank"
               rel="noopener noreferrer nofollow"
-              style={{ cursor: "pointer" }}
             >
-              {selectedAnimeLegacy.title}
+              {title}
             </a>
           </h2>
 
           <small>
-            {selectedAnimeLegacy.aired.prop.from.year
-              ? selectedAnimeLegacy.aired.prop.from.year
-              : ""}
-            {selectedAnimeLegacy.aired.prop.from.year &&
-            selectedAnimeLegacy.score
-              ? " | "
-              : ""}
-            {selectedAnimeLegacy.score
-              ? "IMDb ★ " + selectedAnimeLegacy.score.toFixed(1) + "/10"
-              : ""}
+            {airedYear || ""}
+            {airedYear && score ? " | " : ""}
+            {score ? `IMDb ★ ${score.toFixed(1)}/10` : ""}
             <br />
-            {selectedAnimeLegacy.rating
-              ? "Rating for " + selectedAnimeLegacy.rating
-              : ""}
+            {rating ? `Rating for ${rating}` : ""}
           </small>
           <p>
-            <b>
-              {selectedAnimeLegacy.status
-                ? "Channel: " + selectedAnimeLegacy.status
-                : ""}
-            </b>
+            <b>{status ? `Channel: ${status}` : ""}</b>
           </p>
         </div>
       </header>
       <section>
         <p>
-          <em>{selectedAnimeLegacy.synopsis}</em>
+          <em>{synopsis}</em>
           <br />
           <br style={{ marginTop: "1.6rem" }} />
           <em>
@@ -115,7 +64,7 @@ export default function AnimeDetailLegacy({ selectedAnimeLegacy }) {
             </span>{" "}
             Engaging in piracy harms the creators and the industry as a whole.
             Please support the hardworking creators by purchasing the original
-            {" DVDs " + selectedAnimeLegacy.title + " "}
+            {" DVDs " + title + " "}
             or subscribing to official streaming services. Minna, your support
             ensures the continued production of quality content. Sankyuu~
           </em>

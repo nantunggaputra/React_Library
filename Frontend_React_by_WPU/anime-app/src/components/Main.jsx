@@ -1,7 +1,6 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React from "react";
-import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
 import Anime from "./Anime";
 import AnimeDetail from "./AnimeDetail";
 import AnimeLove from "./AnimeLove";
@@ -9,40 +8,34 @@ import AnimeWinter from "./AnimeWinter";
 import MainLegacy from "./MainLegacy";
 import AnimeByCategory from "./AnimeCategory";
 
+const toggleOpen = (setIsOpen) => () => setIsOpen((open) => !open);
+
 function ListBox({ animes, onSelectedAnime }) {
-  const [isOpen1, setIsOpen1] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div
       className="box"
       style={animes.length > 1 ? {} : { overflow: "hidden" }}
     >
-      <button
-        className="btn-toggle"
-        onClick={() => setIsOpen1((open) => !open)}
-      >
-        {isOpen1 ? "+" : "±"}
+      <button className="btn-toggle" onClick={toggleOpen(setIsOpen)}>
+        {isOpen ? "+" : "±"}
       </button>
-      {isOpen1 && <Anime animes={animes} onSelectedAnime={onSelectedAnime} />}
+      {isOpen && <Anime animes={animes} onSelectedAnime={onSelectedAnime} />}
     </div>
   );
 }
 
 function SelectedBox({ selectedAnime }) {
-  const [isOpen2, setIsOpen2] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <>
-      <div className="box">
-        <button
-          className="btn-toggle"
-          onClick={() => setIsOpen2((open) => !open)}
-        >
-          {isOpen2 ? "+" : "±"}
-        </button>
-        {isOpen2 && <AnimeDetail selectedAnime={selectedAnime} />}
-      </div>
-    </>
+    <div className="box">
+      <button className="btn-toggle" onClick={toggleOpen(setIsOpen)}>
+        {isOpen ? "+" : "±"}
+      </button>
+      {isOpen && <AnimeDetail selectedAnime={selectedAnime} />}
+    </div>
   );
 }
 
@@ -109,7 +102,7 @@ const animeLegacyData = [
     },
     score: 8.0,
     rating: "PG-13 - Teens 13 or older",
-    status: "Trans TV - Global TV",
+    status: "Global TV - Trans TV",
     synopsis:
       "Moments before Naruto Uzumaki's birth, a huge demon known as the Nine-Tailed Fox attacked Konohagakure, the Hidden Leaf Village, and wreaked havoc. In order to put an end to the demon's rampage, the leader of the village, the Fourth Hokage, sacrificed his life and sealed the monstrous beast inside the newborn Naruto. In the present, Naruto is a hyperactive and knuckle-headed ninja growing up within Konohagakure. Shunned because of the demon inside him, Naruto struggles to find his place in the village. His one burning desire to become the Hokage and be acknowledged by the villagers who despite him. However, while his goal leads him to unbreakable bonds with lifelong friends, it also lands him in the crosshairs of many deadly foes. [Written by MAL Rewrite]",
   },
@@ -131,7 +124,7 @@ const animeLegacyData = [
     },
     score: 7.9,
     rating: "PG-13 - Teens 13 or older",
-    status: "Indosiar - Global TV - Spacetoon",
+    status: "Global TV - Indosiar - Spacetoon",
     synopsis:
       "Kagome Higurashi's 15th birthday takes a sudden turn when she is forcefully pulled by a demon into the old well of her family's shrine. Brought to the past, when demons were a common sight in feudal Japan, Kagome finds herself persistently hunted by these vile creatures, all yearning for an item she unknowingly carries: the Shikon Jewel, a small sphere holding extraordinary power. Amid such a predicament, Kagome encounters a half-demon boy named Inuyasha who mistakes her for Kikyou, a shrine maiden he seems to resent. Because of her resemblance to Kikyou, Inuyasha takes a violent dislike to Kagome. However, after realizing the dire circumstances they are both in, he sets aside his hostility and lends her a hand. Unfortunately, during a fight for the Shikon Jewel, the miraculous object ends up shattered into pieces and scattered across the land. Fearing the disastrous consequences of this accident, Kagome and Inuyasha set out on a challenging quest to recover the shards before they fall into the wrong hands. [Written by MAL Rewrite]",
   },
@@ -153,7 +146,7 @@ const animeLegacyData = [
     },
     score: 7.5,
     rating: "PG-13 - Teens 13 or older",
-    status: "RCTI - SCTV - ANTV - Indosiar - Spacetoon",
+    status: "ANTV - Indosiar - RCTI - SCTV - Spacetoon",
     synopsis:
       'Yuugi Mutou is a naïve and lonely high school student who is fascinated by games. While staying with his grandfather, the owner of a game shop, he comes across an ancient Egyption relic known as the "Millennium Puzzle." Rumored to grant any wish to those who solve the Puzzle, Yuugi becomes determined to solve it to wish for some friends. After years of struggling, Yuugi manages to complete the puzzle and mysteriously finds that his wish has been fulfilled. Meanwhile, a new card game known as "Duel Monsters" starts rising in popularity. In this game, players called duelists fight against each other with "monsters" by using magic and trap cards to foil their opponent\'s plans. Yuugi quickly becomes skilled at the game and lives a peaceful life with his newfound friends. However, Yuugi\'s peace is short-lived. The undefeated duelist and egocentric billionaire Seto Kaiba suddenly abducts Yuugi\'s grandfather, forcing him to duel against the rare "Blue Eyes White Dragon" card. Yuugi is thrown into a new world of fierce battles and the stakes continue to rise as dark forces interfere from the shadows. After unexpectedly defeating Kaiba with the help of his "other self"—the spirit of a nameless pharaoh—contained in the puzzle, he unofficially becomes the top duelist known as "The King of Games." However, this new title will attract covetousness and Yuugi will have to use all his intelligence and willpower in order to protect what he holds the dearest to him. [Written by MAL Rewrite]',
   },
