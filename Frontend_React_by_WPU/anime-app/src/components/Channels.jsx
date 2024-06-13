@@ -48,47 +48,47 @@ const channelsNow = [
 const channelsThen = [
   {
     src: "watch-anime-in-then/ANTV.webp",
-    alt: "ANTV",
+    alt: "ANTV (old)",
     size: "M",
   },
   {
     src: "watch-anime-in-then/GLOBALTV.webp",
-    alt: "GLOBALTV",
+    alt: "Global TV (old renamed)",
     size: "M",
   },
   {
     src: "watch-anime-in-then/INDOSIAR.webp",
-    alt: "INDOSIAR",
+    alt: "Indosiar (old)",
     size: "L",
   },
   {
     src: "watch-anime-in-then/RCTI.webp",
-    alt: "RCTI",
+    alt: "RCTI (old)",
     size: "M",
   },
   {
     src: "watch-anime-in-then/SCTV.webp",
-    alt: "SCTV",
+    alt: "SCTV (old)",
     size: "L",
   },
   {
     src: "watch-anime-in-then/SPACETOON.webp",
-    alt: "SPACETOON",
+    alt: "Spacetoon (closed)",
     size: "L",
   },
   {
     src: "watch-anime-in-then/TPI.webp",
-    alt: "TPI",
+    alt: "TPI (closed)",
     size: "XL",
   },
   {
     src: "watch-anime-in-then/TRANSTV.webp",
-    alt: "TRANSTV",
+    alt: "Trans TV (old)",
     size: "XL",
   },
   {
     src: "watch-anime-in-then/TV7.webp",
-    alt: "TV7",
+    alt: "TV7 (closed)",
     size: "XL",
   },
 ];

@@ -6,12 +6,16 @@ import AnimeDetailLegacy from "./AnimeDetailLegacy";
 
 function TextResult() {
   return (
-    <p className="search-results" style={{ margin: "auto" }}>
-      <span>Remember</span>{" "}
-      <strong>
-        Sunday Morning? Wee present The Best 2000s childhood anime...
-      </strong>
-    </p>
+    <>
+      <br />
+      <p className="search-results" style={{ margin: "0.2rem auto -0.4rem" }}>
+        <span>Remember</span>{" "}
+        <strong>
+          Sunday Morning? Wee present The Best 2000s childhood anime...
+        </strong>
+      </p>
+      <br />
+    </>
   );
 }
 

@@ -29,7 +29,6 @@ body {
   color: var(--color-text);
   background-color: var(--color-background-900);
   padding: 2.4rem;
-  overflow-x: hidden;
 }
 
 .body-transition {
@@ -82,12 +81,12 @@ body {
   letter-spacing: 3px;
   opacity: 0;
   z-index: 3;
-  animation: show 4.25s ease;
+  animation: show 5.5s ease;
 }
 
 .loading-page h1 span {
-  color: var(--color-background-100);
-  animation: show 4.25s ease, lamp 1s ease 1.5s;
+  color: var(--color-background-500);
+  animation: show 5.5s ease, lamp 1s ease 1.5s;
 }
 
 @keyframes show {
@@ -120,8 +119,8 @@ body {
 }
 
 .clouds {
-  width: 120%;
-  height: 120%;
+  width: 100%;
+  height: 100%;
   background: transparent url("../Clouds.webp");
   position: fixed;
   opacity: 0;
@@ -527,7 +526,6 @@ body {
   margin: 2.4rem auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   align-items: center;
   border-radius: 1rem;
   background: #17171797;
@@ -535,6 +533,14 @@ body {
   -webkit-backdrop-filter: blur(0.25rem);
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+.channels.stream {
+  justify-content: flex-start;
+}
+
+.channels.tv {
+  justify-content: flex-end;
 }
 
 .channels:hover img {
@@ -570,8 +576,9 @@ body {
 }
 
 .closing {
-  width: 100vw;
-  height: 100vh;
+  margin: 0 -2.4rem;
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   display: flex;
@@ -581,7 +588,7 @@ body {
 }
 
 .closing h4 {
-  margin: -1.5rem 7rem;
+  margin: -1.5rem 5.75rem;
   color: var(--color-text);
   font-family: "Times New Roman", Times, serif;
   font-size: 9rem;
@@ -592,7 +599,6 @@ body {
   top: 105rem;
   right: 1rem;
   position: absolute;
-  transform: scale(1.1);
   filter: contrast(0.4) brightness(0.25);
   opacity: 0.8;
   z-index: -3;
@@ -1479,10 +1485,21 @@ body {
 
 /* Media Query */
 
-@media (max-width: 1260px) {
+@media (max-width: 1259px) {
+  .aside {
+    background: transparent;
+    backdrop-filter: unset;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+@media (max-width: 1149px) {
   .aside {
     display: block;
     position: relative;
+    background: #e1e8ed25;
+    backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.25rem);
     padding: 0.5rem 1.5rem;
     margin: auto;
     margin-bottom: 2.4rem;
@@ -1519,6 +1536,11 @@ body {
 
   .channels img {
     filter: grayscale(1) contrast(1.1) blur(0);
+  }
+
+  .channels.stream,
+  .channels.tv {
+    justify-content: center;
   }
 
   .closing {
@@ -1645,7 +1667,7 @@ body {
   }
 
   .choose {
-    margin-top: 43.3rem;
+    margin-top: 44.4rem;
   }
 
   .separator img {
