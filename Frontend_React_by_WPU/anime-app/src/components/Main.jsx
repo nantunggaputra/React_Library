@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import { useState } from "react";
 import Anime from "./Anime";
 import AnimeDetail from "./AnimeDetail";
 import AnimeLove from "./AnimeLove";
@@ -164,12 +163,16 @@ export default function Main({ animes, selectedAnime, onSelectedAnime }) {
   return (
     <>
       <main className="main">
-        {selectedAnime && <SelectedBox selectedAnime={selectedAnime} />}
+        {selectedAnime && selectedAnime.mal_id !== "No Search Result" && (
+          <SelectedBox selectedAnime={selectedAnime} />
+        )}
         {animes.length > 0 && (
           <ListBox animes={animes} onSelectedAnime={onSelectedAnime} />
         )}
       </main>
-      {selectedAnime && <div className="box-separator"></div>}
+      {selectedAnime && selectedAnime.mal_id !== "No Search Result" && (
+        <div className="box-separator"></div>
+      )}
       <AnimeLove />
       <AnimeWinter />
       <MainLegacy

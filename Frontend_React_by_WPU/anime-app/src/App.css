@@ -55,11 +55,10 @@ body {
 
 .loading-page {
   position: fixed;
-  margin-top: -10vw;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  padding-bottom: 120vh;
+  height: 100vh;
   background: linear-gradient(to top, #17171700, #000000),
     url("../Detective\ Conan\ Case\ Closed\ Brick\ Background.webp");
   background-position: center;
@@ -70,10 +69,11 @@ body {
 
 .loading-page h1 {
   position: fixed;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%);
   width: 100vw;
+  height: 100vh;
   color: var(--color-text);
   font-family: inherit;
   font-size: 9rem;
@@ -84,8 +84,8 @@ body {
   animation: show 5.5s ease;
 }
 
-.loading-page h1 span {
-  color: var(--color-background-500);
+.loading-page h1::before {
+  content: "UNDER DEVELOPMENT";
   animation: show 5.5s ease, lamp 1s ease 1.5s;
 }
 
@@ -453,7 +453,8 @@ body {
 }
 
 .search-results {
-  max-width: 35rem;
+  width: 35rem;
+  max-width: 80vw;
   margin-top: 3rem;
   padding: 0.5rem 0.8rem;
   border-radius: 0.5rem;
@@ -631,7 +632,8 @@ body {
 
 /* Main */
 
-.main {
+.main,
+.main-legacy {
   margin-top: 2.4rem;
   max-height: 55rem;
   display: flex;
@@ -639,7 +641,8 @@ body {
   gap: 2.4rem;
 }
 
-.main .box {
+.main .box,
+.main-legacy .box {
   width: 42rem;
   max-width: 80vw;
   min-height: 6rem;
@@ -1604,12 +1607,14 @@ body {
     font-size: 4rem;
   }
 
-  .main {
+  .main,
+  .main-legacy {
     display: block;
     max-height: 43rem;
   }
 
-  .main .box {
+  .main .box,
+  .main-legacy .box {
     display: block;
     margin: auto;
     margin-bottom: 1rem;

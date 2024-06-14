@@ -64,7 +64,7 @@ export default function Aside() {
 
   return (
     <>
-      <div id="check" className="aside left">
+      <aside id="check" className="aside left">
         <div className="check">
           <h2>
             <span style={{ color: "#0377b9" }}>Genre</span> Anime
@@ -85,8 +85,8 @@ export default function Aside() {
             </button>
           ))}
         </div>
-      </div>
-      <div className="aside right">
+      </aside>
+      <aside className="aside right">
         <div className="check">
           <h2>
             <span style={{ color: "#0377b9" }}>
@@ -150,22 +150,22 @@ export default function Aside() {
             )}
           </div>
         </div>
-      </div>
-      <div className="closing">
-        <div>
+      </aside>
+      <figure className="closing">
+        <figcaption>
           <h4>あ</h4>
           <h4>り</h4>
           <h4>が</h4>
           <h4>と</h4>
           <h4>う</h4>
-        </div>
-        <div>
+        </figcaption>
+        <figcaption>
           <h4>み</h4>
           <h4>な</h4>
           <h4>さ</h4>
           <h4>ん</h4>
-        </div>
-      </div>
+        </figcaption>
+      </figure>
     </>
   );
 }

@@ -1,22 +1,20 @@
 import { useState, useEffect } from "react";
-import "./App.css";
 import axios from "axios";
+import "./App.css";
 import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
-import Footer from "./components/Footer";
-import Separator from "./components/Separator";
 import Aside from "./components/Aside";
 import Channels from "./components/Channels";
+import Separator from "./components/Separator";
+import Footer from "./components/Footer";
 
 const animesData = [
   {
-    mal_id: 1000000000,
+    mal_id: "No Search Result",
     title: "Minna? What is the best anime for you? Let's Search",
     year: 2024,
     image: "https://cdn.myanimelist.net/images/anime/7/75199.jpg",
-    score: 10,
-    synopsis: "",
   },
 ];
 
@@ -38,7 +36,7 @@ export default function App() {
       console.error("Error fetching data:", error);
       setTimeout(() => {
         alert(
-          `${error}\nMinna-San! An error occurred in the result data. Please enter another anime title or try again later.`
+          `${error}\nMinna-san! An error occurred in the result data. Please enter another anime title or try again later.`
         );
         window.location.reload();
       });
@@ -61,11 +59,7 @@ export default function App() {
   if (isLoading) {
     return (
       <div className="loading-page">
-        <h1>
-          <strong>
-            UNDER DEV<span>EL</span>OP<span>MENT</span>
-          </strong>
-        </h1>
+        <h1></h1>
       </div>
     );
   }

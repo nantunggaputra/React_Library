@@ -96,7 +96,7 @@ const channelsThen = [
 export default function Channels() {
   return (
     <>
-      <div className="aside top-left">
+      <aside className="aside top-left">
         <div className="channels stream">
           {channelsNow.map((stream) => (
             <div className="frame" key={stream.alt} title={stream.alt}>
@@ -104,8 +104,8 @@ export default function Channels() {
             </div>
           ))}
         </div>
-      </div>
-      <div className="aside top-right">
+      </aside>
+      <aside className="aside top-right">
         <div className="channels tv">
           {channelsThen.map((tv) => (
             <div className="frame" key={tv.alt} title={tv.alt}>
@@ -123,7 +123,7 @@ export default function Channels() {
             </div>
           ))}
         </div>
-      </div>
+      </aside>
     </>
   );
 }

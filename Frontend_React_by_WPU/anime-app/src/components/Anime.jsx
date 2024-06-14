@@ -1,6 +1,23 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 
+const getImageSrc = (anime) => {
+  return anime.images?.jpg?.large_image_url || anime.image;
+};
+
+const getAnimeYear = (anime) => {
+  return anime.aired?.prop?.from?.year || anime.year || "Year";
+};
+
+const getImageStyle = (rating) => {
+  return rating === "Rx - Hentai"
+    ? {
+        filter: "grayscale(1) brightness(0.3) contrast(0.3)",
+        opacity: "0.7",
+      }
+    : {};
+};
+
 function AnimeList({ anime, onSelectedAnime, isSelected }) {
   return (
     <li
@@ -8,42 +25,17 @@ function AnimeList({ anime, onSelectedAnime, isSelected }) {
       onClick={() => onSelectedAnime(anime)}
       className={isSelected ? "selected" : ""}
     >
-      {anime.images && anime.images.jpg && anime.images.jpg.large_image_url ? (
-        <>
-          <img
-            src={anime.images.jpg.large_image_url}
-            alt={`${anime.title} Cover`}
-            style={
-              anime.rating === "Rx - Hentai"
-                ? {
-                    filter: "grayscale(1) brightness(0.3) contrast(0.3)",
-                    opacity: "0.7",
-                  }
-                : {}
-            }
-          />
-          <h3>{anime.title}</h3>
-          <div>
-            <p>
-              <span>
-                {anime.aired.prop.from.year
-                  ? anime.aired.prop.from.year
-                  : "Year"}
-              </span>
-            </p>
-          </div>
-        </>
-      ) : (
-        <>
-          <img src={anime.image} alt="Anime Cover" />
-          <h3>{anime.title}</h3>
-          <div>
-            <p>
-              <span>{anime.year}</span>
-            </p>
-          </div>
-        </>
-      )}
+      <img
+        src={getImageSrc(anime)}
+        alt={`${anime.title} Cover`}
+        style={getImageStyle(anime.rating)}
+      />
+      <h3>{anime.title}</h3>
+      <div>
+        <p>
+          <span>{getAnimeYear(anime)}</span>
+        </p>
+      </div>
     </li>
   );
 }

@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import { useState } from "react";
 import AnimeLegacy from "./AnimeLegacy";
 import AnimeDetailLegacy from "./AnimeDetailLegacy";
 
-function TextReminder() {
+function MainLegacyResult() {
   return (
     <>
       <br />
@@ -64,8 +63,8 @@ export default function MainLegacy({
 }) {
   return (
     <>
-      <TextReminder />
-      <div className="main">
+      <MainLegacyResult />
+      <div className="main-legacy">
         {selectedAnimeLegacy && (
           <SelectedBox selectedAnimeLegacy={selectedAnimeLegacy} />
         )}

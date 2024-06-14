@@ -1,100 +1,94 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React from "react";
-
 function IndentedText({ children }) {
   return <span style={{ paddingLeft: "33px" }}>{children}</span>;
 }
 
+const getImageStyle = (rating) => {
+  return rating === "Rx - Hentai"
+    ? {
+        filter: "grayscale(1) brightness(0.3) contrast(0.3)",
+        opacity: "0.7",
+      }
+    : {};
+};
+
+const getAnimeYear = (anime) => {
+  return anime.aired?.prop?.from?.year || "";
+};
+
+const getAnimeScore = (anime) => {
+  return anime.score ? `IMDb ★ ${anime.score.toFixed(1)}/10` : "";
+};
+
+const getAnimeRating = (anime) => {
+  return anime.rating ? `Rating for ${anime.rating}` : "";
+};
+
+const getAnimeStatus = (anime) => {
+  return anime.status ? `Status: ${anime.status}` : "";
+};
+
+const getLinkAttributes = (rating, url, title) => {
+  return rating === "Rx - Hentai"
+    ? {}
+    : {
+        href: url,
+        title: title,
+        target: "_blank",
+        rel: "noopener noreferrer nofollow",
+      };
+};
+
 export default function AnimeDetail({ selectedAnime }) {
+  if (!selectedAnime) return null;
+
+  const { title, images, aired, score, rating, synopsis } = selectedAnime;
+
+  const largeImageUrl = images?.jpg?.large_image_url;
+  const malLink = getLinkAttributes(
+    rating,
+    `https://myanimelist.net/search/all?q=${title}&cat=all`,
+    "Search in My Anime List"
+  );
+  const biliLink = getLinkAttributes(
+    rating,
+    `https://www.bilibili.tv/id/search-result?q=${title}`,
+    "Search in BiliBili | Bstation"
+  );
+
   return (
     <div className="details">
       <header>
-        {selectedAnime.images &&
-        selectedAnime.images.jpg &&
-        selectedAnime.images.jpg.large_image_url &&
-        selectedAnime.aired ? (
-          <a
-            href={
-              selectedAnime.rating === "Rx - Hentai"
-                ? undefined
-                : `https://myanimelist.net/search/all?q=${selectedAnime.title}&cat=all`
-            }
-            title={
-              selectedAnime.rating === "Rx - Hentai"
-                ? undefined
-                : "Search in My Anime List"
-            }
-            target={
-              selectedAnime.rating === "Rx - Hentai" ? undefined : "_blank"
-            }
-            rel="noopener noreferrer nofollow"
-          >
+        {largeImageUrl && aired && (
+          <a {...malLink}>
             <img
-              src={selectedAnime.images.jpg.large_image_url}
-              alt={`${selectedAnime.title} Cover`}
-              style={
-                selectedAnime.rating === "Rx - Hentai"
-                  ? {
-                      filter: "grayscale(1) brightness(0.3) contrast(0.3)",
-                      opacity: "0.7",
-                    }
-                  : {}
-              }
+              src={largeImageUrl}
+              alt={`${title} Cover`}
+              style={getImageStyle(rating)}
             />
           </a>
-        ) : (
-          setTimeout(() => {
-            alert("Minna? What is the best anime for you? Let's Search");
-            window.location.reload();
-          })
         )}
         <div className="details-overview">
           <h2>
-            <a
-              href={
-                selectedAnime.rating === "Rx - Hentai"
-                  ? undefined
-                  : `https://www.bilibili.tv/id/search-result?q=${selectedAnime.title}`
-              }
-              title={
-                selectedAnime.rating === "Rx - Hentai"
-                  ? undefined
-                  : "Search in BiliBili | Bstation"
-              }
-              target={
-                selectedAnime.rating === "Rx - Hentai" ? undefined : "_blank"
-              }
-              rel="noopener noreferrer nofollow"
-              style={{ cursor: "pointer" }}
-            >
-              {selectedAnime.title}
+            <a {...biliLink} style={{ cursor: "pointer" }}>
+              {title}
             </a>
           </h2>
-
           <small>
-            {selectedAnime.aired.prop.from.year
-              ? selectedAnime.aired.prop.from.year
-              : ""}
-            {selectedAnime.aired.prop.from.year && selectedAnime.score
-              ? " | "
-              : ""}
-            {selectedAnime.score
-              ? "IMDb ★ " + selectedAnime.score.toFixed(1) + "/10"
-              : ""}
+            {getAnimeYear(selectedAnime)}
+            {getAnimeYear(selectedAnime) && score ? " | " : ""}
+            {getAnimeScore(selectedAnime)}
             <br />
-            {selectedAnime.rating ? "Rating for " + selectedAnime.rating : ""}
+            {getAnimeRating(selectedAnime)}
           </small>
           <p>
-            <b>
-              {selectedAnime.status ? "Status: " + selectedAnime.status : ""}
-            </b>
+            <b>{getAnimeStatus(selectedAnime)}</b>
           </p>
         </div>
       </header>
       <section>
         <p>
-          <em>{selectedAnime.synopsis}</em>
+          <em>{synopsis}</em>
           <br />
           <br style={{ marginTop: "1.6rem" }} />
           <em>
@@ -106,7 +100,7 @@ export default function AnimeDetail({ selectedAnime }) {
             </span>{" "}
             Engaging in piracy harms the creators and the industry as a whole.
             Please support the hardworking creators by purchasing the original
-            {" DVDs " + selectedAnime.title + " "}
+            {" DVDs " + title + " "}
             or subscribing to official streaming services. Minna, your support
             ensures the continued production of quality content. Sankyuu~
           </em>

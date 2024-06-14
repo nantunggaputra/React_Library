@@ -1,13 +1,22 @@
 /* eslint-disable react/prop-types */
 import { useState, useRef } from "react";
 
-function NumResult({ count }) {
+function MainResult({ count }) {
   return (
     <p className="search-results">
-      <span>\(≧▽≦)/</span>{" "}
-      <strong>
-        Subarashii, Minna! Wee found Breathtaking {count} results anime...
-      </strong>
+      {count === 0 ? (
+        <>
+          <span>o(T___T)o</span>{" "}
+          <strong>Gomennasai Minna-san! Please search again...</strong>
+        </>
+      ) : (
+        <>
+          <span>\(≧▽≦)/</span>{" "}
+          <strong>
+            Subarashi Minna-san! Wee found Breathtaking {count} results anime...
+          </strong>
+        </>
+      )}
     </p>
   );
 }
@@ -74,7 +83,7 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
 }
 
 export default function Search({ fetchAnime }) {
-  const [resultCount, setResultCount] = useState(0);
+  const [resultCount, setResultCount] = useState(undefined);
   const [loading, setLoading] = useState(false);
 
   return (
@@ -86,7 +95,7 @@ export default function Search({ fetchAnime }) {
           setLoading={setLoading}
           loading={loading}
         />
-        {resultCount > 0 && <NumResult count={resultCount} />}
+        {resultCount >= 0 && <MainResult count={resultCount} />}
       </>
     </div>
   );

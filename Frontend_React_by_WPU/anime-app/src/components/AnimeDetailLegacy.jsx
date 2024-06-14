@@ -1,7 +1,4 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import React from "react";
-
 function IndentedText({ children }) {
   return <span style={{ paddingLeft: "33px" }}>{children}</span>;
 }
@@ -16,16 +13,14 @@ export default function AnimeDetailLegacy({ selectedAnimeLegacy }) {
   return (
     <div className="details">
       <header>
-        {largeImageUrl && aired && (
-          <a
-            href={`https://myanimelist.net/search/all?q=${title}&cat=all`}
-            title="Search in My Anime List"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-          >
-            <img src={largeImageUrl} alt={`${title} Cover`} />
-          </a>
-        )}
+        <a
+          href={`https://myanimelist.net/search/all?q=${title}&cat=all`}
+          title="Search in My Anime List"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <img src={largeImageUrl} alt={`${title} Cover`} />
+        </a>
         <div className="details-overview">
           <h2>
             <a
