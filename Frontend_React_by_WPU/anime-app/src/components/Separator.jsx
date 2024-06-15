@@ -1,7 +1,7 @@
 export default function Separator() {
   return (
-    <div className="separator">
+    <figure className="separator">
       <img src="Detective Conan Logo Internazionale.webp" alt=" " />
-    </div>
+    </figure>
   );
 }

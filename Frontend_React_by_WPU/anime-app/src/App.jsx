@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 
 const animesData = [
   {
-    mal_id: "No Search Result",
+    mal_id: "No Data",
     title: "Minna? What is the best anime for you? Let's Search",
     year: 2024,
     image: "https://cdn.myanimelist.net/images/anime/7/75199.jpg",

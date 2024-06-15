@@ -287,6 +287,11 @@ body {
   margin-top: 0.5rem;
 }
 
+.nav-bar .links li {
+  list-style: none;
+  display: inline;
+}
+
 .nav-bar .links a {
   margin: 0 0.5rem;
   text-decoration: none;
@@ -588,7 +593,7 @@ body {
   z-index: -4;
 }
 
-.closing h4 {
+.closing h6 {
   margin: -1.5rem 5.75rem;
   color: var(--color-text);
   font-family: "Times New Roman", Times, serif;
@@ -1083,7 +1088,7 @@ body {
 }
 
 .love-image img:hover {
-  animation: hide 1s infinite 0.25s;
+  animation: hide 1s infinite;
 }
 
 @keyframes hide {

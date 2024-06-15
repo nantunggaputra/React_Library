@@ -3,31 +3,26 @@ import { useState, useRef } from "react";
 
 function MainResult({ count }) {
   return (
-    <p className="search-results">
-      {count === 0 ? (
-        <>
-          <span>o(T___T)o</span>{" "}
-          <strong>Gomennasai Minna-san! Please search again...</strong>
-        </>
-      ) : (
-        <>
-          <span>\(≧▽≦)/</span>{" "}
-          <strong>
-            Subarashi Minna-san! Wee found Breathtaking {count} results anime...
-          </strong>
-        </>
-      )}
+    <p className="search-results" style={{ cursor: "default" }}>
+      <span>{count !== 0 ? "\\≧▽≦/" : "/o(T___T)o\\"}</span>{" "}
+      <strong>
+        {count !== 0
+          ? `Subarashi Minna-san! Wee found Breathtaking ${count} results anime...`
+          : "Gomennasai Minna-san! Please Search again..."}
+      </strong>
     </p>
   );
 }
 
 function Kanji() {
   return (
-    <div className="search-kanji">
-      <h6>コ</h6>
-      <h6>ナ</h6>
-      <h6>ン</h6>
-    </div>
+    <figure className="search-kanji">
+      <figcaption>
+        <h6>コ</h6>
+        <h6>ナ</h6>
+        <h6>ン</h6>
+      </figcaption>
+    </figure>
   );
 }
 

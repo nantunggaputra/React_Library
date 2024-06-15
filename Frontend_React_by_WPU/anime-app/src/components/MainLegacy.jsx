@@ -3,14 +3,21 @@ import { useState } from "react";
 import AnimeLegacy from "./AnimeLegacy";
 import AnimeDetailLegacy from "./AnimeDetailLegacy";
 
-function MainLegacyResult() {
+const fetchDataComplete = (data) => data.length > 0;
+
+function MainLegacyResult({ animesLegacy }) {
   return (
     <>
       <br />
-      <p className="search-results" style={{ margin: "0.2rem auto -0.4rem" }}>
-        <span>Remember</span>{" "}
+      <p
+        className="search-results"
+        style={{ margin: "0.2rem auto -0.4rem", cursor: "default" }}
+      >
+        <span>{fetchDataComplete(animesLegacy) ? "Remember" : "Yameru"}</span>{" "}
         <strong>
-          Sunday Morning? Wee present The Best 2000s childhood anime...
+          {fetchDataComplete(animesLegacy)
+            ? "Sunday Morning? Wee present The Best 2000s childhood anime..."
+            : "Minna-san! Please wait or you can Reload to get this anime..."}
         </strong>
       </p>
       <br />
@@ -63,17 +70,15 @@ export default function MainLegacy({
 }) {
   return (
     <>
-      <MainLegacyResult />
+      <MainLegacyResult animesLegacy={animesLegacy} />
       <div className="main-legacy">
         {selectedAnimeLegacy && (
           <SelectedBox selectedAnimeLegacy={selectedAnimeLegacy} />
         )}
-        {animesLegacy.length > 0 && (
-          <ListBox
-            animesLegacy={animesLegacy}
-            onSelectedAnimeLegacy={onSelectedAnimeLegacy}
-          />
-        )}
+        <ListBox
+          animesLegacy={animesLegacy}
+          onSelectedAnimeLegacy={onSelectedAnimeLegacy}
+        />
       </div>
     </>
   );
