@@ -7,8 +7,6 @@ import AnimeWinter from "./AnimeWinter";
 import MainLegacy from "./MainLegacy";
 import AnimeByCategory from "./AnimeCategory";
 
-const fetchDataComplete = (data) => data !== "No Data";
-
 const toggleOpen = (setIsOpen) => () => setIsOpen((open) => !open);
 
 function ListBox({ animes, onSelectedAnime }) {
@@ -40,6 +38,8 @@ function SelectedBox({ selectedAnime }) {
   );
 }
 
+let hasData = (data) => data !== "No Data";
+
 export default function Main({ animes, selectedAnime, onSelectedAnime }) {
   const [animeLegacyData, setAnimeLegacyData] = useState([]);
   const [selectedAnimeLegacy, setSelectedAnimeLegacy] = useState(null);
@@ -60,14 +60,14 @@ export default function Main({ animes, selectedAnime, onSelectedAnime }) {
   return (
     <>
       <main className="main">
-        {selectedAnime && fetchDataComplete(selectedAnime.mal_id) && (
+        {selectedAnime && hasData(selectedAnime.mal_id) && (
           <SelectedBox selectedAnime={selectedAnime} />
         )}
         {animes.length > 0 && (
           <ListBox animes={animes} onSelectedAnime={onSelectedAnime} />
         )}
       </main>
-      {selectedAnime && fetchDataComplete(selectedAnime.mal_id) && (
+      {selectedAnime && hasData(selectedAnime.mal_id) && (
         <div className="box-separator"></div>
       )}
       <AnimeLove />

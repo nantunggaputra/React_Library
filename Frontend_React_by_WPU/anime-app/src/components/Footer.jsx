@@ -1,4 +1,3 @@
-import { useState, useRef } from "react";
 import {
   SiVercel,
   SiGithub,
@@ -8,52 +7,13 @@ import {
 } from "@icons-pack/react-simple-icons";
 
 export default function Footer() {
-  const [isPlaying, setIsPlaying] = useState(true);
-  const audioRef = useRef(null);
-
-  const togglePlayPause = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
   };
 
   return (
-    <>
-      <div className="gototop">
-        <div className="container">
-          <a href="#">
-            <button title="Go to top">⥣</button>
-          </a>
-        </div>
-      </div>
-      <div className="music">
-        <div className="container">
-          <button
-            title={isPlaying ? "Backsound on (Outro Song)" : "Backsound off"}
-            onClick={togglePlayPause}
-          >
-            {isPlaying ? "♪" : "ᯤ"}
-          </button>
-        </div>
-      </div>
+    <footer>
       <div className="footer">
-        <div className="audio-background">
-          <audio
-            ref={audioRef}
-            src="Detective Conan feat TheFatRat - Xenogenesis (Outro Song).mp3"
-            autoPlay
-            loop
-          ></audio>
-        </div>
         <div className="social-icons">
           <a
             href="https://nantunggaputra.vercel.app/"
@@ -168,6 +128,13 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </>
+      <div className="gototop">
+        <div className="container">
+          <a href="#">
+            <button title="Go to top">⥣</button>
+          </a>
+        </div>
+      </div>
+    </footer>
   );
 }

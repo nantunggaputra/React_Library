@@ -3,28 +3,6 @@ import { useState } from "react";
 import AnimeLegacy from "./AnimeLegacy";
 import AnimeDetailLegacy from "./AnimeDetailLegacy";
 
-const fetchDataComplete = (data) => data.length > 0;
-
-function MainLegacyResult({ animesLegacy }) {
-  return (
-    <>
-      <br />
-      <p
-        className="search-results"
-        style={{ margin: "0.2rem auto -0.4rem", cursor: "default" }}
-      >
-        <span>{fetchDataComplete(animesLegacy) ? "Remember" : "Yameru"}</span>{" "}
-        <strong>
-          {fetchDataComplete(animesLegacy)
-            ? "Sunday Morning? Wee present The Best 2000s childhood anime..."
-            : "Minna-san! Please wait or you can Reload to get this anime..."}
-        </strong>
-      </p>
-      <br />
-    </>
-  );
-}
-
 const toggleOpen = (setIsOpen) => () => setIsOpen((open) => !open);
 
 function ListBox({ animesLegacy, onSelectedAnimeLegacy }) {
@@ -60,6 +38,28 @@ function SelectedBox({ selectedAnimeLegacy }) {
         <AnimeDetailLegacy selectedAnimeLegacy={selectedAnimeLegacy} />
       )}
     </div>
+  );
+}
+
+let hasData = (data) => data !== 0;
+
+function MainLegacyResult({ animesLegacy }) {
+  return (
+    <>
+      <br />
+      <p
+        className="search-results"
+        style={{ margin: "0.2rem auto -0.4rem", cursor: "default" }}
+      >
+        <span>{hasData(animesLegacy.length) ? "Remember" : "Yameru"}</span>{" "}
+        <strong>
+          {hasData(animesLegacy.length)
+            ? "Sunday Morning? Wee present The Best 2000s childhood anime..."
+            : "Minna-san! Please wait or you can Reload to get this anime..."}
+        </strong>
+      </p>
+      <br />
+    </>
   );
 }
 

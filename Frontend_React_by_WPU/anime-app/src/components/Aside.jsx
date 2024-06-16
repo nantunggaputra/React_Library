@@ -64,7 +64,7 @@ export default function Aside() {
 
   return (
     <>
-      <aside id="check" className="aside left">
+      <aside id="genre" className="aside left">
         <div className="check">
           <h2>
             <span style={{ color: "#0377b9" }}>Genre</span> Anime

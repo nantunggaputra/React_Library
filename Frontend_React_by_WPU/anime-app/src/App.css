@@ -60,7 +60,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(to top, #17171700, #000000),
-    url("../Detective\ Conan\ Case\ Closed\ Brick\ Background.webp");
+    url("../Detective Conan Case Closed Brick Background.webp");
   background-position: center;
   filter: grayscale(1) contrast(0.7);
   z-index: 1000;
@@ -127,6 +127,12 @@ body {
   animation: move 25s ease-in-out infinite;
 }
 
+.clouds img {
+  height: 100vh;
+  width: 100vh;
+  position: absolute;
+}
+
 @keyframes move {
   0% {
     opacity: 0;
@@ -142,10 +148,54 @@ body {
   }
 }
 
-.clouds img {
-  height: 100vh;
-  width: 100vh;
-  position: absolute;
+.background-audio {
+  display: none;
+}
+
+.transitions,
+.animations,
+.music {
+  position: fixed;
+  bottom: 3.35rem;
+  left: 0;
+  z-index: 1000;
+}
+
+.transitions {
+  bottom: 13.35rem;
+}
+
+.animations {
+  bottom: 8.35rem;
+}
+
+.transitions .container,
+.animations .container,
+.music .container {
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 1.1rem;
+  box-shadow: -2rem 0 3rem var(--color-background-500);
+  background-color: var(--color-background-100);
+  border-radius: 0 1rem 1rem 0;
+}
+
+.transitions .container button,
+.animations .container button,
+.music .container button {
+  margin: auto;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-background-900);
+  color: var(--color-background-light);
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* NavBar */
@@ -1186,89 +1236,6 @@ body {
 
 /* Footer */
 
-.gototop {
-  position: fixed;
-  bottom: 3.35rem;
-  right: 0;
-  z-index: 1000;
-}
-
-.gototop .container {
-  width: 4.4rem;
-  height: 4.4rem;
-  padding: 1.1rem;
-  box-shadow: 2rem 0 3rem var(--color-background-500);
-  background-color: var(--color-background-100);
-  border-radius: 1rem 0 0 1rem;
-}
-
-.gototop .container a {
-  text-decoration: none;
-}
-
-.gototop .container button {
-  display: block;
-  margin: auto;
-  width: 2.2rem;
-  height: 2.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  border: none;
-  background-color: var(--color-background-900);
-  color: var(--color-background-light);
-  font-size: 1.4rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.music,
-.transitions,
-.animations {
-  position: fixed;
-  bottom: 3.35rem;
-  left: 0;
-  z-index: 1000;
-}
-
-.transitions {
-  bottom: 13.35rem;
-}
-
-.animations {
-  bottom: 8.35rem;
-}
-
-.music .container,
-.transitions .container,
-.animations .container {
-  width: 4.4rem;
-  height: 4.4rem;
-  padding: 1.1rem;
-  box-shadow: -2rem 0 3rem var(--color-background-500);
-  background-color: var(--color-background-100);
-  border-radius: 0 1rem 1rem 0;
-}
-
-.music .container button,
-.transitions .container button,
-.animations .container button {
-  margin: auto;
-  width: 2.2rem;
-  height: 2.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  border: none;
-  background-color: var(--color-background-900);
-  color: var(--color-background-light);
-  font-size: 1.4rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
 .footer {
   margin: 4rem auto 1rem;
   position: relative;
@@ -1280,7 +1247,7 @@ body {
   text-transform: uppercase;
   padding-bottom: 48rem;
   border-radius: 1rem;
-  background-image: url("../Mook\ Detective\ Conan\ Secret\ Archives\ Kaito\ Kid.webp");
+  background-image: url("../Mook Detective Conan Secret Archives Kaito Kid.webp");
   opacity: 0.9;
   background-size: cover;
   background-position: center;
@@ -1297,10 +1264,6 @@ body {
   height: 100%;
   background-color: var(--color-background-900);
   opacity: 0.3;
-}
-
-.footer .audio-background {
-  display: none;
 }
 
 .social-icons {
@@ -1489,6 +1452,43 @@ body {
   transform: scale(0.45);
   filter: grayscale(1) contrast(1.15);
   opacity: 0.85;
+}
+
+.gototop {
+  position: fixed;
+  bottom: 3.35rem;
+  right: 0;
+  z-index: 1000;
+}
+
+.gototop .container {
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 1.1rem;
+  box-shadow: 2rem 0 3rem var(--color-background-500);
+  background-color: var(--color-background-100);
+  border-radius: 1rem 0 0 1rem;
+}
+
+.gototop .container a {
+  text-decoration: none;
+}
+
+.gototop .container button {
+  display: block;
+  margin: auto;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-background-900);
+  color: var(--color-background-light);
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* Media Query */

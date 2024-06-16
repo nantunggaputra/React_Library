@@ -1,19 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useRef } from "react";
 
-function MainResult({ count }) {
-  return (
-    <p className="search-results" style={{ cursor: "default" }}>
-      <span>{count !== 0 ? "\\≧▽≦/" : "/o(T___T)o\\"}</span>{" "}
-      <strong>
-        {count !== 0
-          ? `Subarashi Minna-san! Wee found Breathtaking ${count} results anime...`
-          : "Gomennasai Minna-san! Please Search again..."}
-      </strong>
-    </p>
-  );
-}
-
 function Kanji() {
   return (
     <figure className="search-kanji">
@@ -45,8 +32,6 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
 
   return (
     <div className="search-container">
-      <audio ref={audioRef} src="There is Always Only One Truth.aac" />
-      {loading && <Kanji />}
       <div className="search-label">
         <div className="container">
           <label htmlFor="search-anime">
@@ -73,7 +58,24 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
       <div className="search-icon">
         <img src="Conan Edogawa Search.webp" alt=" " />
       </div>
+      <audio ref={audioRef} src="There is Always Only One Truth.aac" />
+      {loading && <Kanji />}
     </div>
+  );
+}
+
+let hasData = (data) => data !== 0;
+
+function MainResult({ count }) {
+  return (
+    <p className="search-results" style={{ cursor: "default" }}>
+      <span>{hasData(count) ? "⋋≧▽≦⋌" : "o (T___T) o"}</span>{" "}
+      <strong>
+        {hasData(count)
+          ? `Subarashi Minna-san! Wee found Breathtaking ${count} results anime...`
+          : "Gomennasai Minna-san! Please Search again..."}
+      </strong>
+    </p>
   );
 }
 
@@ -83,15 +85,13 @@ export default function Search({ fetchAnime }) {
 
   return (
     <div className="search-container">
-      <>
-        <SearchInput
-          fetchAnime={fetchAnime}
-          setResultCount={setResultCount}
-          setLoading={setLoading}
-          loading={loading}
-        />
-        {resultCount >= 0 && <MainResult count={resultCount} />}
-      </>
+      <SearchInput
+        fetchAnime={fetchAnime}
+        setResultCount={setResultCount}
+        setLoading={setLoading}
+        loading={loading}
+      />
+      {resultCount >= 0 && <MainResult count={resultCount} />}
     </div>
   );
 }

@@ -106,9 +106,9 @@ export default function AnimeLove() {
   if (images.length === 0) {
     return (
       <>
-        <div id="choice" className="choice">
+        <div id="favorite" className="choice">
           <h2>
-            <span style={{ color: "#0377b9" }}>Loading</span> Anime
+            <span style={{ color: "#0377b9" }}>Loading</span> Favorite Anime
           </h2>
         </div>
         <div className="love">
@@ -128,7 +128,7 @@ export default function AnimeLove() {
 
   return (
     <>
-      <div id="choice" className="choice">
+      <div id="favorite" className="choice">
         <h2>
           <span style={{ color: "#0377b9" }}>Editor</span>&apos;s Choice Anime
         </h2>

@@ -1,7 +1,7 @@
 export default function Logo() {
   return (
     <header>
-      <a href="" className="logo">
+      <a href="" id="home" className="logo">
         <span role="img">
           <img src="WeeBoo.png" alt=" " />
         </span>

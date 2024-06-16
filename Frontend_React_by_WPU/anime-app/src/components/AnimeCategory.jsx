@@ -70,7 +70,7 @@ export default function AnimeByCategory() {
 
   return (
     <>
-      <div id="choose" className="choose">
+      <div id="category" className="choose">
         <h2>
           <span style={{ color: "#fcbe14" }}>
             {selectedCategory ? selectedCategory : "Recommended"}

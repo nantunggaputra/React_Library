@@ -12,6 +12,8 @@ export default function HamburgerMenu() {
     setShowMainButton(true);
   };
 
+  const menus = ["Home", "Favorite", "Category", "Genre"];
+
   return (
     <div className="hamburger-menu">
       {showMainButton ? (
@@ -37,42 +39,22 @@ export default function HamburgerMenu() {
               ✖
             </button>
           </div>
-          <div className="container">
-            <button
-              className="button-child button-home"
-              onClick={handleChildButtonClick}
-              title="Home"
-            >
-              <a href="#">♤</a>
-            </button>
-          </div>
-          <div className="container">
-            <button
-              className="button-child button-favorite"
-              onClick={handleChildButtonClick}
-              title="Favorite"
-            >
-              <a href="#choice">♡</a>
-            </button>
-          </div>
-          <div className="container">
-            <button
-              className="button-child button-category"
-              onClick={handleChildButtonClick}
-              title="Category"
-            >
-              <a href="#choose">♢</a>
-            </button>
-          </div>
-          <div className="container">
-            <button
-              className="button-child button-genre"
-              onClick={handleChildButtonClick}
-              title="Genre"
-            >
-              <a href="#check">♧</a>
-            </button>
-          </div>
+          {menus.map((menu) => (
+            <div className="container" key={menu}>
+              <button
+                className={"button-child"}
+                onClick={handleChildButtonClick}
+                title={menu}
+              >
+                <a href={"#" + menu.toLowerCase()}>
+                  {(menu === "Home" && "♤") ||
+                    (menu === "Favorite" && "♡") ||
+                    (menu === "Category" && "♢") ||
+                    (menu === "Genre" && "♧")}
+                </a>
+              </button>
+            </div>
+          ))}
         </>
       )}
     </div>

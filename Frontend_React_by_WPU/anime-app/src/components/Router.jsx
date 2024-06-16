@@ -13,19 +13,19 @@ export default function Router() {
         {showLinks ? (
           <menu className="links">
             <li>
-              <a href="#"> Home </a>
+              <a href="#home"> Home </a>
             </li>
             |
             <li>
-              <a href="#choice"> Favorite </a>
+              <a href="#favorite"> Favorite </a>
             </li>
             |
             <li>
-              <a href="#choose"> Category </a>
+              <a href="#category"> Category </a>
             </li>
             |
             <li>
-              <a href="#check"> Genre </a>
+              <a href="#genre"> Genre </a>
             </li>
           </menu>
         ) : (

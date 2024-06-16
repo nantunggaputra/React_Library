@@ -1,21 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Background() {
-  const [isAnimationActive, setIsAnimationActive] = useState(true);
-  const toggleAnimation = () => {
-    setIsAnimationActive(!isAnimationActive);
-  };
-
-  useEffect(() => {
-    if (isAnimationActive) {
-      document.querySelector(".background-container").classList.add("clouds");
-    } else {
-      document
-        .querySelector(".background-container")
-        .classList.remove("clouds");
-    }
-  }, [isAnimationActive]);
-
   const [isTransitionActive, setIsTransitionActive] = useState(true);
   const toggleTransition = () => {
     setIsTransitionActive(!isTransitionActive);
@@ -33,10 +18,47 @@ export default function Background() {
     }
   }, [isTransitionActive]);
 
+  const [isAnimationActive, setIsAnimationActive] = useState(true);
+  const toggleAnimation = () => {
+    setIsAnimationActive(!isAnimationActive);
+  };
+
+  useEffect(() => {
+    if (isAnimationActive) {
+      document.querySelector(".background-container").classList.add("clouds");
+    } else {
+      document
+        .querySelector(".background-container")
+        .classList.remove("clouds");
+    }
+  }, [isAnimationActive]);
+
+  const [isPlaying, setIsPlaying] = useState(true);
+  const audioRef = useRef(null);
+
+  const togglePlayPause = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <>
       <img src="Silhouette Kaito Kid.webp" alt=" " className="silhouette-off" />
       <div className="background-container"></div>
+      <div className="background-audio">
+        <audio
+          ref={audioRef}
+          src="Detective Conan feat TheFatRat - Xenogenesis (Outro Song).mp3"
+          autoPlay
+          loop
+        ></audio>
+      </div>
       <div className="transitions">
         <div className="container">
           <button
@@ -62,6 +84,16 @@ export default function Background() {
             }
           >
             {isAnimationActive ? "⛈" : " "}
+          </button>
+        </div>
+      </div>
+      <div className="music">
+        <div className="container">
+          <button
+            title={isPlaying ? "Backsound on (Outro Song)" : "Backsound off"}
+            onClick={togglePlayPause}
+          >
+            {isPlaying ? "♪" : "ᯤ"}
           </button>
         </div>
       </div>
