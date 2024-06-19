@@ -9,27 +9,41 @@ export default function Router() {
 
   return (
     <div className="container">
-      <div className="toggle-div" onClick={handleToggle}>
+      <div className="toggle-div">
         {showLinks ? (
           <menu className="links">
             <li>
-              <a href="#home"> Home </a>
-            </li>
-            |
+              <a href="#home" onClick={handleToggle}>
+                {" "}
+                Home{" "}
+              </a>
+            </li>{" "}
+            |{" "}
             <li>
-              <a href="#favorite"> Favorite </a>
-            </li>
-            |
+              <a href="#favorite" onClick={handleToggle}>
+                {" "}
+                Favorite{" "}
+              </a>
+            </li>{" "}
+            |{" "}
             <li>
-              <a href="#category"> Category </a>
-            </li>
-            |
+              <a href="#category" onClick={handleToggle}>
+                {" "}
+                Category{" "}
+              </a>
+            </li>{" "}
+            |{" "}
             <li>
-              <a href="#genre"> Genre </a>
+              <a href="#genre" onClick={handleToggle}>
+                {" "}
+                Genre{" "}
+              </a>
             </li>
           </menu>
         ) : (
-          <div className="arrow">▼</div>
+          <div className="arrow" onClick={handleToggle} title="Menu">
+            ▼
+          </div>
         )}
       </div>
     </div>

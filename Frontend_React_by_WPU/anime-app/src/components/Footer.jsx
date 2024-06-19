@@ -130,9 +130,11 @@ export default function Footer() {
       </div>
       <div className="gototop">
         <div className="container">
-          <a href="#">
-            <button title="Go to top">⥣</button>
-          </a>
+          <button>
+            <a href="#" title="Go to top">
+              ⥣
+            </a>
+          </button>
         </div>
       </div>
     </footer>

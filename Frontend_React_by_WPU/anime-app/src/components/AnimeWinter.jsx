@@ -1,4 +1,6 @@
 export default function AnimeWinter() {
+  const categories = ["Sponsored", "Featured", "Remake", "Hiatus"];
+
   const userTimeHours = new Date().getHours();
 
   const image =
@@ -31,6 +33,17 @@ export default function AnimeWinter() {
         </h2>
       </div>
       <div className="winter">
+        <div className="winter-all">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={undefined}
+              className={category === "Featured" ? "selected" : ""}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
         <div className="winter-overview">
           <div className="winter-image">
             <small>❅ ❄ ❆</small>

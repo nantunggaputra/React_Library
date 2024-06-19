@@ -214,7 +214,7 @@ body {
   align-items: center;
   text-decoration: none;
   padding: 2rem;
-  cursor: pointer;
+  cursor: default;
 }
 
 .nav-bar .logo span {
@@ -264,7 +264,6 @@ body {
 }
 
 .nav-bar .toggle-div {
-  cursor: pointer;
   background-color: var(--color-background-light);
   border-radius: 0 0 0.5rem 0.5rem;
   text-align: center;
@@ -313,7 +312,6 @@ body {
   color: var(--color-background-light);
   font-size: 1.4rem;
   font-weight: bolder;
-  cursor: pointer;
 }
 
 .nav-bar .hamburger-menu .container .button-child a {
@@ -325,6 +323,7 @@ body {
   margin-top: 0.2rem;
   font-size: 1.55rem;
   color: var(--color-red);
+  cursor: pointer;
 }
 
 .nav-bar .links {
@@ -392,7 +391,7 @@ body {
 }
 
 .nav-bar .search-kanji h6 {
-  margin: -0.15rem 0;
+  margin: -0.325rem 0;
   color: var(--color-background-500);
   font-family: "Times New Roman", Times, serif;
   font-weight: 900;
@@ -543,7 +542,7 @@ body {
 .aside {
   width: 100%;
   height: 50rem;
-  top: 102.25rem;
+  top: 122.25rem;
   position: absolute;
   text-shadow: 0 0 5px var(--color-background-900);
   background: #e1e8ed25;
@@ -644,15 +643,15 @@ body {
 }
 
 .closing h6 {
-  margin: -1.5rem 5.75rem;
+  margin: -1.75rem 5.75rem;
   color: var(--color-text);
   font-family: "Times New Roman", Times, serif;
-  font-size: 9rem;
+  font-size: 6.25rem;
   opacity: 0.85;
 }
 
 .silhouette-off {
-  top: 105rem;
+  top: 125rem;
   right: 1rem;
   position: absolute;
   filter: contrast(0.4) brightness(0.25);
@@ -935,6 +934,7 @@ body {
 
 .winter {
   max-height: 40rem;
+  margin: 2rem auto 8.5rem;
 }
 
 .category {
@@ -946,6 +946,7 @@ body {
   max-height: 38rem;
 }
 
+.winter-all,
 .category-all,
 .genre-all {
   display: block;
@@ -988,6 +989,7 @@ body {
   justify-content: flex-start;
 }
 
+.winter-all button,
 .category-all button,
 .genre-all button {
   padding: 0.5rem 1.3rem;
@@ -1001,12 +1003,14 @@ body {
   cursor: pointer;
 }
 
+.winter-all button:hover,
 .category-all button:hover,
 .genre-all button:hover {
   background-color: var(--color-red);
   color: var(--color-background-light);
 }
 
+.winter-all .selected,
 .category-all .selected,
 .genre-all .selected {
   background-color: var(--color-red);
@@ -1472,6 +1476,7 @@ body {
 
 .gototop .container a {
   text-decoration: none;
+  color: var(--color-background-light);
 }
 
 .gototop .container button {
@@ -1488,7 +1493,6 @@ body {
   color: var(--color-background-light);
   font-size: 1.4rem;
   font-weight: bold;
-  cursor: pointer;
 }
 
 /* Media Query */

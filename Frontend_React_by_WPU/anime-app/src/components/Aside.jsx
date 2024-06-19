@@ -153,11 +153,14 @@ export default function Aside() {
       </aside>
       <figure className="closing">
         <figcaption>
-          <h6>あ</h6>
-          <h6>り</h6>
-          <h6>が</h6>
-          <h6>と</h6>
-          <h6>う</h6>
+          <h6>い</h6>
+          <h6>ら</h6>
+          <h6>っ</h6>
+          <h6>し</h6>
+          <h6>ゃ</h6>
+          <h6>い</h6>
+          <h6>ま</h6>
+          <h6>せ</h6>
         </figcaption>
         <figcaption>
           <h6>み</h6>

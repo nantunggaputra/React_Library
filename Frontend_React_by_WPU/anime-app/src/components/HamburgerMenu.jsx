@@ -41,12 +41,12 @@ export default function HamburgerMenu() {
           </div>
           {menus.map((menu) => (
             <div className="container" key={menu}>
-              <button
-                className={"button-child"}
-                onClick={handleChildButtonClick}
-                title={menu}
-              >
-                <a href={"#" + menu.toLowerCase()}>
+              <button className={"button-child"}>
+                <a
+                  href={"#" + menu.toLowerCase()}
+                  onClick={handleChildButtonClick}
+                  title={menu}
+                >
                   {(menu === "Home" && "♤") ||
                     (menu === "Favorite" && "♡") ||
                     (menu === "Category" && "♢") ||
