@@ -1,6 +1,6 @@
 # WeeBoo | My Anime List
 
-WeeBoo | My Anime List is a Front-End SPA (Single Page Application) Web project built using React to display a list of anime. This project uses Vite for bundling and Visual Studio Code as the code editor. Mostly anime data is fetched from the Jikan - Unofficial MyAnimeList API.
+[WeeBoo | My Anime List](https://nantunggaputra.github.io/React_Library/Frontend_React_by_WPU/anime-app/weeboo/) is a Front-End SPA (Single Page Application) Web project built using React to display a list of anime. This project uses [Vite](https://vitejs.dev/) for bundling and Visual Studio Code as the code editor. Mostly anime data is fetched from the [Jikan - Unofficial MyAnimeList API](https://docs.api.jikan.moe/).
 
 ## Features (Under Development)
 
@@ -49,7 +49,7 @@ WeeBoo | My Anime List is a Front-End SPA (Single Page Application) Web project 
     pnpm run build
     ```
 
-The application will build at [localhost:3000/weeboo/index.html](http://localhost:3000/weeboo/index.html).
+    The application will build at [localhost:3000/weeboo/index.html](http://localhost:3000/weeboo/index.html).
 
 ## Project Structure
 
@@ -73,7 +73,6 @@ anime-app/
 ├── index.html
 ├── package.json
 ├── pnpm-lock.yaml
-├── README.md
 └── vite.config.js
 ```
 
