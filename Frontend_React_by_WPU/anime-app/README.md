@@ -2,13 +2,14 @@
 
 WeeBoo | My Anime List is a Front-End SPA (Single Page Application) Web project built using React to display a list of anime. This project uses Vite for bundling and Visual Studio Code as the code editor. Mostly anime data is fetched from the Jikan - Unofficial MyAnimeList API.
 
-## Features (under development)
+## Features (Under Development)
 
 - Display anime list based on user searches.
 - Search for anime by title.
 - Provides anime by editor's choice, recommended category, genre, featured, nostalgic 2000s anime, and more.
 - Detailed information about search results anime, including year of release, score, rating, status, synopsis, and more.
 - Easy and fast navigation (about, contact, etc) between pages without reloading (coming soon).
+- ...
 
 ## Technologies used
 
@@ -25,6 +26,8 @@ WeeBoo | My Anime List is a Front-End SPA (Single Page Application) Web project 
    git clone https://github.com/nantunggaputra/React_Library.git
    cd Frontend_React_by_WPU/anime-app
    ```
+
+Wee would prefer you not change anything other than the anime-app directory. Thank you.
 
 2. Install dependencies:
 
@@ -46,12 +49,13 @@ The application will run at [localhost:5173](http://localhost:5173).
    pnpm run build
    ```
 
-The application will build at [localhost:3000/weeboo/index.html]([http://localhost:3000/weeboo/index.html]).
+The application will build at [localhost:3000/weeboo/index.html](http://localhost:3000/weeboo/index.html).
 
 ## Project Structure
 
 The recommended project structure is as follows:
 
+```
 anime-app/
 ├── public/
 ├── src/
@@ -71,6 +75,7 @@ anime-app/
 ├── pnpm-lock.yaml
 ├── README.md
 └── vite.config.js
+```
 
 ## Using the Jikan REST API v4
 
@@ -94,14 +99,23 @@ const fetchAnime = async () => {
 };
 ```
 
-### Contributing
+## Contributing
 
 Wee welcome contributions. To contribute, follow these steps:
 
     Fork this repository.
-    Create a new feature branch (git checkout -b your-feature).
-    Commit your changes (git commit -m 'Add new feature').
-    Push to the branch (git push origin your-feature).
+    Create a new feature branch.
+    ```bash
+    git checkout -b your-feature
+    ```
+    Commit your changes.
+    ```bash
+    git commit -m 'Add new feature'
+    ```
+    Push to the branch.
+    ```bash
+    git push origin your-feature
+    ```
     Create a Pull Request.
 
 ### License
