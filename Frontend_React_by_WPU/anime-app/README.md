@@ -20,34 +20,34 @@ WeeBoo | My Anime List is a Front-End SPA (Single Page Application) Web project 
 
 ## Installation
 
-1. Clone this repository:
+1.  Clone this repository:
 
-   ```bash
-   git clone https://github.com/nantunggaputra/React_Library.git
-   cd Frontend_React_by_WPU/anime-app
-   ```
+    ```bash
+    git clone https://github.com/nantunggaputra/React_Library.git
+    cd Frontend_React_by_WPU/anime-app
+    ```
 
-Wee would prefer you not change anything other than the anime-app directory. Thank you.
+    Wee would prefer you not change anything other than the anime-app directory. Thank you.
 
-2. Install dependencies:
+2.  Install dependencies:
 
-   ```bash
-   pnpm install
-   ```
+    ```bash
+    pnpm install
+    ```
 
-3. Run the application:
+3.  Run the application:
 
-   ```bash
-   pnpm run dev
-   ```
+    ```bash
+    pnpm run dev
+    ```
 
-The application will run at [localhost:5173](http://localhost:5173).
+    The application will run at [localhost:5173](http://localhost:5173).
 
-4. Build the application:
+4.  Build the application:
 
-   ```bash
-   pnpm run build
-   ```
+    ```bash
+    pnpm run build
+    ```
 
 The application will build at [localhost:3000/weeboo/index.html](http://localhost:3000/weeboo/index.html).
 
@@ -103,20 +103,27 @@ const fetchAnime = async () => {
 
 Wee welcome contributions. To contribute, follow these steps:
 
-    Fork this repository.
-    Create a new feature branch.
+1.  Fork this repository.
+
+2.  Create a new feature branch.
+
     ```bash
     git checkout -b your-feature
     ```
-    Commit your changes.
+
+3.  Commit your changes.
+
     ```bash
     git commit -m 'Add new feature'
     ```
-    Push to the branch.
+
+4.  Push to the branch.
+
     ```bash
     git push origin your-feature
     ```
-    Create a Pull Request.
+
+5.  Create a Pull Request.
 
 ### License
 
