@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import { Fade, Slide } from "react-awesome-reveal";
 
 class Contact extends Component {

@@ -1,6 +1,6 @@
 import ReactGA from "react-ga";
 import "./App.css";
-import { Component } from "react";
+import React, { Component } from "react";
 import $ from "jquery";
 import Header from "./Components/Header";
 import About from "./Components/About";

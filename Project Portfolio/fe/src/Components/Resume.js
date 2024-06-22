@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Component } from "react";
+import React, { Component } from "react";
 import { Fade, Slide } from "react-awesome-reveal";
 
 class Resume extends Component {
