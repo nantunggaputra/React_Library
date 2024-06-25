@@ -1,6 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 
 export default function Background() {
+  const [showOverlay, setShowOverlay] = useState(false);
+
+  const handleShowOverlay = () => setShowOverlay(true);
+  const handleCloseOverlay = () => setShowOverlay(false);
+
   const [isTransitionActive, setIsTransitionActive] = useState(true);
   const toggleTransition = () => {
     setIsTransitionActive(!isTransitionActive);
@@ -49,6 +54,24 @@ export default function Background() {
 
   return (
     <>
+      <div className="informations">
+        <div className="container">
+          <button
+            onClick={showOverlay ? handleCloseOverlay : handleShowOverlay}
+            title="About"
+          >
+            i
+          </button>
+        </div>
+      </div>
+      {showOverlay && (
+        <div className="about">
+          <div className="about-container">
+            <button onClick={handleCloseOverlay}>✖</button>
+            <div className="about-content"></div>
+          </div>
+        </div>
+      )}
       <img src="Silhouette Kaito Kid.webp" alt=" " className="silhouette-off" />
       <div className="background-container"></div>
       <div className="background-audio">

@@ -152,6 +152,7 @@ body {
   display: none;
 }
 
+.informations,
 .transitions,
 .animations,
 .music {
@@ -159,6 +160,10 @@ body {
   bottom: 3.35rem;
   left: 0;
   z-index: 1000;
+}
+
+.informations {
+  bottom: 18.35rem;
 }
 
 .transitions {
@@ -169,6 +174,7 @@ body {
   bottom: 8.35rem;
 }
 
+.informations .container,
 .transitions .container,
 .animations .container,
 .music .container {
@@ -180,6 +186,8 @@ body {
   border-radius: 0 1rem 1rem 0;
 }
 
+.informations .container button,
+.about .about-container button,
 .transitions .container button,
 .animations .container button,
 .music .container button {
@@ -196,6 +204,39 @@ body {
   font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
+}
+
+.about {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0 5px var(--color-background-900);
+  background: #17171797;
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.25rem);
+  z-index: 999;
+}
+
+.about-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 94rem;
+  max-width: 80vw;
+  height: 42rem;
+  max-height: 80vh;
+  padding: 1rem 3.2rem;
+  background-color: var(--color-background-100);
+  border-bottom: 2.5rem solid var(--color-background-100);
+  border-radius: 1rem;
 }
 
 /* NavBar */
@@ -334,6 +375,7 @@ body {
   align-items: center;
   letter-spacing: 0.05px;
   margin-top: 0.5rem;
+  cursor: default;
 }
 
 .nav-bar .links li {
@@ -726,7 +768,7 @@ body {
   font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
-  z-index: 999;
+  z-index: 3;
 }
 
 .list {
