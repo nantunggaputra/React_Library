@@ -1,6 +1,10 @@
 # WeeBoo | My Anime List
 
-[WeeBoo | My Anime List](https://nantunggaputra.github.io/React_Library/Frontend_React_by_WPU/anime-app/weeboo/) is a Front-End SPA (Single Page Application) Web project built using React to display a list of anime. This project uses [Vite](https://vitejs.dev/) for bundling and Visual Studio Code as the code editor. Mostly anime data is fetched from the [Jikan - Unofficial MyAnimeList API](https://docs.api.jikan.moe/).
+### WeeBoo from Anime-App
+
+[WeeBoo | My Anime List](https://nantunggaputra.github.io/React_Library/Frontend_React_by_WPU/anime-app/weeboo/) is a Front-End SPA (Single Page Application) Web project built using [React](https://react.dev/) to display a list of anime. This project uses [Vite](https://vitejs.dev/) for bundling and Visual Studio Code as the code editor. Mostly anime data is fetched from the [Jikan - Unofficial MyAnimeList API](https://docs.api.jikan.moe/).
+
+WeeBoo is designed and developed by [Nantungga Putra](https://nantunggaputra.github.io/HTML/), also later dedicated development team under Open Source Contribution.
 
 ## Features (Under Development)
 
@@ -126,8 +130,16 @@ Wee welcome contributions. To contribute, follow these steps:
 
 ### License
 
-This project is licensed under the MIT License. See the LICENSE file for more information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-### Contact
+### Privacy Policy
 
-If you have any questions or suggestions, please create an issue in this repository or contact me via email at anggunnantunggaputra@gmail.com or send me message on [Nantungga Putra | LinkedIn](https://www.linkedin.com/in/nantungga-putra-451779116/).
+Please read our [Privacy Policy](PRIVACY_POLICY.md) for details on how Wee handle your data.
+
+### End-User Rights
+
+Please read our [End-User Rights](RIGHTS.md) document for important information about your rights and obligations when using our application.
+
+### Contact Information
+
+If you have any questions or suggestions, please contact us at anggunnantunggaputra@gmail.com or send our developer message on [Nantungga Putra | LinkedIn](https://www.linkedin.com/in/nantungga-putra-451779116/) or create an [issue](https://github.com/nantunggaputra/React_Library/issues/) in this repository.

@@ -78,7 +78,9 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener"
                 >
-                  WEBDEVELOPER
+                  WEB
+                  <wbr />
+                  DEVELOPER
                 </a>
               </h2>
               <small
@@ -88,7 +90,9 @@ export default function Footer() {
                   cursor: "text",
                 }}
               >
-                anggunnantunggaputra@gmail.com
+                anggunnantunggaputra
+                <wbr />
+                @gmail.com
               </small>
               <br />
               <br />
