@@ -14,19 +14,19 @@ function Kanji() {
 }
 
 function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
+  const [placeholder, setPlaceholder] = useState("Search anime...");
   const [query, setQuery] = useState("");
   const audioRef = useRef(null);
 
   const handleSearch = async () => {
     if (query.trim()) {
       setLoading(true);
-      if (audioRef.current) {
-        audioRef.current.play();
-      }
+      audioRef.current && audioRef.current.play();
       const results = await fetchAnime(query);
       setResultCount(results.length);
       setLoading(false);
       setQuery("");
+      setPlaceholder(results.length > 0 ? query.trim() : "Search anime...");
     }
   };
 
@@ -43,7 +43,7 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
         className="search"
         id="search-anime"
         type="text"
-        placeholder="Search anime..."
+        placeholder={placeholder}
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyPress={(e) => {

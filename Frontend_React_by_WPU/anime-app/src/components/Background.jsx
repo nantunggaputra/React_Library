@@ -1,6 +1,31 @@
 import { useState, useEffect, useRef } from "react";
 
 export default function Background() {
+  const [connectionStatus, setConnectionStatus] = useState("offline");
+
+  const updateOnlineStatus = () => {
+    if (!navigator.onLine) {
+      setConnectionStatus("offline");
+      return;
+    }
+
+    setConnectionStatus("online");
+  };
+
+  useEffect(() => {
+    window.addEventListener("online", updateOnlineStatus);
+    window.addEventListener("offline", updateOnlineStatus);
+
+    setInterval(function () {
+      updateOnlineStatus();
+    }, 10000);
+
+    return () => {
+      window.removeEventListener("online", updateOnlineStatus);
+      window.removeEventListener("offline", updateOnlineStatus);
+    };
+  }, []);
+
   const [showOverlay, setShowOverlay] = useState(false);
 
   const handleShowOverlay = () => setShowOverlay(true);
@@ -54,6 +79,29 @@ export default function Background() {
 
   return (
     <>
+      <div className="connection">
+        <div className="container">
+          <button
+            onClick={
+              connectionStatus === "offline"
+                ? () => window.location.reload()
+                : () => updateOnlineStatus()
+            }
+            title={
+              connectionStatus === "offline"
+                ? "No connection"
+                : "You are online"
+            }
+            style={
+              connectionStatus === "offline"
+                ? { color: "#ff0000", cursor: "wait" }
+                : { color: "#00bd00", cursor: "progress" }
+            }
+          >
+            ⊙
+          </button>
+        </div>
+      </div>
       <div className="informations">
         <div className="container">
           <button
@@ -71,7 +119,7 @@ export default function Background() {
             <img className="logo" src="WeeBoo.png" alt=" " />
             <div className="anime-app-version">
               <h1>WeeBoo</h1>
-              <h4>v0.1.2-beta (Public Beta)</h4>
+              <h5>v0.1.3-beta (Public Beta)</h5>
               <h4>WeeBoo from Anime-App</h4>
               <p>
                 WeeBoo | My Anime List is a Front-End SPA (Single Page
@@ -173,7 +221,7 @@ export default function Background() {
                 : "Background transitions off"
             }
           >
-            {isTransitionActive ? "☯︎" : " "}
+            {isTransitionActive ? "☯︎" : "⚆"}
           </button>
         </div>
       </div>
@@ -187,7 +235,7 @@ export default function Background() {
                 : "Background animations off"
             }
           >
-            {isAnimationActive ? "⛈" : " "}
+            {isAnimationActive ? "𖡎" : "𖤐"}
           </button>
         </div>
       </div>

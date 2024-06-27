@@ -153,6 +153,7 @@ body {
   display: none;
 }
 
+.connection,
 .informations,
 .transitions,
 .animations,
@@ -161,6 +162,10 @@ body {
   bottom: 3.35rem;
   left: 0;
   z-index: 1000;
+}
+
+.connection {
+  bottom: 23.35rem;
 }
 
 .informations {
@@ -175,6 +180,7 @@ body {
   bottom: 8.35rem;
 }
 
+.connection .container,
 .informations .container,
 .transitions .container,
 .animations .container,
@@ -187,6 +193,7 @@ body {
   border-radius: 0 1rem 1rem 0;
 }
 
+.connection .container button,
 .informations .container button,
 .about .about-container button,
 .transitions .container button,
@@ -255,7 +262,13 @@ body {
   right: 1rem;
 }
 
-.about-container h1,
+.about-container h1 {
+  padding: 1rem 0;
+  font-size: 2.85rem;
+}
+
+.about-container h4,
+.about-container h5,
 .about-container p {
   padding: 0.5rem 0;
 }
