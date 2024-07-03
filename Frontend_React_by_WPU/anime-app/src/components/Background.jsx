@@ -18,7 +18,7 @@ export default function Background() {
 
     setInterval(function () {
       updateOnlineStatus();
-    }, 10000);
+    }, 1000);
 
     return () => {
       window.removeEventListener("online", updateOnlineStatus);
