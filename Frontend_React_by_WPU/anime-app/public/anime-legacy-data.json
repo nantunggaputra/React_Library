@@ -1,5 +1,115 @@
 [
   {
+    "mal_id": "Code Geass",
+    "title": "Code Geass",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/1032/135088l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2006
+        }
+      }
+    },
+    "score": 8.7,
+    "rating": "R - 17+ (violence & profanity)",
+    "status": "Global TV",
+    "synopsis":
+      "In the year 2010, the Holy Empire of Britannia is establishing itself as a dominant military nation, starting with the conquest of Japan. Renamed to Area 11 after its swift defeat, Japan has seen significant resistance against these tyrants in an attempt to regain independence. Lelouch Lamperouge, a Britannian student, unfortunately finds himself caught in a crossfire between the Britannian and the Area 11 rebel armed forces. He is able to escape, however, thanks to the timely appearance of a mysterious girl named C.C., who bestows upon him Geass, the 'Power of Kings.' Realizing the vast potential of his newfound 'power of absolute obedience,' Lelouch embarks upon a perilous journey as the masked vigilante known as Zero, leading a merciless onslaught against Britannia in order to get revenge once and for all. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Death Note",
+    "title": "Death Note",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/1079/138100l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2006
+        }
+      }
+    },
+    "score": 8.6,
+    "rating": "R - 17+ (violence & profanity)",
+    "status": "Global TV",
+    "synopsis":
+      "Brutal murders, petty thefts, and senseless violence pollute the human world. In contrast, the realm of death gods is a humdrum, unchanging gambling den. The ingenious 17-year-old Japanese student Light Yagami and sadistic god of death Ryuk share one belief: their worlds are rotten. For his own amusement, Ryuk drops his Death Note into the human world. Light stumbles upon it, deeming the first of its rules ridiculous: the human whose name is written in this note shall die. However, the temptation is too great, and Light experiments by writing a felon's name, which disturbingly enacts his first murder. Aware of the terrifying godlike power that has fallen into his hands, Light—under the alias Kira—follows his wicked sense of justice with the ultimate goal of cleansing the world of all evil-doers. The meticulous mastermind detective L is already on his trail, but as Light's brilliance rivals L's, the grand chase for Kira turns into an intense battle of wits that can only end when one of them is dead. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Kekkaishi",
+    "title": "Kekkaishi",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/7/75191l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2006
+        }
+      }
+    },
+    "score": 7.6,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "ANTV",
+    "synopsis":
+      "Yoshimura Sumimura comes from a long line of 'Kekkaishi,' individuals who have supernatural abilities and are able to destroy evil creatures called Ayakashi that venture into the human realm from time to time. The Ayakashi are demons that look to feast on the power emanating from the land of Karasumori, which also happens to be where Yoshimura's high school is located. Now, Yoshimura must fight to protect his beloved school and hometown. Although, if it were up to him, he would rather be baking cakes than fighting off the ugly characters that show up at night. Thankfully, Yoshimura isn't the only one helping to keep the baddies at bay. His childhood friend and neighbor, Tokine Yukimura, joins him in this righteous battle. Despite the fact that they are from rival clans, these two make a fantastic team. And teamwork is something vital to fighting the evil that is closing in, as the Ayakashi attack in waves, looking to claim the land as their own, and a shadowy organization looks on, ready to pounce when the time is right..."
+  },
+  {
+    "mal_id": "The Law of Ueki",
+    "title": "The Law of Ueki",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/8/20596l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2005
+        }
+      }
+    },
+    "score": 7.7,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Global TV - Spacetoon",
+    "synopsis":
+      "Unbeknownst to most humans, a bizarre tournament is held to decide the next ruler of the Heavenly World. In this tournament, 100 Heavenly Beings known as the 'God Candidates' are required to search among the middle school students on Earth, and transfer their powers to a student of their choice. The chosen ones will then battle each other, representing their God Candidates. The victor of this tournament will be awarded the 'Blank Talent'—allowing them to choose any one unique ability they so desire—while the God Candidate they represent will obtain the position of 'God' and become the king of the Heavenly World. Participating in this grand tournament is Kousuke Ueki, a middle school student who is given the power to turn trash into trees by his homeroom teacher, Kobayashi. Despite the concerns of his classmate, Ai Mori, Ueki embarks on a journey to pursue his own sense of justice after witnessing the people around him misusing their powers for selfish purposes. But as he encounters talented power users such as Seiichirou Sano, Rinko Jerrard, Robert Haydn, and Hideyoshi Soya, he realizes that achieving his goal might be harder than it seems. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "MÄR",
+    "title": "MÄR",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/8/38383l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2005
+        }
+      }
+    },
+    "score": 7.3,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Global TV",
+    "synopsis":
+      "Dreaming of a magical world every night, the young Toramizu Ginta yearns to be able to go there. With only his friend Koyuki believing in his dreams, Ginta remains positive despite the slander he receives from others over his dreams. But his wishes are answered, as one day a large door appears in front of Ginta, summoning him to the land of MAR Heaven. In this land, the weapons known as ARMS exist. While initially Ginta greatly enjoyed the discovery of this magical world, he soon learns of the terrible wars that have once plagued MAR Heaven and the upcoming war that may soon appear."
+  },
+  {
     "mal_id": "Idaten Jump",
     "title": "Idaten Jump",
     "images": {
@@ -17,7 +127,7 @@
     },
     "score": 7.3,
     "rating": "PG - Children",
-    "status": "Global TV",
+    "status": "Global TV - Spacetoon",
     "synopsis":
       "During a race, mountain bike (MTB) enthusiast Shou Yamato is mysteriously dragged into another world alongside his friends, Kakeru and Makoto. Soon, the group discovers that this world known as 'X-Zone' revolves around Idaten battles—MTB races characterized by special courses, rules, and hidden powers lying dormant within the bikes. The only way to return home is to win and obtain the MTB emblems from the defeated challengers. Despite being perplexed and terrified of the bizarre world, Shou is surprisingly excited. He has the opportunity to compete with fellow MTB riders, make new friends and rivals, and also unearth the X-Zone's hidden truths that may dramatically change his fate. Shou and his friends must make it through an arduous journey, one rife with conspiracies against them, in order to safely return home together. [Written by MAL Rewrite]"
   },
@@ -42,6 +152,72 @@
     "status": "Global TV",
     "synopsis":
       "Shy, reserved, and small-statured, Deimon High School student Sena Kobayakawa is the perfect target for bullies. However, as a result of running errands throughout his life, Sena has become agile and developed a skill for avoiding crowds of people. After the cunning Youichi Hiruma—captain of the Deimon Devil Bats football team—witnesses Sena's rapid legs in motion, he coerces the timid boy into joining his squad. As Hiruma wants to conceal Sena's identity from other clubs, Sena is forced to hide under the visored helmet of \"Eyeshield 21,\" a mysterious running back wearing the number 21 jersey. The legendary Eyeshield 21 can supposedly run at the speed of light and has achieved remarkable feats in the United States during his time at the Notre Dame College. Accustomed to avoiding his problems in the past, Sena's specialty might just help him become the new secret weapon of the Deimon Devil Bats. As he interacts with his teammates, Sena gradually gains more self-confidence and forges valuable bonds along the way. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Eureka Seven",
+    "title": "Eureka Seven",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/12/34443l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2005
+        }
+      }
+    },
+    "score": 8.1,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Global TV - Spacetoon",
+    "synopsis":
+      "In the backwater town of Bellforest lives a 14-year-old boy named Renton Thurston. He desires to leave his home behind and join the mercenary group known as Gekkostate, hoping to find some adventure to brighten up his mundane life. However, stuck between his grandfather's insistence to become a mechanic like him and the pressure of his deceased father's legacy, the only excitement Renton finds is in his pastime of riding the Trapar wave particles that are dispersed throughout the air, an activity akin to surfing. Everything changes when an unknown object crashes through Renton's garage, discovered to be a Light Finding Operation—a robot capable of riding the Trapar waves—specifically known as the Nirvash typeZERO. Its pilot is a young girl named Eureka, a member of the Gekkostate, who requests a tune-up for the Nirvash. Their meeting sparks the beginning of Renton's involvement with the Gekkostate as he takes off alongside Eureka as the co-pilot of the Nirvash. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Ragnarök Animation",
+    "title": "Ragnarök Animation",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/10/2589l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2004
+        }
+      }
+    },
+    "score": 6.5,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Indosiar",
+    "synopsis":
+      "A great evil is sweeping over the realm; an evil that the young swordsman Roan and his life-long companion, the acolyte Yufa, must face head on! For these two travel toward their destiny, from the highest towers to the depths of the underworld, through forest and desert alike. With an ever-growing cast of fellow heroes, fate will grasp these travelers by their very souls and propel the band of skilled adventurers towards a noble end. Or ignoble, if they don't watch their step! Monsters are afoot and the way rife with danger and magic, the path forward may be unclear... But where will is strong, there is a way! Lessons wait in the depths of darkness, and good must prevail. The journey starts now! (Source: FUNimation Entertainment)"
+  },
+  {
+    "mal_id": "Bleach",
+    "title": "Bleach",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/3/40451l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2004
+        }
+      }
+    },
+    "score": 7.9,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Indosiar",
+    "synopsis":
+      "Ichigo Kurosaki is an ordinary high schooler—until his family is attacked by a Hollow, a corrupt spirit that seeks to devour human souls. It is then that he meets a Soul Reaper named Rukia Kuchiki, who gets injured while protecting Ichigo's family from the assailant. To save his family, Ichigo accepts Rukia's offer of taking her powers and becomes a Soul Reaper as a result. However, as Rukia is unable to regain her powers, Ichigo is given the daunting task of hunting down the Hollows that plague their town. However, he is not alone in his fight, as he is later joined by his friends—classmates Orihime Inoue, Yasutora Sado, and Uryuu Ishida—who each have their own unique abilities. As Ichigo and his comrades get used to their new duties and support each other on and off the battlefield, the young Soul Reaper soon learns that the Hollows are not the only real threat to the human world. [Written by MAL Rewrite]"
   },
   {
     "mal_id": "Naruto",
@@ -171,9 +347,53 @@
     },
     "score": 8.7,
     "rating": "PG-13 - Teens 13 or older",
-    "status": "Global TV - RCTI",
+    "status": "Global TV - RCTI - Spacetoon",
     "synopsis":
       "Barely surviving in a barrel after passing through a terrible whirlpool at sea, carefree Monkey D. Luffy ends up aboard a ship under attack by fearsome pirates. Despite being a naive-looking teenager, he is not to be underestimated. Unmatched in battle, Luffy is a pirate himself who resolutely pursues the coveted One Piece treasure and the King of the Pirates title that comes with it. The late King of the Pirates, Gol D. Roger, stirred up the world before his death by disclosing the whereabouts of his hoard of riches and daring everyone to obtain it. Ever since then, countless powerful pirates have sailed dangerous seas for the prized One Piece only to never return. Although Luffy lacks a crew and a proper ship, he is endowed with a superhuman ability and an unbreakable spirit that make him not only a formidable adversary but also an inspiration to many. As he faces numerous challenges with a big smile on his face, Luffy gathers one-of-a-kind companions to join him in his ambitious endeavor, together embracing perils and wonders on their once-in-a-lifetime adventure. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Hunter x Hunter",
+    "title": "Hunter x Hunter",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/1305/132237l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1999
+        }
+      }
+    },
+    "score": 8.4,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Spacetoon - TV7",
+    "synopsis":
+      "Hunters are specialized in a wide variety of fields, ranging from treasure hunting to cooking. They have access to otherwise unavailable funds and information that allow them to pursue their dreams and interests. However, being a hunter is a special privilege, only attained by taking a deadly exam with an extremely low success rate. Gon Freecss, a 12-year-old boy with the hope of finding his missing father, sets out on a quest to take the Hunter Exam. Along the way, he picks up three companions who also aim to take the dangerous test: the revenge-seeking Kurapika, aspiring doctor Leorio Paladiknight, and a mischievous child the same age as Gon, Killua Zoldyck. As the four aspiring hunters embark on a perilous adventure, they fight for their dreams while defying the odds. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Zoids",
+    "title": "Zoids",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/1908/139655l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1999
+        }
+      }
+    },
+    "score": 7.4,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "ANTV",
+    "synopsis":
+      "In a remote desert on the Planet Zi, a boy named Van discovers an abandoned, dilapidated facility. Inside, he finds an opaque cocoon that breaks on its own, and a dinosaur-like robot known as an 'Organoid' emerges from the shell. Van names the creature Zeke and claims it for himself, but a group of bandits come after him to seize the Organoid. The bandits are equipped with 'Zoids,' beast-like mechanical units that are used for combat. Van is able to fend off his pursuers by reviving and fusing with an old Zoid dubbed the 'Shield Liger.' Van returns to the facility with Zeke in tow and finds a new cocoon. He is ecstatic that he may have obtained another Organoid, but when the cocoon breaks, a girl emerges from it instead. Unaware of her origins, the girl only remembers that her name is Fiona and that she has to locate an object called the 'Zoid Eve.' Determined to solve the mystery behind her existence, Fiona ventures out alongside Van and Zeke to uncover what the Zoid Eve truly is. The trio runs across many friends and foes in their adventure, encountering various dangers and experiencing slices of light-heartedness as they travel. [Written by MAL Rewrite]"
   },
   {
     "mal_id": "Digimon Adventure",
@@ -198,6 +418,28 @@
       "When a group of seven children go to summer camp, the last thing that they expect is snow falling in July. In the confusion that follows this phenomenon, they each receive an odd device that transports them to another world. As soon as they wake up in this new world, they encounter strange creatures who call themselves 'Digimon.' The Digimon tell them that they've landed in the 'Digital World,' far from home. With only the Digimon and the 'Digivices' as protection, the seven children set off to find their way home and learn the reason why they were brought here. Led by the impulsive Taichi Yagami and his hungry Digimon partner Agumon, this group will have to fight unknown evils as they discover more about this outlandish Digital World. [Written by MAL Rewrite]"
   },
   {
+    "mal_id": "Super YoYo",
+    "title": "Super YoYo",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/1226/119140l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1998
+        }
+      }
+    },
+    "score": 6.6,
+    "rating": "G - All Ages",
+    "status": "Indosiar - Spacetoon",
+    "synopsis":
+      "Despite being talented in various sports, Shunichi Domoto is not passionate about any of them in particular—that is, until he discovers the world of competitive yo-yo. It all begins when Shunichi's friend, Beso Kimura, loses his yo-yo in a duel against the school bully, Benkei Musashimaru. Albeit inexperienced, Shunichi eventually agrees to help Beso retrieve his yo-yo. After practicing for three days, Shunichi challenges and unexpectedly defeats the relatively skilled Benkei. Shunichi's win instills the belief that the yo-yo is easy to master, and that he is ultimately able to easily master anything he puts his mind to. However, after losing to the exceptionally gifted yo-yo player Seito Hojoin, Shinichi finds his ego shattered. As the humiliating loss ignites a spark in Shunichi, he decides to surpass Seito in Japan's national Yo-yo Championship! [Written by MAL Rewrite]"
+  },
+  {
     "mal_id": "Pokemon",
     "title": "Pokemon",
     "images": {
@@ -220,6 +462,50 @@
       "Pokémon are peculiar creatures with a vast array of different abilities and appearances; many people, known as Pokémon trainers, capture and train them, often with the intent of battling others. Young Satoshi has not only dreamed of becoming a Pokémon trainer but also a 'Pokémon Master,' and on the arrival of his 10th birthday, he finally has a chance to make that dream a reality. Unfortunately for him, all three Pokémon available to beginning trainers have already been claimed and only Pikachu, a rebellious Electric-type Pokémon, remains. However, this chance encounter would mark the start of a lifelong friendship and an epic adventure! Setting off on a journey to become the very best, Satoshi and Pikachu travel across beautiful, sprawling regions with their friends Kasumi, a Water-type trainer, and Takeshi, a Rock-type trainer. But danger lurks around every corner. The infamous Team Rocket is always nearby, seeking to steal powerful Pokémon through nefarious schemes. It'll be up to Satoshi and his friends to thwart their efforts as he also strives to earn the eight Pokémon Gym Badges he'll need to challenge the Pokémon League, and eventually claim the title of Pokémon Master. [Written by MAL Rewrite]"
   },
   {
+    "mal_id": "Kindaichi Case Files",
+    "title": "Kindaichi Case Files",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/1702/120440l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1997
+        }
+      }
+    },
+    "score": 7.9,
+    "rating": "R - 17+ (violence & profanity)",
+    "status": "TV7",
+    "synopsis":
+      "Hajime Kindaichi's unorganized appearance and lax nature may give the impression of an average high school student, but a book should never be judged by its cover. Hajime is the grandson of the man who was once Japan's greatest detective, and he is also a remarkable sleuth himself. With the help of his best friend, Miyuki Nanase, and the peculiar inspector Isamu Kenmochi, Hajime travels to remote islands, ominous towns, abysmal seas, and other hostile environments. His life's mission is to uncover the truth behind some of the most cunning, grueling, and disturbing mysteries the world has ever faced. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Master Cooking Boy",
+    "title": "Master Cooking Boy",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/6/75283l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1997
+        }
+      }
+    },
+    "score": 7.6,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "SCTV - Spacetoon",
+    "synopsis":
+      "The story takes place in 19th century China during the Qing Dynasty, where the Emperor was weakened and the country was close to chaos. It is also during a fictitious era called 'The Era of the Cooking Wars'. It was an era in which top chefs with different cooking styles tried their best to improve their skills and to become the best chef in China. It is a country where insulting a high-grade chef or fooling around with cooking could land a person in a jail, and impersonating a top-chef is as good as usurpation of authority. Chefs compete with each other in order to gain respect and even power, but also with the risks of losing everything. The country of China has four major regions: Beijing, Szechuan, Shanghai, and Guangdong. The beginning of the story takes place in Szechuan, Mao's birthplace. After the death of Mao's mother, Pai, who was called the 'Fairy of Cuisine', Mao becomes a Super Chef in order to take the title as Master Chef of his mother's restaurant. However, before he takes his mother's place as Master Chef, he continues to travel China in order to learn more of the many ways of cooking, in the hopes of becoming a legendary chef, just like his mother. During his journey, he meets great friends and fierce rivals who wish to challenge him in the field of cooking. (Source: Wikipedia)"
+  },
+  {
     "mal_id": "Let's & Go",
     "title": "Let's & Go",
     "images": {
@@ -237,7 +523,7 @@
     },
     "score": 6.8,
     "rating": "G - All Ages",
-    "status": "RCTI",
+    "status": "RCTI - Spacetoon",
     "synopsis":
       "Based on the manga by Tetsuhiro Koshita, Bakusou Kyoudai Let's &amp; Go!! has two main seasons evolving around the Go brothers and the TRF Victorys. The third season, Bakusou Kyoudai Let's &amp; Go!! MAX evolves more around two new main characters, but the primary idea is the same... Racing! Let's &amp; Go!! focuses on Retsu and Go Seiba, two young brothers who receive racing cars called 'Mini 4WD' by Dr. Tsuchia. From there on, the series portraits those two boys, training and customizing parts to later on participate on Japans Cup, where all of Japan's racers enter to be the best of the best!"
   },
@@ -259,9 +545,185 @@
     },
     "score": 8.2,
     "rating": "PG-13 - Teens 13 or older",
-    "status": "Indosiar",
+    "status": "Indosiar - Spacetoon",
     "synopsis":
       "Shinichi Kudou, a high school student of astounding talent in detective work, is well known for having solved several challenging cases. One day, when Shinichi spots two suspicious men and decides to follow them, he inadvertently becomes witness to a disturbing illegal activity. Unfortunately, he is caught in the act, so the men dose him with an experimental drug formulated by their criminal organization, leaving him to his death. However, to his own astonishment, Shinichi lives to see another day, but now in the body of a seven-year-old child. Perfectly preserving his original intelligence, he hides his real identity from everyone, including his childhood friend Ran Mouri and her father, private detective Kogorou Mouri. To this end, he takes on the alias of Conan Edogawa, inspired by the mystery writers Arthur Conan Doyle and Ranpo Edogawa. Shinichi, as Conan, starts secretly solving the senior Mouri's cases from behind the scenes with his still exceptional sleuthing skills, while covertly investigating the organization responsible for his current state, hoping to reverse the drug's effects someday. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Samurai X",
+    "title": "Samurai X",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/1346/119505l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1996
+        }
+      }
+    },
+    "score": 8.3,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Global TV - Indosiar - SCTV",
+    "synopsis":
+      "In the final years of the Bakumatsu era lived a legendary assassin known as Hitokiri Battousai. Feared as a merciless killer, he was unmatched throughout the country, but mysteriously disappeared at the peak of the Japanese Revolution. It has been ten peaceful years since then, but the very mention of Battousai still strikes terror into the hearts of war veterans. Unbeknownst to them, Battousai has abandoned his bloodstained lifestyle in an effort to repent for his sins, now living as Kenshin Himura, a wandering swordsman with a cheerful attitude and a strong will. Vowing never to kill again, Kenshin dedicates himself to protecting the weak. One day, he stumbles across Kaoru Kamiya at her kendo dojo, which is being threatened by an impostor claiming to be Battousai. After receiving help from Kenshin, Kaoru allows him to stay at the dojo, and so the former assassin temporarily ceases his travels. Rurouni Kenshin: Meiji Kenkaku Romantan tells the story of Kenshin as he strives to save those in need of saving. However, as enemies from both past and present begin to emerge, will the reformed killer be able to uphold his new ideals? [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Gundam Wing",
+    "title": "Gundam Wing",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/1884/114414l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1995
+        }
+      }
+    },
+    "score": 7.7,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Indosiar",
+    "synopsis":
+      "The United Earth Sphere Alliance is a powerful military organization that has ruled over Earth and space colonies with an iron fist for several decades. When the colonies proclaimed their opposition to this, their leader was assassinated. Now, in the year After Colony 195, bitter colonial rebels have launched 'Operation Meteor,' sending five powerful mobile suits to Earth for vengeance. Built out of virtually indestructible material called Gundanium Alloy, these 'Gundams' begin an assault against the Alliance and its sub organization OZ. One Gundam, whose pilot has taken the name of the slain colony leader Heero Yuy, is forced to make a crash landing into the ocean after an atmospheric battle against OZ's ace pilot Zechs Marquise. Upon coming ashore, he is found by Relena Peacecraft, daughter of a peace-seeking politician, who witnesses Heero's descent to Earth. Although neither of them realize it yet, this encounter will have a profound impact on both their lives, as well as those on Earth and in space colonies. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Dragon League",
+    "title": "Dragon League",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/5/49791l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1993
+        }
+      }
+    },
+    "score": 7.0,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "ANTV - Spacetoon",
+    "synopsis":
+      "Tokio and his father Amon go to the soccer country of Elevenia where they see a parade of the strongest soccer team of that country, the Winners. Amon challenges the team captain Leon to a soccer battle and, when Amon loses, Leon turns him into a miniature dragon. Tokio sees the fight and decides to challenge against Leon so that Amon can become human again. (Source: AnimeNFo)"
+  },
+  {
+    "mal_id": "Slam Dunk",
+    "title": "Slam Dunk",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/12/86890l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1993
+        }
+      }
+    },
+    "score": 8.5,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "RCTI - TV7",
+    "synopsis":
+      "Hanamichi Sakuragi, infamous for his temper, massive height, and fire-red hair, enrolls in Shohoku High, hoping to finally get a girlfriend and break his record of being rejected 50 consecutive times in middle school. His notoriety precedes him, however, leading to him being avoided by most students. Soon, after certain events, Hanamichi is left with two unwavering thoughts: 'I hate basketball,' and 'I desperately need a girlfriend.' One day, a girl named Haruko Akagi approaches him without any knowledge of his troublemaking ways and asks him if he likes basketball. Hanamichi immediately falls head over heels in love with her, blurting out a fervent affirmative. She then leads him to the gymnasium, where she asks him if he can do a slam dunk. In an attempt to impress Haruko, he makes the leap, but overshoots, instead slamming his head straight into the blackboard. When Haruko informs the basketball team's captain of Hanamichi's near-inhuman physical capabilities, he slowly finds himself drawn into the camaraderie and competition of the sport he had previously held resentment for. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Time Travel Tondekeman!",
+    "title": "Time Travel Tondekeman!",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/6/45656l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1989
+        }
+      }
+    },
+    "score": 7.3,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Indosiar - Spacetoon",
+    "synopsis":
+      "The series starts when Hayato, a soccer enthusiast, and his girlfriend Yumi, an aspiring musician, went to a visit to Dr. Leonard's lab. They accidentally activated the Tondekeman, a funny talking kettle who transported them many centuries in the past. In Baghdad, Hayato and Yumi gets reunited but they got separated from Tondekeman. They meet Aladdin, Prince Dandarn and Princess Shalala. They also meet the cunning Abdullah who is always ready to kidnap the princess so that he could marry the princess to his master. Our heroes get to go to different places and times and meet several historical and literary figures as they follow Abdullah as he escapes through time to abduct the princess. Hayato and Yumi are stuck in the past until they get Tondekeman from the possession of Abdullah. (Source: Wikipedia)"
+  },
+  {
+    "mal_id": "Ranma ½",
+    "title": "Ranma ½",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/13/6441l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1989
+        }
+      }
+    },
+    "score": 7.8,
+    "rating": "R+ - Mild Nudity",
+    "status": "RCTI - TV7",
+    "synopsis":
+      "Ranma Saotome is a top-class martial artist and prodigy at the Saotome 'Anything-Goes' school of martial arts. While training in China, he and his father meet a terrible fate when they accidentally fall into a cursed spring. Now, Ranma is cursed to turn into a girl when splashed with cold water, and only hot water can turn him back into a boy. Things are only complicated further when Ranma discovers that his father has arranged for him to marry one of Soun Tendo's three daughters in order to secure the future of the Tendo dojo. Though Soun learns of Ranma's predicament, he is still determined to go ahead with the engagement, and chooses his youngest daughter Akane, who happens to be a skilled martial artist herself and is notorious for hating men. Ranma ½ follows the hilarious adventures of Ranma and Akane as they encounter various opponents, meet new love interests, and find different ways to make each other angry, all while their engagement hangs over their head. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Kungfu Boy",
+    "title": "Kungfu Boy",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/13/57443l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1988
+        }
+      }
+    },
+    "score": 7.2,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Global TV - SCTV - Spacetoon",
+    "synopsis":
+      "Chinmi is a young Chinese boy devoted to martial arts training. Word of his skill reaches the kung-fu masters at the famous Dailin temple who invite him to study with them. Through his own dedication and the guidance of his teachers, Chinmi becomes one of the top students at the temple. Eventually, the time comes for him to leave Dailin and make a pilgrimage. On his journey he faces a number of dangers that test his skills, but he also meets many people who inspire him in different ways. A chastened but determined Chinmi returns to Dailin for advanced training. But soon his skills are needed again—the Mongol hordes are nearing the temple. (Source: ANN)"
+  },
+  {
+    "mal_id": "Saint Seiya",
+    "title": "Saint Seiya",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/1180/133782l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1986
+        }
+      }
+    },
+    "score": 7.8,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Indosiar - Spacetoon",
+    "synopsis":
+      "In ancient times, a group of young men devoted their lives to protecting Athena, the Goddess of Wisdom and War. These men were capable of fighting without weapons—a swing of their fist alone was powerful enough to rip the very sky apart and shatter the earth beneath them. These brave heroes became known as Saints, as they could summon up the power of the Cosmos from within themselves. Now, in present day, a new generation of Saints is about to come forth. The young and spirited Seiya is fighting a tough battle for the Sacred Armor of Pegasus, and he isn't about to let anyone get in the way of him and his prize. Six years of hard work and training pay off with his victory and new title as one of Athena's Saints. But Seiya's endeavor doesn't end there. In fact, plenty of perils and dangerous enemies face him and the rest of the Saints throughout the series. What new quests await the heroes of the epic Saint Seiya saga?"
   },
   {
     "mal_id": "Dragon Ball",
@@ -284,5 +746,27 @@
     "status": "Indosiar",
     "synopsis":
       "Gokuu Son is a young boy who lives in the woods all alone—that is, until a girl named Bulma runs into him in her search for a set of magical objects called the 'Dragon Balls.' Since the artifacts are said to grant one wish to whoever collects all seven, Bulma hopes to gather them and wish for a perfect boyfriend. Gokuu happens to be in possession of a dragon ball, but unfortunately for Bulma, he refuses to part ways with it, so she makes him a deal: he can tag along on her journey if he lets her borrow the dragon ball's power. With that, the two set off on the journey of a lifetime. They don't go on the journey alone. On the way, they meet the old Muten-Roshi and wannabe disciple Kuririn, with whom Gokuu trains to become a stronger martial artist for the upcoming World Martial Arts Tournament. However, it's not all fun and games; the ability to make any wish come true is a powerful one, and there are others who would do much worse than just wishing for a boyfriend. To stop those who would try to abuse the legendary power, they train to become stronger fighters, using their newfound strength to help the people around them along the way. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Captain Tsubasa",
+    "title": "Captain Tsubasa",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/1580/134917l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1983
+        }
+      }
+    },
+    "score": 7.3,
+    "rating": "G - All Ages",
+    "status": "TV7",
+    "synopsis":
+      "Captain Tsubasa is the passionate story of an elementary school student whose thoughts and dreams revolve almost entirely around the love of soccer. 11-year-old Tsubasa Oozora started playing soccer at a very young age, and while it was mostly just a recreational sport for his friends, for him, it developed into something of an obsession. In order to pursue his dream to the best of his elementary school abilities, Tsubasa moves with his mother to Nankatsu city, which is well-known for its excellent elementary school soccer teams. But although he was easily the best in his old town, Nankatsu has a lot more competition, and he will need all of his skill and talent in order to stand out from this new crowd. He encounters not only rivals, but also new friends like the pretty girl Sanae Nakazawa and the talented goalkeeper, Genzo Wakabayashi, who shares the same passion as Tsubasa, and will prove to be a treasured friend in helping him push towards his dreams. Representing Japan in the FIFA World Cup is Tsubasa's ultimate dream, but it will take a lot more than talent to reach it."
   }
 ]

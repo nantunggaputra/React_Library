@@ -94,11 +94,11 @@ export default function Background() {
             }
             style={
               connectionStatus === "offline"
-                ? { color: "#ff0000", cursor: "wait" }
-                : { color: "#00bd00", cursor: "progress" }
+                ? { color: "#ff0000", fontSize: "2.5rem", cursor: "wait" }
+                : { color: "#13e713", fontSize: "2.5rem", cursor: "progress" }
             }
           >
-            ⊙
+            •
           </button>
         </div>
       </div>
@@ -221,7 +221,7 @@ export default function Background() {
                 : "Background transitions off"
             }
           >
-            {isTransitionActive ? "☯︎" : "⚆"}
+            {isTransitionActive ? "☯︎" : "⊙"}
           </button>
         </div>
       </div>
