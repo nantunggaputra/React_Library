@@ -119,7 +119,7 @@ export default function Background() {
             <img className="logo" src="WeeBoo.png" alt=" " />
             <div className="anime-app-version">
               <h1>WeeBoo</h1>
-              <h5>v0.1.3-beta (Public Beta)</h5>
+              <h5>v0.1.4-beta (Public Beta)</h5>
               <h4>WeeBoo from Anime-App</h4>
               <p>
                 WeeBoo | My Anime List is a Front-End SPA (Single Page
@@ -147,6 +147,7 @@ export default function Background() {
               </p>
             </div>
             <div className="title">
+              <hr style={{ opacity: "0.2" }}></hr>
               <p>
                 <a
                   href="https://github.com/nantunggaputra/React_Library/blob/main/Frontend_React_by_WPU/anime-app/README.md"
@@ -156,8 +157,10 @@ export default function Background() {
                   Anime-App
                 </a>
               </p>
+              <hr style={{ opacity: "0.2" }}></hr>
             </div>
             <div className="license">
+              <hr style={{ opacity: "0.2" }}></hr>
               <p>
                 <a
                   href="https://github.com/nantunggaputra/React_Library/blob/main/Frontend_React_by_WPU/anime-app/LICENSE"
@@ -167,8 +170,10 @@ export default function Background() {
                   Licensing Information
                 </a>
               </p>
+              <hr style={{ opacity: "0.2" }}></hr>
             </div>
             <div className="rights">
+              <hr style={{ opacity: "0.2" }}></hr>
               <p>
                 <a
                   href="https://github.com/nantunggaputra/React_Library/blob/main/Frontend_React_by_WPU/anime-app/RIGHTS.md"
@@ -178,8 +183,10 @@ export default function Background() {
                   End-User Rights
                 </a>
               </p>
+              <hr style={{ opacity: "0.2" }}></hr>
             </div>
             <div className="privacy-policy">
+              <hr style={{ opacity: "0.2" }}></hr>
               <p>
                 <a
                   href="https://github.com/nantunggaputra/React_Library/blob/main/Frontend_React_by_WPU/anime-app/PRIVACY_POLICY.md"
@@ -189,6 +196,7 @@ export default function Background() {
                   Privacy Policy
                 </a>
               </p>
+              <hr style={{ opacity: "0.2" }}></hr>
             </div>
             <div className="trademarks">
               <small>
