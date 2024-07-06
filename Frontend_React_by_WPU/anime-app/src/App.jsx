@@ -9,19 +9,26 @@ import Channels from "./components/Channels";
 import Separator from "./components/Separator";
 import Footer from "./components/Footer";
 
-const animesData = [
-  {
-    mal_id: "No Data",
-    title: "Minna? What is the best anime for you? Let's Search",
-    year: 2024,
-    image: "https://cdn.myanimelist.net/images/anime/7/75199.jpg",
-  },
-];
+function LoadingPage() {
+  return (
+    <div className="loading-page">
+      <h1></h1>
+    </div>
+  );
+}
 
-export default function App() {
-  const [animes, setAnimes] = useState(animesData);
+function ContentPage() {
+  const initialAnimesData = [
+    {
+      mal_id: "No Data",
+      title: "Minna? What is the best anime for you? Let's Search",
+      year: 2024,
+      image: "https://cdn.myanimelist.net/images/anime/7/75199.jpg",
+    },
+  ];
+
+  const [animes, setAnimes] = useState(initialAnimesData);
   const [selectedAnime, setSelectedAnime] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
 
   const fetchAnime = async (query) => {
     try {
@@ -30,16 +37,14 @@ export default function App() {
       );
       const fetchedAnimes = response.data.data;
       setAnimes(fetchedAnimes);
-      setSelectedAnime(fetchedAnimes.length > 0 ? fetchedAnimes[0] : null);
+      setSelectedAnime(fetchedAnimes[0] || null);
       return fetchedAnimes;
     } catch (error) {
       console.error("Error fetching data:", error);
-      setTimeout(() => {
-        alert(
-          `${error}\nMinna-san! An error occurred in the result data. Please enter another anime title or try again later.`
-        );
-        window.location.reload();
-      });
+      alert(
+        `${error}\nMinna-san! An error occurred in the result data. Please enter another anime title or try again later.`
+      );
+      window.location.reload();
       return [];
     }
   };
@@ -47,22 +52,6 @@ export default function App() {
   const handleSelectedAnime = (anime) => {
     setSelectedAnime(anime);
   };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 4000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="loading-page">
-        <h1></h1>
-      </div>
-    );
-  }
 
   return (
     <>
@@ -78,6 +67,25 @@ export default function App() {
       <Channels />
       <Separator />
       <Footer />
+    </>
+  );
+}
+
+export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <>
+      {isLoading && <LoadingPage />}
+      {!isLoading && <ContentPage />}
     </>
   );
 }
