@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
+import FloatingButton from "./FloatingButton";
 
 export default function HamburgerMenu() {
   const [showMainButton, setShowMainButton] = useState(true);
@@ -17,43 +18,53 @@ export default function HamburgerMenu() {
   return (
     <div className="hamburger-menu">
       {showMainButton ? (
-        <div className="container">
-          <button
-            className="button-parrent"
-            style={{ fontWeight: "bolder", fontSize: "2.85rem" }}
-            onClick={handleMainButtonClick}
-            title="Menu"
-          >
-            =
-          </button>
-        </div>
+        <FloatingButton
+          titleOn="Menu"
+          titleOff=""
+          state={true}
+          toggleState={handleMainButtonClick}
+          styleOn={{
+            fontWeight: "bolder",
+            fontSize: "2.85rem",
+          }}
+          styleOff={{}}
+          className="button-parrent"
+          iconOn="="
+          iconOff=""
+        />
       ) : (
         <>
-          <div className="container">
-            <button
-              className="button-parrent"
-              style={{ fontWeight: "lighter", fontSize: "1.85rem" }}
-              onClick={handleChildButtonClick}
-              title="Close"
-            >
-              ✖
-            </button>
-          </div>
+          <FloatingButton
+            titleOn=""
+            titleOff="Close"
+            state={false}
+            toggleState={handleChildButtonClick}
+            styleOn={{}}
+            styleOff={{
+              fontWeight: "lighter",
+              fontSize: "1.85rem",
+            }}
+            className="button-parrent"
+            iconOn=""
+            iconOff="✖"
+          />
           {menus.map((menu) => (
-            <div className="container" key={menu}>
-              <button className={"button-child"}>
-                <a
-                  href={"#" + menu.toLowerCase()}
-                  onClick={handleChildButtonClick}
-                  title={menu}
-                >
-                  {(menu === "Home" && "♤") ||
-                    (menu === "Favorite" && "♡") ||
-                    (menu === "Category" && "♢") ||
-                    (menu === "Genre" && "♧")}
-                </a>
-              </button>
-            </div>
+            <FloatingButton
+              key={menu}
+              itemKey={menu}
+              state={false}
+              toggleState={null}
+              className="button-child"
+              url={"#" + menu.toLowerCase()}
+              toggleStateLink={handleChildButtonClick}
+              titleLink={menu}
+              iconLink={
+                (menu === "Home" && "♤") ||
+                (menu === "Favorite" && "♡") ||
+                (menu === "Category" && "♢") ||
+                (menu === "Genre" && "♧")
+              }
+            />
           ))}
         </>
       )}

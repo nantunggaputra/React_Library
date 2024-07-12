@@ -6,106 +6,121 @@ export default function AnimeWinter() {
 
   const userTimeHours = new Date().getHours();
 
-  const imageSponsored =
-    userTimeHours < 8
-      ? [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1003/142645l.jpg",
-            title: "T.P BON",
-          },
-        ]
-      : userTimeHours < 14
-      ? [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1801/142390l.jpg",
-            title: "Ore dake Level Up na Ken",
-          },
-        ]
-      : userTimeHours < 20
-      ? [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1948/143550l.jpg",
-            title: "Sengoku Youko: Senma Konton-hen",
-          },
-        ]
-      : [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1239/140803l.jpg",
-            title: "Ao no Exorcist: Shimane Illuminati-hen",
-          },
-        ];
+  const getImageByTime = (time, imageOptions) => {
+    for (let option of imageOptions) {
+      if (time < option.limit) {
+        return [option.image];
+      }
+    }
+    return [imageOptions[imageOptions.length - 1].image];
+  };
 
-  const imageFeatured =
-    userTimeHours < 4
-      ? [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1799/139199l.jpg",
-            title: "Medalist",
-          },
-        ]
-      : userTimeHours < 8
-      ? [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1607/143049l.jpg",
-            title: "Mahoutsukai no Yakusoku",
-          },
-        ]
-      : userTimeHours < 12
-      ? [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1530/143202l.jpg",
-            title: "Momentary Lily",
-          },
-        ]
-      : userTimeHours < 16
-      ? [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1011/142918l.jpg",
-            title: "Izure Saikyou no Renkinjutsushi?",
-          },
-        ]
-      : userTimeHours < 20
-      ? [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1501/143569l.jpg",
-            title: "NEET Kunoichi to Nazeka Dousei Hajimemashita",
-          },
-        ]
-      : [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1718/143481l.jpg",
-            title: "Kimi no Koto ga Daidaisuki na 100-nin no Kanojo 2nd Season",
-          },
-        ];
+  const imageSponsoredOptions = [
+    {
+      limit: 8,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1003/142645l.jpg",
+        title: "T.P BON",
+      },
+    },
+    {
+      limit: 14,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1801/142390l.jpg",
+        title: "Ore dake Level Up na Ken",
+      },
+    },
+    {
+      limit: 20,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1948/143550l.jpg",
+        title: "Sengoku Youko: Senma Konton-hen",
+      },
+    },
+    {
+      limit: 24,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1239/140803l.jpg",
+        title: "Ao no Exorcist: Shimane Illuminati-hen",
+      },
+    },
+  ];
 
-  const imageRemake =
-    userTimeHours < 8
-      ? [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1105/140422l.jpg",
-            title: "The One Piece",
-          },
-        ]
-      : userTimeHours < 14
-      ? [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1426/129194l.jpg",
-            title: "Trigun Stampede",
-          },
-        ]
-      : userTimeHours < 20
-      ? [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1599/136532l.jpg",
-            title: "Rurouni Kenshin: Meiji Kenkaku Romantan",
-          },
-        ]
-      : [
-          {
-            src: "https://cdn.myanimelist.net/images/anime/1059/142414l.jpg",
-            title: "Ookami to Koushinryou: Merchant Meets the Wise Wolf",
-          },
-        ];
+  const imageFeaturedOptions = [
+    {
+      limit: 4,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1607/143049l.jpg",
+        title: "Mahoutsukai no Yakusoku",
+      },
+    },
+    {
+      limit: 8,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1799/139199l.jpg",
+        title: "Medalist",
+      },
+    },
+    {
+      limit: 12,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1530/143202l.jpg",
+        title: "Momentary Lily",
+      },
+    },
+    {
+      limit: 16,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1011/142918l.jpg",
+        title: "Izure Saikyou no Renkinjutsushi?",
+      },
+    },
+    {
+      limit: 20,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1501/143569l.jpg",
+        title: "NEET Kunoichi to Nazeka Dousei Hajimemashita",
+      },
+    },
+    {
+      limit: 24,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1718/143481l.jpg",
+        title: "Kimi no Koto ga Daidaisuki na 100-nin no Kanojo 2nd Season",
+      },
+    },
+  ];
+
+  const imageRemakeOptions = [
+    {
+      limit: 8,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1105/140422l.jpg",
+        title: "The One Piece",
+      },
+    },
+    {
+      limit: 14,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1426/129194l.jpg",
+        title: "Trigun Stampede",
+      },
+    },
+    {
+      limit: 20,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1599/136532l.jpg",
+        title: "Rurouni Kenshin: Meiji Kenkaku Romantan",
+      },
+    },
+    {
+      limit: 24,
+      image: {
+        src: "https://cdn.myanimelist.net/images/anime/1059/142414l.jpg",
+        title: "Ookami to Koushinryou: Merchant Meets the Wise Wolf",
+      },
+    },
+  ];
 
   const imageHiatus = [
     {
@@ -113,6 +128,10 @@ export default function AnimeWinter() {
       title: "Magic Kaito",
     },
   ];
+
+  const imageSponsored = getImageByTime(userTimeHours, imageSponsoredOptions);
+  const imageFeatured = getImageByTime(userTimeHours, imageFeaturedOptions);
+  const imageRemake = getImageByTime(userTimeHours, imageRemakeOptions);
 
   const images = {
     Sponsored: imageSponsored,
