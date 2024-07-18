@@ -38,7 +38,25 @@ function SelectedBox({ selectedAnime }) {
   );
 }
 
-let hasData = (data) => data !== "No Data";
+const hasData = (data) => data !== "No Data";
+
+function MainPage({ animes, selectedAnime, onSelectedAnime }) {
+  return (
+    <>
+      <main className="main">
+        {selectedAnime && hasData(selectedAnime.mal_id) && (
+          <SelectedBox selectedAnime={selectedAnime} />
+        )}
+        {animes.length > 0 && (
+          <ListBox animes={animes} onSelectedAnime={onSelectedAnime} />
+        )}
+      </main>
+      {selectedAnime && hasData(selectedAnime.mal_id) && (
+        <div className="box-separator"></div>
+      )}
+    </>
+  );
+}
 
 export default function Main({ animes, selectedAnime, onSelectedAnime }) {
   const [animeLegacyData, setAnimeLegacyData] = useState([]);
@@ -59,17 +77,11 @@ export default function Main({ animes, selectedAnime, onSelectedAnime }) {
 
   return (
     <>
-      <main className="main">
-        {selectedAnime && hasData(selectedAnime.mal_id) && (
-          <SelectedBox selectedAnime={selectedAnime} />
-        )}
-        {animes.length > 0 && (
-          <ListBox animes={animes} onSelectedAnime={onSelectedAnime} />
-        )}
-      </main>
-      {selectedAnime && hasData(selectedAnime.mal_id) && (
-        <div className="box-separator"></div>
-      )}
+      <MainPage
+        animes={animes}
+        selectedAnime={selectedAnime}
+        onSelectedAnime={onSelectedAnime}
+      />
       <AnimeLove />
       <AnimeWinter />
       <MainLegacy

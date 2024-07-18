@@ -76,7 +76,7 @@ body {
   height: 100vh;
   color: var(--color-text);
   font-family: inherit;
-  font-size: 9rem;
+  font-size: 8rem;
   text-align: center;
   letter-spacing: 3px;
   opacity: 0;
@@ -631,7 +631,7 @@ body {
 .search-results {
   width: 35rem;
   max-width: 80vw;
-  margin-top: 3rem;
+  margin-top: 4rem;
   padding: 0.5rem 0.8rem;
   border-radius: 0.5rem;
   background-color: #17171750;
@@ -664,7 +664,7 @@ body {
 .aside {
   width: 100%;
   height: 50rem;
-  top: 122.25rem;
+  top: 108rem;
   position: absolute;
   text-shadow: 0 0 5px var(--color-background-900);
   background: #e1e8ed25;
@@ -773,7 +773,7 @@ body {
 }
 
 .silhouette-off {
-  top: 125rem;
+  top: 110rem;
   right: 1rem;
   position: absolute;
   filter: contrast(0.4) brightness(0.25);
@@ -810,7 +810,6 @@ body {
 
 .main,
 .main-legacy {
-  margin-top: 2.4rem;
   max-height: 55rem;
   display: flex;
   justify-content: center;
@@ -819,6 +818,7 @@ body {
 
 .main .box,
 .main-legacy .box {
+  margin-top: 2.4rem;
   width: 42rem;
   max-width: 80vw;
   min-height: 6rem;
@@ -1514,7 +1514,7 @@ body {
 .foot-menu .left-menu {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 6.67rem;
   align-items: flex-end;
 }
 
@@ -1709,18 +1709,13 @@ body {
 
 @media (max-width: 1024px) {
   .loading-page h1 {
-    font-size: 7rem;
-  }
-
-  .foot-menu .left-menu .rss,
-  .foot-menu .left-menu .sitemap {
-    display: none;
+    font-size: 6rem;
   }
 }
 
 @media (max-width: 926px) {
   .loading-page h1 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   .foot-menu .left-menu {
@@ -1736,7 +1731,7 @@ body {
 
 @media (max-width: 768px) {
   .loading-page h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .about-container {
@@ -1757,6 +1752,7 @@ body {
   .main,
   .main-legacy {
     display: block;
+    margin-top: 2.4rem;
     max-height: 43rem;
   }
 
@@ -1812,14 +1808,11 @@ body {
   .love,
   .featured,
   .winter,
+  .winter-all,
   .choose,
   .category,
   .category-all {
     min-width: 80vw;
-  }
-
-  .choose {
-    margin-top: 44.4rem;
   }
 
   .separator img {

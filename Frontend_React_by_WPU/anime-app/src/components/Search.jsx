@@ -64,18 +64,20 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
   );
 }
 
-let hasData = (data) => data !== 0;
+const hasData = (data) => data !== 0;
 
 function MainResult({ count }) {
   return (
-    <p className="search-results" style={{ cursor: "default" }}>
-      <span>{hasData(count) ? "⋋≧▽≦⋌" : "o (T___T) o"}</span>{" "}
-      <strong>
-        {hasData(count)
-          ? `Subarashi Minna-san! Wee found Breathtaking ${count} results anime...`
-          : "Gomennasai Minna-san! Please Search again..."}
-      </strong>
-    </p>
+    <>
+      <p className="search-results" style={{ cursor: "default" }}>
+        <span>{hasData(count) ? "⋋≧▽≦⋌" : "o (T___T) o"}</span>{" "}
+        <strong>
+          {hasData(count)
+            ? `Subarashi Minna-san! Wee found Breathtaking ${count} results anime...`
+            : "Gomennasai Minna-san! Please Search again..."}
+        </strong>
+      </p>
+    </>
   );
 }
 

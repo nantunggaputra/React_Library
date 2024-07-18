@@ -124,8 +124,8 @@ export default function AnimeWinter() {
 
   const imageHiatus = [
     {
-      src: "https://cdn.myanimelist.net/images/anime/13/46095l.jpg",
-      title: "Magic Kaito",
+      src: "https://cdn.myanimelist.net/images/anime/3/67807l.jpg",
+      title: "Magic Kaito 1412",
     },
   ];
 

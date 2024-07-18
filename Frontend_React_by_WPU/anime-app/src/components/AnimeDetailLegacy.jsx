@@ -54,7 +54,7 @@ export default function AnimeDetailLegacy({ selectedAnimeLegacy }) {
             <IndentedText> </IndentedText>
             <strong>Warning: </strong>
             <span style={{ color: "#ef4444" }}>
-              We strongly advise against watching the listed anime titles
+              Wee strongly advise against watching the listed anime titles
               through illegal means.
             </span>{" "}
             Engaging in piracy harms the creators and the industry as a whole.

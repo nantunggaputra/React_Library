@@ -41,7 +41,7 @@ function SelectedBox({ selectedAnimeLegacy }) {
   );
 }
 
-let hasData = (data) => data !== 0;
+const hasData = (data) => data !== 0;
 
 function MainLegacyResult({ animesLegacy }) {
   return (
@@ -63,6 +63,31 @@ function MainLegacyResult({ animesLegacy }) {
   );
 }
 
+function MainLegacyPage({
+  animesLegacy,
+  selectedAnimeLegacy,
+  onSelectedAnimeLegacy,
+}) {
+  return (
+    <>
+      <main className="main-legacy">
+        {selectedAnimeLegacy && (
+          <SelectedBox selectedAnimeLegacy={selectedAnimeLegacy} />
+        )}
+        {animesLegacy.length >= 0 && (
+          <ListBox
+            animesLegacy={animesLegacy}
+            onSelectedAnimeLegacy={onSelectedAnimeLegacy}
+          />
+        )}
+      </main>
+      {selectedAnimeLegacy && hasData(selectedAnimeLegacy.mal_id) && (
+        <div className="box-separator"></div>
+      )}
+    </>
+  );
+}
+
 export default function MainLegacy({
   animesLegacy,
   selectedAnimeLegacy,
@@ -71,15 +96,11 @@ export default function MainLegacy({
   return (
     <>
       <MainLegacyResult animesLegacy={animesLegacy} />
-      <div className="main-legacy">
-        {selectedAnimeLegacy && (
-          <SelectedBox selectedAnimeLegacy={selectedAnimeLegacy} />
-        )}
-        <ListBox
-          animesLegacy={animesLegacy}
-          onSelectedAnimeLegacy={onSelectedAnimeLegacy}
-        />
-      </div>
+      <MainLegacyPage
+        animesLegacy={animesLegacy}
+        selectedAnimeLegacy={selectedAnimeLegacy}
+        onSelectedAnimeLegacy={onSelectedAnimeLegacy}
+      />
     </>
   );
 }

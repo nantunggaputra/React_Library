@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import Logo from "./Logo";
 import HamburgerMenu from "./HamburgerMenu";
-import Router from "./Router";
+import NavbarMenu from "./NavbarMenu";
 import Search from "./Search";
 
 export default function Navbar({ fetchAnime }) {
@@ -9,7 +9,7 @@ export default function Navbar({ fetchAnime }) {
     <nav className="nav-bar">
       <Logo />
       <HamburgerMenu />
-      <Router />
+      <NavbarMenu />
       <Search fetchAnime={fetchAnime} />
     </nav>
   );
