@@ -1,11 +1,8 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const categories = ["Season Now", "Top Anime", "Top Manga", "Top Characters"];
-
 export default function AnimeByCategory() {
+  const categories = ["Season Now", "Top Anime", "Top Manga", "Top Characters"];
   const [selectedCategory, setSelectedCategory] = useState("");
   const [animeList, setAnimeList] = useState([]);
   const [loading, setLoading] = useState(false);

@@ -36,7 +36,7 @@ export default function AnimeDetailLegacy({ selectedAnimeLegacy }) {
           <small>
             {airedYear || ""}
             {airedYear && score ? " | " : ""}
-            {score ? `IMDb ★ ${score.toFixed(1)}/10` : ""}
+            {score ? `MAL - IMDb ★ ${score.toFixed(1)}/10` : ""}
             <br />
             {rating ? `Rating for ${rating}` : ""}
           </small>

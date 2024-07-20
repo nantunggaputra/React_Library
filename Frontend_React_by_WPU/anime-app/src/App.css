@@ -1028,6 +1028,7 @@ body {
 .choice,
 .featured,
 .choose,
+.masterpiece,
 .check {
   display: block;
   margin: 2.4rem auto -1rem;
@@ -1042,9 +1043,14 @@ body {
   cursor: default;
 }
 
+.masterpiece {
+  margin: 10.2rem auto -1rem;
+}
+
 .love,
 .winter,
 .category,
+.studio,
 .genre-list {
   display: block;
   margin: 2rem auto;
@@ -1058,6 +1064,11 @@ body {
   margin: 2rem auto 8.5rem;
 }
 
+.studio {
+  max-height: 40rem;
+  margin: 2rem auto 23.5rem;
+}
+
 .category {
   margin: 2rem auto 7rem;
 }
@@ -1069,6 +1080,7 @@ body {
 
 .winter-all,
 .category-all,
+.studio-all,
 .genre-all {
   display: block;
   margin: -1rem auto 1rem;
@@ -1082,6 +1094,11 @@ body {
   justify-content: center;
   gap: 0.5rem;
   overflow: hidden;
+}
+
+.studio-all {
+  margin: 1rem auto;
+  flex-wrap: wrap;
 }
 
 .check,
@@ -1112,6 +1129,7 @@ body {
 
 .winter-all button,
 .category-all button,
+.studio-all button,
 .genre-all button {
   padding: 0.5rem 1.3rem;
   border: none;
@@ -1126,6 +1144,7 @@ body {
 
 .winter-all button:hover,
 .category-all button:hover,
+.studio-all button:hover,
 .genre-all button:hover {
   background-color: var(--color-red);
   color: var(--color-background-light);
@@ -1133,6 +1152,7 @@ body {
 
 .winter-all .selected,
 .category-all .selected,
+.studio-all .selected,
 .genre-all .selected {
   background-color: var(--color-red);
   color: var(--color-background-light);
@@ -1141,6 +1161,7 @@ body {
 .love-overview,
 .winter-overview,
 .category-overview,
+.studio-overview,
 .genre-list-overview {
   width: 100%;
   height: 100%;
@@ -1152,7 +1173,8 @@ body {
   overflow: hidden;
 }
 
-.winter-overview {
+.winter-overview,
+.studio-overview {
   padding: 2rem 2.4rem 0 2.4rem;
 }
 
@@ -1189,6 +1211,7 @@ body {
 .love-image,
 .winter-image,
 .category-image,
+.studio-image,
 .genre-list-image {
   min-height: 32rem;
   margin: 2rem auto 0;
@@ -1196,7 +1219,8 @@ body {
   overflow: hidden;
 }
 
-.winter-image {
+.winter-image,
+.studio-image {
   margin: 0 auto;
 }
 
@@ -1214,6 +1238,7 @@ body {
 
 .winter-image small,
 .category-image small,
+.studio-image small,
 .genre-list-image small {
   width: 100%;
   padding: 1rem;
@@ -1229,7 +1254,8 @@ body {
   opacity: 0;
 }
 
-.winter-image:hover small {
+.winter-image:hover small,
+.studio-image:hover small {
   left: 0%;
   animation: blink 1s ease infinite, spin 20s ease infinite;
 }
@@ -1254,6 +1280,7 @@ body {
 .love-image img,
 .winter-image img,
 .category-image img,
+.studio-image img,
 .genre-list-image img {
   max-width: 100%;
   min-height: 32rem;
@@ -1284,6 +1311,7 @@ body {
 
 .winter-image img:hover,
 .category-image img:hover,
+.studio-image img:hover,
 .genre-list-image img:hover {
   opacity: 0.35;
 }
@@ -1303,6 +1331,7 @@ body {
 .love-overview p,
 .winter-overview p,
 .category-overview p,
+.studio-overview p,
 .genre-list-overview p {
   margin: auto;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -1811,7 +1840,10 @@ body {
   .winter-all,
   .choose,
   .category,
-  .category-all {
+  .category-all,
+  .masterpiece,
+  .studio,
+  .studio-all {
     min-width: 80vw;
   }
 

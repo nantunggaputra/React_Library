@@ -1,45 +1,6 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
-import AnimeLegacy from "./AnimeLegacy";
-import AnimeDetailLegacy from "./AnimeDetailLegacy";
-
-const toggleOpen = (setIsOpen) => () => setIsOpen((open) => !open);
-
-function ListBox({ animesLegacy, onSelectedAnimeLegacy }) {
-  const [isOpen, setIsOpen] = useState(true);
-
-  return (
-    <div
-      className="box"
-      style={animesLegacy.length > 1 ? {} : { overflow: "hidden" }}
-    >
-      <button className="btn-toggle" onClick={toggleOpen(setIsOpen)}>
-        {isOpen ? "+" : "±"}
-      </button>
-      {isOpen && (
-        <AnimeLegacy
-          animesLegacy={animesLegacy}
-          onSelectedAnimeLegacy={onSelectedAnimeLegacy}
-        />
-      )}
-    </div>
-  );
-}
-
-function SelectedBox({ selectedAnimeLegacy }) {
-  const [isOpen, setIsOpen] = useState(true);
-
-  return (
-    <div className="box">
-      <button className="btn-toggle" onClick={toggleOpen(setIsOpen)}>
-        {isOpen ? "+" : "±"}
-      </button>
-      {isOpen && (
-        <AnimeDetailLegacy selectedAnimeLegacy={selectedAnimeLegacy} />
-      )}
-    </div>
-  );
-}
+import SelectedBox from "./SelectedBox";
+import ListBox from "./ListBox";
 
 const hasData = (data) => data !== 0;
 
@@ -72,12 +33,13 @@ function MainLegacyPage({
     <>
       <main className="main-legacy">
         {selectedAnimeLegacy && (
-          <SelectedBox selectedAnimeLegacy={selectedAnimeLegacy} />
+          <SelectedBox selectedAnime={selectedAnimeLegacy} legacy={true} />
         )}
         {animesLegacy.length >= 0 && (
           <ListBox
-            animesLegacy={animesLegacy}
-            onSelectedAnimeLegacy={onSelectedAnimeLegacy}
+            animes={animesLegacy}
+            onSelectedAnime={onSelectedAnimeLegacy}
+            legacy={true}
           />
         )}
       </main>

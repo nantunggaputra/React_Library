@@ -1,42 +1,12 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
-import Anime from "./Anime";
-import AnimeDetail from "./AnimeDetail";
+import SelectedBox from "./SelectedBox";
+import ListBox from "./ListBox";
 import AnimeLove from "./AnimeLove";
 import AnimeWinter from "./AnimeWinter";
 import MainLegacy from "./MainLegacy";
 import AnimeByCategory from "./AnimeCategory";
-
-const toggleOpen = (setIsOpen) => () => setIsOpen((open) => !open);
-
-function ListBox({ animes, onSelectedAnime }) {
-  const [isOpen, setIsOpen] = useState(true);
-
-  return (
-    <div
-      className="box"
-      style={animes.length > 1 ? {} : { overflow: "hidden" }}
-    >
-      <button className="btn-toggle" onClick={toggleOpen(setIsOpen)}>
-        {isOpen ? "+" : "±"}
-      </button>
-      {isOpen && <Anime animes={animes} onSelectedAnime={onSelectedAnime} />}
-    </div>
-  );
-}
-
-function SelectedBox({ selectedAnime }) {
-  const [isOpen, setIsOpen] = useState(true);
-
-  return (
-    <div className="box">
-      <button className="btn-toggle" onClick={toggleOpen(setIsOpen)}>
-        {isOpen ? "+" : "±"}
-      </button>
-      {isOpen && <AnimeDetail selectedAnime={selectedAnime} />}
-    </div>
-  );
-}
+import AnimeByStudio from "./AnimeStudio";
 
 const hasData = (data) => data !== "No Data";
 
@@ -90,6 +60,7 @@ export default function Main({ animes, selectedAnime, onSelectedAnime }) {
         onSelectedAnimeLegacy={handleSelectedAnimeLegacy}
       />
       <AnimeByCategory />
+      <AnimeByStudio />
     </>
   );
 }

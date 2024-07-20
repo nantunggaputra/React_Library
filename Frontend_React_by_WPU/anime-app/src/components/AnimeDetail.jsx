@@ -17,7 +17,7 @@ const getAnimeYear = (anime) => {
 };
 
 const getAnimeScore = (anime) => {
-  return anime.score ? `IMDb ★ ${anime.score.toFixed(1)}/10` : "";
+  return anime.score ? `MAL - IMDb ★ ${anime.score.toFixed(1)}/10` : "";
 };
 
 const getAnimeRating = (anime) => {

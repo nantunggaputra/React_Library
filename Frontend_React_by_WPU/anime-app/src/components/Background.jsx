@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState, useEffect, useRef } from "react";
 import AboutPage from "./AboutPage";
 import FloatingButton from "./FloatingButton";
