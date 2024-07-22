@@ -5,7 +5,6 @@ import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Aside from "./components/Aside";
-import Channels from "./components/Channels";
 import Separator from "./components/Separator";
 import Footer from "./components/Footer";
 
@@ -64,7 +63,6 @@ function ContentPage() {
         onSelectedAnime={handleSelectedAnime}
       />
       <Aside />
-      <Channels />
       <Separator />
       <Footer />
     </>

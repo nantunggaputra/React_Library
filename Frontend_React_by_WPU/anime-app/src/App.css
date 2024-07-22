@@ -1064,13 +1064,13 @@ body {
   margin: 2rem auto 8.5rem;
 }
 
+.category {
+  margin: 2rem auto 16rem;
+}
+
 .studio {
   max-height: 40rem;
   margin: 2rem auto 23.5rem;
-}
-
-.category {
-  margin: 2rem auto 7rem;
 }
 
 .genre-list {
@@ -1255,7 +1255,8 @@ body {
 }
 
 .winter-image:hover small,
-.studio-image:hover small {
+.studio-image:hover small,
+.genre-list-image:hover small {
   left: 0%;
   animation: blink 1s ease infinite, spin 20s ease infinite;
 }
@@ -1272,8 +1273,7 @@ body {
   }
 }
 
-.category-image:hover small,
-.genre-list-image:hover small {
+.category-image:hover small {
   animation: blink 1s ease infinite;
 }
 
