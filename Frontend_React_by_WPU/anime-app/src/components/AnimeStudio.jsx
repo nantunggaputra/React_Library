@@ -31,6 +31,7 @@ export default function AnimeByStudio() {
   return (
     <>
       <div className="masterpiece">
+        <div className="ornament"></div>
         <h2>
           <span style={{ color: "#d372b8" }}>
             {studioMasterpiece.length > 0 ? selectedStudio : "The Gift"}
@@ -80,6 +81,7 @@ export default function AnimeByStudio() {
             </h2>
           )}
         </div>
+        <div className="ornament"></div>
       </div>
     </>
   );

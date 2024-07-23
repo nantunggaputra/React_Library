@@ -1098,6 +1098,10 @@ body {
 
 .studio-all {
   margin: 1rem auto;
+  max-height: 17rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: var(--color-background-light) transparent;
   flex-wrap: wrap;
 }
 
@@ -1358,6 +1362,18 @@ body {
 .category-overview p:hover,
 .genre-list-overview p:hover {
   color: var(--color-red);
+}
+
+.ornament {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-60%);
+  max-width: 60%;
+  width: 21rem;
+  height: 9rem;
+  background-color: var(--color-background-light);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 /* Accessories */
