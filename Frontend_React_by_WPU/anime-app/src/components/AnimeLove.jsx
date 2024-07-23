@@ -108,13 +108,14 @@ export default function AnimeLove() {
       <>
         <div id="favorite" className="choice">
           <h2>
-            <span style={{ color: "#0377b9" }}>Loading</span> Favorite Anime
+            <span style={{ color: "var(--color-primary-light)" }}>Loading</span>{" "}
+            Favorite Anime
           </h2>
         </div>
         <div className="love">
           <div className="love-overview">
             <p>
-              <span style={{ color: "#d372b8", cursor: "default" }}>
+              <span style={{ color: "var(--color-red)", cursor: "default" }}>
                 Please wait...
               </span>
             </p>
@@ -130,7 +131,8 @@ export default function AnimeLove() {
     <>
       <div id="favorite" className="choice">
         <h2>
-          <span style={{ color: "#0377b9" }}>Editor</span>&apos;s Choice Anime
+          <span style={{ color: "var(--color-primary-light)" }}>Editor</span>
+          &apos;s Choice Anime
         </h2>
       </div>
       <div className="love">
@@ -148,7 +150,7 @@ export default function AnimeLove() {
             />
           </div>
           <p>
-            <span style={{ color: "#d372b8" }}>Wee ♡ </span>
+            <span style={{ color: "var(--color-red)" }}>Wee ♡ </span>
             {title}
           </p>
           <button tabIndex="down" onClick={handleNext}>

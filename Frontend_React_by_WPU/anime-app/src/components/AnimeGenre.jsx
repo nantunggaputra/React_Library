@@ -67,7 +67,8 @@ export default function AnimeByGenre() {
       <aside id="genre" className="aside left">
         <div className="check">
           <h2>
-            <span style={{ color: "#0377b9" }}>Genre</span> Anime
+            <span style={{ color: "var(--color-primary-light)" }}>Genre</span>{" "}
+            Anime
           </h2>
         </div>
         <div className="genre-all">
@@ -89,7 +90,7 @@ export default function AnimeByGenre() {
       <aside className="aside right">
         <div className="check">
           <h2>
-            <span style={{ color: "#0377b9" }}>
+            <span style={{ color: "var(--color-primary-light)" }}>
               {selectedGenre ? selectedGenre : "Genre"}
             </span>{" "}
             Anime
@@ -100,7 +101,7 @@ export default function AnimeByGenre() {
             {loading ? (
               <h2
                 style={{
-                  color: "#e1e8ed",
+                  color: "var(--color-text)",
                   position: "absolute",
                   left: "50%",
                   transform: "translateX(-50%) translateY(16rem)",
@@ -138,7 +139,7 @@ export default function AnimeByGenre() {
             ) : (
               <h2
                 style={{
-                  color: "#e1e8ed",
+                  color: "var(--color-text)",
                   position: "absolute",
                   left: "50%",
                   transform: "translateX(-50%) translateY(16rem)",

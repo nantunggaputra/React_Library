@@ -33,7 +33,7 @@ export default function AnimeByStudio() {
       <div className="masterpiece">
         <div className="ornament"></div>
         <h2>
-          <span style={{ color: "#d372b8" }}>
+          <span style={{ color: "var(--color-red)" }}>
             {studioMasterpiece.length > 0 ? selectedStudio : "The Gift"}
           </span>{" "}
           {studioMasterpiece.length > 0 ? "Masterpiece" : "from Studio Anime"}
@@ -70,7 +70,7 @@ export default function AnimeByStudio() {
           ) : (
             <h2
               style={{
-                color: "#e1e8ed",
+                color: "var(--color-text)",
                 position: "absolute",
                 left: "50%",
                 transform: "translateX(-50%) translateY(16rem)",

@@ -76,7 +76,13 @@ export default function AnimeDetailLegacy({ selectedAnimeLegacy }) {
             }}
           />
         </p>
-        <p style={{ textAlign: "right", color: "#e1e8ed", fontWeight: "600" }}>
+        <p
+          style={{
+            textAlign: "right",
+            color: "var(--color-text)",
+            fontWeight: "600",
+          }}
+        >
           <em>WeeBoo</em>
         </p>
       </section>

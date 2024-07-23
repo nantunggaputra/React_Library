@@ -69,7 +69,7 @@ export default function AnimeByCategory() {
     <>
       <div id="category" className="choose">
         <h2>
-          <span style={{ color: "#fcbe14" }}>
+          <span style={{ color: "var(--color-orange)" }}>
             {selectedCategory ? selectedCategory : "Recommended"}
           </span>{" "}
           for you
@@ -92,7 +92,7 @@ export default function AnimeByCategory() {
         <div className="category-overview">
           <h2
             style={{
-              color: "#e1e8ed",
+              color: "var(--color-text)",
               position: "absolute",
               left: "50%",
               transform: "translateX(-50%) translateY(22rem)",
@@ -120,7 +120,7 @@ export default function AnimeByCategory() {
                       style={
                         selectedCategory == "Top Characters"
                           ? {
-                              border: "0.2rem solid #e1e8ed",
+                              border: "0.2rem solid var(--color-text)",
                               filter: "grayscale(1)",
                               display: "block",
                               margin: "0 auto",

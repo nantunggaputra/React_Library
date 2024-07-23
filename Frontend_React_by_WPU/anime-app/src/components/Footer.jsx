@@ -20,31 +20,31 @@ export default function Footer() {
             target="_blank"
             rel="noopener"
           >
-            <SiVercel color="#ffffff" size={24} />
+            <SiVercel color="var(--color-text)" size={24} />
           </a>
           <a
             href="https://github.com/nantunggaputra"
             target="_blank"
             rel="noopener"
           >
-            <SiGithub color="#ffffff" size={24} />
+            <SiGithub color="var(--color-text)" size={24} />
           </a>
           <a
             href="https://www.sololearn.com/en/profile/29010238"
             target="_blank"
             rel="noopener"
           >
-            <SiSololearn color="#ffffff" size={24} />
+            <SiSololearn color="var(--color-text)" size={24} />
           </a>
           <a
             href="https://www.freecodecamp.org/fcc25a60d51-9b4d-4215-8292-018b8c933994"
             target="_blank"
             rel="noopener"
           >
-            <SiFreecodecamp color="#ffffff" size={24} />
+            <SiFreecodecamp color="var(--color-text)" size={24} />
           </a>
           <a style={{ cursor: "pointer" }}>
-            <SiReact color="#ffffff" size={24} />
+            <SiReact color="var(--color-text)" size={24} />
           </a>
         </div>
         <h3>

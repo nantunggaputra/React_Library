@@ -146,7 +146,7 @@ export default function AnimeWinter() {
     <>
       <div className="featured">
         <h2>
-          <span style={{ color: "#d372b8" }}>{selectedCategory}</span>{" "}
+          <span style={{ color: "var(--color-red)" }}>{selectedCategory}</span>{" "}
           {selectedCategory === "Featured" ? "in Winter Anime" : "Anime"}
         </h2>
       </div>
