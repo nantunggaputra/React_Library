@@ -3,9 +3,9 @@
 :root {
   --color-primary: #0377b980;
   --color-primary-light: #0377b9;
-  --color-text: #ebecee;
+  --color-text: #f0f0f8;
   --color-text-dark: #000000;
-  --color-background-light: #ebecee;
+  --color-background-light: #f0f0f8;
   --color-background-100: #171717;
   --color-background-500: #0a0a0a;
   --color-background-900: #252525;
@@ -669,7 +669,7 @@ body {
   top: 108rem;
   position: absolute;
   text-shadow: 0 0 5px var(--color-background-900);
-  background: #ebecee25;
+  background: #f0f0f825;
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.25rem);
   z-index: 1;
@@ -771,7 +771,6 @@ body {
   color: var(--color-text);
   font-family: "Times New Roman", Times, serif;
   font-size: 6.25rem;
-  opacity: 0.85;
 }
 
 .silhouette-off {
@@ -1463,8 +1462,8 @@ body {
 }
 
 .social-icons a:hover {
-  border-top: 2px solid #747577f5;
-  border-left: 2px solid #747577f5;
+  border-top: 2px solid #808087;
+  border-left: 2px solid #808087;
 }
 
 .footer h3 a {
@@ -1493,11 +1492,11 @@ body {
 }
 
 .footer a:hover span {
-  color: #25636cdc;
+  color: #0e8496;
 }
 
 .footer a:hover {
-  color: #747577f5;
+  color: #808087;
 }
 
 @keyframes fadein {
@@ -1613,7 +1612,7 @@ body {
   margin-left: 0.1rem;
   border: none;
   background-color: transparent;
-  filter: grayscale(1) brightness(1.25);
+  filter: grayscale(1) brightness(1.3);
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -1624,7 +1623,7 @@ body {
   top: -3.5rem;
   transform: scale(0.45);
   filter: grayscale(1) brightness(0.85);
-  opacity: 0.85;
+  opacity: 0.935;
 }
 
 .gototop {
@@ -1678,7 +1677,7 @@ body {
   .aside {
     display: block;
     position: relative;
-    background: #ebecee25;
+    background: #f0f0f825;
     backdrop-filter: blur(0.5rem);
     -webkit-backdrop-filter: blur(0.25rem);
     padding: 0.5rem 1.5rem;

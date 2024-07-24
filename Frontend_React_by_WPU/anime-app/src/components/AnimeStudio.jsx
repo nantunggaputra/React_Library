@@ -57,7 +57,7 @@ export default function AnimeByStudio() {
           {selectedStudioImage ? (
             <>
               <div className="studio-image">
-                <small>💌</small>
+                <small>✦</small>
                 <img
                   src={selectedStudioImage.src}
                   alt={selectedStudioImage.title}

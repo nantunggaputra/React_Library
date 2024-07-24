@@ -62,9 +62,18 @@ export default function Background() {
 
   const togglePlayPause = () => {
     audioRef.current &&
-      (isPlaying ? audioRef.current.pause() : audioRef.current.play());
+      (isPlaying ? audioRef.current.play() : audioRef.current.pause());
     setIsPlaying(!isPlaying);
   };
+
+  const userTimeHours = new Date().getHours();
+
+  const selectedBacksound =
+    userTimeHours < 12
+      ? "Departure to the Front Lines (Yasuharu Takanashi).mp3"
+      : userTimeHours < 18
+      ? "The Last Magic II (Yasuharu Takanashi).mp3"
+      : "The Last Magic I (Yasuharu Takanashi).mp3";
 
   return (
     <>
@@ -72,12 +81,7 @@ export default function Background() {
       <img src="Silhouette Kaito Kid.webp" alt=" " className="silhouette-off" />
       <div className="background-container"></div>
       <div className="background-audio">
-        <audio
-          ref={audioRef}
-          src="Detective Conan feat TheFatRat - Xenogenesis (Outro Song).mp3"
-          autoPlay
-          loop
-        ></audio>
+        <audio ref={audioRef} src={selectedBacksound} loop></audio>
       </div>
       <div className="connection">
         <FloatingButton
@@ -117,18 +121,18 @@ export default function Background() {
           titleOff="Background animations off"
           state={isAnimationActive}
           toggleState={toggleAnimation}
-          iconOn="𖡎"
+          iconOn="𖣐"
           iconOff="𖤐"
         />
       </div>
       <div className="music">
         <FloatingButton
-          titleOn="Backsound on (Outro Song)"
+          titleOn="Backsound on (Yasuharu Takanashi)"
           titleOff="Backsound off"
-          state={isPlaying}
+          state={!isPlaying}
           toggleState={togglePlayPause}
           iconOn="♪"
-          iconOff="ᯤ"
+          iconOff="♬"
         />
       </div>
     </>
