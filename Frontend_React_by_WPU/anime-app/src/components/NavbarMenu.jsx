@@ -10,7 +10,7 @@ function MenuLink({ href, onClick, label }) {
           {label}
         </a>
       </li>
-      {label === "Genre" ? "" : " | "}
+      {label === "Genre" ? "" : "|"}
     </>
   );
 }

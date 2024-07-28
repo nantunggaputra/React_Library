@@ -15,7 +15,7 @@ export default function AnimeDetailLegacy({ selectedAnimeLegacy }) {
       <header>
         <a
           href={`https://myanimelist.net/search/all?q=${title}&cat=all`}
-          title="Search in My Anime List"
+          title="Search anime in My Anime List"
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
@@ -25,7 +25,7 @@ export default function AnimeDetailLegacy({ selectedAnimeLegacy }) {
           <h2>
             <a
               href={`https://www.bilibili.tv/id/search-result?q=${title}`}
-              title="Search in BiliBili | Bstation"
+              title="Search anime in BiliBili | Bstation"
               target="_blank"
               rel="noopener noreferrer nofollow"
             >

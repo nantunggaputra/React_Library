@@ -48,12 +48,12 @@ export default function AnimeDetail({ selectedAnime }) {
   const malLink = getLinkAttributes(
     rating,
     `https://myanimelist.net/search/all?q=${title}&cat=all`,
-    "Search in My Anime List"
+    "Search anime in My Anime List"
   );
   const biliLink = getLinkAttributes(
     rating,
     `https://www.bilibili.tv/id/search-result?q=${title}`,
-    "Search in BiliBili | Bstation"
+    "Search anime in BiliBili | Bstation"
   );
 
   return (

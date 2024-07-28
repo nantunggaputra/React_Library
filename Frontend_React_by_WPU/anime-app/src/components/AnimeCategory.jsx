@@ -99,9 +99,7 @@ export default function AnimeByCategory() {
               cursor: "default",
             }}
           >
-            {selectedCategory
-              ? loading && "Please wait..."
-              : "Minna! Select Category"}
+            {selectedCategory ? loading && "Please wait..." : "Select Category"}
           </h2>
           {loading
             ? ""

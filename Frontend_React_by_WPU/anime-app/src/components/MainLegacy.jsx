@@ -15,8 +15,8 @@ function MainLegacyResult({ animesLegacy }) {
         <span>{hasData(animesLegacy.length) ? "Remember" : "Yameru"}</span>{" "}
         <strong>
           {hasData(animesLegacy.length)
-            ? "Sunday Morning? Wee present The Best 2000s childhood anime..."
-            : "Minna-san! Please wait or you can Reload to get this anime..."}
+            ? "Sunday Morning TV? Wee present 2000s childhood anime..."
+            : "Minna-san! Sorry for the inconvenience during its loading..."}
         </strong>
       </p>
       <br />

@@ -5,6 +5,7 @@ import {
   SiFreecodecamp,
   SiReact,
 } from "@icons-pack/react-simple-icons";
+import FloatingButton from "./FloatingButton";
 
 export default function Footer() {
   const handleSubmit = (event) => {
@@ -133,13 +134,14 @@ export default function Footer() {
         </div>
       </div>
       <div className="gototop">
-        <div className="container">
-          <button>
-            <a href="#" title="Go to top">
-              ⥣
-            </a>
-          </button>
-        </div>
+        <FloatingButton
+          itemKey="top-button"
+          titleOn=""
+          titleOff="Go to top"
+          url="#"
+          titleLink="Go to top"
+          iconLink="⥣"
+        />
       </div>
     </footer>
   );

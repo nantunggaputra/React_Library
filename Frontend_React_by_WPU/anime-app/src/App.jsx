@@ -20,7 +20,7 @@ function ContentPage() {
   const initialAnimesData = [
     {
       mal_id: "No Data",
-      title: "Minna? What is the best anime for you? Let's Search",
+      title: "Minna-san? What is the best anime for you?",
       year: 2024,
       image: "https://cdn.myanimelist.net/images/anime/7/75199.jpg",
     },
@@ -41,7 +41,7 @@ function ContentPage() {
     } catch (error) {
       console.error("Error fetching data:", error);
       alert(
-        `${error}\nMinna-san! An error occurred in the result data. Please enter another anime title or try again later.`
+        `${error}\nMinna-san! An error occurred in the result data. Please enter correct title or try again later.`
       );
       window.location.reload();
       return [];

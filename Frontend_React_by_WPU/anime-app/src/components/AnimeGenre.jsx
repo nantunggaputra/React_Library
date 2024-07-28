@@ -146,7 +146,7 @@ export default function AnimeByGenre() {
                   cursor: "default",
                 }}
               >
-                Minna! Select Genre
+                Select Genre
               </h2>
             )}
           </div>
