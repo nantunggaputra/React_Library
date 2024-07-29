@@ -73,7 +73,7 @@ function MainResult({ count }) {
         <span>{hasData(count) ? "⋋≧▽≦⋌" : "(T_T)"}</span>{" "}
         <strong>
           {hasData(count)
-            ? `Subarashi Minna-san! Wee found breathtaking ${count} anime...`
+            ? `Subarashi Minna-san! Wee found breathtaking of ${count} anime...`
             : "Gomennasai Minna-san! Please search another anime..."}
         </strong>
       </p>
