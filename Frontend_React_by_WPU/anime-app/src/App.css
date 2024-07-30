@@ -1196,30 +1196,39 @@ body {
   cursor: pointer;
 }
 
+.news-all button {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
 .news-all li {
   list-style: none;
   font-weight: 600;
-  color: var(--color-red);
+  color: var(--color-text);
   padding-bottom: 0.25rem;
   cursor: default;
 }
 
 .news-all a {
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--color-red);
+  font-size: 1.2rem;
 }
 
 .news-all a:hover {
-  color: var(--color-red);
+  color: var(--color-primary-light);
 }
 
 .winter-all button:hover,
 .category-all button:hover,
 .studio-all button:hover,
-.genre-all button:hover,
-.news-all button:hover {
+.genre-all button:hover {
   background-color: var(--color-red);
   color: var(--color-background-light);
+}
+
+.news-all button:hover {
+  color: var(--color-background-900);
 }
 
 .winter-all .selected,
@@ -1482,7 +1491,7 @@ body {
   max-width: 42rem;
   height: 0;
   font-family: "Arial Narrow", Arial;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.25px;
   text-transform: uppercase;
   padding-bottom: 48rem;
   border-radius: 1rem;
@@ -1628,6 +1637,10 @@ body {
   justify-content: space-between;
   gap: 6.67rem;
   align-items: flex-end;
+}
+
+.foot-menu .left-menu h2 {
+  letter-spacing: 1.45px;
 }
 
 .foot-menu .left-menu a {
@@ -1873,7 +1886,7 @@ body {
 
 @media (max-width: 768px) {
   html {
-    font-size: 63.5%;
+    font-size: 63%;
   }
 
   .loading-page h1 {
