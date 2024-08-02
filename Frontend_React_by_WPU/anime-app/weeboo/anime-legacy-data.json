@@ -1,5 +1,93 @@
 [
   {
+    "mal_id": "Fairy Tail",
+    "title": "Fairy Tail",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/5/18179l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2009
+        }
+      }
+    },
+    "score": 7.6,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Indosiar",
+    "synopsis":
+      "In the enchanted Kingdom of Fiore, the lively Lucy Heartfilia has one wish: to join the renowned Fairy Tail—one of the many magical wizard guilds scattered around the continent. Luckily, a chance encounter with Natsu Dragneel, the 'Salamander' of Fairy Tail, whisks her into the legendary guild. From Natsu's rivalrous antics with ice wizard Gray Fullbuster to the frightening presence of the unmatched combat goddess Erza Scarlet, Fairy Tail's powerful mages have a slight penchant for trouble. Through all the lucrative odd jobs and adventures to save the world from destruction lies an absolute and unyielding trust stronger than family that has formed between each guild member. Teaming up with Natsu, Gray, and Erza, Lucy finds herself amidst the guild's most misfit wizards. But as they constantly stand in the eye of every danger, there is one name that never ceases to resurface: Zeref, the feared master of dark magic. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Naruto: Shippuuden",
+    "title": "Naruto: Shippuuden",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/1565/111305l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2007
+        }
+      }
+    },
+    "score": 8.3,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Global TV - Indosiar",
+    "synopsis":
+      "It has been two and a half years since Naruto Uzumaki left Konohagakure, the Hidden Leaf Village, for intense training following events which fueled his desire to be stronger. Now Akatsuki, the mysterious organization of elite rogue ninja, is closing in on their grand plan which may threaten the safety of the entire shinobi world. Although Naruto is older and sinister events loom on the horizon, he has changed little in personality—still rambunctious and childish—though he is now far more confident and possesses an even greater determination to protect his friends and home. Come whatever may, Naruto will carry on with the fight for what is important to him, even at the expense of his own body, in the continuation of the saga about the boy who wishes to become Hokage. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Blue Dragon",
+    "title": "Blue Dragon",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/2/20597l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2007
+        }
+      }
+    },
+    "score": 6.4,
+    "rating": "PG - Children",
+    "status": "Indosiar - Spacetoon",
+    "synopsis":
+      "As Shu's village was being attacked by an unknown enemy, he and his friends, Jiro and Kluke decide to defend their home. They soon meet warrior Zola and receive the powers of Shadow, an ability that let's them transform their shadow into a powerful monster. Shu receives one of the most powerful monsters, Blue Dragon, and they all set out to defeat their enemy. (Source: ANN)"
+  },
+  {
+    "mal_id": "Bakugan Battle Brawlers",
+    "title": "Bakugan Battle Brawlers",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/7/21568l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2007
+        }
+      }
+    },
+    "score": 6.5,
+    "rating": "PG - Children",
+    "status": "Spacetoon",
+    "synopsis":
+      "Mysterious cards came down from the sky one day. Capable of summoning powerful creatures from another dimension, they became the centerpiece of a new game called Bakugan. The game gained instant popularity among children and teenagers, with the best of them competing in a worldwide ranking. Meanwhile, war for domination over Vestroia, the homeland of Bakugan cards, rages on. Invaded by the White Dragon Naga and his servants, the Doom Beings, the realm becomes increasingly destabilized. Dimensions begin to merge and many Bakugan players come to realize that their pastime is not merely a game. Danma Kuusou, one such Bakugan player, intends to become the World Ranking's leader someday. However, during one of his fights he experiences a vision of a clash in Vestroia. The fight suddenly moves to Earth, where Danma comes into possession of a talking, mighty fire Bakugan, Pyrus Dragonoid. He soon gets dragged into the conflict, and together with his Bakugan Brawlers team, must traverse the dimensions and restore balance in a ravaged world. [Written by MAL Rewrite]"
+  },
+  {
     "mal_id": "Code Geass",
     "title": "Code Geass",
     "images": {
@@ -64,6 +152,50 @@
     "status": "ANTV",
     "synopsis":
       "Yoshimura Sumimura comes from a long line of 'Kekkaishi,' individuals who have supernatural abilities and are able to destroy evil creatures called Ayakashi that venture into the human realm from time to time. The Ayakashi are demons that look to feast on the power emanating from the land of Karasumori, which also happens to be where Yoshimura's high school is located. Now, Yoshimura must fight to protect his beloved school and hometown. Although, if it were up to him, he would rather be baking cakes than fighting off the ugly characters that show up at night. Thankfully, Yoshimura isn't the only one helping to keep the baddies at bay. His childhood friend and neighbor, Tokine Yukimura, joins him in this righteous battle. Despite the fact that they are from rival clans, these two make a fantastic team. And teamwork is something vital to fighting the evil that is closing in, as the Ayakashi attack in waves, looking to claim the land as their own, and a shadowy organization looks on, ready to pounce when the time is right..."
+  },
+  {
+    "mal_id": "Gintama",
+    "title": "Gintama",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/10/73274l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2006
+        }
+      }
+    },
+    "score": 8.9,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Indosiar",
+    "synopsis":
+      "Edo is a city that was home to the vigor and ambition of samurai across the country. However, following feudal Japan's surrender to powerful aliens known as the 'Amanto,' those aspirations now seem unachievable. With the once-influential shogunate rebuilt as a puppet government, a new law is passed that promptly prohibits all swords in public. Enter Gintoki Sakata, an eccentric silver-haired man who always carries around a wooden sword and maintains his stature as a samurai despite the ban. As the founder of Yorozuya, a small business for odd jobs, Gintoki often embarks on endeavors to help other people—though usually in rather strange and unforeseen ways. Assisted by Shinpachi Shimura, a boy with glasses supposedly learning the way of the samurai; Kagura, a tomboyish girl with superhuman strength and an endless appetite; and Sadaharu, their giant pet dog who loves biting on people's heads, the Yorozuya encounter anything from alien royalty to scuffles with local gangs in the ever-changing world of Edo. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Air Gear",
+    "title": "Air Gear",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/11/18227l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2006
+        }
+      }
+    },
+    "score": 7.5,
+    "rating": "R+ - Mild Nudity",
+    "status": "Indosiar",
+    "synopsis":
+      "Air Trecks, also known as AT, are motorized and futuristic inline skates that are the new craze taking the nation by storm. Although each AT comes with a speed limiter, a community of daredevils known as the 'Storm Riders' are brave enough to tamper with the device. Utilizing AT's in underground battles, individual teams wager valuable AT parts or team emblems—their symbol of pride—to dominate the streets. Living in this era is Itsuki Minami, a middle school student notorious for engaging in street fights. Always wanting to reach heights no one else is able to, the reckless punk will break through any obstacle that stands in his way, alongside his best friends Kazuma Mikura and Onigiri. However, it is when he discovers a pair of Air Trecks in his house that the path to his true desire finally opens: to rule the skies. [Written by MAL Rewrite]"
   },
   {
     "mal_id": "Absolute Boy",
@@ -220,6 +352,28 @@
       "A great evil is sweeping over the realm; an evil that the young swordsman Roan and his life-long companion, the acolyte Yufa, must face head on! For these two travel toward their destiny, from the highest towers to the depths of the underworld, through forest and desert alike. With an ever-growing cast of fellow heroes, fate will grasp these travelers by their very souls and propel the band of skilled adventurers towards a noble end. Or ignoble, if they don't watch their step! Monsters are afoot and the way rife with danger and magic, the path forward may be unclear... But where will is strong, there is a way! Lessons wait in the depths of darkness, and good must prevail. The journey starts now! (Source: FUNimation Entertainment)"
   },
   {
+    "mal_id": "Keroro Gunsou",
+    "title": "Keroro Gunsou",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/1121/117792l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2004
+        }
+      }
+    },
+    "score": 7.7,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "ANTV",
+    "synopsis":
+      "It is the year 2004 AD, and pandemonium breaks as a mysterious frog-like alien race fills the sky with UFOs—or so 12-year-old Fuyuki Hinata dreams. Coincidentally, Sergeant Keroro, leader of a preliminary squad for the Keronian invasion of Pekopon—the alien name for Earth—begins his mission by invading Fuyuki's home. After subduing the boy and his sister, Keroro plans to reunite with his comrades and return to the mothership to repair his invaluable invasion device, the Kero Ball. Unfortunately, he receives word that headquarters has abandoned his unit's retrieval due to an unprecedented issue that forced the rest of the Keronians to flee. Consequently, Keroro is forced to stay at the Hinata residence together with the friendly, starry-eyed Fuyuki; his athletic, short-tempered sister Natsumi; and their hardworking, attractive mother Aki. Now stuck until further notice, Keroro and his platoon spend each day plotting world domination, but are thwarted each and every time by various unexpected factors. Nevertheless, as they live alongside humans, they learn to treat them as friends and allies, forming comedic yet meaningful connections that make their lives on Earth worthwhile. [Written by MAL Rewrite]"
+  },
+  {
     "mal_id": "Origami Warriors",
     "title": "Origami Warriors",
     "images": {
@@ -286,6 +440,28 @@
       "Moments before Naruto Uzumaki's birth, a huge demon known as the Nine-Tailed Fox attacked Konohagakure, the Hidden Leaf Village, and wreaked havoc. In order to put an end to the demon's rampage, the leader of the village, the Fourth Hokage, sacrificed his life and sealed the monstrous beast inside the newborn Naruto. In the present, Naruto is a hyperactive and knuckle-headed ninja growing up within Konohagakure. Shunned because of the demon inside him, Naruto struggles to find his place in the village. His one burning desire to become the Hokage and be acknowledged by the villagers who despite him. However, while his goal leads him to unbreakable bonds with lifelong friends, it also lands him in the crosshairs of many deadly foes. [Written by MAL Rewrite]"
   },
   {
+    "mal_id": "Hungry Heart Wild Striker",
+    "title": "Hungry Heart Wild Striker",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/12/49655l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2002
+        }
+      }
+    },
+    "score": 7.5,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Spacetoon",
+    "synopsis":
+      "As the younger brother of Japanese soccer star Seisuke Kanou, Kyousuke was always expected to grow as a soccer player at the same pace his brother did—an expectation that proved too difficult to meet. Having fallen behind, he now lives in the shadow of his brother's success. Entering his freshman year at Jouyou Akanegaoka High School, Kyousuke vows never to play soccer again. However, Miki Tsujiwaki, the captain of the girls' soccer team, and Mori Kazuto, the manager of the boys' team, recognize Kyousuke's potential and want to see his return to the game for their own reasons. With an opportunity to play soccer again, Kyousuke must either remain steadfast in his decision to abandon the sport he once loved, or allow himself to reignite that flame to become the best striker in the world. [Written by MAL Rewrite]"
+  },
+  {
     "mal_id": "Shaman King",
     "title": "Shaman King",
     "images": {
@@ -306,6 +482,28 @@
     "status": "ANTV",
     "synopsis":
       "Abattle is about to begin in Tokyo: the Shaman Fight, a tournament held every five hundred years where shaman—those who can command spirits—confront each other in combat. The victor of this contest becomes the Shaman King and the only one who is able to contact and control the Great Spirit, allowing them to reshape the world as they please through its immense power. During a late night walk, Manta Oyamada runs into his classmate, the carefree You Asakura, who invites him to come stargazing with some friends, who, to Manta's horror, turn out to be ghosts from a local cemetery! However, the knowledge that Manta possesses—a rare sixth sense that allows Manta to see these spirits—endears the boy to You. So when You finds out that his new comrade has been beaten up by a local gang, he decides to avenge him with the help of Amidamaru, a samurai ghost whose tomb was broken by the gang leader. Soon Manta uncovers more about the world of spirits, including the Shaman Fight, in which his new friend You aims to claim victory. [Written by MAL Rewrite]"
+  },
+  {
+    "mal_id": "Digimon Tamers",
+    "title": "Digimon Tamers",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/7/73696l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 2001
+        }
+      }
+    },
+    "score": 7.6,
+    "rating": "PG - Children",
+    "status": "Indosiar",
+    "synopsis":
+      "Digimon Tamers takes place in a world where the popular Digimon franchise is all the rage, consisting of a cartoon, video games, and the trading card game. Takato Matsuda is a huge Digimon fan that's particularly obsessed with the card game, and constantly daydreams about the universe therein. One day, he finds a mysterious blue card, which he slides through a scanner toy to use in the popular battle game. His toy suddenly glows and transforms into a Digivice, and Takato's fan-made design, Guilmon, materialises in front of him. Thrilled by the prospect of having a real-life Digimon, Takato embraces his new partner, and his adventures as a Digimon Tamer begin. Takato quickly discovers that being a Digimon Tamer is not all fun and games—in reality, it's much more dangerous than the card games he's accustomed to. Wild Digimon have begun to appear all across Japan, causing rampages that result in chaos and mayhem. Armed with his Digivice, which can scan trading cards to strengthen Guilmon, Takato and his new partner set out to combat the rogue Digimon. They are tasked with protecting the world from Digimon attacks, whilst a mysterious organization determined to eliminate all Digimon and their Tamers lurks in the shadows..."
   },
   {
     "mal_id": "Beyblade",
@@ -900,6 +1098,28 @@
     "status": "Indosiar - Spacetoon",
     "synopsis":
       "The series starts when Hayato, a soccer enthusiast, and his girlfriend Yumi, an aspiring musician, went to a visit to Dr. Leonard's lab. They accidentally activated the Tondekeman, a funny talking kettle who transported them many centuries in the past. In Baghdad, Hayato and Yumi gets reunited but they got separated from Tondekeman. They meet Aladdin, Prince Dandarn and Princess Shalala. They also meet the cunning Abdullah who is always ready to kidnap the princess so that he could marry the princess to his master. Our heroes get to go to different places and times and meet several historical and literary figures as they follow Abdullah as he escapes through time to abduct the princess. Hayato and Yumi are stuck in the past until they get Tondekeman from the possession of Abdullah. (Source: Wikipedia)"
+  },
+  {
+    "mal_id": "Dragon Ball Z",
+    "title": "Dragon Ball Z",
+    "images": {
+      "jpg": {
+        "large_image_url":
+          "https://cdn.myanimelist.net/images/anime/1277/142022l.jpg"
+      }
+    },
+    "aired": {
+      "prop": {
+        "from": {
+          "year": 1989
+        }
+      }
+    },
+    "score": 8.2,
+    "rating": "PG-13 - Teens 13 or older",
+    "status": "Indosiar - RCTI",
+    "synopsis":
+      "Five years after winning the World Martial Arts tournament, Gokuu is now living a peaceful life with his wife and son. This changes, however, with the arrival of a mysterious enemy named Raditz who presents himself as Gokuu's long-lost brother. He reveals that Gokuu is a descendant of the once powerful but now virtually extinct Saiyan race, whose homeworld was annihilated. When he was sent to Earth as a baby, Gokuu's sole purpose was to conquer and destroy the planet; but after suffering amnesia from a head injury, his violent and savage nature changed, and instead was raised as a kind and well-mannered boy, now fighting to protect others. With his failed attempt at forcibly recruiting Gokuu as an ally, Raditz warns Gokuu's friends of a new threat that's rapidly approaching Earth—one that could plunge Earth into an intergalactic conflict and cause the heavens themselves to shake. A war will soon be fought over the seven mystical Dragon Balls, magic objects that can grant any wish. Only the strongest will survive. [Written by MAL Rewrite]"
   },
   {
     "mal_id": "Ranma ½",
