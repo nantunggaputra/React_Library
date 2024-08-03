@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^9.6.0",
-    "axios": "^1.7.2",
+    "axios": "^1.7.3",
     "react": "^18.3.1",
-    "react-awesome-reveal": "^4.2.13",
+    "react-awesome-reveal": "^4.2.14",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 export default function AnimeLove() {
   const [images, setImages] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading, setLoading] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const animationRef = useRef(null);
 
@@ -13,15 +14,25 @@ export default function AnimeLove() {
   }, []);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+    setLoading(true);
+    setTimeout(() => {
+      setImages(images);
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      );
+      setLoading(false);
+    }, 500);
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
+    setLoading(true);
+    setTimeout(() => {
+      setImages(images);
+      setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+      setLoading(false);
+    }, 500);
   };
 
   useEffect(() => {
@@ -137,23 +148,34 @@ export default function AnimeLove() {
       </div>
       <div className="love">
         <div className="love-overview">
-          <button tabIndex="up" onClick={handlePrev}>
+          <button tabIndex="up" onClick={!loading ? handlePrev : undefined}>
             ⥣
           </button>
-          <div className="love-image">
-            <canvas id="canvas"></canvas>
-            <img
-              src={src}
-              alt={title}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            />
-          </div>
-          <p>
-            <span style={{ color: "var(--color-red)" }}>Wee ♡ </span>
-            {title}
-          </p>
-          <button tabIndex="down" onClick={handleNext}>
+          {loading ? (
+            <p>
+              <span style={{ color: "var(--color-red)", cursor: "default" }}>
+                Please wait...
+              </span>
+            </p>
+          ) : (
+            <>
+              <div className="love-image">
+                <canvas id="canvas"></canvas>
+                <img
+                  src={src}
+                  alt={title}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                />
+              </div>
+              <p>
+                <span style={{ color: "var(--color-red)" }}>Wee ♡ </span>
+                {title}
+              </p>
+            </>
+          )}
+
+          <button tabIndex="down" onClick={!loading ? handleNext : undefined}>
             ⥥
           </button>
         </div>

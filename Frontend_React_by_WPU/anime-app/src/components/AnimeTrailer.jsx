@@ -5,11 +5,12 @@ export default function AnimeTrailer() {
   const [animeData, setAnimeData] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   const animeIds = [
     56785, 52742, 49785, 52196, 55855, 56840, 52299, 58488, 53889, 57152, 55318,
-    58739, 58822, 58082, 57616, 57557, 52093, 50613, 51122,
+    58739, 58822, 58082, 57616, 57557, 52093, 50613, 51122, 56785, 52742, 49785,
+    52196, 55855, 56840, 52299, 58488, 53889, 57152, 55318, 58739, 58822, 58082,
+    57616, 57557, 52093, 50613, 51122,
   ];
 
   const animeTitles = [
@@ -32,20 +33,38 @@ export default function AnimeTrailer() {
     "Trigun Stampede",
     "Rurouni Kenshin",
     "Ookami to Koushinryou",
+    "Conan",
+    "Hinata",
+    "Natsu",
+    "Shido Itsuka",
+    "Ciel",
+    "Bon Namihira",
+    "Jin-woo",
+    "Jinka Yamato",
+    "Rin",
+    "Akira Masaki",
+    "Inori Yuitsuka",
+    "Yuri Kawazu",
+    "Takumi",
+    "Shizuri",
+    "Rentaro",
+    "Monkey D. Luffy",
+    "Vash",
+    "Kenshin",
+    "Kraft Lawrence",
   ];
 
   useEffect(() => {
-    const fetchDataWithDelay = () => {
+    const fetchTrailers = () => {
       setTimeout(() => {
-        fetchAnimeData(animeIds[currentIndex]);
+        fetchAnimeTrailer(animeIds[currentIndex]);
       }, 15000);
     };
-    fetchDataWithDelay();
+    fetchTrailers();
   }, [currentIndex]);
 
-  const fetchAnimeData = async (id) => {
+  const fetchAnimeTrailer = async (id) => {
     setLoading(true);
-    setError(null);
     try {
       const response = await fetch(`https://api.jikan.moe/v4/anime/${id}`);
       if (!response.ok) {
@@ -54,55 +73,42 @@ export default function AnimeTrailer() {
       const data = await response.json();
       setAnimeData(data.data);
     } catch (error) {
-      setError(error.message);
+      console.error("Error fetching trailers:", error);
     } finally {
       setLoading(false);
     }
   };
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? animeIds.length - 1 : prevIndex - 1
-    );
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === animeIds.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
   return (
     <>
-      <aside className="">
-        <div className="">
+      <aside className="aside last-left">
+        <div className="recent">
           <h2>
             <span style={{ color: "var(--color-primary-light)" }}>Recent</span>{" "}
             Trailer Anime
           </h2>
         </div>
-        <div className="">
+        <div className="trailer-all">
           {animeTitles.map((title, index) => (
             <button
-              key={animeIds[index]}
-              onClick={() => {
-                setCurrentIndex(index);
-                setAnimeData(null);
-              }}
-              style={{
-                color:
-                  index === currentIndex
-                    ? "var(--color-primary-light)"
-                    : "inherit",
-              }}
+              key={title}
+              onClick={
+                !loading
+                  ? () => {
+                      setLoading(true);
+                      setCurrentIndex(index);
+                    }
+                  : undefined
+              }
+              className={index === currentIndex ? "selected" : ""}
             >
               {title}
             </button>
           ))}
         </div>
       </aside>
-      <aside className="">
-        <div className="">
+      <aside className="aside last-right">
+        <div className="recent">
           <h2>
             <span style={{ color: "var(--color-primary-light)" }}>
               {animeData ? "Recent" : "Loading"}
@@ -110,8 +116,8 @@ export default function AnimeTrailer() {
             Trailer Anime
           </h2>
         </div>
-        <div className="">
-          <div className="">
+        <div className="trailer-list">
+          <div className="trailer-list-overview">
             {loading ? (
               <h2
                 style={{
@@ -124,53 +130,24 @@ export default function AnimeTrailer() {
               >
                 Please wait...
               </h2>
-            ) : error ? (
-              <h2
-                style={{
-                  color: "var(--color-text)",
-                  position: "absolute",
-                  left: "50%",
-                  transform: "translateX(-50%) translateY(16rem)",
-                  cursor: "default",
-                }}
-              >
-                {error}
-              </h2>
             ) : animeData ? (
               <>
-                <button
-                  tabIndex="up"
-                  onClick={() => {
-                    handlePrev;
-                    setAnimeData(null);
-                  }}
-                >
-                  ⥣
-                </button>
-                <div className="">
+                <div className="trailer-list-video">
                   {animeData.trailer.embed_url && (
                     <iframe
-                      width="240"
-                      height="160"
-                      src={`${animeData.trailer.embed_url}?autoplay=0`}
+                      width="100%"
+                      height="100%"
+                      src={`${animeData.trailer.embed_url}?autoplay=0&mute=0`}
                       title="Anime Trailer"
-                      frameBorder="0"
-                      sandbox="allow-same-origin allow-scripts"
+                      allow="autoplay; encrypted-media"
+                      sandbox="allow-same-origin allow-scripts allow-modal"
+                      loading="lazy"
                       allowFullScreen
+                      style={{ border: "0" }}
                     ></iframe>
                   )}
                 </div>
                 <p>{animeData.title}</p>
-                <button
-                  className="arrow"
-                  tabIndex="down"
-                  onClick={() => {
-                    handleNext;
-                    setAnimeData(null);
-                  }}
-                >
-                  ⥥
-                </button>
               </>
             ) : (
               <h2
@@ -182,7 +159,7 @@ export default function AnimeTrailer() {
                   cursor: "default",
                 }}
               >
-                Please wait...
+                Select Trailer
               </h2>
             )}
           </div>
