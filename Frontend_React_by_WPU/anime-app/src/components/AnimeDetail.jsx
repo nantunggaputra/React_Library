@@ -3,48 +3,40 @@ function IndentedText({ children }) {
   return <span style={{ paddingLeft: "33px" }}>{children}</span>;
 }
 
-const getImageStyle = (rating) => {
-  return rating === "Rx - Hentai"
-    ? {
-        filter: "grayscale(1) brightness(0.3) contrast(0.3)",
-        opacity: "0.7",
-      }
-    : {};
-};
-
-const getAnimeYear = (anime) => {
-  return anime.aired?.prop?.from?.year || "";
-};
-
-const getAnimeScore = (anime) => {
-  return anime.score ? `MAL ★ ${anime.score.toFixed(1)}/10` : "";
-};
-
-const getAnimeRating = (anime) => {
-  return anime.rating ? `Rating for ${anime.rating}` : "";
-};
-
-const getAnimeStatus = (anime) => {
-  return anime.status ? `Status: ${anime.status}` : "";
-};
-
-const getLinkAttributes = (rating, url, title) => {
-  return rating === "Rx - Hentai"
-    ? {}
-    : {
-        href: url,
-        title: title,
-        target: "_blank",
-        rel: "noopener noreferrer nofollow",
-      };
-};
-
 export default function AnimeDetail({ selectedAnime }) {
   if (!selectedAnime) return null;
 
   const { title, images, aired, score, rating, synopsis } = selectedAnime;
 
   const largeImageUrl = images?.jpg?.large_image_url;
+
+  const getAnimeYear = (anime) => {
+    return anime.aired?.prop?.from?.year || "";
+  };
+
+  const getAnimeScore = (anime) => {
+    return anime.score ? `MAL ★ ${anime.score.toFixed(1)}/10` : "";
+  };
+
+  const getAnimeRating = (anime) => {
+    return anime.rating ? `Rating for ${anime.rating}` : "";
+  };
+
+  const getAnimeStatus = (anime) => {
+    return anime.status ? `Status: ${anime.status}` : "";
+  };
+
+  const getLinkAttributes = (rating, url, title) => {
+    return rating === "Rx - Hentai"
+      ? {}
+      : {
+          href: url,
+          title: title,
+          target: "_blank",
+          rel: "noopener noreferrer nofollow",
+        };
+  };
+
   const malLink = getLinkAttributes(
     rating,
     `https://myanimelist.net/search/all?q=${title}&cat=all`,
@@ -55,6 +47,24 @@ export default function AnimeDetail({ selectedAnime }) {
     `https://www.bilibili.tv/id/search-result?q=${title}`,
     "Search anime in BiliBili | Bstation"
   );
+
+  const getImageStyle = (rating) => {
+    return rating === "Rx - Hentai"
+      ? {
+          filter: "grayscale(1) brightness(0.3) contrast(0.3)",
+          opacity: "0.7",
+        }
+      : {};
+  };
+
+  const getLinkStyle = (rating) => {
+    return rating === "Rx - Hentai"
+      ? {
+          filter: "grayscale(1)",
+          cursor: "help",
+        }
+      : {};
+  };
 
   return (
     <div className="details">
@@ -70,7 +80,7 @@ export default function AnimeDetail({ selectedAnime }) {
         )}
         <div className="details-overview">
           <h2>
-            <a {...biliLink} style={{ cursor: "pointer" }}>
+            <a {...biliLink} style={getLinkStyle(rating)}>
               {title}
             </a>
           </h2>

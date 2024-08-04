@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function AnimeWinter() {
   const categories = ["Sponsored", "Featured", "Remake", "Hiatus"];
+  const [loadingImage, setLoadingImage] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("Featured");
 
   const userTimeHours = new Date().getHours();
@@ -142,6 +143,14 @@ export default function AnimeWinter() {
 
   const selectedImage = images[selectedCategory];
 
+  const handleCategoryClick = (category) => {
+    setLoadingImage(true);
+    setSelectedCategory(category);
+    setTimeout(() => {
+      setLoadingImage(false);
+    }, 1000);
+  };
+
   return (
     <>
       <div className="featured">
@@ -155,7 +164,9 @@ export default function AnimeWinter() {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={
+                !loadingImage ? () => handleCategoryClick(category) : undefined
+              }
               className={category === selectedCategory ? "selected" : ""}
             >
               {category}
@@ -163,7 +174,16 @@ export default function AnimeWinter() {
           ))}
         </div>
         <div className="winter-overview">
-          <div className="winter-image">
+          <div
+            className="winter-image"
+            style={
+              !loadingImage
+                ? {}
+                : {
+                    filter: "blur(0.1rem)",
+                  }
+            }
+          >
             <small>
               {(selectedCategory === "Sponsored" && "$") ||
                 (selectedCategory === "Featured" && "❅ ❄ ❆") ||

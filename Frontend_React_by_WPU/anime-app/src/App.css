@@ -1191,7 +1191,7 @@ body {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  filter: grayscale(1) brightness(0.75) contrast(1.25) blur(1px);
+  filter: grayscale(1) brightness(0.75) contrast(1.25) blur(0.1rem);
   opacity: 0.39;
 }
 
@@ -1347,9 +1347,9 @@ body {
 
 .trailer-list-video {
   max-width: 100%;
-  min-height: 260px;
-  max-height: 260px;
-  margin: 0 auto;
+  min-height: 295px;
+  max-height: 295px;
+  margin: 0 auto 1rem;
   border-radius: 1rem;
   overflow: hidden;
 }
@@ -1480,8 +1480,7 @@ body {
 }
 
 .category-overview p:hover,
-.genre-list-overview p:hover,
-.trailer-list-overview p:hover {
+.genre-list-overview p:hover {
   color: var(--color-red);
 }
 

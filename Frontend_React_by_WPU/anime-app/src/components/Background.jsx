@@ -78,7 +78,7 @@ export default function Background() {
   return (
     <>
       {showOverlay && <AboutPage toggleOverlay={toggleOverlay} />}
-      <img src="Silhouette Kaito Kid.webp" alt=" " className="silhouette-off" />
+      <img src="Silhouette Kaito Kid.webp" alt="" className="silhouette-off" />
       <div className="background-container"></div>
       <div className="background-audio">
         <audio ref={audioRef} src={selectedBacksound} loop></audio>

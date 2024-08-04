@@ -56,7 +56,7 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
         {loading ? "Please wait..." : "Search"}
       </button>
       <div className="search-icon">
-        <img src="Conan Edogawa Search.webp" alt=" " />
+        <img src="Conan Edogawa Search.webp" alt="" />
       </div>
       <audio ref={audioRef} src="There is Always Only One Truth.aac" />
       {loading && <Kanji />}

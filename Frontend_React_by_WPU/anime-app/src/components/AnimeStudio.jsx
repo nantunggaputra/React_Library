@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function AnimeByStudio() {
   const [studioMasterpiece, setStudioMasterpiece] = useState([]);
+  const [loadingImage, setLoadingImage] = useState(false);
   const [selectedStudio, setSelectedStudio] = useState("Studio Ghibli");
 
   useEffect(() => {
@@ -21,7 +22,11 @@ export default function AnimeByStudio() {
   }, []);
 
   const handleStudioClick = (studio) => {
+    setLoadingImage(true);
     setSelectedStudio(studio);
+    setTimeout(() => {
+      setLoadingImage(false);
+    }, 1000);
   };
 
   const selectedStudioImage = studioMasterpiece.find(
@@ -45,7 +50,11 @@ export default function AnimeByStudio() {
             {studioMasterpiece.map((studio) => (
               <button
                 key={studio.studio}
-                onClick={() => handleStudioClick(studio.studio)}
+                onClick={
+                  !loadingImage
+                    ? () => handleStudioClick(studio.studio)
+                    : undefined
+                }
                 className={studio.studio === selectedStudio ? "selected" : ""}
               >
                 {studio.studio}
@@ -56,7 +65,16 @@ export default function AnimeByStudio() {
         <div className="studio-overview">
           {selectedStudioImage ? (
             <>
-              <div className="studio-image">
+              <div
+                className="studio-image"
+                style={
+                  !loadingImage
+                    ? {}
+                    : {
+                        filter: "blur(0.1rem)",
+                      }
+                }
+              >
                 <small>✦</small>
                 <img
                   src={selectedStudioImage.src}

@@ -127,7 +127,7 @@ export default function Footer() {
               <input type="email" id="subs" required />
               <button type="submit" title="Subscribe">
                 &#128276;
-                <img src="Kaito Kid Logo 3D.webp" alt=" " />
+                <img src="Kaito Kid Logo 3D.webp" alt="" />
               </button>
             </form>
           </div>

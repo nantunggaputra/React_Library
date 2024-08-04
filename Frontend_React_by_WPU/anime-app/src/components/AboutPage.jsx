@@ -14,14 +14,14 @@ function AboutInfo({ className, url, textLink }) {
 }
 
 export default function AboutPage({ toggleOverlay }) {
-  const appVersion = "v0.1.6";
+  const appVersion = "v0.1.7";
   const appRelease = "Public Beta";
 
   return (
     <div className="about">
       <div className="about-container">
         <button onClick={toggleOverlay}>×</button>
-        <img className="logo" src="WeeBoo.png" alt=" " />
+        <img className="logo" src="WeeBoo.png" alt="" />
         <div className="anime-app-version">
           <h1>WeeBoo</h1>
           <h5>

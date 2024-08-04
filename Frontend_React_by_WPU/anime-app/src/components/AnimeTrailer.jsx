@@ -8,9 +8,9 @@ export default function AnimeTrailer() {
 
   const animeIds = [
     56785, 52742, 49785, 52196, 55855, 56840, 52299, 58488, 53889, 57152, 55318,
-    58739, 58822, 58082, 57616, 57557, 52093, 50613, 51122, 56785, 52742, 49785,
-    52196, 55855, 56840, 52299, 58488, 53889, 57152, 55318, 58739, 58822, 58082,
-    57616, 57557, 52093, 50613, 51122,
+    58739, 58822, 58082, 57616, 57557, 52093, 50613, 51122, 25517, 56785, 52742,
+    49785, 52196, 55855, 56840, 52299, 58488, 53889, 57152, 55318, 58739, 58822,
+    58082, 57616, 57557, 52093, 50613, 51122, 25517,
   ];
 
   const animeTitles = [
@@ -33,6 +33,7 @@ export default function AnimeTrailer() {
     "Trigun Stampede",
     "Rurouni Kenshin",
     "Ookami to Koushinryou",
+    "Magic Kaito 1412",
     "Conan",
     "Hinata",
     "Natsu",
@@ -52,6 +53,7 @@ export default function AnimeTrailer() {
     "Vash",
     "Kenshin",
     "Kraft Lawrence",
+    "KID",
   ];
 
   useEffect(() => {
@@ -101,6 +103,14 @@ export default function AnimeTrailer() {
                   : undefined
               }
               className={index === currentIndex ? "selected" : ""}
+              style={
+                title === "Magic Kaito 1412" || title === "KID"
+                  ? {
+                      filter: "grayscale(1)",
+                      cursor: "not-allowed",
+                    }
+                  : undefined
+              }
             >
               {title}
             </button>
@@ -138,10 +148,11 @@ export default function AnimeTrailer() {
                       width="100%"
                       height="100%"
                       src={`${animeData.trailer.embed_url}?autoplay=0&mute=0`}
-                      title="Anime Trailer"
-                      allow="autoplay; encrypted-media"
-                      sandbox="allow-same-origin allow-scripts allow-modal"
+                      title="Watch trailer on YouTube"
                       loading="lazy"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
                       style={{ border: "0" }}
                     ></iframe>

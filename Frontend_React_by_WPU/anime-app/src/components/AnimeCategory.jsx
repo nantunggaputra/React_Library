@@ -6,6 +6,7 @@ export default function AnimeByCategory() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [animeList, setAnimeList] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [loadingImage, setLoadingImage] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const fetchAnimeByCategory = async (category) => {
@@ -42,15 +43,23 @@ export default function AnimeByCategory() {
   }, [selectedCategory]);
 
   const handlePrev = () => {
+    setLoadingImage(true);
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? animeList.length - 1 : prevIndex - 1
     );
+    setTimeout(() => {
+      setLoadingImage(false);
+    }, 1000);
   };
 
   const handleNext = () => {
+    setLoadingImage(true);
     setCurrentIndex((prevIndex) =>
       prevIndex === animeList.length - 1 ? 0 : prevIndex + 1
     );
+    setTimeout(() => {
+      setLoadingImage(false);
+    }, 1000);
   };
 
   let currentRank = "";
@@ -105,7 +114,10 @@ export default function AnimeByCategory() {
             ? ""
             : animeList.length > 0 && (
                 <>
-                  <button tabIndex="up" onClick={handlePrev}>
+                  <button
+                    tabIndex="up"
+                    onClick={!loadingImage ? handlePrev : undefined}
+                  >
                     ⥣
                   </button>
                   <div className="category-image">
@@ -116,14 +128,28 @@ export default function AnimeByCategory() {
                     </small>
                     <img
                       style={
-                        selectedCategory == "Top Characters"
+                        !loadingImage && selectedCategory == "Top Characters"
                           ? {
                               border: "0.2rem solid var(--color-text)",
                               filter: "grayscale(1)",
                               display: "block",
                               margin: "0 auto",
                             }
-                          : { display: "block", margin: "0 auto" }
+                          : !loadingImage &&
+                            selectedCategory != "Top Characters"
+                          ? { display: "block", margin: "0 auto" }
+                          : loadingImage && selectedCategory != "Top Characters"
+                          ? {
+                              display: "block",
+                              margin: "0 auto",
+                              filter: "blur(0.1rem)",
+                            }
+                          : {
+                              border: "0.2rem solid var(--color-text)",
+                              display: "block",
+                              margin: "0 auto",
+                              filter: "grayscale(1) blur(0.25rem)",
+                            }
                       }
                       src={animeList[currentIndex].images.jpg.image_url}
                       alt={
@@ -139,7 +165,7 @@ export default function AnimeByCategory() {
                   <button
                     className="arrow"
                     tabIndex="down"
-                    onClick={handleNext}
+                    onClick={!loadingImage ? handleNext : undefined}
                   >
                     ⥥
                   </button>

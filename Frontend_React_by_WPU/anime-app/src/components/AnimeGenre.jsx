@@ -5,6 +5,7 @@ export default function AnimeByGenre() {
   const [animeList, setAnimeList] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [loadingImage, setLoadingImage] = useState(false);
   const [selectedGenre, setSelectedGenre] = useState("");
 
   useEffect(() => {
@@ -51,15 +52,41 @@ export default function AnimeByGenre() {
   };
 
   const handlePrev = () => {
+    setLoadingImage(true);
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? animeList.length - 1 : prevIndex - 1
     );
+    setTimeout(() => {
+      setLoadingImage(false);
+    }, 1000);
   };
 
   const handleNext = () => {
+    setLoadingImage(true);
     setCurrentIndex((prevIndex) =>
       prevIndex === animeList.length - 1 ? 0 : prevIndex + 1
     );
+    setTimeout(() => {
+      setLoadingImage(false);
+    }, 1000);
+  };
+
+  const getImageStyle = (animeList) => {
+    return animeList[currentIndex].rating === "Rx - Hentai"
+      ? {
+          filter: "grayscale(1) brightness(0.3) contrast(0.3)",
+          opacity: "0.7",
+        }
+      : {};
+  };
+
+  const getLinkStyle = (animeList) => {
+    return animeList[currentIndex].rating === "Rx - Hentai"
+      ? {
+          filter: "grayscale(1)",
+          cursor: "help",
+        }
+      : {};
   };
 
   return (
@@ -81,6 +108,14 @@ export default function AnimeByGenre() {
                   : undefined
               }
               className={genre.name === selectedGenre ? "selected" : ""}
+              style={
+                genre.name === "Hentai"
+                  ? {
+                      filter: "grayscale(1)",
+                      cursor: "help",
+                    }
+                  : {}
+              }
             >
               {genre.name}
             </button>
@@ -112,27 +147,37 @@ export default function AnimeByGenre() {
               </h2>
             ) : animeList.length > 0 ? (
               <>
-                <button tabIndex="up" onClick={handlePrev}>
+                <button
+                  tabIndex="up"
+                  onClick={!loadingImage ? handlePrev : undefined}
+                >
                   ⥣
                 </button>
-                <div className="genre-list-image">
+                <div
+                  className="genre-list-image"
+                  style={
+                    !loadingImage
+                      ? {}
+                      : {
+                          filter: "blur(0.1rem)",
+                        }
+                  }
+                >
                   <small>☆</small>
                   <img
                     src={animeList[currentIndex].images.jpg.image_url}
                     alt={animeList[currentIndex].title}
-                    style={
-                      animeList[currentIndex].rating === "Rx - Hentai"
-                        ? {
-                            filter:
-                              "grayscale(1) brightness(0.3) contrast(0.3)",
-                            opacity: "0.7",
-                          }
-                        : {}
-                    }
+                    style={getImageStyle(animeList)}
                   />
                 </div>
-                <p>{animeList[currentIndex].title}</p>
-                <button className="arrow" tabIndex="down" onClick={handleNext}>
+                <p style={getLinkStyle(animeList)}>
+                  {animeList[currentIndex].title}
+                </p>
+                <button
+                  className="arrow"
+                  tabIndex="down"
+                  onClick={!loadingImage ? handleNext : undefined}
+                >
                   ⥥
                 </button>
               </>
