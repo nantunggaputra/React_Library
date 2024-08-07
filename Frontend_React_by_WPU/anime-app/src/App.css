@@ -1,15 +1,15 @@
 :root {
-  --color-primary: #0377b980;
-  --color-primary-light: #0377b9;
-  --color-text: #f0f0f8;
-  --color-text-dark: #000000;
-  --color-background-light: #f0f0f8;
-  --color-background-100: #171717;
-  --color-background-500: #0a0a0a;
-  --color-background-900: #252525;
+  --color-white: #f0f0f8;
+  --color-orange: #fcbe14;
+  --color-blue: #0377b980;
+  --color-blue-light: #0377b9;
   --color-red: #d372b8;
   --color-red-dark: #aa3d8b;
-  --color-orange: #fcbe14;
+  --color-background-light: #f0f0f8;
+  --color-background-grey-25: #252525;
+  --color-background-grey-17: #171717;
+  --color-background-grey-10: #0d0d0d;
+  --color-background-dark: #070707;
 }
 
 * {
@@ -24,8 +24,8 @@ html {
 
 body {
   font-family: sans-serif, Arial;
-  color: var(--color-text);
-  background-color: var(--color-background-900);
+  color: var(--color-white);
+  background-color: var(--color-background-grey-25);
   padding: 2.4rem;
 }
 
@@ -35,19 +35,19 @@ body {
 
 @keyframes change {
   0% {
-    background-color: var(--color-background-900);
+    background-color: var(--color-background-grey-25);
   }
   50% {
     background-image: linear-gradient(
-      var(--color-background-900),
-      var(--color-background-900),
-      var(--color-background-900),
+      var(--color-background-grey-25),
+      var(--color-background-grey-25),
+      var(--color-background-grey-25),
       var(--color-background-light),
       var(--color-background-light)
     );
   }
   100% {
-    background-color: var(--color-background-900);
+    background-color: var(--color-background-grey-25);
   }
 }
 
@@ -74,7 +74,7 @@ body {
   transform: translate(-50%);
   width: 100vw;
   height: 100vh;
-  color: var(--color-text);
+  color: var(--color-white);
   font-family: sans-serif, Arial;
   font-size: 8rem;
   text-align: center;
@@ -188,8 +188,8 @@ body {
   width: 4.4rem;
   height: 4.4rem;
   padding: 1.1rem;
-  box-shadow: -2rem 0 3rem var(--color-background-500);
-  background-color: var(--color-background-100);
+  box-shadow: -2rem 0 3rem var(--color-background-grey-10);
+  background-color: var(--color-background-grey-17);
   border-radius: 0 1rem 1rem 0;
 }
 
@@ -207,7 +207,7 @@ body {
   align-items: center;
   border-radius: 50%;
   border: none;
-  background-color: var(--color-background-900);
+  background-color: var(--color-background-grey-25);
   color: var(--color-background-light);
   font-size: 1.4rem;
   font-weight: bold;
@@ -225,7 +225,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 0 0 5px var(--color-background-900);
+  text-shadow: 0 0 5px var(--color-background-grey-25);
   background: #17171797;
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.25rem);
@@ -248,8 +248,15 @@ body {
   color: var(--color-background-light);
   font-size: 1.3rem;
   text-align: center;
-  background-color: var(--color-background-100);
-  border-bottom: 2.5rem solid var(--color-background-100);
+  background-image: linear-gradient(
+    to right,
+    var(--color-background-grey-10),
+    var(--color-background-grey-10),
+    var(--color-background-grey-17),
+    var(--color-background-grey-17)
+  );
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
   border-radius: 1rem;
   overflow: auto;
   scrollbar-color: var(--color-orange) transparent;
@@ -327,7 +334,7 @@ body {
 }
 
 .nav-bar .logo {
-  background-color: var(--color-primary-light);
+  background-color: var(--color-blue-light);
   border-radius: 1rem;
   display: flex;
   justify-content: center;
@@ -404,8 +411,8 @@ body {
   height: 4.4rem;
   padding: 1.1rem;
   margin-bottom: 0.6rem;
-  box-shadow: -2rem 0 3rem var(--color-background-500);
-  background-color: var(--color-background-100);
+  box-shadow: -2rem 0 3rem var(--color-background-grey-10);
+  background-color: var(--color-background-grey-17);
   border-radius: 0 1rem 1rem 0;
 }
 
@@ -429,7 +436,7 @@ body {
   align-items: center;
   border-radius: 50%;
   border: none;
-  background-color: var(--color-background-900);
+  background-color: var(--color-background-grey-25);
   color: var(--color-background-light);
   font-size: 1.4rem;
   font-weight: bolder;
@@ -472,7 +479,7 @@ body {
 
 .nav-bar .arrow:hover,
 .nav-bar .links a:hover {
-  color: var(--color-background-100);
+  color: var(--color-background-grey-17);
 }
 
 .nav-bar .search-icon {
@@ -517,7 +524,7 @@ body {
 
 .nav-bar .search-kanji h6 {
   margin: -0.325rem 0;
-  color: var(--color-background-500);
+  color: var(--color-background-grey-10);
   font-family: "Times New Roman", Times, serif;
   font-weight: 900;
   text-shadow: 0 0 10px var(--color-background-light);
@@ -558,7 +565,7 @@ body {
   max-width: 80vw;
   transition: all 0.3s;
   color: var(--color-background-light);
-  background-color: var(--color-primary-light);
+  background-color: var(--color-blue-light);
   animation: blink 1s ease infinite;
 }
 
@@ -577,8 +584,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 2rem 0 3rem var(--color-background-500);
-  background-color: var(--color-background-100);
+  box-shadow: 2rem 0 3rem var(--color-background-grey-10);
+  background-color: var(--color-background-grey-17);
   border-radius: 1rem 0 0 1rem;
 }
 
@@ -590,7 +597,7 @@ body {
 }
 
 .nav-bar .search::placeholder {
-  color: var(--color-text);
+  color: var(--color-white);
   filter: brightness(80%);
   font-size: 1.4rem;
 }
@@ -614,7 +621,7 @@ body {
 }
 
 .nav-bar .search-btn:hover {
-  color: var(--color-background-100);
+  color: var(--color-background-grey-17);
 }
 
 @keyframes blink {
@@ -666,7 +673,7 @@ body {
   height: 50rem;
   top: 108rem;
   position: absolute;
-  text-shadow: 0 0 5px var(--color-background-900);
+  text-shadow: 0 0 5px var(--color-background-grey-25);
   background: #f0f0f825;
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.25rem);
@@ -781,7 +788,7 @@ body {
 
 .closing h6 {
   margin: -1.75rem 5.75rem;
-  color: var(--color-text);
+  color: var(--color-white);
   font-family: "Times New Roman", Times, serif;
   font-size: 6.25rem;
 }
@@ -835,10 +842,17 @@ body {
   margin-top: 2.4rem;
   width: 42rem;
   max-width: 80vw;
-  min-height: 6rem;
+  min-height: 8rem;
   max-height: 75rem;
-  background-color: var(--color-background-100);
-  border-bottom: 2.5rem solid var(--color-background-100);
+  background-image: linear-gradient(
+    to right,
+    var(--color-background-grey-10),
+    var(--color-background-grey-10),
+    var(--color-background-grey-17),
+    var(--color-background-grey-17)
+  );
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
   border-radius: 1rem;
   overflow: auto;
   scrollbar-color: var(--color-orange) transparent;
@@ -856,7 +870,7 @@ body {
   align-items: center;
   border-radius: 50%;
   border: none;
-  background-color: var(--color-background-900);
+  background-color: var(--color-background-grey-25);
   color: var(--color-background-light);
   font-size: 1.4rem;
   font-weight: bold;
@@ -883,7 +897,7 @@ body {
   font-size: 1.6rem;
   align-items: center;
   padding: 1.6rem 3.2rem;
-  border-bottom: 1px solid var(--color-background-900);
+  border-bottom: 1px solid var(--color-background-grey-25);
 }
 
 .list.list-anime li {
@@ -893,11 +907,11 @@ body {
 }
 
 .list.list-anime li:hover {
-  color: var(--color-primary-light);
+  color: var(--color-blue-light);
 }
 
 .list.list-anime .selected {
-  background-color: var(--color-background-500);
+  background-color: var(--color-background-dark);
 }
 
 .list.list-anime p {
@@ -916,7 +930,7 @@ body {
 }
 
 .list.list-movies li:hover {
-  background-color: var(--color-background-100);
+  background-color: var(--color-background-grey-17);
 }
 
 .list img {
@@ -951,7 +965,7 @@ body {
   border-radius: 50%;
   border: none;
   background-color: var(--color-red);
-  color: var(--color-background-900);
+  color: var(--color-background-grey-25);
   font-size: 0.9rem;
   font-weight: bold;
   cursor: pointer;
@@ -1004,7 +1018,6 @@ body {
 .details-overview {
   width: 100%;
   padding: 2rem 2.4rem;
-  background-color: var(--color-background-100);
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
@@ -1016,7 +1029,7 @@ body {
 }
 
 .details-overview h2 a {
-  color: var(--color-primary-light);
+  color: var(--color-blue-light);
   text-decoration: none;
 }
 
@@ -1051,7 +1064,7 @@ body {
   width: 42rem;
   max-width: 80vw;
   padding: 2rem 2.4rem;
-  background-color: var(--color-background-100);
+  background-color: var(--color-background-grey-17);
   border-radius: 1rem;
   color: var(--color-background-light);
   font-size: 1.2rem;
@@ -1109,7 +1122,7 @@ body {
   width: 42rem;
   max-width: 80vw;
   padding: 1.5rem;
-  background-color: var(--color-background-100);
+  background-color: var(--color-background-grey-17);
   border-radius: 1rem;
   display: flex;
   flex-direction: row;
@@ -1228,7 +1241,7 @@ body {
 .news-all li {
   list-style: none;
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-white);
   padding-bottom: 0.25rem;
   cursor: default;
 }
@@ -1240,7 +1253,7 @@ body {
 }
 
 .news-all a:hover {
-  color: var(--color-primary-light);
+  color: var(--color-blue-light);
 }
 
 .winter-all button:hover,
@@ -1253,7 +1266,7 @@ body {
 }
 
 .news-all button:hover {
-  color: var(--color-background-900);
+  color: var(--color-background-grey-25);
 }
 
 .winter-all .selected,
@@ -1274,7 +1287,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 2rem 2.4rem;
-  background-color: var(--color-background-100);
+  background-color: var(--color-background-grey-17);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -1314,7 +1327,7 @@ body {
 .love-overview button:hover,
 .category-overview button:hover,
 .genre-list-overview button:hover {
-  color: var(--color-background-900);
+  color: var(--color-background-grey-25);
 }
 
 .love-image,
@@ -1466,10 +1479,11 @@ body {
 }
 
 .love-overview p {
-  color: var(--color-primary-light);
+  color: var(--color-blue-light);
 }
 
-.love-overview p:hover {
+.love-overview p:hover,
+.studio-overview p:hover {
   color: var(--color-background-light);
 }
 
@@ -1528,7 +1542,7 @@ body {
 /* Footer */
 
 .footer {
-  margin: 7rem auto 1rem;
+  margin: 8rem auto 1rem;
   position: relative;
   width: 80vw;
   max-width: 42rem;
@@ -1552,7 +1566,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-background-900);
+  background-color: var(--color-background-grey-25);
   opacity: 0.3;
 }
 
@@ -1564,6 +1578,10 @@ body {
   display: flex;
 }
 
+.footer:hover h3 a {
+  display: block;
+}
+
 .footer:hover .social-icons {
   opacity: 1;
 }
@@ -1571,7 +1589,7 @@ body {
 .social-icons a {
   margin: 1rem;
   padding: 3px 2px 0 5px;
-  color: var(--color-text);
+  color: var(--color-white);
   font-size: 2rem;
   font-weight: 600;
   transition: transform 0.3s ease;
@@ -1586,6 +1604,7 @@ body {
 }
 
 .footer h3 a {
+  display: none;
   position: absolute;
   top: 2rem;
   width: 100%;
@@ -1607,7 +1626,7 @@ body {
 
 .footer a {
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 .footer a:hover span {
@@ -1658,7 +1677,7 @@ body {
 }
 
 .foot-menu {
-  background-color: var(--color-background-100);
+  background-color: var(--color-background-grey-17);
   color: var(--color-background-light);
   border-radius: 1rem;
   display: flex;
@@ -1700,7 +1719,7 @@ body {
 
 .foot-menu .left-menu a:hover,
 .foot-menu .left-menu p:hover {
-  color: var(--color-primary-light);
+  color: var(--color-blue-light);
 }
 
 .foot-menu .left-menu .fs:hover {
@@ -1721,7 +1740,7 @@ body {
   letter-spacing: 1px;
   outline-style: none;
   background-color: #767676;
-  color: var(--color-background-100);
+  color: var(--color-background-grey-17);
   border: none;
   border-radius: 0.5rem;
   opacity: 0.55;
@@ -1760,8 +1779,8 @@ body {
   width: 4.4rem;
   height: 4.4rem;
   padding: 1.1rem;
-  box-shadow: 2rem 0 3rem var(--color-background-500);
-  background-color: var(--color-background-100);
+  box-shadow: 2rem 0 3rem var(--color-background-grey-10);
+  background-color: var(--color-background-grey-17);
   border-radius: 1rem 0 0 1rem;
 }
 
@@ -1780,7 +1799,7 @@ body {
   align-items: center;
   border-radius: 50%;
   border: none;
-  background-color: var(--color-background-900);
+  background-color: var(--color-background-grey-25);
   color: var(--color-background-light);
   font-size: 1.4rem;
   font-weight: bold;
@@ -1975,7 +1994,7 @@ body {
     margin: auto;
     margin-bottom: 1rem;
     min-width: 80vw;
-    min-height: 6rem;
+    min-height: 8rem;
     max-height: 42rem;
   }
 

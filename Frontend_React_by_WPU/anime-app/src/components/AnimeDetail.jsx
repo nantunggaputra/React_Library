@@ -73,7 +73,7 @@ export default function AnimeDetail({ selectedAnime }) {
           <a {...malLink}>
             <img
               src={largeImageUrl}
-              alt={`${title} Cover`}
+              alt={title}
               style={getImageStyle(rating)}
             />
           </a>
@@ -130,7 +130,7 @@ export default function AnimeDetail({ selectedAnime }) {
         <p
           style={{
             textAlign: "right",
-            color: "var(--color-text)",
+            color: "var(--color-white)",
             fontWeight: "600",
           }}
         >

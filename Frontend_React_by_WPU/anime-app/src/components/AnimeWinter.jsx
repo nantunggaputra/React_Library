@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Fade } from "react-awesome-reveal";
 
 export default function AnimeWinter() {
   const categories = ["Sponsored", "Featured", "Remake", "Hiatus"];
@@ -152,7 +153,7 @@ export default function AnimeWinter() {
   };
 
   return (
-    <>
+    <Fade triggerOnce delay={250} duration={1000}>
       <div className="featured">
         <h2>
           <span style={{ color: "var(--color-red)" }}>{selectedCategory}</span>{" "}
@@ -197,6 +198,6 @@ export default function AnimeWinter() {
           </p>
         </div>
       </div>
-    </>
+    </Fade>
   );
 }

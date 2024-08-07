@@ -19,7 +19,7 @@ function AnimeListLegacy({
     >
       {largeImageUrl ? (
         <>
-          <img src={largeImageUrl} alt={`${title} Cover`} />
+          <img src={largeImageUrl} alt={title} />
           <h3>{title}</h3>
           <div>
             <p>
@@ -29,7 +29,7 @@ function AnimeListLegacy({
         </>
       ) : (
         <>
-          <img src={image} alt="Anime Cover" />
+          <img src={image} alt={title} />
           <h3>{title}</h3>
           <div>
             <p>

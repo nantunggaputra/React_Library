@@ -19,7 +19,7 @@ export default function AnimeDetailLegacy({ selectedAnimeLegacy }) {
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
-          <img src={largeImageUrl} alt={`${title} Cover`} />
+          <img src={largeImageUrl} alt={title} />
         </a>
         <div className="details-overview">
           <h2>
@@ -79,7 +79,7 @@ export default function AnimeDetailLegacy({ selectedAnimeLegacy }) {
         <p
           style={{
             textAlign: "right",
-            color: "var(--color-text)",
+            color: "var(--color-white)",
             fontWeight: "600",
           }}
         >

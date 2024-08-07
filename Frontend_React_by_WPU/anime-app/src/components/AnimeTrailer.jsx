@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 
 export default function AnimeTrailer() {
   const [animeData, setAnimeData] = useState(null);
@@ -84,97 +85,101 @@ export default function AnimeTrailer() {
   return (
     <>
       <aside className="aside last-left">
-        <div className="recent">
-          <h2>
-            <span style={{ color: "var(--color-primary-light)" }}>Recent</span>{" "}
-            Trailer Anime
-          </h2>
-        </div>
-        <div className="trailer-all">
-          {animeTitles.map((title, index) => (
-            <button
-              key={title}
-              onClick={
-                !loading
-                  ? () => {
-                      setLoading(true);
-                      setCurrentIndex(index);
-                    }
-                  : undefined
-              }
-              className={index === currentIndex ? "selected" : ""}
-              style={
-                title === "Magic Kaito 1412" || title === "KID"
-                  ? {
-                      filter: "grayscale(1)",
-                      cursor: "not-allowed",
-                    }
-                  : undefined
-              }
-            >
-              {title}
-            </button>
-          ))}
-        </div>
+        <Fade triggerOnce delay={250} duration={1000}>
+          <div className="recent">
+            <h2>
+              <span style={{ color: "var(--color-blue-light)" }}>Recent</span>{" "}
+              Trailer Anime
+            </h2>
+          </div>
+          <div className="trailer-all">
+            {animeTitles.map((title, index) => (
+              <button
+                key={title}
+                onClick={
+                  !loading
+                    ? () => {
+                        setLoading(true);
+                        setCurrentIndex(index);
+                      }
+                    : undefined
+                }
+                className={index === currentIndex ? "selected" : ""}
+                style={
+                  title === "Magic Kaito 1412" || title === "KID"
+                    ? {
+                        filter: "grayscale(1)",
+                        cursor: "not-allowed",
+                      }
+                    : undefined
+                }
+              >
+                {title}
+              </button>
+            ))}
+          </div>
+        </Fade>
       </aside>
       <aside className="aside last-right">
-        <div className="recent">
-          <h2>
-            <span style={{ color: "var(--color-primary-light)" }}>
-              {animeData ? "Recent" : "Loading"}
-            </span>{" "}
-            Trailer Anime
-          </h2>
-        </div>
-        <div className="trailer-list">
-          <div className="trailer-list-overview">
-            {loading ? (
-              <h2
-                style={{
-                  color: "var(--color-text)",
-                  position: "absolute",
-                  left: "50%",
-                  transform: "translateX(-50%) translateY(16rem)",
-                  cursor: "default",
-                }}
-              >
-                Please wait...
-              </h2>
-            ) : animeData ? (
-              <>
-                <div className="trailer-list-video">
-                  {animeData.trailer.embed_url && (
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src={`${animeData.trailer.embed_url}?autoplay=0&mute=0`}
-                      title="Watch trailer on YouTube"
-                      loading="lazy"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                      style={{ border: "0" }}
-                    ></iframe>
-                  )}
-                </div>
-                <p>{animeData.title}</p>
-              </>
-            ) : (
-              <h2
-                style={{
-                  color: "var(--color-text)",
-                  position: "absolute",
-                  left: "50%",
-                  transform: "translateX(-50%) translateY(16rem)",
-                  cursor: "default",
-                }}
-              >
-                Select Trailer
-              </h2>
-            )}
+        <Fade triggerOnce delay={250} duration={1000}>
+          <div className="recent">
+            <h2>
+              <span style={{ color: "var(--color-blue-light)" }}>
+                {animeData ? "Recent" : "Loading"}
+              </span>{" "}
+              Trailer Anime
+            </h2>
           </div>
-        </div>
+          <div className="trailer-list">
+            <div className="trailer-list-overview">
+              {loading ? (
+                <h2
+                  style={{
+                    color: "var(--color-white)",
+                    position: "absolute",
+                    left: "50%",
+                    transform: "translateX(-50%) translateY(16rem)",
+                    cursor: "default",
+                  }}
+                >
+                  Please wait...
+                </h2>
+              ) : animeData ? (
+                <>
+                  <div className="trailer-list-video">
+                    {animeData.trailer.embed_url && (
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={`${animeData.trailer.embed_url}?autoplay=0&mute=0`}
+                        title="Watch trailer on YouTube"
+                        loading="lazy"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        style={{ border: "0" }}
+                      ></iframe>
+                    )}
+                  </div>
+                  <p>{animeData.title}</p>
+                </>
+              ) : (
+                <h2
+                  style={{
+                    color: "var(--color-white)",
+                    position: "absolute",
+                    left: "50%",
+                    transform: "translateX(-50%) translateY(16rem)",
+                    cursor: "default",
+                  }}
+                >
+                  Select Trailer
+                </h2>
+              )}
+            </div>
+          </div>
+        </Fade>
       </aside>
     </>
   );

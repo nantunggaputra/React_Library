@@ -1,3 +1,5 @@
+import { Fade } from "react-awesome-reveal";
+
 export default function Channels() {
   const channelsNow = [
     {
@@ -97,32 +99,36 @@ export default function Channels() {
   return (
     <>
       <aside className="aside top-left">
-        <div className="channels stream">
-          {channelsNow.map((channel) => (
-            <div className="frame" key={channel.alt} title={channel.alt}>
-              <img src={channel.src} alt={channel.alt} />
-            </div>
-          ))}
-        </div>
+        <Fade triggerOnce delay={250} duration={1000}>
+          <div className="channels stream">
+            {channelsNow.map((channel) => (
+              <div className="frame" key={channel.alt} title={channel.alt}>
+                <img src={channel.src} alt={channel.alt} />
+              </div>
+            ))}
+          </div>
+        </Fade>
       </aside>
       <aside className="aside top-right">
-        <div className="channels tv">
-          {channelsThen.map((channel) => (
-            <div className="frame" key={channel.alt} title={channel.alt}>
-              <img
-                src={channel.src}
-                alt={channel.alt}
-                style={
-                  channel.size === "L"
-                    ? { width: "73.5%" }
-                    : channel.size === "XL"
-                    ? { width: "65%" }
-                    : {}
-                }
-              />
-            </div>
-          ))}
-        </div>
+        <Fade triggerOnce delay={250} duration={1000}>
+          <div className="channels tv">
+            {channelsThen.map((channel) => (
+              <div className="frame" key={channel.alt} title={channel.alt}>
+                <img
+                  src={channel.src}
+                  alt={channel.alt}
+                  style={
+                    channel.size === "L"
+                      ? { width: "73.5%" }
+                      : channel.size === "XL"
+                      ? { width: "65%" }
+                      : {}
+                  }
+                />
+              </div>
+            ))}
+          </div>
+        </Fade>
       </aside>
     </>
   );

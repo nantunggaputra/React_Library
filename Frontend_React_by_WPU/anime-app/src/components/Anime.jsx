@@ -37,7 +37,7 @@ function AnimeList({ anime, onSelectedAnime, isSelected }) {
     >
       <img
         src={getImageSrc(anime)}
-        alt={`${anime.title} Cover`}
+        alt={anime.title}
         style={getImageStyle(anime.rating)}
       />
       <h3>{anime.title}</h3>

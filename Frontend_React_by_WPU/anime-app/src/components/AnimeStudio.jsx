@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 
 export default function AnimeByStudio() {
   const [studioMasterpiece, setStudioMasterpiece] = useState([]);
@@ -34,7 +35,7 @@ export default function AnimeByStudio() {
   )?.image;
 
   return (
-    <>
+    <Fade triggerOnce delay={250} duration={1000}>
       <div className="masterpiece">
         <div className="ornament"></div>
         <h2>
@@ -88,7 +89,7 @@ export default function AnimeByStudio() {
           ) : (
             <h2
               style={{
-                color: "var(--color-text)",
+                color: "var(--color-white)",
                 position: "absolute",
                 left: "50%",
                 transform: "translateX(-50%) translateY(16rem)",
@@ -101,6 +102,6 @@ export default function AnimeByStudio() {
         </div>
         <div className="ornament"></div>
       </div>
-    </>
+    </Fade>
   );
 }

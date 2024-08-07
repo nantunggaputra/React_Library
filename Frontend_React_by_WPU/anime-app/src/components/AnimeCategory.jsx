@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 import axios from "axios";
 
 export default function AnimeByCategory() {
@@ -75,7 +76,7 @@ export default function AnimeByCategory() {
   }
 
   return (
-    <>
+    <Fade triggerOnce delay={250} duration={1000}>
       <div id="category" className="choose">
         <h2>
           <span style={{ color: "var(--color-orange)" }}>
@@ -101,7 +102,7 @@ export default function AnimeByCategory() {
         <div className="category-overview">
           <h2
             style={{
-              color: "var(--color-text)",
+              color: "var(--color-white)",
               position: "absolute",
               left: "50%",
               transform: "translateX(-50%) translateY(22rem)",
@@ -130,7 +131,7 @@ export default function AnimeByCategory() {
                       style={
                         !loadingImage && selectedCategory == "Top Characters"
                           ? {
-                              border: "0.2rem solid var(--color-text)",
+                              border: "0.2rem solid var(--color-white)",
                               filter: "grayscale(1)",
                               display: "block",
                               margin: "0 auto",
@@ -145,7 +146,7 @@ export default function AnimeByCategory() {
                               filter: "blur(0.1rem)",
                             }
                           : {
-                              border: "0.2rem solid var(--color-text)",
+                              border: "0.2rem solid var(--color-white)",
                               display: "block",
                               margin: "0 auto",
                               filter: "grayscale(1) blur(0.25rem)",
@@ -173,6 +174,6 @@ export default function AnimeByCategory() {
               )}
         </div>
       </div>
-    </>
+    </Fade>
   );
 }

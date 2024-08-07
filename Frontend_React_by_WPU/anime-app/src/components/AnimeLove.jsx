@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Fade } from "react-awesome-reveal";
 
 export default function AnimeLove() {
   const [images, setImages] = useState([]);
@@ -116,10 +117,10 @@ export default function AnimeLove() {
 
   if (images.length === 0) {
     return (
-      <>
+      <Fade triggerOnce delay={250} duration={1000}>
         <div id="favorite" className="choice">
           <h2>
-            <span style={{ color: "var(--color-primary-light)" }}>Loading</span>{" "}
+            <span style={{ color: "var(--color-blue-light)" }}>Loading</span>{" "}
             Favorite Anime
           </h2>
         </div>
@@ -147,7 +148,7 @@ export default function AnimeLove() {
             </h2>
           </div>
         </div>
-      </>
+      </Fade>
     );
   }
 
@@ -157,7 +158,7 @@ export default function AnimeLove() {
     <>
       <div id="favorite" className="choice">
         <h2>
-          <span style={{ color: "var(--color-primary-light)" }}>Editor</span>
+          <span style={{ color: "var(--color-blue-light)" }}>Editor</span>
           &apos;s Choice Anime
         </h2>
       </div>

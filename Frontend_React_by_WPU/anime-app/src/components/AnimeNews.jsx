@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 
 export default function AnimeNews() {
   const [news, setNews] = useState([]);
@@ -48,33 +49,35 @@ export default function AnimeNews() {
 
   return (
     <aside className="aside bottom-left">
-      <div className="magazine">
-        <h2>
-          <span style={{ color: "var(--color-primary-light)" }}>Magazine</span>{" "}
-          Anime
-        </h2>
-      </div>
-      <div className="news-all">
-        <button onClick={handleFetchRandomNews}>
-          {error ? "⥁" : loading ? "↻" : "⟳"}
-        </button>
-        <ul>
-          {news.map((article) => (
-            <li key={article.mal_id}>
-              <a
-                href={article.url}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                title="Read news in My Anime List"
-              >
-                {article.title}
-              </a>
-              <br />
-              <span>{new Date(article.date).toLocaleDateString()}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Fade triggerOnce delay={250} duration={1000}>
+        <div className="magazine">
+          <h2>
+            <span style={{ color: "var(--color-blue-light)" }}>Magazine</span>{" "}
+            Anime
+          </h2>
+        </div>
+        <div className="news-all">
+          <button onClick={handleFetchRandomNews}>
+            {error ? "⥁" : loading ? "↻" : "⟳"}
+          </button>
+          <ul>
+            {news.map((article) => (
+              <li key={article.mal_id}>
+                <a
+                  href={article.url}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  title="Read news in My Anime List"
+                >
+                  {article.title}
+                </a>
+                <br />
+                <span>{new Date(article.date).toLocaleDateString()}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Fade>
     </aside>
   );
 }
