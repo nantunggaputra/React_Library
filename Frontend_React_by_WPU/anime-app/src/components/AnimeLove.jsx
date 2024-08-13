@@ -9,9 +9,11 @@ export default function AnimeLove() {
   const animationRef = useRef(null);
 
   useEffect(() => {
-    fetch("./anime-love-data.json")
-      .then((response) => response.json())
-      .then((data) => setImages(data));
+    setTimeout(() => {
+      fetch("./anime-love-data.json")
+        .then((response) => response.json())
+        .then((data) => setImages(data));
+    }, 4000);
   }, []);
 
   const handlePrev = () => {

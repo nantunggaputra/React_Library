@@ -8,7 +8,7 @@
   --color-background-light: #f0f0f8;
   --color-background-grey-25: #252525;
   --color-background-grey-17: #171717;
-  --color-background-grey-10: #0f0f0f;
+  --color-background-grey-10: #0e0e0e;
   --color-background-dark: #070707;
 }
 
@@ -656,12 +656,15 @@ body {
 
 @keyframes letter {
   0% {
+    font-weight: 400;
     letter-spacing: initial;
   }
   50% {
-    letter-spacing: 0.5px;
+    font-weight: 900;
+    letter-spacing: 1px;
   }
   100% {
+    font-weight: 400;
     letter-spacing: initial;
   }
 }
@@ -1775,14 +1778,15 @@ body {
 }
 
 .lights {
-  margin: -1rem auto 0;
+  margin: -1.85rem auto 0;
   max-width: 85rem;
+  height: 1.3rem;
   border-radius: 1rem;
-  background: linear-gradient(90deg, #ff0000ab, #0000ffab);
-  box-shadow: 0 0 1.25rem 0.5rem #ff0000e6, 0 0 1.25rem 0.5rem #0000ffe6;
+  background: linear-gradient(90deg, #ff0000, #0000ff);
+  box-shadow: 0 0 1.3rem 0.3rem #ff0000, 0 0 1.3rem 0.3rem #0000ff;
   z-index: -2;
-  animation: police-lights 1s infinite alternate;
-  animation-duration: 1s;
+  animation: police-lights 2s infinite alternate;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
@@ -1790,15 +1794,27 @@ body {
 @keyframes police-lights {
   0% {
     background: linear-gradient(90deg, #ff0000, #0000ff);
-    box-shadow: 0 0 1.25rem 0.5rem #ff0000, 0 0 1.25rem 0.5rem #0000ff;
+    box-shadow: 0 0 1.3rem 0.3rem #ff0000, 0 0 1.3rem 0.3rem #0000ff;
+  }
+  30% {
+    background: linear-gradient(90deg, #0000ff, #ff0000);
+    box-shadow: 0 0 1.3rem 0.3rem #0000ffd7, 0 0 1.3rem 0.3rem #ff0000d7;
   }
   50% {
+    background: linear-gradient(90deg, #ff0000, #0000ff);
+    box-shadow: 0 0 1.3rem 0.3rem #ff0000b7, 0 0 1.3rem 0.3rem #0000ffb7;
+  }
+  70% {
     background: linear-gradient(90deg, #0000ff, #ff0000);
-    box-shadow: 0 0 1.25rem 0.5rem #0000ff, 0 0 1.25rem 0.5rem #ff0000;
+    box-shadow: 0 0 1.3rem 0.3rem #0000ffb7, 0 0 1.3rem 0.3rem #ff0000b7;
+  }
+  90% {
+    background: linear-gradient(90deg, #ff0000, #0000ff);
+    box-shadow: 0 0 1.3rem 0.3rem #ff0000d7, 0 0 1.3rem 0.3rem #0000ffd7;
   }
   100% {
-    background: linear-gradient(90deg, #ff0000, #0000ff);
-    box-shadow: 0 0 1.25rem 0.5rem #ff0000, 0 0 1.25rem 0.5rem #0000ff;
+    background: linear-gradient(90deg, #0000ff, #ff0000);
+    box-shadow: 0 0 1.3rem 0.3rem #0000ff, 0 0 1.3rem 0.3rem #ff0000;
   }
 }
 
