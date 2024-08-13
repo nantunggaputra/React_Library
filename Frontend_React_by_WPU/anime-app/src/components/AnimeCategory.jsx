@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
-import axios from "axios";
 
 export default function AnimeByCategory() {
   const categories = ["Season Now", "Top Anime", "Top Manga", "Top Characters"];
@@ -23,9 +22,13 @@ export default function AnimeByCategory() {
         (category === "Top Characters" &&
           `https://api.jikan.moe/v4/top/characters?limit=25`);
 
-      const response = await axios.get(url);
-      if (response.data.data) {
-        setAnimeList(response.data.data);
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error("Failed to fetch data");
+      }
+      const data = await response.json();
+      if (data.data) {
+        setAnimeList(data.data);
         setCurrentIndex(0);
       } else {
         setAnimeList([]);

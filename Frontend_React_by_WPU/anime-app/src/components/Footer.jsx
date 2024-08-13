@@ -31,28 +31,28 @@ export default function Footer() {
             <a
               href="https://nantunggaputra.vercel.app/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <SiVercel color="var(--color-white)" size={24} />
             </a>
             <a
               href="https://github.com/nantunggaputra"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <SiGithub color="var(--color-white)" size={24} />
             </a>
             <a
               href="https://www.sololearn.com/en/profile/29010238"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <SiSololearn color="var(--color-white)" size={24} />
             </a>
             <a
               href="https://www.freecodecamp.org/fcc25a60d51-9b4d-4215-8292-018b8c933994"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <SiFreecodecamp color="var(--color-white)" size={24} />
             </a>
@@ -64,7 +64,7 @@ export default function Footer() {
             <a
               href="https://nantunggaputra.github.io/HTML/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               web<span>dev</span>el<span>op</span>er
             </a>
@@ -74,7 +74,7 @@ export default function Footer() {
             <a
               href="https://www.linkedin.com/in/nantungga-putra-451779116/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               Nan<span>t</span>ungga Put<span>r</span>a
             </a>{" "}
@@ -90,7 +90,7 @@ export default function Footer() {
                 <a
                   href="https://nantunggaputra.github.io/HTML/"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   WEB
                   <wbr />

@@ -4,7 +4,7 @@ function AboutInfo({ className, url, textLink }) {
     <div className={className}>
       <hr style={{ opacity: "0.2" }} />
       <p>
-        <a href={url} target="_blank" rel="noopener">
+        <a href={url} target="_blank" rel="noopener noreferrer">
           {textLink}
         </a>
       </p>
@@ -45,7 +45,7 @@ export default function AboutPage({ toggleOverlay }) {
               <a
                 href="https://github.com/nantunggaputra/React_Library/issues/5"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 get involved
               </a>
