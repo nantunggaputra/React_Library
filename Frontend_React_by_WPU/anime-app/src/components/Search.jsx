@@ -70,7 +70,7 @@ function MainResult({ count }) {
   return (
     <>
       <p className="search-results" style={{ cursor: "default" }}>
-        <span>{hasData(count) ? "⋋≧.≦⋌" : "<T_T>"}</span>{" "}
+        <span>{hasData(count) ? "⋋≧.≦⋌" : "⋋T_T⋌"}</span>{" "}
         <strong>
           {hasData(count)
             ? `Subarashi Minna-san! Wee found breathtaking of ${count} anime...`

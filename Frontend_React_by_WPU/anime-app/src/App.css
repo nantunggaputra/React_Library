@@ -1818,6 +1818,9 @@ body {
   }
 }
 
+.share,
+.donation,
+.pocket,
 .gototop {
   position: fixed;
   bottom: 3.35rem;
@@ -1825,6 +1828,21 @@ body {
   z-index: 1000;
 }
 
+.share {
+  bottom: 18.35rem;
+}
+
+.donation {
+  bottom: 13.35rem;
+}
+
+.pocket {
+  bottom: 8.35rem;
+}
+
+.share .container,
+.donation .container,
+.pocket .container,
 .gototop .container {
   width: 4.4rem;
   height: 4.4rem;
@@ -1834,11 +1852,17 @@ body {
   border-radius: 1rem 0 0 1rem;
 }
 
+.donation .container a,
+.pocket .container a,
 .gototop .container a {
+  padding: 0.5rem 0.7rem;
   text-decoration: none;
   color: var(--color-background-light);
 }
 
+.share .container button,
+.donation .container button,
+.pocket .container button,
 .gototop .container button {
   display: block;
   margin: auto;
@@ -1853,6 +1877,7 @@ body {
   color: var(--color-background-light);
   font-size: 1.4rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 /* Media Query */

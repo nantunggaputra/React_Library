@@ -23,6 +23,18 @@ export default function Footer() {
     }, 1250);
   };
 
+  const [isCopied, setIsCopied] = useState(false);
+
+  const copyUrlToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 10000);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <footer>
       <Fade triggerOnce delay={250} duration={1000}>
@@ -151,11 +163,42 @@ export default function Footer() {
         </div>
       </div>
       {showLights && <div className="lights"></div>}
+      <div className="share">
+        <FloatingButton
+          itemKey="share-button"
+          titleOn="Copied to clipboard"
+          titleOff="Share"
+          state={isCopied}
+          toggleState={copyUrlToClipboard}
+          iconOn="✓"
+          iconOff="⌗"
+        />
+      </div>
+      <div className="donation">
+        <FloatingButton
+          itemKey="donation-button"
+          titleOn=""
+          titleOff=""
+          url="#donation"
+          titleLink="Donation"
+          iconLink="❥"
+        />
+      </div>
+      <div className="pocket">
+        <FloatingButton
+          itemKey="pocket-button"
+          titleOn=""
+          titleOff=""
+          url="#pocket"
+          titleLink="Pocket"
+          iconLink="⛁"
+        />
+      </div>
       <div className="gototop">
         <FloatingButton
           itemKey="top-button"
           titleOn=""
-          titleOff="Go to top"
+          titleOff=""
           url="#"
           titleLink="Go to top"
           iconLink="⥣"

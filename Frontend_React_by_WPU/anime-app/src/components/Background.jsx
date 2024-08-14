@@ -97,8 +97,8 @@ export default function Background() {
       </div>
       <div className="informations">
         <FloatingButton
-          titleOn="About WeeBoo"
-          titleOff="About WeeBoo"
+          titleOn="About"
+          titleOff="About"
           state={showOverlay}
           toggleState={toggleOverlay}
           iconOn={<span style={{ fontSize: "1.2rem" }}>𝐢</span>}

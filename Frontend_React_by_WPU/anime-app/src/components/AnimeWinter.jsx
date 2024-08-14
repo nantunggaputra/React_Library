@@ -187,8 +187,8 @@ export default function AnimeWinter() {
           >
             <small>
               {(selectedCategory === "Sponsored" && "$") ||
-                (selectedCategory === "Featured" && "❅ 𑁍 ❆") ||
-                (selectedCategory === "Remake" && "♻") ||
+                (selectedCategory === "Featured" && " ❅ ❀ ❆ ") ||
+                (selectedCategory === "Remake" && "♼") ||
                 (selectedCategory === "Hiatus" && "zᶻ")}
             </small>
             <img src={selectedImage[0].src} alt={selectedImage[0].title} />
