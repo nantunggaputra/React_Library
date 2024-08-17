@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Background from "./components/Background";
+import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Aside from "./components/Aside";
@@ -58,6 +59,7 @@ function ContentPage() {
   return (
     <>
       <Background />
+      <Header />
       <Navbar fetchAnime={fetchAnime} />
       <Main
         animes={animes}

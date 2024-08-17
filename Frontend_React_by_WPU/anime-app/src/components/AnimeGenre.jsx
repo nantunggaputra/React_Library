@@ -85,7 +85,7 @@ export default function AnimeByGenre() {
     return animeList[currentIndex].rating === "Rx - Hentai"
       ? {
           filter: "grayscale(1)",
-          cursor: "help",
+          cursor: "not-allowed",
         }
       : {};
   };
@@ -114,7 +114,7 @@ export default function AnimeByGenre() {
                   genre.name === "Hentai"
                     ? {
                         filter: "grayscale(1)",
-                        cursor: "help",
+                        cursor: "not-allowed",
                       }
                     : {}
                 }

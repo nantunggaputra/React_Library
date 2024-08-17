@@ -109,7 +109,7 @@ export default function AnimeTrailer() {
                   title === "Magic Kaito 1412" || title === "KID"
                     ? {
                         filter: "grayscale(1)",
-                        cursor: "not-allowed",
+                        cursor: "default",
                       }
                     : undefined
                 }

@@ -61,7 +61,7 @@ export default function AnimeDetail({ selectedAnime }) {
     return rating === "Rx - Hentai"
       ? {
           filter: "grayscale(1)",
-          cursor: "help",
+          cursor: "not-allowed",
         }
       : {};
   };

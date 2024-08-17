@@ -122,16 +122,80 @@ export default function Footer() {
               </small>
               <br />
               <br />
-              <p>About Us</p>
-              <p>Contact Us</p>
-              <p className="fs">Fans Screening</p>
-              <p className="afa">Anime Festival Asia (ID)</p>
+              <p>
+                <a
+                  href="https://github.com/nantunggaputra/React_Library/blob/main/Frontend_React_by_WPU/anime-app/README.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  About Us
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://github.com/nantunggaputra/React_Library/blob/main/Frontend_React_by_WPU/anime-app/CONTACT.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contact Us
+                </a>
+              </p>
+              <p className="fs">
+                <a
+                  href="https://titipjepang.com/?s=fans+screening&id=125306&post_type=post"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Fans Screening
+                </a>
+              </p>
+              <p className="afa">
+                <a
+                  href="https://animefestival.asia/afaid24/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Anime Festival Asia (ID)
+                </a>
+              </p>
             </div>
             <div>
-              <p className="rss">RSS</p>
-              <p className="sitemap">Sitemap</p>
-              <p>Privacy Policy</p>
-              <p>Terms & Conditions</p>
+              <p className="alt">
+                <a
+                  href="https://myanimelist.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Anime List
+                </a>
+              </p>
+              <p className="ast">
+                <a
+                  href="https://www.bilibili.tv/id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Anime Streaming
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://github.com/nantunggaputra/React_Library/blob/main/Frontend_React_by_WPU/anime-app/RIGHTS.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Terms & Conditions
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://github.com/nantunggaputra/React_Library/blob/main/Frontend_React_by_WPU/anime-app/PRIVACY_POLICY.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Privacy Policy
+                </a>
+              </p>
             </div>
           </div>
           <div className="right-menu">
@@ -181,7 +245,7 @@ export default function Footer() {
           titleOff=""
           url="#donation"
           titleLink="Donation"
-          iconLink="❥"
+          iconLink="⛁"
         />
       </div>
       <div className="pocket">
@@ -191,7 +255,7 @@ export default function Footer() {
           titleOff=""
           url="#pocket"
           titleLink="Pocket"
-          iconLink="⛁"
+          iconLink="₿"
         />
       </div>
       <div className="gototop">

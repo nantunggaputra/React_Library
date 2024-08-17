@@ -23,7 +23,7 @@ function AnimeList({ anime, onSelectedAnime, isSelected }) {
     return rating === "Rx - Hentai"
       ? {
           filter: "grayscale(1)",
-          cursor: "help",
+          cursor: "not-allowed",
         }
       : {};
   };

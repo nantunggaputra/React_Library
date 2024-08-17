@@ -121,7 +121,7 @@ export default function Background() {
           titleOff="Background animations off"
           state={isAnimationActive}
           toggleState={toggleAnimation}
-          iconOn="𖣐"
+          iconOn="𑁍"
           iconOff="𖤐"
         />
       </div>

@@ -325,6 +325,80 @@ body {
   color: var(--color-red);
 }
 
+/* Header */
+
+.head {
+  margin: 0 auto 1.5rem;
+  max-width: 100vw;
+  padding: 0 3.2rem;
+  position: relative;
+}
+
+.head-menu {
+  background-image: linear-gradient(
+    to right,
+    var(--color-background-grey-10),
+    var(--color-background-grey-10),
+    var(--color-background-grey-17),
+    var(--color-background-grey-17)
+  );
+  color: var(--color-background-light);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  height: 6.35rem;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0;
+  cursor: default;
+}
+
+.head-menu .left-menu {
+  width: 15rem;
+}
+
+.head-menu .left-menu img {
+  margin: 0 1rem;
+  filter: grayscale(1) brightness(1.25);
+  opacity: 0.975;
+}
+
+.head-menu .center-menu {
+  filter: grayscale(1);
+}
+
+.head-menu .center-menu a {
+  margin: 0 2.5rem;
+}
+
+.head-menu .center-menu a:hover {
+  color: var(--color-red);
+}
+
+.head-menu .right-menu {
+  width: 15rem;
+  filter: grayscale(1);
+}
+
+.head-menu .right-menu button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1.3rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--color-background-light);
+  color: var(--color-red);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.head-menu .right-menu button:hover {
+  background-color: var(--color-red);
+  color: var(--color-background-light);
+}
+
 /* NavBar */
 
 .nav-bar {
@@ -674,7 +748,7 @@ body {
 .aside {
   width: 100%;
   height: 50rem;
-  top: 108rem;
+  top: 116rem;
   position: absolute;
   text-shadow: 0 0 5px var(--color-background-grey-25);
   background: #f0f0f825;
@@ -705,19 +779,19 @@ body {
 
 .aside.top-left,
 .aside.top-right {
-  top: 18rem;
+  top: 26rem;
   height: 17.5rem;
 }
 
 .aside.bottom-left,
 .aside.bottom-right {
-  top: 278rem;
+  top: 286rem;
   height: 32rem;
 }
 
 .aside.last-left,
 .aside.last-right {
-  top: 312.8rem;
+  top: 320.8rem;
 }
 
 .channels {
@@ -797,7 +871,7 @@ body {
 }
 
 .silhouette-off {
-  top: 110rem;
+  top: 118rem;
   right: 1rem;
   position: absolute;
   filter: contrast(0.4) brightness(0.25);
@@ -1478,7 +1552,7 @@ body {
   font-weight: 600;
   text-align: center;
   color: var(--color-red);
-  cursor: pointer;
+  cursor: default;
 }
 
 .love-overview p {
@@ -1673,7 +1747,7 @@ body {
 }
 
 .foot {
-  margin: 3rem auto 0;
+  margin: 3rem auto -1.15rem;
   max-width: 94rem;
   padding: 1rem 3.2rem;
   position: relative;
@@ -1723,19 +1797,18 @@ body {
 .foot-menu .left-menu p {
   margin-top: 0.5rem;
   font-size: 1.4rem;
-  cursor: pointer;
+  cursor: default;
 }
 
-.foot-menu .left-menu a:hover,
-.foot-menu .left-menu p:hover {
+.foot-menu .left-menu a:hover {
   color: var(--color-blue-light);
 }
 
-.foot-menu .left-menu .fs:hover {
+.foot-menu .left-menu .fs a:hover {
   color: var(--color-red);
 }
 
-.foot-menu .left-menu .afa:hover {
+.foot-menu .left-menu .afa a:hover {
   color: var(--color-orange);
 }
 
@@ -1796,7 +1869,7 @@ body {
     background: linear-gradient(90deg, #ff0000, #0000ff);
     box-shadow: 0 0 1.3rem 0.3rem #ff0000, 0 0 1.3rem 0.3rem #0000ff;
   }
-  30% {
+  35% {
     background: linear-gradient(90deg, #0000ff, #ff0000);
     box-shadow: 0 0 1.3rem 0.3rem #0000ffd7, 0 0 1.3rem 0.3rem #ff0000d7;
   }
@@ -2028,8 +2101,6 @@ body {
     display: block;
   }
 
-  .foot-menu .left-menu .rss,
-  .foot-menu .left-menu .sitemap,
   .foot-menu img {
     display: none;
   }
@@ -2042,6 +2113,10 @@ body {
 @media (max-width: 768px) {
   html {
     font-size: 63%;
+  }
+
+  .head {
+    display: none;
   }
 
   .loading-page h1 {
