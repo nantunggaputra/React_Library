@@ -151,9 +151,25 @@ body {
     opacity: 0;
     transform: scale(1);
   }
+  20% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  40% {
+    opacity: 0.4;
+    transform: scale(1.3);
+  }
   50% {
     opacity: 0.8;
+    transform: scale(1.6);
+  }
+  60% {
+    opacity: 0.4;
     transform: scale(1.3);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1);
   }
   100% {
     opacity: 0;
@@ -240,7 +256,6 @@ body {
   text-shadow: 0 0 5px var(--color-background-grey-25);
   background: #17171797;
   backdrop-filter: blur(0.25rem);
-  -webkit-backdrop-filter: blur(0.25rem);
   z-index: 999;
 }
 
@@ -799,7 +814,6 @@ body {
   text-shadow: 0 0 5px var(--color-background-grey-25);
   background: #f0f0f825;
   backdrop-filter: blur(0.25rem);
-  -webkit-backdrop-filter: blur(0.25rem);
   z-index: 1;
 }
 
@@ -852,7 +866,6 @@ body {
   border-radius: 1rem;
   background: #17171797;
   backdrop-filter: blur(0.25rem);
-  -webkit-backdrop-filter: blur(0.25rem);
   overflow: auto;
   scrollbar-color: var(--color-background-light) transparent;
 }
@@ -1276,7 +1289,6 @@ body {
   width: 31rem;
   background: #17171797;
   backdrop-filter: blur(0.25rem);
-  -webkit-backdrop-filter: blur(0.25rem);
 }
 
 .genre-all,
@@ -1431,7 +1443,6 @@ body {
   margin: 2.4rem auto -1.4rem;
   background: #17171797;
   backdrop-filter: blur(0.25rem);
-  -webkit-backdrop-filter: blur(0.25rem);
   overflow-x: hidden;
   overflow-y: hidden;
   scrollbar-color: var(--color-background-light) transparent;
@@ -2027,7 +2038,6 @@ body {
   .aside {
     background: transparent;
     backdrop-filter: unset;
-    -webkit-backdrop-filter: none;
   }
 }
 
@@ -2037,7 +2047,6 @@ body {
     position: relative;
     background: #f0f0f825;
     backdrop-filter: blur(0.25rem);
-    -webkit-backdrop-filter: blur(0.25rem);
     padding: 0.5rem 1.5rem;
     margin: auto;
     margin-bottom: 2.4rem;
