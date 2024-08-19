@@ -255,7 +255,7 @@ export default function Footer() {
           titleOff=""
           url="#pocket"
           titleLink="Pocket"
-          iconLink="₿"
+          iconLink="¥"
         />
       </div>
       <div className="gototop">

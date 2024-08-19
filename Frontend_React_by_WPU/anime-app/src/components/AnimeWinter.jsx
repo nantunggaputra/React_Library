@@ -187,7 +187,7 @@ export default function AnimeWinter() {
           >
             <small>
               {(selectedCategory === "Sponsored" && "$") ||
-                (selectedCategory === "Featured" && " ❅ ❀ ❆ ") ||
+                (selectedCategory === "Featured" && "❅ ❄️ ❆") ||
                 (selectedCategory === "Remake" && "♼") ||
                 (selectedCategory === "Hiatus" && "zᶻ")}
             </small>

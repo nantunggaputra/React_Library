@@ -13,7 +13,7 @@ export default function AnimeLove() {
       fetch("./anime-love-data.json")
         .then((response) => response.json())
         .then((data) => setImages(data));
-    }, 4000);
+    }, 1000);
   }, []);
 
   const handlePrev = () => {
