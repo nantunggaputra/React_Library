@@ -28,7 +28,7 @@ export default function AnimeNews() {
       fetch(`https://api.jikan.moe/v4/anime/${animeId}/news`)
         .then((response) => {
           if (!response.ok) {
-            throw new Error("Network response was not ok");
+            throw new Error("Failed to fetch data");
           }
           return response.json();
         })

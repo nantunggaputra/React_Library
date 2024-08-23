@@ -31,7 +31,7 @@ export default function Footer() {
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 10000);
     } catch (error) {
-      console.error(error);
+      console.error("Error fetching data:", error);
     }
   };
 

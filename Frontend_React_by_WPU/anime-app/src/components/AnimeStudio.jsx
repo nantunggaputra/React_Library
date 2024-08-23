@@ -10,7 +10,7 @@ export default function AnimeByStudio() {
     fetch("./anime-studio-data.json")
       .then((response) => {
         if (!response.ok) {
-          throw new Error("No Network");
+          throw new Error("Failed to fetch data");
         }
         return response.json();
       })

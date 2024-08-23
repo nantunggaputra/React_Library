@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { fetchAnimeData } from "./service/animeService";
 import "./App.css";
 import Background from "./components/Background";
 import Header from "./components/Header";
@@ -30,26 +31,10 @@ function ContentPage() {
   const [selectedAnime, setSelectedAnime] = useState(null);
 
   const fetchAnime = async (query) => {
-    try {
-      const response = await fetch(
-        `https://api.jikan.moe/v4/anime?q=${query}&limit=25`
-      );
-      if (!response.ok) {
-        throw new Error("Failed to fetch data");
-      }
-      const data = await response.json();
-      const fetchedAnimes = data.data;
-      setAnimes(fetchedAnimes);
-      setSelectedAnime(fetchedAnimes[0] || null);
-      return fetchedAnimes;
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      alert(
-        `${error}\nMinna-san! An error occurred in the result data. Please enter the correct title or try again later.`
-      );
-      window.location.reload();
-      return [];
-    }
+    const fetchedAnimes = await fetchAnimeData(query);
+    setAnimes(fetchedAnimes);
+    setSelectedAnime(fetchedAnimes[0] || null);
+    return fetchedAnimes;
   };
 
   const handleSelectedAnime = (anime) => {

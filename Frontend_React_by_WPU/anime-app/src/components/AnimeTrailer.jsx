@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 
 export default function AnimeTrailer() {
   const [animeData, setAnimeData] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(39);
   const [loading, setLoading] = useState(true);
 
   const animeIds = [
@@ -76,7 +76,7 @@ export default function AnimeTrailer() {
       const data = await response.json();
       setAnimeData(data.data);
     } catch (error) {
-      console.error("Error fetching trailers:", error);
+      console.error("Error fetching data:", error);
     } finally {
       setLoading(false);
     }
@@ -144,7 +144,7 @@ export default function AnimeTrailer() {
                 >
                   Please wait...
                 </h2>
-              ) : animeData ? (
+              ) : animeData.trailer.embed_url ? (
                 <>
                   <div className="trailer-list-video">
                     {animeData.trailer.embed_url && (
@@ -155,7 +155,7 @@ export default function AnimeTrailer() {
                         title="Watch trailer on YouTube"
                         loading="lazy"
                         frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allow="web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen
                         style={{ border: "0" }}

@@ -16,7 +16,7 @@ export default function AnimeByGenre() {
         const data = await response.json();
         setGenres(data.data);
       } catch (error) {
-        console.error("Error fetching genres:", error);
+        console.error("Error fetching data:", error);
       }
     };
 
@@ -46,7 +46,7 @@ export default function AnimeByGenre() {
       setAnimeList(filteredAnimes);
       setCurrentIndex(0);
     } catch (error) {
-      console.error("Error fetching anime:", error);
+      console.error("Error fetching data:", error);
     } finally {
       setLoading(false);
     }
