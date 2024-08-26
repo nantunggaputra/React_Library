@@ -31,10 +31,19 @@ function ContentPage() {
   const [selectedAnime, setSelectedAnime] = useState(null);
 
   const fetchAnime = async (query) => {
-    const fetchedAnimes = await fetchAnimeData(query);
-    setAnimes(fetchedAnimes);
-    setSelectedAnime(fetchedAnimes[0] || null);
-    return fetchedAnimes;
+    try {
+      const data = await fetchAnimeData(query);
+      setAnimes(data);
+      setSelectedAnime(data[0]);
+      return data;
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      alert(
+        `${error}\nMinna-san! An error occurred in the result data. Please enter the correct title or try again later.`
+      );
+      window.location.reload();
+      return [];
+    }
   };
 
   const handleSelectedAnime = (anime) => {

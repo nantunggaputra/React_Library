@@ -61,7 +61,7 @@ export default function AnimeTrailer() {
     const fetchTrailers = () => {
       setTimeout(() => {
         fetchAnimeTrailer(animeIds[currentIndex]);
-      }, 15000);
+      }, 1000);
     };
     fetchTrailers();
   }, [currentIndex]);

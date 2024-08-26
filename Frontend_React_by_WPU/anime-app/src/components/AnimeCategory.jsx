@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { fetchAnimeByCategoryData } from "../service/animeCategoryService";
 import { Fade } from "react-awesome-reveal";
 
 export default function AnimeByCategory() {
@@ -12,29 +13,12 @@ export default function AnimeByCategory() {
   const fetchAnimeByCategory = async (category) => {
     setLoading(true);
     try {
-      const url =
-        (category === "Season Now" &&
-          `https://api.jikan.moe/v4/seasons/now?limit=25`) ||
-        (category === "Top Anime" &&
-          `https://api.jikan.moe/v4/top/anime?limit=25`) ||
-        (category === "Top Manga" &&
-          `https://api.jikan.moe/v4/top/manga?limit=25`) ||
-        (category === "Top Characters" &&
-          `https://api.jikan.moe/v4/top/characters?limit=25`);
-
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error("Failed to fetch data");
-      }
-      const data = await response.json();
-      if (data.data) {
-        setAnimeList(data.data);
-        setCurrentIndex(0);
-      } else {
-        setAnimeList([]);
-      }
+      const data = await fetchAnimeByCategoryData(category);
+      setAnimeList(data);
+      setCurrentIndex(0);
     } catch (error) {
       console.log("Error fetching data:", error);
+      setAnimeList([]);
     } finally {
       setLoading(false);
     }
