@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { fetchGenres } from "../service/animeGenresService";
+import { fetchAnimeByGenreId } from "../service/animeGenreIdService";
 import { Fade } from "react-awesome-reveal";
 
 export default function AnimeByGenre() {
@@ -10,40 +12,24 @@ export default function AnimeByGenre() {
   const [selectedGenre, setSelectedGenre] = useState("");
 
   useEffect(() => {
-    const fetchGenres = async () => {
+    const getGenres = async () => {
       try {
-        const response = await fetch("https://api.jikan.moe/v4/genres/anime");
-        const data = await response.json();
-        setGenres(data.data);
+        const data = await fetchGenres();
+        setGenres(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
-    fetchGenres();
+    getGenres();
   }, []);
 
   const fetchAnimeByGenre = async (genreId, genreName) => {
     setLoading(true);
     setSelectedGenre(genreName);
     try {
-      const response = await fetch(
-        `https://api.jikan.moe/v4/anime?genres=${genreId}&limit=25`
-      );
-      const data = await response.json();
-      const filteredAnimes = data.data.filter(
-        (anime) =>
-          (anime.rating !== "R+ - Mild Nudity" &&
-            anime.rating !== "R - 17+ (violence & profanity)" &&
-            anime.type !== "OVA" &&
-            anime.type !== "Movie" &&
-            anime.type === "TV") ||
-          (anime.rating !== "R+ - Mild Nudity" &&
-            anime.rating !== "R - 17+ (violence & profanity)" &&
-            anime.type === "OVA" &&
-            anime.type !== "Movie")
-      );
-      setAnimeList(filteredAnimes);
+      const data = await fetchAnimeByGenreId(genreId);
+      setAnimeList(data);
       setCurrentIndex(0);
     } catch (error) {
       console.error("Error fetching data:", error);
