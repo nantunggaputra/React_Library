@@ -16,17 +16,22 @@ function Kanji() {
 function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
   const [placeholder, setPlaceholder] = useState("Search anime...");
   const [query, setQuery] = useState("");
+  const [isNotClicked, setNotClicked] = useState(false);
   const audioRef = useRef(null);
 
   const handleSearch = async () => {
-    if (query.trim()) {
+    if (query.trim() && query.trim() !== "") {
       setLoading(true);
+      setNotClicked(true);
       audioRef.current && audioRef.current.play();
       const results = await fetchAnime(query);
       setResultCount(results.length);
-      setLoading(false);
-      setQuery("");
-      setPlaceholder(results.length > 0 ? query.trim() : "Search anime...");
+      setTimeout(() => {
+        setLoading(false);
+        setQuery("");
+        setPlaceholder(results.length > 0 ? query.trim() : "Search anime...");
+        setNotClicked(false);
+      }, 2000);
     }
   };
 
@@ -48,11 +53,15 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
         onChange={(e) => setQuery(e.target.value)}
         onKeyPress={(e) => {
           if (e.key === "Enter") {
-            handleSearch();
+            !loading ? handleSearch() : undefined;
           }
         }}
       />
-      <button className="search-btn" onClick={handleSearch}>
+      <button
+        className="search-btn"
+        onClick={handleSearch}
+        disabled={isNotClicked}
+      >
         {loading ? "Please wait..." : "Search"}
       </button>
       <div className="search-icon">
