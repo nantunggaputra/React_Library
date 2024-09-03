@@ -1393,6 +1393,10 @@ body {
   color: var(--color-blue-light);
 }
 
+.news-all a:visited {
+  color: var(--color-blue-light);
+}
+
 .winter-all button:hover,
 .category-all button:hover,
 .studio-all button:hover,

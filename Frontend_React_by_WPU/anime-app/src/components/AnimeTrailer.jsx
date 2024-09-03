@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 
 export default function AnimeTrailer() {
   const [animeData, setAnimeData] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(39);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
 
   const animeIds = [
@@ -154,9 +154,7 @@ export default function AnimeTrailer() {
                         src={`${animeData.trailer.embed_url}?autoplay=0&mute=0`}
                         title="Watch trailer on YouTube"
                         loading="lazy"
-                        frameBorder="0"
-                        allow="web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
+                        referrerPolicy="no-referrer"
                         allowFullScreen
                         style={{ border: "0" }}
                       ></iframe>
