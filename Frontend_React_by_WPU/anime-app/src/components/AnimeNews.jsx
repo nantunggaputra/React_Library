@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
+import { fetchAnimeNews } from "../service/animeNewsService";
 import { Fade } from "react-awesome-reveal";
 
 export default function AnimeNews() {
@@ -25,15 +26,9 @@ export default function AnimeNews() {
   useEffect(() => {
     if (animeId !== null) {
       setLoading(true);
-      fetch(`https://api.jikan.moe/v4/anime/${animeId}/news`)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Failed to fetch data");
-          }
-          return response.json();
-        })
-        .then((data) => {
-          setNews(data.data);
+      fetchAnimeNews(animeId)
+        .then((newsData) => {
+          setNews(newsData);
           setLoading(false);
         })
         .catch((error) => {

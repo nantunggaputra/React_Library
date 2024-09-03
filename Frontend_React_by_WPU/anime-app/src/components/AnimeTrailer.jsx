@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
+import { fetchAnimeTrailerData } from "../service/animeTrailerService";
 import { Fade } from "react-awesome-reveal";
 
 export default function AnimeTrailer() {
@@ -69,12 +70,8 @@ export default function AnimeTrailer() {
   const fetchAnimeTrailer = async (id) => {
     setLoading(true);
     try {
-      const response = await fetch(`https://api.jikan.moe/v4/anime/${id}`);
-      if (!response.ok) {
-        throw new Error("Failed to fetch data");
-      }
-      const data = await response.json();
-      setAnimeData(data.data);
+      const data = await fetchAnimeTrailerData(id);
+      setAnimeData(data);
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {
