@@ -13,6 +13,7 @@ function LoadingPage() {
   return (
     <div className="loading-page">
       <h1></h1>
+      <audio src="There is Always Only One Truth.aac" autoPlay />
     </div>
   );
 }
