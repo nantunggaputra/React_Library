@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
-import { Fade } from "react-awesome-reveal";
 
 class Footer extends Component {
   render() {
@@ -20,7 +19,6 @@ class Footer extends Component {
     return (
       <footer>
         <div className="row">
-          <Fade bottom>
             <div className="twelve columns">
               <ul className="social-links">{networks}</ul>
               <ul className="copyright">
@@ -44,7 +42,6 @@ class Footer extends Component {
                 </li>
               </ul>
             </div>
-          </Fade>
 
           <div id="go-top">
             <a className="smoothscroll" title="Back to Top" href="#home">

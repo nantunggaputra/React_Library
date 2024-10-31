@@ -10,10 +10,10 @@
         "phone": "",
         "email": "anggunnantunggaputra@gmail.com",
         "address": {
-            "street": "Ciledug",
+            "street": "",
             "city": "Kota Tangerang",
             "state": "Banten",
-            "zip": "15152"
+            "zip": ""
         },
         "website": "https://nantunggaputra.github.io/HTML/",
         "resumedownload": "https://www.jobstreet.co.id/profile/nantungga-putra-80CR8dBXjq",
@@ -65,11 +65,11 @@
             ],
             "skills": [
                 {
-                    "name": "HTML 5",
+                    "name": "HTML5",
                     "level": "90%"
                 },
                 {
-                    "name": "CSS 3",
+                    "name": "CSS3",
                     "level": "90%"
                 },
                 {
@@ -179,6 +179,20 @@
                     "category": "Shopping List",
                     "image": "Shopping List.png",
                     "url": "https://nantunggaputra.github.io/React_Library/Project%20Portfolio/Shopping%20List/dist/"
+                },
+                {
+                    "id": "13",
+                    "title": "React Portfolio",
+                    "category": "React Portfolio",
+                    "image": "React Portfolio.png",
+                    "url": "https://nantunggaputra.vercel.app/"
+                },
+                {
+                    "id": "14",
+                    "title": "WeeBoo | My Anime List",
+                    "category": "My Anime List",
+                    "image": "WeeBoo | My Anime List.png",
+                    "url": "https://nantunggaputra-anime-app.vercel.app/"
                 }
             ]
         }
