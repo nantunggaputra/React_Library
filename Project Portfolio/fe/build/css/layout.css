@@ -74,7 +74,7 @@ header .banner-text h3 a {
 header .banner-text hr {
    width: 60%;
    margin: 18px auto 24px auto;
-   border-color: #2F2D2E;
+   border-color: #313131;
    border-color: rgba(150, 150, 150, .1);
 }
 
@@ -137,10 +137,15 @@ header .scrolldown a:hover { color: #0762f9; }
 }
 .opaque { background-color: #333; }
 
+#nav-wrap > a.mobile-btn {
+   right: 0;
+}
+
 /* hide toggle button */
 #nav-wrap > a.mobile-btn { display: none; }
 
 ul#nav {
+   margin: 0 !important;
    min-height: 48px;
    width: auto;
 
@@ -182,7 +187,7 @@ ul#nav li.current a { color: #fe6928; }
 /* ------------------------------------------------------------------ */
 
 #about {
-   background: #000524;
+   background: #363636;
    padding-top: 96px;
    padding-bottom: 66px;
    overflow: hidden;
@@ -201,6 +206,7 @@ ul#nav li.current a { color: #fe6928; }
    color: #ccc;
 }
 #about .profile-pic {
+   margin-top: 48px;
    position: relative;
    width: 120px;
    height: 120px;
@@ -437,7 +443,7 @@ ul#nav li.current a { color: #fe6928; }
 /* Portfolio Content */
 #portfolio-wrapper .columns { margin-bottom: 36px; }
 .portfolio-item .item-wrap {
-   background: #fff;
+   background: #363636;
    overflow: hidden;
    position: relative;
 
@@ -628,8 +634,8 @@ ul#nav li.current a { color: #fe6928; }
    color: #636363;
    font-size: 17px;
 }
-/*#
-call-to-action .button {
+/*
+#call-to-action .button {
 	color:#fff;
    background: #0D0D0D;
 }
@@ -730,7 +736,7 @@ call-to-action .button {
 .flexslider .slides > li { position: relative; }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides > li { display: none; -webkit-backface-visibility: hidden; }
+.flexslider .slides > li { display: none; visibility: hidden; }
 /* Suggested container for slide animation setups. Can replace this with your own */
 .flex-container { zoom: 1; position: relative; }
 
@@ -746,7 +752,7 @@ call-to-action .button {
 
 /* No JavaScript Fallback */
 /* If you are not using another script, such as Modernizr, make sure you
- * include js that eliminates this class on page load */
+/* include js that eliminates this class on page load */
 .no-js .slides > li:first-child { display: block; }
 
 /* Slider Styles */
@@ -767,7 +773,7 @@ call-to-action .button {
     margin: 0 6px;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    display: inline;
 }
 .flex-control-paging li a {
     width: 12px;
@@ -846,7 +852,6 @@ call-to-action .button {
    margin: 12px 0;
    color: #EBEEEE;
 	display: inline-block;
-	float: left;
    width: 26%;
 }
 #contact input,
@@ -860,7 +865,7 @@ call-to-action .button {
 	outline: none;
    font-size: 15px;
    line-height: 24px;
-   width: 65%;
+   width: 100%;
 }
 #contact input:focus,
 #contact textarea:focus,
@@ -878,7 +883,6 @@ call-to-action .button {
    height: auto;
    display: inline-block;
 	border-radius: 0px;
-   margin-left: 26%;
 }
 #contact button.submit:hover {
 	color: #0D0D0D;
@@ -969,7 +973,7 @@ footer .copyright li:before {
     content: "\2022";
     padding-left: 10px;
     padding-right: 10px;
-    color: #095153;
+    color: #525252;
 }
 footer .copyright  li:first-child:before {
     display: none;
@@ -1017,10 +1021,11 @@ footer .social-links li:first-child { margin-left: 0; }
    line-height: 60px;
  	border-radius: 100%;
 }
-#go-top a:hover { background-color: #0F9095; }
+#go-top a:hover { background-color: #000000; }
 
 
 .social .btn:first-child{
+   margin-left: 30px;
    margin-right: 30px;
 }
 .social .btn{
@@ -1034,5 +1039,5 @@ footer .social-links li:first-child { margin-left: 0; }
    background-color: #1abc9c !important;
 }
 .github-btn{
-   background-color: #34495e !important;
+   background-color: #363636 !important;
 }
