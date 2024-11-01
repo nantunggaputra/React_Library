@@ -19,7 +19,7 @@
   z-index: 1043;
   position: fixed;
   outline: none !important;
-  -webkit-backface-visibility: hidden; }
+  visibility: hidden; }
 
 .mfp-container {
   text-align: center;
@@ -108,7 +108,7 @@ button.mfp-close, button.mfp-arrow {
   cursor: pointer;
   background: transparent;
   border: 0;
-  -webkit-appearance: none;
+  appearance: unset;
   display: block;
   outline: none;
   padding: 0;

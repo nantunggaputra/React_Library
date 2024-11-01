@@ -66,7 +66,7 @@ class Header extends Component {
                   rel="noreferrer"
                   className="button btn github-btn"
                 >
-                  <i className="fa fa-github"></i>Github
+                  <i className="fa fa-github"></i>GitHub
                 </a>
               </ul>
           </div>
