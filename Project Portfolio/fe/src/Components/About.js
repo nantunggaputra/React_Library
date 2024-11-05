@@ -33,6 +33,7 @@ class About extends Component {
                   <p className="address">
                     <span>{name}</span>
                     <br />
+                    <span>Front End Web Developer</span>
                     <span>
                       {street}
                       <br />

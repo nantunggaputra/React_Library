@@ -5,8 +5,10 @@ class Contact extends Component {
     if (!this.props.data) return null;
 
     const name = this.props.data.name;
+    const street = this.props.data.address.street;
     const city = this.props.data.address.city;
     const state = this.props.data.address.state;
+    const email = this.props.data.email;
     const message = this.props.data.contactmessage;
 
     return (
@@ -95,11 +97,16 @@ class Contact extends Component {
               <div className="widget widget_contact">
                 <h4>Address</h4>
                 <p className="address">
-                  {name}
-                  <br />
-                  {city}
-                  <br />
-                  {state}
+                <span>{name}</span>
+                    <br />
+                    <span>Front End Web Developer</span>
+                    <span>
+                      {street}
+                      <br />
+                      {city}, {state}
+                    </span>
+                    <br />
+                    <span>{email}</span>
                 </p>
               </div>
             </aside>

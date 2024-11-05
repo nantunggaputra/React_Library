@@ -13,7 +13,7 @@ class Portofolio extends Component {
         <div key={id++} className="columns portfolio-item">
           <div className="item-wrap" onClick={()=> window.open(`${projects.url}`, "_blank")} style={{cursor: "pointer"}}>
             <img alt={projects.title} src={projectImage} />
-            <div style={{ textAlign: "center" }}>{projects.title}</div>
+            <div style={{ textAlign: "center", color: "#fff" }}>{projects.title}</div>
           </div>
         </div>
       );
