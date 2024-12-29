@@ -5,6 +5,7 @@ export default function FloatingButton({
   titleOn,
   titleOff,
   url,
+  target,
   toggleState,
   toggleStateLink,
   styleOn,
@@ -24,7 +25,7 @@ export default function FloatingButton({
         className={className}
       >
         {url ? (
-          <a href={url} onClick={toggleStateLink} title={titleLink}>
+          <a href={url} target={target} onClick={toggleStateLink} title={titleLink}>
             {iconLink}
           </a>
         ) : state ? (

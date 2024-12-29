@@ -243,7 +243,8 @@ export default function Footer() {
           itemKey="donation-button"
           titleOn=""
           titleOff=""
-          url="#donation"
+          url="https://trakteer.id/nantunggaputra"
+          target="_blank"
           titleLink="Donation"
           iconLink="⛁"
         />
