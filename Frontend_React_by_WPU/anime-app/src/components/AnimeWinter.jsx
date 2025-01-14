@@ -154,7 +154,7 @@ export default function AnimeWinter() {
 
   return (
     <Fade triggerOnce delay={250} duration={1000}>
-      <div className="featured">
+      <div id="featured" className="featured">
         <h2>
           <span style={{ color: "var(--color-red)" }}>{selectedCategory}</span>{" "}
           {selectedCategory === "Featured" ? "in Winter Anime" : "Anime"}
@@ -179,7 +179,7 @@ export default function AnimeWinter() {
             className="winter-image"
             style={
               !loadingImage
-                ? {}
+                ? { transition: "1s" }
                 : {
                     filter: "blur(0.1rem)",
                   }

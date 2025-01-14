@@ -131,8 +131,8 @@ export default function Background() {
           titleOff="Backsound off"
           state={!isPlaying}
           toggleState={togglePlayPause}
-          iconOn="♪"
-          iconOff="♬"
+          iconOn="♬"
+          iconOff="♪"
         />
       </div>
     </>

@@ -45,7 +45,7 @@ export default function AnimeNews() {
   return (
     <aside className="aside bottom-left">
       <Fade triggerOnce delay={250} duration={1000}>
-        <div className="magazine">
+        <div id="magazine" className="magazine">
           <h2>
             <span style={{ color: "var(--color-blue-light)" }}>Magazine</span>{" "}
             Anime

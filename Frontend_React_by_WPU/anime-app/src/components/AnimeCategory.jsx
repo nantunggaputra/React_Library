@@ -125,18 +125,23 @@ export default function AnimeByCategory() {
                             }
                           : !loadingImage &&
                             selectedCategory != "Top Characters"
-                          ? { display: "block", margin: "0 auto" }
+                          ? {
+                              display: "block",
+                              margin: "0 auto",
+                            }
                           : loadingImage && selectedCategory != "Top Characters"
                           ? {
                               display: "block",
                               margin: "0 auto",
                               filter: "blur(0.1rem)",
+                              transition: "unset",
                             }
                           : {
                               border: "0.2rem solid var(--color-white)",
                               display: "block",
                               margin: "0 auto",
                               filter: "grayscale(1) blur(0.25rem)",
+                              transition: "unset",
                             }
                       }
                       src={animeList[currentIndex].images.jpg.image_url}

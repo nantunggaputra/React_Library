@@ -36,7 +36,7 @@ export default function AnimeByStudio() {
 
   return (
     <Fade triggerOnce delay={250} duration={1000}>
-      <div className="masterpiece">
+      <div id="masterpiece" className="masterpiece">
         <div className="ornament"></div>
         <h2>
           <span style={{ color: "var(--color-red)" }}>
@@ -76,7 +76,7 @@ export default function AnimeByStudio() {
                       }
                 }
               >
-                <small>✦</small>
+                <small>𑁍</small>
                 <img
                   src={selectedStudioImage.src}
                   alt={selectedStudioImage.title}

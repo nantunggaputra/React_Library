@@ -176,7 +176,7 @@ export default function AnimeLove() {
             className="love-image"
             style={
               !loadingImage
-                ? {}
+                ? { transition: "1s" }
                 : {
                     filter: "blur(0.1rem)",
                   }

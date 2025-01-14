@@ -16,14 +16,12 @@ export default function Aside() {
       <figure className="closing">
         <Fade triggerOnce duration={1500} direction="down" easing="ease-out">
           <figcaption>
-            <h6>い</h6>
-            <h6>ら</h6>
-            <h6>っ</h6>
-            <h6>し</h6>
-            <h6>ゃ</h6>
-            <h6>い</h6>
-            <h6>ま</h6>
-            <h6>せ</h6>
+            <h6>ハ</h6>
+            <h6>!</h6>
+            <h6>お</h6>
+            <h6>か</h6>
+            <h6>え</h6>
+            <h6>り</h6>
           </figcaption>
           <figcaption>
             <h6>み</h6>

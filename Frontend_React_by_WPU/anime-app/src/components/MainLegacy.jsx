@@ -6,7 +6,7 @@ const hasData = (data) => data !== 0;
 
 function MainLegacyResult({ animesLegacy }) {
   return (
-    <>
+    <div id="legacy" className="legacy">
       <br />
       <p
         className="search-results"
@@ -20,7 +20,7 @@ function MainLegacyResult({ animesLegacy }) {
         </strong>
       </p>
       <br />
-    </>
+    </div>
   );
 }
 

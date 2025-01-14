@@ -83,7 +83,7 @@ export default function AnimeTrailer() {
     <>
       <aside className="aside last-left">
         <Fade triggerOnce delay={250} duration={1000}>
-          <div className="recent">
+          <div id="recent" className="recent">
             <h2>
               <span style={{ color: "var(--color-blue-light)" }}>Recent</span>{" "}
               Trailer Anime

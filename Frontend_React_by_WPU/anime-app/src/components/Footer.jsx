@@ -123,6 +123,38 @@ export default function Footer() {
               <br />
               <br />
               <p>
+                <a href="#home">Home</a>
+              </p>
+              <p>
+                <a href="#search-container">Search</a>
+              </p>
+              <p>
+                <a href="#favorite">Favorite</a>
+              </p>
+              <p>
+                <a href="#featured">Featured</a>
+              </p>
+              <p>
+                <a href="#legacy">Sunday Morning TV</a>
+              </p>
+              <p>
+                <a href="#category">Category</a>
+              </p>
+              <p>
+                <a href="#masterpiece">Studio Masterpiece</a>
+              </p>
+              <p>
+                <a href="#genre">Genre</a>
+              </p>
+              <p>
+                <a href="#recent">Trailer</a>
+              </p>
+              <p>
+                <a href="#magazine">Magazine</a>
+              </p>
+            </div>
+            <div>
+              <p>
                 <a
                   href="https://github.com/nantunggaputra/React_Library/blob/main/Frontend_React_by_WPU/anime-app/README.md"
                   target="_blank"
@@ -158,8 +190,6 @@ export default function Footer() {
                   Anime Festival Asia (ID)
                 </a>
               </p>
-            </div>
-            <div>
               <p className="alt">
                 <a
                   href="https://myanimelist.net/"
@@ -196,6 +226,8 @@ export default function Footer() {
                   Privacy Policy
                 </a>
               </p>
+              <p>WeeBoo from Anime-App</p>
+              <p>WeeBoo × Detective Conan</p>
             </div>
           </div>
           <div className="right-menu">
@@ -254,9 +286,10 @@ export default function Footer() {
           itemKey="pocket-button"
           titleOn=""
           titleOff=""
-          url="#pocket"
-          titleLink="Pocket"
-          iconLink="¥"
+          url="https://contra.com/nantungga_putra_f5y67v1g"
+          target="_blank"
+          titleLink="Freelance"
+          iconLink="✦"
         />
       </div>
       <div className="gototop">

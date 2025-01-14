@@ -36,7 +36,7 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
   };
 
   return (
-    <div className="search-container">
+    <div id="search-container" className="search-container">
       <div className="search-label">
         <div className="container">
           <label htmlFor="search-anime">

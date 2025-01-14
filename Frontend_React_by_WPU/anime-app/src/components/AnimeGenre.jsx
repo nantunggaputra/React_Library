@@ -147,7 +147,7 @@ export default function AnimeByGenre() {
                     className="genre-list-image"
                     style={
                       !loadingImage
-                        ? {}
+                        ? { transition: "1s" }
                         : {
                             filter: "blur(0.1rem)",
                           }

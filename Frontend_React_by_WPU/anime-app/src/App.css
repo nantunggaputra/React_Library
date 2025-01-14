@@ -72,8 +72,8 @@ body {
   0% {
     opacity: 0;
   }
-  2.5% {
-    opacity: 0;
+  25% {
+    opacity: 1;
   }
   50% {
     opacity: 1;
@@ -256,7 +256,6 @@ body {
   align-items: center;
   text-shadow: 0 0 5px var(--color-background-grey-25);
   background: #17171797;
-  backdrop-filter: blur(0.25rem);
   z-index: 999;
 }
 
@@ -646,10 +645,35 @@ body {
   position: absolute;
   top: -10.8rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0.25);
   height: 4.5rem;
   filter: brightness(0.25) contrast(0.85) grayscale(1);
+  opacity: 0;
+  animation: seek 10s infinite;
   z-index: 2;
+}
+
+@keyframes seek {
+  0% {
+    transform: translateX(-50%) scale(0.25);
+    opacity: 0;
+  }
+  15% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  45% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0;
+  }
 }
 
 .nav-bar .search-container {
@@ -831,7 +855,6 @@ body {
   position: absolute;
   text-shadow: 0 0 5px var(--color-background-grey-25);
   background: #f0f0f825;
-  backdrop-filter: blur(0.25rem);
   z-index: 1;
 }
 
@@ -883,7 +906,6 @@ body {
   align-items: center;
   border-radius: 1rem;
   background: #17171797;
-  backdrop-filter: blur(0.25rem);
   overflow: auto;
   scrollbar-color: var(--color-background-light) transparent;
 }
@@ -946,6 +968,7 @@ body {
   color: var(--color-white);
   font-family: "Times New Roman", Times, serif;
   font-size: 6.25rem;
+  text-align: center;
 }
 
 .silhouette-off {
@@ -1285,7 +1308,6 @@ body {
   margin: 2.4rem auto -1.4rem;
   width: 31rem;
   background: #17171797;
-  backdrop-filter: blur(0.25rem);
 }
 
 .genre-all,
@@ -1443,7 +1465,6 @@ body {
   padding: 1.5rem;
   margin: 2.4rem auto -1.4rem;
   background: #17171797;
-  backdrop-filter: blur(0.25rem);
   overflow-x: hidden;
   overflow-y: hidden;
   scrollbar-color: var(--color-background-light) transparent;
@@ -1550,7 +1571,7 @@ body {
 }
 
 .love-image img:hover {
-  animation: hide 1s alternate both infinite;
+  animation: hide 2s alternate both;
 }
 
 @keyframes hide {
@@ -1558,12 +1579,12 @@ body {
     opacity: 1;
     z-index: 1;
   }
-  10% {
-    opacity: 1;
+  50% {
+    opacity: 0.5;
     z-index: 1;
   }
   100% {
-    opacity: 0.5;
+    opacity: 1;
     z-index: 1;
   }
 }
@@ -1907,6 +1928,37 @@ body {
   cursor: pointer;
 }
 
+.foot-menu:hover .right-menu button {
+  animation: shake-top 1.075s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+@keyframes shake-top {
+  0%,
+  100% {
+    transform: scale(1.075) rotate(0deg);
+    transform-origin: 50% 0;
+  }
+  10% {
+    transform: scale(1.075) rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: scale(1.075) rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: scale(1.075) rotate(4deg);
+  }
+  80% {
+    transform: scale(1.075) rotate(-2deg);
+  }
+  90% {
+    transform: scale(1.075) rotate(2deg);
+  }
+}
+
 .foot-menu img {
   position: absolute;
   right: -7.5rem;
@@ -2041,7 +2093,6 @@ body {
 @media (max-width: 1264px) {
   .aside {
     background: transparent;
-    backdrop-filter: unset;
   }
 }
 
@@ -2050,7 +2101,6 @@ body {
     display: block;
     position: relative;
     background: #f0f0f825;
-    backdrop-filter: blur(0.25rem);
     padding: 0.5rem 1.5rem;
     margin: auto;
     margin-bottom: 2.4rem;
