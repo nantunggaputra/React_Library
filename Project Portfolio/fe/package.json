@@ -9,6 +9,7 @@
     "body-parser": "^1.20.3",
     "express": "^4.21.2",
     "jquery": "^3.7.1",
+    "nanoid": "^3.3.8",
     "particles-bg": "^2.5.5",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.7",
