@@ -18,8 +18,10 @@ function LoadingPage() {
         &#215;
         <br />
         Detective Conan
+        <br />
+        <br />
+        <audio src="There is Always Only One Truth.aac" controls />
       </h1>
-      <audio src="There is Always Only One Truth.aac" controls />
     </div>
   );
 }

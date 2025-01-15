@@ -88,10 +88,11 @@ body {
 
 .loading-page h1 {
   position: fixed;
-  top: 30%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%);
-  width: 100vw;
+  width: max-content;
+  max-width: 100vw;
   height: 100vh;
   color: var(--color-white);
   font-family: sans-serif, Arial;
@@ -116,11 +117,7 @@ body {
 }
 
 .loading-page audio {
-  position: fixed;
-  bottom: 57.5px;
-  left: 50%;
-  transform: translate(-50%);
-  width: 75vw;
+  width: 100%;
   z-index: 9;
 }
 
@@ -2272,6 +2269,7 @@ body {
   }
 
   .loading-page h1 {
+    top: 35%;
     font-size: 3rem;
     letter-spacing: 1px;
   }

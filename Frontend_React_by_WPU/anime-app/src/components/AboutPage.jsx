@@ -14,7 +14,7 @@ function AboutInfo({ className, url, textLink }) {
 }
 
 export default function AboutPage({ toggleOverlay }) {
-  const appVersion = "v0.1.8";
+  const appVersion = "v0.1.9";
   const appRelease = "Public Beta";
 
   return (
