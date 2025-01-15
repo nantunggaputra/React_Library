@@ -88,7 +88,7 @@ body {
 
 .loading-page h1 {
   position: fixed;
-  top: 35%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%);
   width: 100vw;
@@ -100,12 +100,6 @@ body {
   letter-spacing: 3px;
   opacity: 0;
   z-index: 3;
-  animation: show 5.5s ease;
-}
-
-.loading-page h1::before {
-  content: "⚠️ UNDER DEVELOPMENT";
-  filter: grayscale(1);
   animation: show 5.5s ease, lamp 1s ease 1.5s;
 }
 
@@ -119,6 +113,15 @@ body {
   100% {
     text-shadow: none;
   }
+}
+
+.loading-page audio {
+  position: fixed;
+  bottom: 57.5px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 75vw;
+  z-index: 9;
 }
 
 /* Background */
@@ -396,7 +399,12 @@ body {
   margin: 0 1rem;
   filter: brightness(1.25);
   opacity: 0.95;
+  transition: 0.6s;
   cursor: pointer;
+}
+
+.head-menu .left-menu img:hover {
+  transform: rotate(360deg);
 }
 
 .head-menu .center-menu {
@@ -410,9 +418,18 @@ body {
   scrollbar-color: var(--color-background-light) transparent;
 }
 
-.head-menu .center-menu a {
+.head-menu .center-menu a,
+.head-menu .center-menu span {
   min-width: max-content;
+}
+
+.head-menu .center-menu a {
+  transition: 0.3s;
   cursor: pointer;
+}
+
+.head-menu .center-menu a:hover {
+  color: var(--color-blue-light);
 }
 
 .head-menu .right-menu {
@@ -598,7 +615,8 @@ body {
 
 .nav-bar .arrow {
   margin-top: 0.2rem;
-  font-size: 1.55rem;
+  font-size: 1.75rem;
+  font-weight: 900;
   color: var(--color-red);
   transition: 0.3s;
   cursor: pointer;
@@ -667,11 +685,11 @@ body {
     opacity: 1;
   }
   45% {
-    transform: translateX(-50%) scale(1);
+    transform: translateX(-50%) scale(0.25);
     opacity: 0;
   }
   100% {
-    transform: translateX(-50%) scale(1);
+    transform: translateX(-50%) scale(0.25);
     opacity: 0;
   }
 }
@@ -1392,10 +1410,11 @@ body {
 }
 
 .news-all button {
-  padding: 1rem;
-  font-size: 1.2rem;
+  padding: 1rem 0.75rem;
+  font-size: 1.6rem;
 }
 
+.news-all p,
 .news-all li {
   list-style: none;
   font-weight: 600;
@@ -1404,6 +1423,7 @@ body {
   cursor: default;
 }
 
+.news-all p,
 .news-all a {
   text-decoration: none;
   color: var(--color-red);
@@ -1479,6 +1499,7 @@ body {
   background-color: var(--color-background-light);
   color: var(--color-red);
   font-size: 1.5rem;
+  font-weight: 900;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -1892,11 +1913,11 @@ body {
 }
 
 .foot-menu .left-menu .fs a:hover {
-  color: var(--color-red);
+  color: var(--color-orange);
 }
 
 .foot-menu .left-menu .afa a:hover {
-  color: var(--color-orange);
+  color: var(--color-red);
 }
 
 .foot-menu .right-menu input {
@@ -2251,8 +2272,8 @@ body {
   }
 
   .loading-page h1 {
-    font-size: 3.8rem;
-    letter-spacing: 1.25px;
+    font-size: 3rem;
+    letter-spacing: 1px;
   }
 
   .about-container {

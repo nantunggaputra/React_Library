@@ -40,7 +40,7 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
       <div className="search-label">
         <div className="container">
           <label htmlFor="search-anime">
-            <span title="Search">⌕</span>
+            <span title="Search">{"\u2315"}</span>
           </label>
         </div>
       </div>

@@ -118,7 +118,7 @@ export default function Footer() {
               >
                 anggunnantunggaputra
                 <wbr />
-                @gmail.com
+                &#64;gmail.com
               </small>
               <br />
               <br />
@@ -214,7 +214,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Terms & Conditions
+                  Terms &amp; Conditions
                 </a>
               </p>
               <p>
@@ -227,7 +227,7 @@ export default function Footer() {
                 </a>
               </p>
               <p>WeeBoo from Anime-App</p>
-              <p>WeeBoo × Detective Conan</p>
+              <p>WeeBoo &#215; Detective Conan</p>
             </div>
           </div>
           <div className="right-menu">
@@ -266,8 +266,8 @@ export default function Footer() {
           titleOff="Share"
           state={isCopied}
           toggleState={copyUrlToClipboard}
-          iconOn="✓"
-          iconOff="⌗"
+          iconOn={"\u2713"}
+          iconOff={"\u2317"}
         />
       </div>
       <div className="donation">
@@ -278,7 +278,7 @@ export default function Footer() {
           url="https://trakteer.id/nantunggaputra"
           target="_blank"
           titleLink="Donation"
-          iconLink="⛁"
+          iconLink={"\u26C1"}
         />
       </div>
       <div className="pocket">
@@ -289,7 +289,7 @@ export default function Footer() {
           url="https://contra.com/nantungga_putra_f5y67v1g"
           target="_blank"
           titleLink="Freelance"
-          iconLink="✦"
+          iconLink={"\u2726"}
         />
       </div>
       <div className="gototop">
@@ -299,7 +299,7 @@ export default function Footer() {
           titleOff=""
           url="#"
           titleLink="Go to top"
-          iconLink="⥣"
+          iconLink={"\u2963"}
         />
       </div>
     </footer>

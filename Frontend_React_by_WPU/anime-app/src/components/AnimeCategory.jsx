@@ -106,7 +106,7 @@ export default function AnimeByCategory() {
                     tabIndex="up"
                     onClick={!loadingImage ? handlePrev : undefined}
                   >
-                    ⥣
+                    {"\u2963"}
                   </button>
                   <div className="category-image">
                     <small>
@@ -160,7 +160,7 @@ export default function AnimeByCategory() {
                     tabIndex="down"
                     onClick={!loadingImage ? handleNext : undefined}
                   >
-                    ⥥
+                    {"\u2965"}
                   </button>
                 </>
               )}

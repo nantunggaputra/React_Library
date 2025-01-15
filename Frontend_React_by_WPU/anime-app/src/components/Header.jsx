@@ -36,7 +36,7 @@ export default function Header() {
             <a>Landing Page</a>
             <a>Updates</a>
             <a>Help</a>
-            <a>{countryCode || "IP"}</a>
+            <span>{countryCode || "IP"}</span>
           </div>
           <div className="right-menu">
             <button>

@@ -70,7 +70,7 @@ export default function AnimeByStudio() {
                 className="studio-image"
                 style={
                   !loadingImage
-                    ? {}
+                    ? { transition: "1s" }
                     : {
                         filter: "blur(0.1rem)",
                       }

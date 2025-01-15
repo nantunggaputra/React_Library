@@ -170,7 +170,7 @@ export default function AnimeLove() {
             tabIndex="up"
             onClick={!loadingImage ? handlePrev : undefined}
           >
-            ⥣
+            {"\u2963"}
           </button>
           <div
             className="love-image"
@@ -191,14 +191,14 @@ export default function AnimeLove() {
             />
           </div>
           <p>
-            <span style={{ color: "var(--color-red)" }}>Wee ♡ </span>
+            <span style={{ color: "var(--color-red)" }}>Wee &#10085; </span>
             {title}
           </p>
           <button
             tabIndex="down"
             onClick={!loadingImage ? handleNext : undefined}
           >
-            ⥥
+            {"\u2965"}
           </button>
         </div>
       </div>

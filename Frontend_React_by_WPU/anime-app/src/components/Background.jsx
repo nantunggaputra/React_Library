@@ -89,8 +89,8 @@ export default function Background() {
           titleOff="No connection"
           state={connectionStatus === "online"}
           toggleState={reloadOnlineStatus}
-          iconOn="•"
-          iconOff="•"
+          iconOn={"\u2022"}
+          iconOff={"\u2022"}
           styleOn={{ color: "#13e713", fontSize: "2.5rem", cursor: "progress" }}
           styleOff={{ color: "#ff0000", fontSize: "2.5rem", cursor: "wait" }}
         />
@@ -101,8 +101,8 @@ export default function Background() {
           titleOff="About"
           state={showOverlay}
           toggleState={toggleOverlay}
-          iconOn={<span style={{ fontSize: "1.2rem" }}>𝐢</span>}
-          iconOff={<span style={{ fontSize: "1.2rem" }}>𝐢</span>}
+          iconOn={<span style={{ fontSize: "1.2rem" }}>{"\uD835\uDC22"}</span>}
+          iconOff={<span style={{ fontSize: "1.2rem" }}>{"\uD835\uDC22"}</span>}
         />
       </div>
       <div className="transitions">
@@ -111,8 +111,8 @@ export default function Background() {
           titleOff="Background transitions off"
           state={isTransitionActive}
           toggleState={toggleTransition}
-          iconOn="☯︎"
-          iconOff="⊙"
+          iconOn={"\u262F\uFE0E"}
+          iconOff={"\u2299"}
         />
       </div>
       <div className="animations">
@@ -121,8 +121,8 @@ export default function Background() {
           titleOff="Background animations off"
           state={isAnimationActive}
           toggleState={toggleAnimation}
-          iconOn="❖"
-          iconOff="⊹"
+          iconOn={"\u2756"}
+          iconOff={"\u22B9"}
         />
       </div>
       <div className="music">
@@ -131,8 +131,8 @@ export default function Background() {
           titleOff="Backsound off"
           state={!isPlaying}
           toggleState={togglePlayPause}
-          iconOn="♬"
-          iconOff="♪"
+          iconOn={"\u266C"}
+          iconOff={"\u266A"}
         />
       </div>
     </>

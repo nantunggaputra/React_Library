@@ -53,24 +53,32 @@ export default function AnimeNews() {
         </div>
         <div className="news-all">
           <button onClick={handleFetchRandomNews}>
-            {error ? "⥁" : loading ? "↻" : "⟳"}
+            {error ? "\u2941" : loading ? "\u21BB" : "\u27F3"}
           </button>
-          <ul>
-            {news.map((article) => (
-              <li key={article.mal_id}>
-                <a
-                  href={article.url}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  title="Read news in My Anime List"
-                >
-                  {article.title}
-                </a>
-                <br />
-                <span>{new Date(article.date).toLocaleDateString()}</span>
-              </li>
-            ))}
-          </ul>
+          {loading ? (
+            <p style={{ color: "var(--color-background-light)" }}>
+              Please wait...
+            </p>
+          ) : (
+            <ul>
+              {news.map((article) => (
+                <Fade triggerOnce delay={250} direction="right" duration={500}>
+                  <li key={article.mal_id}>
+                    <a
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      title="Read news in My Anime List"
+                    >
+                      {article.title}
+                    </a>
+                    <br />
+                    <span>{new Date(article.date).toLocaleDateString()}</span>
+                  </li>
+                </Fade>
+              ))}
+            </ul>
+          )}
         </div>
       </Fade>
     </aside>

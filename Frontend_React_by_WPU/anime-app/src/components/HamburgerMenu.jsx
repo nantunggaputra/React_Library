@@ -28,7 +28,7 @@ export default function HamburgerMenu() {
           }}
           styleOff={{}}
           className="button-parrent"
-          iconOn="="
+          iconOn={"\u003D"}
           iconOff=""
         />
       ) : (
@@ -45,7 +45,7 @@ export default function HamburgerMenu() {
             }}
             className="button-parrent"
             iconOn=""
-            iconOff="✖"
+            iconOff={"\u2716"}
           />
           {menus.map((menu) => (
             <FloatingButton
@@ -58,10 +58,10 @@ export default function HamburgerMenu() {
               toggleStateLink={handleChildButtonClick}
               titleLink={menu}
               iconLink={
-                (menu === "Home" && "♤") ||
-                (menu === "Favorite" && "♡") ||
-                (menu === "Category" && "♢") ||
-                (menu === "Genre" && "♧")
+                (menu === "Home" && "\u2660") ||
+                (menu === "Favorite" && "\u2665") ||
+                (menu === "Category" && "\u2666") ||
+                (menu === "Genre" && "\u2663")
               }
             />
           ))}

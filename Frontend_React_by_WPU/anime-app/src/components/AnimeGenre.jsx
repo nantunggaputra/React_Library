@@ -141,7 +141,7 @@ export default function AnimeByGenre() {
                     tabIndex="up"
                     onClick={!loadingImage ? handlePrev : undefined}
                   >
-                    ⥣
+                    {"\u2963"}
                   </button>
                   <div
                     className="genre-list-image"
@@ -168,7 +168,7 @@ export default function AnimeByGenre() {
                     tabIndex="down"
                     onClick={!loadingImage ? handleNext : undefined}
                   >
-                    ⥥
+                    {"\u2965"}
                   </button>
                 </>
               ) : (
