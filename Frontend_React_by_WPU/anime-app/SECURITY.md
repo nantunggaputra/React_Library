@@ -6,8 +6,8 @@ Wee currently support the following versions with security updates:
 
 | Version           | Supported          |
 | ----------------- | ------------------ |
-| v0.1.9-beta       | :white_check_mark: |
-| < v0.1.8.004-beta | :x:                |
+| v0.1.9.001-beta   | :white_check_mark: |
+| < v0.1.9.001-beta | :x:                |
 
 ## Reporting a Vulnerability
 
