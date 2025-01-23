@@ -86,7 +86,6 @@ button {
 
 .list {
   background-image: linear-gradient(180deg, #25252570, #40404070, #25252570);
-  max-height: 36vh;
   margin: 20px 0;
   overflow: scroll;
   padding: 10px 20px;
