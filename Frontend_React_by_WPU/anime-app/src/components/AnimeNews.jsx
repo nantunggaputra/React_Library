@@ -61,9 +61,14 @@ export default function AnimeNews() {
             </p>
           ) : (
             <ul>
-              {news.map((article) => (
-                <Fade triggerOnce delay={250} direction="right" duration={500}>
-                  <li key={article.mal_id}>
+              {news.map((article, index) => (
+                <Fade
+                  delay={250 + index * 75}
+                  direction="right"
+                  duration={500}
+                  key={article.mal_id}
+                >
+                  <li>
                     <a
                       href={article.url}
                       target="_blank"

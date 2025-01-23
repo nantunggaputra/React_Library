@@ -91,28 +91,29 @@ export default function AnimeTrailer() {
           </div>
           <div className="trailer-all">
             {animeTitles.map((title, index) => (
-              <button
-                key={title}
-                onClick={
-                  !loading
-                    ? () => {
-                        setLoading(true);
-                        setCurrentIndex(index);
-                      }
-                    : undefined
-                }
-                className={index === currentIndex ? "selected" : ""}
-                style={
-                  title === "Magic Kaito 1412" || title === "KID"
-                    ? {
-                        filter: "grayscale(1)",
-                        cursor: "default",
-                      }
-                    : undefined
-                }
-              >
-                {title}
-              </button>
+              <Fade delay={250 + index * 75} duration={500} key={title}>
+                <button
+                  onClick={
+                    !loading
+                      ? () => {
+                          setLoading(true);
+                          setCurrentIndex(index);
+                        }
+                      : undefined
+                  }
+                  className={index === currentIndex ? "selected" : ""}
+                  style={
+                    title === "Magic Kaito 1412" || title === "KID"
+                      ? {
+                          filter: "grayscale(1)",
+                          cursor: "default",
+                        }
+                      : undefined
+                  }
+                >
+                  {title}
+                </button>
+              </Fade>
             ))}
           </div>
         </Fade>

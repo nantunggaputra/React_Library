@@ -87,26 +87,27 @@ export default function AnimeByGenre() {
             </h2>
           </div>
           <div className="genre-all">
-            {genres.map((genre) => (
-              <button
-                key={genre.mal_id}
-                onClick={
-                  !loading
-                    ? () => fetchAnimeByGenre(genre.mal_id, genre.name)
-                    : undefined
-                }
-                className={genre.name === selectedGenre ? "selected" : ""}
-                style={
-                  genre.name === "Hentai"
-                    ? {
-                        filter: "grayscale(1)",
-                        cursor: "not-allowed",
-                      }
-                    : {}
-                }
-              >
-                {genre.name}
-              </button>
+            {genres.map((genre, index) => (
+              <Fade delay={250 + index * 75} duration={500} key={genre.mal_id}>
+                <button
+                  onClick={
+                    !loading
+                      ? () => fetchAnimeByGenre(genre.mal_id, genre.name)
+                      : undefined
+                  }
+                  className={genre.name === selectedGenre ? "selected" : ""}
+                  style={
+                    genre.name === "Hentai"
+                      ? {
+                          filter: "grayscale(1)",
+                          cursor: "not-allowed",
+                        }
+                      : {}
+                  }
+                >
+                  {genre.name}
+                </button>
+              </Fade>
             ))}
           </div>
         </Fade>
