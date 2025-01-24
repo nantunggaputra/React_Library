@@ -26,25 +26,12 @@ h3 {
 
 .add-form .report {
   font-weight: bold;
-  animation: blink 2s ease infinite;
 }
 
 .add-form .report a {
   color: #737373;
   font-size: 0.8rem;
   text-decoration: none;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.4;
-  }
 }
 
 .add-form input {
@@ -89,6 +76,19 @@ button {
   margin: 20px 0;
   overflow: scroll;
   padding: 10px 20px;
+  animation: bgcolor 2s linear infinite;
+}
+
+@keyframes bgcolor {
+  0% {
+    background-color: #25252570;
+  }
+  50% {
+    background-color: #40404070;
+  }
+  100% {
+    background-color: #25252570;
+  }
 }
 
 .list ul {
