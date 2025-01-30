@@ -2253,6 +2253,10 @@ body {
     letter-spacing: 2px;
   }
 
+  .loading-page footer {
+    margin-bottom: 5rem;
+  }
+
   .lights {
     width: 90%;
   }
@@ -2262,6 +2266,10 @@ body {
   .loading-page header {
     font-size: 4rem;
     letter-spacing: 1.85px;
+  }
+
+  .loading-page footer {
+    margin-bottom: 7rem;
   }
 
   .foot-menu .left-menu {
@@ -2289,6 +2297,10 @@ body {
   .loading-page header {
     font-size: 3.25rem;
     letter-spacing: 0.75px;
+  }
+
+  .loading-page footer {
+    margin-bottom: 9rem;
   }
 
   .about-container {
