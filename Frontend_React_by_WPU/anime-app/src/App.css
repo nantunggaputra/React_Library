@@ -60,6 +60,10 @@ body {
   transform: translateX(-50%);
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: last baseline;
   background: linear-gradient(to top, #17171700, #000000),
     url("../Detective Conan Case Closed Brick Background.webp");
   background-position: center;
@@ -86,19 +90,13 @@ body {
   }
 }
 
-.loading-page h1 {
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%);
-  width: max-content;
-  max-width: 100vw;
-  height: 100vh;
+.loading-page header {
+  width: 100vw;
   color: var(--color-white);
   font-family: sans-serif, Arial;
-  font-size: 8rem;
+  font-size: 5rem;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 2.85px;
   opacity: 0;
   z-index: 3;
   animation: show 5.5s ease, lamp 1s ease 1.5s;
@@ -116,9 +114,29 @@ body {
   }
 }
 
-.loading-page audio {
-  width: 100%;
+.loading-page figure {
   z-index: 9;
+}
+
+.loading-page footer {
+  margin-bottom: 3rem;
+  width: 100vw;
+  text-align: center;
+  font-family: sans-serif, Arial;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-white);
+}
+
+.loading-page footer span {
+  margin: 2.85rem 0;
+  display: block;
+}
+
+.loading-page footer span b {
+  padding: 1rem 1.85rem;
+  background-color: var(--color-background-grey-17);
+  border-radius: 1rem;
 }
 
 /* Background */
@@ -2230,8 +2248,8 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .loading-page h1 {
-    font-size: 6rem;
+  .loading-page header {
+    font-size: 4.5rem;
     letter-spacing: 2px;
   }
 
@@ -2241,8 +2259,8 @@ body {
 }
 
 @media (max-width: 926px) {
-  .loading-page h1 {
-    font-size: 5rem;
+  .loading-page header {
+    font-size: 4rem;
     letter-spacing: 1.85px;
   }
 
@@ -2268,10 +2286,9 @@ body {
     display: none;
   }
 
-  .loading-page h1 {
-    top: 35%;
-    font-size: 3rem;
-    letter-spacing: 1px;
+  .loading-page header {
+    font-size: 3.25rem;
+    letter-spacing: 0.75px;
   }
 
   .about-container {

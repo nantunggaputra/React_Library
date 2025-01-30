@@ -11,18 +11,26 @@ import Footer from "./components/Footer";
 
 function LoadingPage() {
   return (
-    <div className="loading-page">
-      <h1>
-        WeeBoo
-        <br />
-        &#215;
-        <br />
-        Detective Conan
-        <br />
-        <br />
-        <audio src="There is Always Only One Truth.aac" controls />
-      </h1>
-    </div>
+    <section className="loading-page">
+      <header>
+        <h1>WeeBoo</h1>
+        <h2>&times;</h2>
+        <h2>Detective Conan</h2>
+      </header>
+      <article>
+        <figure>
+          <audio src="There is Always Only One Truth.aac" controls />
+        </figure>
+      </article>
+      <footer>
+        <span>
+          <b>from</b>
+        </span>
+        <span>
+          <b>Anime-App</b>
+        </span>
+      </footer>
+    </section>
   );
 }
 
