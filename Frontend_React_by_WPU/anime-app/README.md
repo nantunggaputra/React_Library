@@ -12,7 +12,7 @@ WeeBoo is designed and developed by [Nantungga Putra](https://nantunggaputra.git
 - Search for anime by title.
 - Provides anime by editor's choice, recommended category, genre, featured, nostalgic 2000s anime, and more.
 - Detailed information about search results anime, including year of release, score, rating, status, synopsis, and more.
-- Easy and fast navigation (about, contact, etc) between pages without reloading (coming soon).
+- Scrapes the website to satisfy the need for API functionality that MyAnimeList.net lacks.
 - ...
 
 ## Technologies used
@@ -53,7 +53,7 @@ WeeBoo is designed and developed by [Nantungga Putra](https://nantunggaputra.git
     pnpm run build
     ```
 
-    The application will build at [localhost:3000/weeboo/index.html](http://localhost:3000/weeboo/index.html).
+    The application will build at [localhost:3000/Frontend_React_by_WPU/anime-app/weeboo/index.html](http://localhost:3000/Frontend_React_by_WPU/anime-app/weeboo/index.html).
 
 ## Project Structure
 
@@ -65,13 +65,12 @@ anime-app/
 ├── src/
 │ ├── assets/
 │ ├── components/
-│ ├── pages/
-│ ├── services/
+│ ├── config/
+│ ├── service/
 │ ├── App.css
 │ ├── App.jsx
-│ ├── main.jsx
-│ └── index.css
-├── weeboo/
+│ └── main.jsx
+├── weeboo/ [Custom Build Output Directory]
 ├── .eslintrc.cjs
 ├── .gitignore
 ├── index.html
