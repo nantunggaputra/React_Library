@@ -102,6 +102,32 @@ or as a subdomain:
 
     landingpage.weeboo (if using a custom domain setup)
 
+## Contributing
+
+Wee welcome contributions. To contribute, follow these steps:
+
+1.  Fork this repository.
+
+2.  Create a new feature branch.
+
+    ```bash
+    git checkout -b your-feature
+    ```
+
+3.  Commit your changes.
+
+    ```bash
+    git commit -m 'Add new feature'
+    ```
+
+4.  Push to the branch.
+
+    ```bash
+    git push origin your-feature
+    ```
+
+5.  Create a Pull Request.
+
 ### Contact Information
 
 If you have any questions or suggestions, please contact us at anggunnantunggaputra@gmail.com or send our developer message on [Nantungga Putra | LinkedIn](https://www.linkedin.com/in/nantungga-putra-451779116/) or create an [issue](https://github.com/nantunggaputra/React_Library/issues/) in this repository.
