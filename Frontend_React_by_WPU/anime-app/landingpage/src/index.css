@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pontano+Sans:wght@300..700&family=Sedan:ital@0;1&family=Wix+Madefor+Display:wght@400..800&display=swap");
+
+:root {
+  font-family: "Wix Madefor Display", sans-serif, Arial;
+  font-optical-sizing: auto;
+  font-synthesis: none;
+  font-weight: 400;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 0.1px solid #80808080; */
+  /** for border and layout debugging */
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: #f0f0f8;
+  background-color: #070707;
+  overflow-x: hidden;
+}
+
+#root {
+  --color-white: #ffffff;
+  --color-light: #f0f0f8;
+  --color-light-1: #ececf4;
+  --color-light-2: #ceced6;
+  --color-light-3: #c4c4cc;
+  --color-light-4: #c4c4cccc;
+  --color-orange: #fcbe14;
+  --color-blue-light: #0377b9;
+  --color-blue: #0377b980;
+  --color-red: #d372b8;
+  --color-red-dark: #aa3d8b;
+  --color-green: #40bd06;
+  --color-dark-4: #252525cc;
+  --color-dark-3: #252525;
+  --color-dark-2: #171717;
+  --color-dark-1: #0e0e0e;
+  --color-dark: #070707;
+  --color-black: #000000;
+}
+
+div,
+section,
+article,
+aside,
+header,
+footer,
+nav,
+main {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a,
+button {
+  outline: none;
+}
+
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  border: none;
+}
+
+a,
+ul li a {
+  transition: 0.3s;
+}
+
+a,
+a:hover,
+ul li a,
+ul li a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
