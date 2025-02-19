@@ -226,8 +226,8 @@ export default function Footer() {
                   Privacy Policy
                 </a>
               </p>
-              <p>WeeBoo from Anime-App</p>
               <p>WeeBoo &#215; Detective Conan</p>
+              <p>WeeBoo from Anime-App</p>
             </div>
           </div>
           <div className="right-menu">
