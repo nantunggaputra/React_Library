@@ -66,6 +66,7 @@ export default function AnimeNews() {
                   delay={250 + index * 75}
                   direction="right"
                   duration={500}
+                  fraction={0}
                   key={article.mal_id}
                 >
                   <li>

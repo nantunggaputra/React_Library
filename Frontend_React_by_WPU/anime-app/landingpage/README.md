@@ -69,9 +69,11 @@ anime-app/
 │ │ ├── pages/
 │ │ ├── App.css
 │ │ ├── App.jsx
+│ │ ├── AppMobile.css
+│ │ ├── index.css
 │ │ └── main.jsx
-│ ├── .eslintrc.cjs
 │ ├── .gitignore
+│ ├── eslint.config.js
 │ ├── index.html
 │ ├── package.json
 │ ├── pnpm-lock.yaml
@@ -127,6 +129,10 @@ Wee welcome contributions. To contribute, follow these steps:
     ```
 
 5.  Create a Pull Request.
+
+### License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 ### Contact Information
 

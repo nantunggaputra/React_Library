@@ -91,7 +91,12 @@ export default function AnimeTrailer() {
           </div>
           <div className="trailer-all">
             {animeTitles.map((title, index) => (
-              <Fade delay={250 + index * 75} duration={500} key={title}>
+              <Fade
+                delay={250 + index * 75}
+                duration={500}
+                fraction={0}
+                key={title}
+              >
                 <button
                   onClick={
                     !loading
