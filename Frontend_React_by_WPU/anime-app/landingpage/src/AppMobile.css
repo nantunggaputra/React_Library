@@ -1,0 +1,49 @@
+/** Tablet  */
+
+@media (width <= 1024px) {
+}
+
+/** Mobile  */
+
+@media (width <= 768px) {
+  /** Header */
+
+  .header {
+    padding: 16px;
+  }
+
+  .header-container {
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  .nav {
+    gap: 24px;
+  }
+
+  .logo img {
+    max-width: 38px;
+    min-width: 38px;
+    max-height: 36px;
+    min-height: 36px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+  .nav-links a {
+    font-size: 12px;
+  }
+  .nav-links span {
+    display: none;
+  }
+
+  .auth-buttons {
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,104 @@
+/** Desktop  */
+
+/** Header  */
+
+.header {
+  padding: 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  z-index: 50;
+}
+.header.scrolled {
+  background: var(--color-dark-4);
+  backdrop-filter: blur(4px);
+  box-shadow: 0px 4px 6px var(--color-dark);
+}
+
+.header-container {
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo img {
+  padding-top: 2px;
+  max-width: 42px;
+  min-width: 42px;
+  max-height: 40px;
+  min-height: 40px;
+  object-fit: contain;
+  filter: grayscale(1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-light-4);
+  transition: color 0.3s ease-in-out;
+}
+.nav-links a svg {
+  margin-right: 6px;
+  margin-bottom: -4px;
+  min-width: 18px;
+  max-width: 18px;
+  min-height: 18px;
+  max-height: 18px;
+}
+.nav-links a.active {
+  color: var(--color-light);
+}
+.nav-links a.active svg {
+  fill: var(--color-light-5);
+}
+.nav-links a:hover {
+  color: var(--color-light);
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-ghost {
+  color: var(--color-light);
+  background: none;
+}
+.btn-ghost:hover {
+  background: var(--color-dark-2);
+}
+
+.btn-primary {
+  color: var(--color-light);
+  background: var(--color-dark);
+}
+.btn-primary:hover {
+  background: var(--color-dark-2);
+}
