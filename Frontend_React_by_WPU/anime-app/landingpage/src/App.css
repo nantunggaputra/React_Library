@@ -1,5 +1,40 @@
 /** Desktop  */
 
+/** Animation */
+
+@keyframes animate-background {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+}
+
+@keyframes animate-button {
+  0% {
+    background-position: 0% 50%;
+  }
+  70% {
+    background-position: 100% 50%;
+  }
+  80% {
+    background-position: 100% 50%;
+  }
+  90% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /** Header  */
 
 .header {
@@ -50,7 +85,6 @@
 .nav-links a {
   font-size: 14px;
   font-weight: 600;
-  text-decoration: none;
   color: var(--color-light-4);
   transition: color 0.3s ease-in-out;
 }
@@ -81,7 +115,6 @@
   padding: 8px 16px;
   font-size: 14px;
   font-weight: 500;
-  border: none;
   border-radius: 8px;
   transition: 0.3s;
   cursor: pointer;
@@ -89,7 +122,6 @@
 
 .btn-ghost {
   color: var(--color-light);
-  background: none;
 }
 .btn-ghost:hover {
   background: var(--color-dark-2);
@@ -101,4 +133,106 @@
 }
 .btn-primary:hover {
   background: var(--color-dark-2);
+}
+
+/** Hero */
+
+.hero {
+  padding: 124px 48px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 28px;
+  overflow-x: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  right: -30%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, var(--color-light-5) 0%, transparent 40%);
+  opacity: 0;
+  pointer-events: none;
+  animation: animate-background 6s ease-in-out infinite;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero-subtitle {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-light-4);
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.highlight {
+  font-weight: 800;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--color-dark-4),
+    transparent,
+    transparent
+  );
+}
+
+.hero-description {
+  margin: 24px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-light);
+}
+.hero-description span {
+  font-size: 14px;
+  color: var(--color-light-4);
+}
+
+.hero-button {
+  padding: 8px 16px;
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-dark);
+  background: var(--color-light);
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+.hero-button:hover {
+  background: var(--color-light-2);
+}
+.hero-button:hover::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    transparent,
+    var(--color-dark-4),
+    var(--color-light-2)
+  );
+  background-size: 300% 300%;
+  border-radius: 8px;
+  animation: animate-button 2s ease-in-out infinite;
+  inset: -2px;
+  z-index: -1;
 }
