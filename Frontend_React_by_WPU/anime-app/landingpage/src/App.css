@@ -2,7 +2,7 @@
 
 /** Animation */
 
-@keyframes animate-background {
+@keyframes animate-lamp-background {
   0% {
     opacity: 0;
     transform: translateX(50%);
@@ -17,7 +17,96 @@
   }
 }
 
-@keyframes animate-button {
+@keyframes animate-title-highlight {
+  0%,
+  100% {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-dark-4),
+      transparent,
+      transparent
+    );
+  }
+  41.99% {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-light-3),
+      transparent,
+      transparent
+    );
+  }
+  42% {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-dark-3),
+      transparent,
+      transparent
+    );
+    opacity: 1;
+  }
+  43% {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-dark-4),
+      transparent,
+      transparent
+    );
+    opacity: 0.7;
+  }
+  43.01% {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-light-3),
+      transparent,
+      transparent
+    );
+    opacity: 0.7;
+  }
+  47.99% {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-light-2),
+      transparent,
+      transparent
+    );
+    opacity: 1;
+  }
+  48% {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-dark-3),
+      transparent,
+      transparent
+    );
+  }
+  49% {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-dark-4),
+      transparent,
+      transparent
+    );
+  }
+  49.01% {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-light),
+      transparent,
+      transparent
+    );
+  }
+}
+
+@keyframes animate-cta-button {
   0% {
     background-position: 0% 50%;
   }
@@ -32,6 +121,39 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes animate-logo-slider {
+  0% {
+    transform: translateX(0);
+  }
+  2% {
+    transform: translateX(0);
+  }
+  96% {
+    transform: translateX(-200%);
+  }
+  98% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes animate-app-button {
+  0% {
+    color: var(--color-light-4);
+  }
+  25% {
+    color: var(--color-light-4);
+  }
+  75% {
+    color: var(--color-light);
+  }
+  100% {
+    color: var(--color-light-4);
   }
 }
 
@@ -91,10 +213,10 @@
 .nav-links a svg {
   margin-right: 6px;
   margin-bottom: -4px;
-  min-width: 18px;
   max-width: 18px;
-  min-height: 18px;
+  min-width: 18px;
   max-height: 18px;
+  min-height: 18px;
 }
 .nav-links a.active {
   color: var(--color-light);
@@ -144,7 +266,7 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  gap: 28px;
+  gap: 48px;
   overflow-x: hidden;
 }
 .hero::after {
@@ -157,13 +279,18 @@
   background: radial-gradient(circle, var(--color-light-5) 0%, transparent 40%);
   opacity: 0;
   pointer-events: none;
-  animation: animate-background 6s ease-in-out infinite;
+  animation: animate-lamp-background 6s ease-in-out infinite;
 }
 
 .hero-content {
   width: 100%;
-  max-width: 600px;
+  max-width: 640px;
+  min-width: 260px;
   text-align: left;
+  cursor: default;
+}
+.hero-content:hover .highlight {
+  animation: animate-title-highlight 1s ease infinite;
 }
 
 .hero-subtitle {
@@ -178,11 +305,12 @@
   font-size: 2.8rem;
   font-weight: 600;
   line-height: 1.2;
+  opacity: 1;
 }
 
 .highlight {
   font-weight: 800;
-  background-image: linear-gradient(
+  background: linear-gradient(
     to right,
     transparent,
     var(--color-dark-4),
@@ -193,8 +321,11 @@
 
 .hero-description {
   margin: 24px 0;
+  width: 100%;
+  max-width: 420px;
   font-size: 18px;
   font-weight: 600;
+  text-align: justify;
   color: var(--color-light);
 }
 .hero-description span {
@@ -232,7 +363,173 @@
   );
   background-size: 300% 300%;
   border-radius: 8px;
-  animation: animate-button 2s ease-in-out infinite;
+  animation: animate-cta-button 2s ease-in-out infinite;
   inset: -2px;
   z-index: -1;
+}
+
+.partner-info {
+  margin-top: 52px;
+  display: flex;
+  align-items: center;
+}
+
+.partner-logo {
+  margin-right: 4px;
+  width: 13px;
+  height: 13px;
+  filter: grayscale(1);
+}
+
+.partner-name {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.partner-logos {
+  margin-top: 20px;
+}
+
+.logo-slider {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.logo-slider:hover .logo-track {
+  filter: unset;
+}
+
+.logo-track {
+  display: flex;
+  gap: 2rem;
+  filter: grayscale(1);
+  transition: all 0.9s ease-in-out;
+  animation: animate-logo-slider 30s linear infinite;
+}
+
+.logo-item {
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.hero-image-container:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    var(--color-dark-4),
+    var(--color-dark-2)
+  );
+  pointer-events: none;
+}
+.hero-image-container:hover .hero-image {
+  filter: grayscale(1) contrast(0.7);
+}
+.hero-image-container:hover .overlay-button svg {
+  animation: animate-app-button 1s ease-in-out infinite;
+}
+.hero-image-container:hover .overlay-text.description {
+  display: block;
+}
+.hero-image-container:hover .overlay-text.developer {
+  display: none;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease-in-out;
+}
+.hero-image.scaled {
+  transform: scale(1.05);
+}
+
+.hero-overlay-card {
+  padding: 15px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  background: linear-gradient(
+    to right,
+    var(--color-dark-1),
+    var(--color-dark-2)
+  );
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px var(--color-dark-4);
+  cursor: default;
+}
+
+.overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.overlay-title {
+  font-size: 14px;
+  font-weight: 800;
+}
+.overlay-title span {
+  margin-left: 2px;
+  font-size: 12px;
+  color: var(--color-blue-light);
+}
+
+.overlay-text {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-light-3);
+}
+.overlay-text.description {
+  display: none;
+}
+
+.overlay-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.overlay-footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overlay-year {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-light);
+}
+
+.overlay-button {
+  cursor: pointer;
+}
+.overlay-button svg {
+  max-width: 21px;
+  min-width: 21px;
+  max-height: 21px;
+  min-height: 21px;
+  color: var(--color-light-4);
 }
