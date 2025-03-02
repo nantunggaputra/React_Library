@@ -27,7 +27,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  min-width: 320px;
+  min-width: 380px;
   min-height: 100vh;
   color: #f0f0f8;
   background-color: #070707;
@@ -41,12 +41,14 @@ body {
   --color-light-2: #ceced6;
   --color-light-3: #c4c4cc;
   --color-light-4: #c4c4cccc;
+  --color-light-5: #c4c4cc4d;
   --color-orange: #fcbe14;
   --color-blue-light: #0377b9;
   --color-blue: #0377b980;
   --color-red: #d372b8;
   --color-red-dark: #aa3d8b;
   --color-green: #40bd06;
+  --color-dark-5: #2626264d;
   --color-dark-4: #252525cc;
   --color-dark-3: #252525;
   --color-dark-2: #171717;
