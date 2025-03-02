@@ -1,6 +1,16 @@
 /** Tablet  */
 
 @media (width <= 1024px) {
+  /** Hero */
+
+  .hero-content {
+    max-width: 560px;
+  }
+
+  .hero-description,
+  .logo-slider {
+    max-width: 380px;
+  }
 }
 
 /** Mobile  */
@@ -45,5 +55,39 @@
   .btn {
     padding: 6px 14px;
     font-size: 12px;
+  }
+
+  /** Hero  */
+
+  .hero {
+    padding: 124px 28px;
+    flex-direction: column;
+    align-items: normal;
+    gap: 60px;
+  }
+  .hero::after {
+    height: 70%;
+    background: radial-gradient(
+      circle,
+      var(--color-light-5) 0%,
+      transparent 30%
+    );
+  }
+
+  .hero-title {
+    max-width: 540px;
+  }
+
+  .hero-description {
+    max-width: 420px;
+  }
+
+  .hero-content,
+  .logo-slider {
+    max-width: unset;
+  }
+
+  .hero-image.scaled {
+    transform: unset;
   }
 }

@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
+import { NavLink } from "react-router-dom";
 import { ChevronsRight } from "react-feather";
 
 // Partner Data
@@ -38,83 +40,98 @@ function Hero() {
 
   return (
     <section className="hero">
-      {/* Hero Section: Left-side */}
-      <div className="hero-content">
-        <h2 className="hero-subtitle">WEEBOO FROM ANIME-APP</h2>
-        <h1 className="hero-title">
-          YOUR <span className="highlight">ULTIMATE</span> ANIME-APP{" "}
-          <span className="highlight">STARTS</span> HERE!
-        </h1>
-        <p className="hero-description">
-          Stay updated with the latest features, anime search functionalities,
-          and exciting development progress of Anime-App.
-          <br />
-          <span>
-            Be part of our journey and explore what&apos;s coming next!
-          </span>
-        </p>
-        <button className="hero-button">See Updates</button>
-        <div className="partner-info">
-          <img
-            src="/images/header/WeeBoo.png"
-            alt="WeeBoo Logo"
-            className="partner-logo"
-          />
-          <span className="partner-name">WEEBOO&apos;S PARTNER</span>
-        </div>
-        <div className="partner-logos">
-          <div className="logo-slider">
-            <div className="logo-track">
-              {partners.concat(partners).map((item, index) => (
-                <img
-                  key={index}
-                  src={item.image}
-                  alt={item.name}
-                  className="logo-item"
-                />
-              ))}
+      <Fade delay={250} duration={1000} triggerOnce>
+        {/* Hero Section: Left-side */}
+        <div className="hero-content">
+          <Fade delay={0} duration={750} direction="left" triggerOnce>
+            <h2 className="hero-subtitle">WEEBOO FROM ANIME-APP</h2>
+            <h1 className="hero-title">
+              YOUR <span className="highlight">ULTIMATE</span> ANIME-APP{" "}
+              <span className="highlight">STARTS</span> HERE!
+            </h1>
+            <p className="hero-description">
+              Stay updated with the latest features, anime search
+              functionalities, and exciting development progress of Anime-App.
+              <br />
+              <span>
+                Be part of our journey and explore what&apos;s coming next!
+              </span>
+            </p>
+            <NavLink to="/updates/#updates">
+              <button className="hero-button">See Updates</button>
+            </NavLink>
+          </Fade>
+          <Fade delay={250} duration={750} direction="up" triggerOnce>
+            <div className="partner-info">
+              <img
+                src="/images/header/WeeBoo.png"
+                alt="WeeBoo Logo"
+                className="partner-logo"
+              />
+              <span className="partner-name">WEEBOO&apos;S PARTNER</span>
             </div>
-          </div>
+            <div className="partner-logos">
+              <div className="logo-slider">
+                <div className="logo-track">
+                  {partners.concat(partners).map((item, index) => (
+                    <img
+                      key={index}
+                      src={item.image}
+                      alt={item.name}
+                      className="logo-item"
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Fade>
         </div>
-      </div>
 
-      {/* Hero Section: Right-side */}
-      <div className="hero-image-container">
-        <img
-          src="/images/hero/banner/Detective Conan Case Closed Brick Background.webp"
-          alt="WeeBoo Banner"
-          className={`hero-image ${isScrolled ? "scaled" : ""}`}
-        />
-        <div className="hero-overlay-card">
-          <div className="overlay-header">
-            <div>
-              <h3 className="overlay-title">
-                WeeBoo | My Anime List<span> 0.1 Beta</span>
-              </h3>
-              <p className="overlay-text description">
-                WeeBoo | My Anime List is a Front-End SPA (Single Page
-                Application) Web project built using React to display a list of
-                anime.
-              </p>
-              <p className="overlay-text developer">
-                WeeBoo is designed and developed by Nantungga Putra, also later
-                dedicated development team under Open Source Contribution.
-              </p>
-            </div>
+        {/* Hero Section: Right-side */}
+        <div className="hero-image-container">
+          <Fade delay={0} duration={750} direction="right" triggerOnce>
             <img
-              src="/images/header/WeeBoo.png"
-              alt="WeeBoo Logo"
-              className="overlay-logo"
+              src="/images/hero/banner/Detective Conan Case Closed Brick Background.webp"
+              alt="WeeBoo Banner"
+              className={`hero-image ${isScrolled ? "scaled" : ""}`}
             />
-          </div>
-          <div className="overlay-footer">
-            <span className="overlay-year">2024</span>
-            <button className="overlay-button">
-              <ChevronsRight size={20} />
-            </button>
-          </div>
+            <Fade delay={250} duration={750} triggerOnce>
+              <div className="hero-overlay-card">
+                <div className="overlay-header">
+                  <div>
+                    <h3 className="overlay-title">
+                      WeeBoo | My Anime List<span> 0.1 Beta</span>
+                    </h3>
+                    <p className="overlay-text description">
+                      <b>WeeBoo | My Anime List</b> is a Front-End SPA (Single
+                      Page Application) Web project built using <b>React</b> to
+                      display a list of anime.
+                    </p>
+                    <p className="overlay-text developer">
+                      <b>WeeBoo</b> is designed and developed by{" "}
+                      <b>Nantungga Putra</b>, also later dedicated development
+                      team under Open Source Contribution.
+                    </p>
+                  </div>
+                  <img
+                    src="/images/header/WeeBoo.png"
+                    alt="WeeBoo Logo"
+                    className="overlay-logo"
+                  />
+                </div>
+                <div className="overlay-footer">
+                  <span className="overlay-year">2024</span>
+                  <a href="../">
+                    <button className="overlay-button">
+                      <ChevronsRight size={20} />
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </Fade>
+          </Fade>
         </div>
-      </div>
+      </Fade>
     </section>
   );
 }
