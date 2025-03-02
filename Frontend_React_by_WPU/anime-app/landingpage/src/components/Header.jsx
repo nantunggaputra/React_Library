@@ -20,7 +20,7 @@ function Header() {
         <div className="nav">
           <div className="logo">
             <NavLink to="/#home" exact>
-              <img src="/images/header/WeeBoo.png" alt="WeeBoo" />
+              <img src="/landingpage/images/header/WeeBoo.png" alt="WeeBoo" />
             </NavLink>
           </div>
           <nav className="nav-links">
