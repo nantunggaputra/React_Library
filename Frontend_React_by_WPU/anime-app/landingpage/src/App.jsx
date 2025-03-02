@@ -1,6 +1,6 @@
 import "./App.css";
 import "./AppMobile.css";
-import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Home from "./pages/Home";
 import Updates from "./pages/Updates";
@@ -43,9 +43,9 @@ function WeeBoo() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router basename="/landingpage">
       <WeeBoo />
-    </BrowserRouter>
+    </Router>
   );
 }
 

@@ -5,25 +5,25 @@ import { ChevronsRight } from "react-feather";
 
 // Partner Data
 const partners = [
-  { id: 1, name: "BSTATION", image: "./images/hero/partner/BSTATION.webp" },
+  { id: 1, name: "BSTATION", image: "/landingpage/images/hero/partner/BSTATION.webp" },
   {
     id: 2,
     name: "CRUNCHYROLL",
-    image: "./images/hero/partner/CRUNCHYROLL.webp",
+    image: "/landingpage/images/hero/partner/CRUNCHYROLL.webp",
   },
   {
     id: 3,
     name: "DISNEYPLUSHOTSTAR",
-    image: "./images/hero/partner/DISNEYPLUSHOTSTAR.webp",
+    image: "/landingpage/images/hero/partner/DISNEYPLUSHOTSTAR.webp",
   },
-  { id: 4, name: "FUNIMATION", image: "./images/hero/partner/FUNIMATION.webp" },
-  { id: 5, name: "GENFLIX", image: "./images/hero/partner/GENFLIX.webp" },
-  { id: 6, name: "IQIYI", image: "./images/hero/partner/IQIYI.webp" },
-  { id: 7, name: "NETFLIX", image: "./images/hero/partner/NETFLIX.webp" },
-  { id: 8, name: "PRIMEVIDEO", image: "./images/hero/partner/PRIMEVIDEO.webp" },
-  { id: 9, name: "VIDIO", image: "./images/hero/partner/VIDIO.webp" },
-  { id: 10, name: "VIU", image: "./images/hero/partner/VIU.webp" },
-  { id: 11, name: "WETV", image: "./images/hero/partner/WETV.webp" },
+  { id: 4, name: "FUNIMATION", image: "/landingpage/images/hero/partner/FUNIMATION.webp" },
+  { id: 5, name: "GENFLIX", image: "/landingpage/images/hero/partner/GENFLIX.webp" },
+  { id: 6, name: "IQIYI", image: "/landingpage/images/hero/partner/IQIYI.webp" },
+  { id: 7, name: "NETFLIX", image: "/landingpage/images/hero/partner/NETFLIX.webp" },
+  { id: 8, name: "PRIMEVIDEO", image: "/landingpage/images/hero/partner/PRIMEVIDEO.webp" },
+  { id: 9, name: "VIDIO", image: "/landingpage/images/hero/partner/VIDIO.webp" },
+  { id: 10, name: "VIU", image: "/landingpage/images/hero/partner/VIU.webp" },
+  { id: 11, name: "WETV", image: "/landingpage/images/hero/partner/WETV.webp" },
 ];
 
 function Hero() {
@@ -64,7 +64,7 @@ function Hero() {
           <Fade delay={250} duration={750} direction="up" triggerOnce>
             <div className="partner-info">
               <img
-                src="/images/header/WeeBoo.png"
+                src="/landingpage/images/header/WeeBoo.png"
                 alt="WeeBoo Logo"
                 className="partner-logo"
               />
@@ -91,7 +91,7 @@ function Hero() {
         <div className="hero-image-container">
           <Fade delay={0} duration={750} direction="right" triggerOnce>
             <img
-              src="/images/hero/banner/Detective Conan Case Closed Brick Background.webp"
+              src="/landingpage/images/hero/banner/Detective Conan Case Closed Brick Background.webp"
               alt="WeeBoo Banner"
               className={`hero-image ${isScrolled ? "scaled" : ""}`}
             />
@@ -114,7 +114,7 @@ function Hero() {
                     </p>
                   </div>
                   <img
-                    src="/images/header/WeeBoo.png"
+                    src="/landingpage/images/header/WeeBoo.png"
                     alt="WeeBoo Logo"
                     className="overlay-logo"
                   />
