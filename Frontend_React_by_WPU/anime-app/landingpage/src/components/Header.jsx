@@ -19,20 +19,20 @@ function Header() {
       <div className="header-container">
         <div className="nav">
           <div className="logo">
-            <NavLink to="/" exact>
+            <NavLink to="/#home" exact>
               <img src="/images/header/WeeBoo.png" alt="WeeBoo" />
             </NavLink>
           </div>
           <nav className="nav-links">
-            <NavLink to="/" exact activeClassName="active">
+            <NavLink to="/#home" exact activeClassName="active">
               <Trello />
               <span>LANDING PAGE</span>
             </NavLink>
-            <NavLink to="/updates" activeClassName="active">
+            <NavLink to="/updates/#updates" activeClassName="active">
               <Activity />
               <span>UPDATES</span>
             </NavLink>
-            <NavLink to="/help" activeClassName="active">
+            <NavLink to="/help/#help" activeClassName="active">
               <Info />
               <span>HELP</span>
             </NavLink>
