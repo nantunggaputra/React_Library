@@ -1,6 +1,8 @@
-/** Tablet  */
-
 @media (width <= 1024px) {
+  /* Tablet  */
+
+  /* Components  */
+
   /** Hero */
 
   .hero-content {
@@ -13,9 +15,11 @@
   }
 }
 
-/** Mobile  */
-
 @media (width <= 768px) {
+  /* Mobile  */
+
+  /* Components  */
+
   /** Header */
 
   .header {
@@ -89,5 +93,11 @@
 
   .hero-image.scaled {
     transform: unset;
+  }
+
+  /** Service  */
+
+  .service-section {
+    padding: 0 28px 32px 28px;
   }
 }

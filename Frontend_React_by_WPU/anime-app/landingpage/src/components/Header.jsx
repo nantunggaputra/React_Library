@@ -15,7 +15,7 @@ function Header() {
   }, []);
 
   return (
-    <header className={`header ${isScrolled ? "scrolled" : ""}`}>
+    <header id="header" className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         <div className="nav">
           <div className="logo">
