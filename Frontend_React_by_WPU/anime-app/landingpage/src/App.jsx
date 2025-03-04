@@ -1,6 +1,11 @@
 import "./App.css";
 import "./AppMobile.css";
-import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useLocation,
+} from "react-router-dom";
 import { useEffect } from "react";
 import Home from "./pages/Home";
 import Updates from "./pages/Updates";
@@ -14,13 +19,13 @@ function WeeBoo() {
 
   useEffect(() => {
     const titles = {
-      "/updates": "WeeBoo | My Anime Landing Page 0.2 Beta | Updates",
-      "/updates/": "WeeBoo | My Anime Landing Page 0.2 Beta | Updates",
-      "/help": "WeeBoo | My Anime Landing Page 0.2 Beta | Help",
-      "/help/": "WeeBoo | My Anime Landing Page 0.2 Beta | Help",
+      "/updates": "WeeBoo | My Anime Landing Page 0.3 Beta | Updates",
+      "/updates/": "WeeBoo | My Anime Landing Page 0.3 Beta | Updates",
+      "/help": "WeeBoo | My Anime Landing Page 0.3 Beta | Help",
+      "/help/": "WeeBoo | My Anime Landing Page 0.3 Beta | Help",
     };
 
-    const defaultTitle = "WeeBoo | My Anime Landing Page 0.2 Beta";
+    const defaultTitle = "WeeBoo | My Anime Landing Page 0.3 Beta";
     const newTitle = titles[location.pathname] || defaultTitle;
     document.title = newTitle;
   }, [location]);
