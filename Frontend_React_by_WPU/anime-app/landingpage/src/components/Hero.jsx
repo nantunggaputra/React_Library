@@ -1,11 +1,17 @@
 import { useState, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import { NavLink } from "react-router-dom";
-import { ChevronsRight } from "react-feather";
+import { Feather, ChevronsRight } from "react-feather";
+import AnimatedTypingText from "./AnimatedTypingText";
+import AnimatedCtaButton from "./AnimatedCtaButton";
 
 // Partner Data
 const partners = [
-  { id: 1, name: "BSTATION", image: "/landingpage/images/hero/partner/BSTATION.webp" },
+  {
+    id: 1,
+    name: "BSTATION",
+    image: "/landingpage/images/hero/partner/BSTATION.webp",
+  },
   {
     id: 2,
     name: "CRUNCHYROLL",
@@ -16,12 +22,36 @@ const partners = [
     name: "DISNEYPLUSHOTSTAR",
     image: "/landingpage/images/hero/partner/DISNEYPLUSHOTSTAR.webp",
   },
-  { id: 4, name: "FUNIMATION", image: "/landingpage/images/hero/partner/FUNIMATION.webp" },
-  { id: 5, name: "GENFLIX", image: "/landingpage/images/hero/partner/GENFLIX.webp" },
-  { id: 6, name: "IQIYI", image: "/landingpage/images/hero/partner/IQIYI.webp" },
-  { id: 7, name: "NETFLIX", image: "/landingpage/images/hero/partner/NETFLIX.webp" },
-  { id: 8, name: "PRIMEVIDEO", image: "/landingpage/images/hero/partner/PRIMEVIDEO.webp" },
-  { id: 9, name: "VIDIO", image: "/landingpage/images/hero/partner/VIDIO.webp" },
+  {
+    id: 4,
+    name: "FUNIMATION",
+    image: "/landingpage/images/hero/partner/FUNIMATION.webp",
+  },
+  {
+    id: 5,
+    name: "GENFLIX",
+    image: "/landingpage/images/hero/partner/GENFLIX.webp",
+  },
+  {
+    id: 6,
+    name: "IQIYI",
+    image: "/landingpage/images/hero/partner/IQIYI.webp",
+  },
+  {
+    id: 7,
+    name: "NETFLIX",
+    image: "/landingpage/images/hero/partner/NETFLIX.webp",
+  },
+  {
+    id: 8,
+    name: "PRIMEVIDEO",
+    image: "/landingpage/images/hero/partner/PRIMEVIDEO.webp",
+  },
+  {
+    id: 9,
+    name: "VIDIO",
+    image: "/landingpage/images/hero/partner/VIDIO.webp",
+  },
   { id: 10, name: "VIU", image: "/landingpage/images/hero/partner/VIU.webp" },
   { id: 11, name: "WETV", image: "/landingpage/images/hero/partner/WETV.webp" },
 ];
@@ -39,7 +69,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <Fade delay={250} duration={1000} triggerOnce>
         {/* Hero Section: Left-side */}
         <div className="hero-content">
@@ -53,12 +83,13 @@ function Hero() {
               Stay updated with the latest features, anime search
               functionalities, and exciting development progress of Anime-App.
               <br />
-              <span>
-                Be part of our journey and explore what&apos;s coming next!
-              </span>
+              <small>
+                <Feather />
+                <AnimatedTypingText text="Be part of our journey and explore what's coming next!" />
+              </small>
             </p>
             <NavLink to="/updates/#updates">
-              <button className="hero-button">See Updates</button>
+              <AnimatedCtaButton text="See Updates" />
             </NavLink>
           </Fade>
           <Fade delay={250} duration={750} direction="up" triggerOnce>
@@ -123,7 +154,7 @@ function Hero() {
                   <span className="overlay-year">2024</span>
                   <a href="../">
                     <button className="overlay-button">
-                      <ChevronsRight size={20} />
+                      <ChevronsRight />
                     </button>
                   </a>
                 </div>

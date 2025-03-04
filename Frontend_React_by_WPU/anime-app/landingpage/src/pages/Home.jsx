@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import Hero from "../components/Hero";
+import Service from "../components/Service";
 
 function Home() {
   const { hash } = useLocation();
@@ -20,6 +21,9 @@ function Home() {
       <Fade delay={0} duration={1000} triggerOnce>
         {/* Hero Section */}
         <Hero />
+
+        {/* Service Section */}
+        <Service />
       </Fade>
     </section>
   );
