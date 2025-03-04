@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import { NavLink } from "react-router-dom";
-import { ChevronsRight } from "react-feather";
+import { Feather, ChevronsRight } from "react-feather";
 import AnimatedTypingText from "./AnimatedTypingText";
 import AnimatedCtaButton from "./AnimatedCtaButton";
 
@@ -84,6 +84,7 @@ function Hero() {
               functionalities, and exciting development progress of Anime-App.
               <br />
               <small>
+                <Feather />
                 <AnimatedTypingText text="Be part of our journey and explore what's coming next!" />
               </small>
             </p>

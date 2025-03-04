@@ -170,6 +170,21 @@
   }
 }
 
+@keyframes animate-particle-background {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50vh) translateX(20vw);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(-30vw);
+    opacity: 0;
+  }
+}
+
 /* Desktop  */
 
 /* Components  */
@@ -397,6 +412,14 @@
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
+.hero-description small svg {
+  margin-right: 4px;
+  margin-bottom: -2px;
+  max-width: 14px;
+  min-width: 14px;
+  max-height: 14px;
+  min-height: 14px;
+}
 
 .partner-info {
   margin-top: 52px;
@@ -576,6 +599,57 @@
   color: var(--color-light) !important;
 }
 
+/** Particle  */
+
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    transparent,
+    transparent,
+    var(--color-dark-1),
+    transparent,
+    transparent
+  );
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  animation: animate-particle-background 6s ease-in-out infinite backwards;
+}
+.particle:nth-child(odd) {
+  width: 5px;
+  height: 5px;
+  background: var(--color-light-3);
+}
+.particle:nth-child(even) {
+  width: 3px;
+  height: 3px;
+  background: var(--color-light-4);
+}
+.particle:nth-child(3n) {
+  width: 6px;
+  height: 6px;
+  background: var(--color-blue-light);
+}
+.particle:nth-child(5n) {
+  width: 3px;
+  height: 3px;
+  background: var(--color-dark-3);
+}
+.particle:nth-child(7n) {
+  width: 6px;
+  height: 6px;
+  background: var(--color-dark-4);
+}
+
 /** Styled Heading Text  */
 
 .styled-heading-text {
@@ -599,8 +673,21 @@
 /** Service  */
 
 .service-section {
+  position: relative;
   padding: 0 48px 32px 48px;
   overflow: hidden;
+  cursor: default;
+  z-index: 1;
+}
+
+.service-subtitle {
+  position: absolute;
+  top: 20px;
+  right: 48px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-light-4);
 }
 
 .service-container {
@@ -608,7 +695,7 @@
   padding: 48px 0;
   position: relative;
   width: 100%;
-  max-width: 720px;
+  max-width: 768px;
   overflow: hidden;
 }
 
@@ -627,8 +714,8 @@
 
 .service-image {
   width: 100%;
-  max-height: 405px;
-  min-height: 240px;
+  max-height: 432px;
+  min-height: 182px;
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
@@ -642,29 +729,42 @@
   backdrop-filter: blur(4px);
   border-radius: 0 0 10px 10px;
   box-shadow: 0 0 6px 4px var(--color-dark);
-  cursor: default;
 }
 
 .service-name {
   margin-bottom: 20px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-light);
 }
 
-.service-description {
+.service-description a {
   font-size: 14px;
   color: var(--color-light-4);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.service-description svg {
+  margin-right: 6px;
+  margin-bottom: -1px;
+  max-width: 14px;
+  min-width: 14px;
+  max-height: 14px;
+  min-height: 14px;
+}
+.service-description a:hover {
+  color: var(--color-light);
+}
+.service-description a:active svg {
+  fill: var(--color-light-5);
+}
 
 .service-btn {
   padding: 4px;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateY(-22px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -688,7 +788,7 @@
 .service-btn:hover {
   color: var(--color-light);
 }
-.service-btn:hover svg {
+.service-btn:active svg {
   fill: var(--color-light-5);
 }
 
@@ -697,7 +797,7 @@
   display: flex;
   justify-content: center;
   transform: translateY(-48px);
-  background-color: var(--color-dark);
+  background: var(--color-dark);
 }
 
 .indicator {
