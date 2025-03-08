@@ -26,25 +26,33 @@ export default function Header() {
       <div className="head">
         <div className="head-menu">
           <div className="left-menu">
-            <img src="WeeBoo.png" alt="WeeBoo" />
+            <a>
+              <img src="WeeBoo.png" alt="WeeBoo" />
+            </a>
           </div>
           <div className="center-menu">
-            <a>Blog</a>
-            <a>Event</a>
-            <a>Forum</a>
-            <a>Website</a>
-            <a>Landing Page</a>
-            <a>Updates</a>
-            <a>Help</a>
+            <a className="website">Blog</a>
+            <a className="website">Event</a>
+            <a className="website">Forum</a>
+            <a className="website">Website</a>
+            <a href="./landingpage" className="landingpage">
+              Landing Page
+            </a>
+            <a href="./landingpage" className="landingpage">
+              Updates
+            </a>
+            <a href="./landingpage" className="landingpage">
+              Help
+            </a>
             <span>{countryCode || "IP"}</span>
           </div>
           <div className="right-menu">
-            <button>
-              <a>Login</a>
-            </button>
-            <button>
-              <a>Sign Up</a>
-            </button>
+            <a href="./landingpage" className="landingpage">
+              <button>Login</button>
+            </a>
+            <a href="./landingpage" className="landingpage">
+              <button>Sign Up</button>
+            </a>
           </div>
         </div>
       </div>
