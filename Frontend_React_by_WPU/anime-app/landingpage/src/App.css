@@ -738,12 +738,14 @@
   color: var(--color-light);
 }
 
-.service-description a {
-  font-size: 14px;
-  color: var(--color-light-4);
+.service-description {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+.service-description a {
+  font-size: 14px;
+  color: var(--color-light-4);
 }
 .service-description svg {
   margin-right: 6px;
