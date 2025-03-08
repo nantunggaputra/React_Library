@@ -115,6 +115,8 @@ body {
 }
 
 .loading-page figure {
+  filter: invert(1) grayscale(1);
+  opacity: 0.5;
   z-index: 9;
 }
 
@@ -135,7 +137,7 @@ body {
 
 .loading-page footer span b {
   padding: 1rem 1.85rem;
-  background-color: var(--color-background-grey-17);
+  background-color: var(--color-background-grey-10);
   border-radius: 1rem;
 }
 
@@ -2108,7 +2110,6 @@ body {
 .donation .container button,
 .pocket .container button,
 .gototop .container button {
-  display: block;
   margin: auto;
   width: 2.2rem;
   height: 2.2rem;
@@ -2122,6 +2123,90 @@ body {
   font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
+}
+
+.description-floating-button {
+  display: none;
+  min-width: max-content;
+  color: var(--color-background-light);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.nav-bar .search-label:hover .container,
+.nav-bar .hamburger-menu:hover .container {
+  display: block;
+  width: max-content;
+}
+
+.connection:hover .container,
+.informations:hover .container,
+.about:hover .about-container,
+.transitions:hover .container,
+.animations:hover .container,
+.music:hover .container,
+.share:hover .container,
+.donation:hover .container,
+.pocket:hover .container,
+.gototop:hover .container {
+  width: unset;
+}
+
+.nav-bar .search-label:hover span,
+.nav-bar .hamburger-menu:hover .button-parrent,
+.nav-bar .hamburger-menu:hover .button-child {
+  padding: 0.5rem 0.7rem;
+  width: unset;
+  border-radius: 0.5rem;
+}
+
+.connection:hover button,
+.informations:hover button,
+.about:hover button,
+.transitions:hover button,
+.animations:hover button,
+.music:hover button,
+.share:hover button,
+.donation:hover button,
+.pocket:hover button,
+.gototop:hover button {
+  width: unset;
+  border-radius: 0.5rem;
+}
+
+.nav-bar .search-label:hover .icon-floating-button,
+.nav-bar .hamburger-menu:hover .icon-floating-button,
+.connection:hover .icon-floating-button,
+.informations:hover .icon-floating-button,
+.about:hover .icon-floating-button,
+.transitions:hover .icon-floating-button,
+.animations:hover .icon-floating-button,
+.music:hover .icon-floating-button,
+.share:hover .icon-floating-button,
+.donation:hover .icon-floating-button,
+.pocket:hover .icon-floating-button,
+.gototop:hover .icon-floating-button {
+  display: none;
+}
+
+.nav-bar .search-label:hover .description-floating-button {
+  padding: 0.7rem;
+  display: flex;
+  font-size: 1rem;
+}
+
+.nav-bar .hamburger-menu:hover .description-floating-button,
+.connection:hover .description-floating-button,
+.informations:hover .description-floating-button,
+.about:hover .description-floating-button,
+.transitions:hover .description-floating-button,
+.animations:hover .description-floating-button,
+.music:hover .description-floating-button,
+.share:hover .description-floating-button,
+.donation:hover .description-floating-button,
+.pocket:hover .description-floating-button,
+.gototop:hover .description-floating-button {
+  display: flex;
 }
 
 /* Media Query */

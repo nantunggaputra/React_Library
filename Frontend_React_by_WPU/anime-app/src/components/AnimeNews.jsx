@@ -63,7 +63,8 @@ export default function AnimeNews() {
             <ul>
               {news.map((article, index) => (
                 <Fade
-                  delay={250 + index * 75}
+                  triggerOnce
+                  delay={250 + index * 100}
                   direction="right"
                   duration={500}
                   fraction={0}

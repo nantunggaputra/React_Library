@@ -74,16 +74,23 @@ export default function AnimeByCategory() {
       </div>
       <div className="category" style={{ minHeight: "43rem" }}>
         <div className="category-all">
-          {categories.map((category) => (
-            <button
+          {categories.map((category, index) => (
+            <Fade
+              triggerOnce
+              delay={250 + index * 50}
+              duration={500}
+              fraction={0}
               key={category}
-              onClick={
-                !loading ? () => setSelectedCategory(category) : undefined
-              }
-              className={category === selectedCategory ? "selected" : ""}
             >
-              {category}
-            </button>
+              <button
+                onClick={
+                  !loading ? () => setSelectedCategory(category) : undefined
+                }
+                className={category === selectedCategory ? "selected" : ""}
+              >
+                {category}
+              </button>
+            </Fade>
           ))}
         </div>
         <div className="category-overview">

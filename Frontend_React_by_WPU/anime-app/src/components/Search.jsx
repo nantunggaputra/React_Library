@@ -39,8 +39,9 @@ function SearchInput({ fetchAnime, setResultCount, setLoading, loading }) {
     <div id="search-container" className="search-container">
       <div className="search-label">
         <div className="container">
-          <label htmlFor="search-anime">
-            <span title="Search">{"\u2315"}</span>
+          <label htmlFor="search-anime" title="Search">
+            <span className="icon-floating-button">{"\u2315"}</span>
+            <span className="description-floating-button">Search</span>
           </label>
         </div>
       </div>

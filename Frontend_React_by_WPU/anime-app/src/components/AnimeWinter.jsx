@@ -162,16 +162,25 @@ export default function AnimeWinter() {
       </div>
       <div className="winter">
         <div className="winter-all">
-          {categories.map((category) => (
-            <button
+          {categories.map((category, index) => (
+            <Fade
+              triggerOnce
+              delay={250 + index * 50}
+              duration={500}
+              fraction={0}
               key={category}
-              onClick={
-                !loadingImage ? () => handleCategoryClick(category) : undefined
-              }
-              className={category === selectedCategory ? "selected" : ""}
             >
-              {category}
-            </button>
+              <button
+                onClick={
+                  !loadingImage
+                    ? () => handleCategoryClick(category)
+                    : undefined
+                }
+                className={category === selectedCategory ? "selected" : ""}
+              >
+                {category}
+              </button>
+            </Fade>
           ))}
         </div>
         <div className="winter-overview">

@@ -48,18 +48,25 @@ export default function AnimeByStudio() {
       <div className="studio">
         {selectedStudioImage && (
           <div className="studio-all">
-            {studioMasterpiece.map((studio) => (
-              <button
+            {studioMasterpiece.map((studio, index) => (
+              <Fade
+                triggerOnce
+                delay={250 + index * 50}
+                duration={500}
+                fraction={0}
                 key={studio.studio}
-                onClick={
-                  !loadingImage
-                    ? () => handleStudioClick(studio.studio)
-                    : undefined
-                }
-                className={studio.studio === selectedStudio ? "selected" : ""}
               >
-                {studio.studio}
-              </button>
+                <button
+                  onClick={
+                    !loadingImage
+                      ? () => handleStudioClick(studio.studio)
+                      : undefined
+                  }
+                  className={studio.studio === selectedStudio ? "selected" : ""}
+                >
+                  {studio.studio}
+                </button>
+              </Fade>
             ))}
           </div>
         )}
