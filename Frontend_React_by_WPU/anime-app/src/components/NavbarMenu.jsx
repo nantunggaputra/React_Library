@@ -45,7 +45,7 @@ export default function NavbarMenu() {
           </menu>
         ) : (
           <div className="arrow" onClick={handleToggle} title="Menu">
-            &#9818;
+            &spades;
           </div>
         )}
       </div>

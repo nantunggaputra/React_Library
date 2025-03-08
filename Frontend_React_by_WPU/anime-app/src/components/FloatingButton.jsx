@@ -25,13 +25,25 @@ export default function FloatingButton({
         className={className}
       >
         {url ? (
-          <a href={url} target={target} onClick={toggleStateLink} title={titleLink}>
-            {iconLink}
+          <a
+            href={url}
+            target={target}
+            onClick={toggleStateLink}
+            title={titleLink}
+          >
+            <span className="icon-floating-button">{iconLink}</span>
+            <span className="description-floating-button">{titleLink}</span>
           </a>
         ) : state ? (
-          iconOn
+          <>
+            <span className="icon-floating-button">{iconOn}</span>
+            <span className="description-floating-button">{titleOn}</span>
+          </>
         ) : (
-          iconOff
+          <>
+            <span className="icon-floating-button">{iconOff}</span>
+            <span className="description-floating-button">{titleOff}</span>
+          </>
         )}
       </button>
     </div>

@@ -262,8 +262,8 @@ export default function Footer() {
       <div className="share">
         <FloatingButton
           itemKey="share-button"
-          titleOn="Copied to clipboard"
-          titleOff="Share"
+          titleOn="&ensp; Copied to clipboard &ensp;"
+          titleOff="&ensp; Share &ensp;"
           state={isCopied}
           toggleState={copyUrlToClipboard}
           iconOn={"\u2713"}

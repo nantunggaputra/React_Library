@@ -95,6 +95,29 @@
     transform: unset;
   }
 
+  /** Particle */
+
+  .particle:nth-child(odd) {
+    width: 3px;
+    height: 3px;
+  }
+  .particle:nth-child(even) {
+    width: 1px;
+    height: 1px;
+  }
+  .particle:nth-child(3n) {
+    width: 4px;
+    height: 4px;
+  }
+  .particle:nth-child(5n) {
+    width: 1px;
+    height: 1px;
+  }
+  .particle:nth-child(7n) {
+    width: 4px;
+    height: 4px;
+  }
+
   /** Service  */
 
   .service-section {

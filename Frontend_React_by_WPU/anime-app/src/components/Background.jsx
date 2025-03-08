@@ -85,8 +85,8 @@ export default function Background() {
       </div>
       <div className="connection">
         <FloatingButton
-          titleOn="You are online"
-          titleOff="No connection"
+          titleOn="&ensp; You are online &ensp;"
+          titleOff="&ensp; No connection &ensp;"
           state={connectionStatus === "online"}
           toggleState={reloadOnlineStatus}
           iconOn={"\u2022"}
@@ -97,8 +97,8 @@ export default function Background() {
       </div>
       <div className="informations">
         <FloatingButton
-          titleOn="About"
-          titleOff="About"
+          titleOn="&ensp; About &ensp;"
+          titleOff="&ensp; About &ensp;"
           state={showOverlay}
           toggleState={toggleOverlay}
           iconOn={<span style={{ fontSize: "1.2rem" }}>{"\uD835\uDC22"}</span>}
@@ -107,8 +107,8 @@ export default function Background() {
       </div>
       <div className="transitions">
         <FloatingButton
-          titleOn="Background transitions on (30s to 90s)"
-          titleOff="Background transitions off"
+          titleOn="&ensp; Background transitions on (30s to 90s) &ensp;"
+          titleOff="&ensp; Background transitions off &ensp;"
           state={isTransitionActive}
           toggleState={toggleTransition}
           iconOn={"\u262F\uFE0E"}
@@ -117,8 +117,8 @@ export default function Background() {
       </div>
       <div className="animations">
         <FloatingButton
-          titleOn="Background animations on (Clouds)"
-          titleOff="Background animations off"
+          titleOn="&ensp; Background animations on (Clouds) &ensp;"
+          titleOff="&ensp; Background animations off &ensp;"
           state={isAnimationActive}
           toggleState={toggleAnimation}
           iconOn={"\u2756"}
@@ -127,8 +127,8 @@ export default function Background() {
       </div>
       <div className="music">
         <FloatingButton
-          titleOn="Backsound on (Yasuharu Takanashi)"
-          titleOff="Backsound off"
+          titleOn="&ensp; Backsound on (Yasuharu Takanashi) &ensp;"
+          titleOff="&ensp; Backsound off &ensp;"
           state={!isPlaying}
           toggleState={togglePlayPause}
           iconOn={"\u266C"}

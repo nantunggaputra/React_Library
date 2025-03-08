@@ -89,7 +89,8 @@ export default function AnimeByGenre() {
           <div className="genre-all">
             {genres.map((genre, index) => (
               <Fade
-                delay={250 + index * 75}
+                triggerOnce
+                delay={250 + index * 50}
                 duration={500}
                 fraction={0}
                 key={genre.mal_id}

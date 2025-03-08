@@ -101,10 +101,18 @@ export default function Channels() {
       <aside className="aside top-left">
         <Fade triggerOnce delay={250} duration={1000}>
           <div className="channels stream">
-            {channelsNow.map((channel) => (
-              <div className="frame" key={channel.alt} title={channel.alt}>
-                <img src={channel.src} alt={channel.alt} />
-              </div>
+            {channelsNow.map((channel, index) => (
+              <Fade
+                triggerOnce
+                delay={250 + index * 50}
+                duration={500}
+                fraction={0}
+                key={channel.alt}
+              >
+                <div className="frame" title={channel.alt}>
+                  <img src={channel.src} alt={channel.alt} />
+                </div>
+              </Fade>
             ))}
           </div>
         </Fade>
@@ -112,20 +120,28 @@ export default function Channels() {
       <aside className="aside top-right">
         <Fade triggerOnce delay={250} duration={1000}>
           <div className="channels tv">
-            {channelsThen.map((channel) => (
-              <div className="frame" key={channel.alt} title={channel.alt}>
-                <img
-                  src={channel.src}
-                  alt={channel.alt}
-                  style={
-                    channel.size === "L"
-                      ? { width: "73.5%" }
-                      : channel.size === "XL"
-                      ? { width: "65%" }
-                      : {}
-                  }
-                />
-              </div>
+            {channelsThen.map((channel, index) => (
+              <Fade
+                triggerOnce
+                delay={250 + index * 50}
+                duration={500}
+                fraction={0}
+                key={channel.alt}
+              >
+                <div className="frame" title={channel.alt}>
+                  <img
+                    src={channel.src}
+                    alt={channel.alt}
+                    style={
+                      channel.size === "L"
+                        ? { width: "73.5%" }
+                        : channel.size === "XL"
+                        ? { width: "65%" }
+                        : {}
+                    }
+                  />
+                </div>
+              </Fade>
             ))}
           </div>
         </Fade>

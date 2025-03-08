@@ -1,4 +1,10 @@
 import { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useLocation,
+} from "react-router-dom";
 import { fetchAnimeData } from "./service/animeService";
 import "./App.css";
 import Background from "./components/Background";
@@ -35,6 +41,14 @@ function LoadingPage() {
 }
 
 function ContentPage() {
+  return (
+    <Switch>
+      <Route exact path="/" component={MainComponent} />
+    </Switch>
+  );
+}
+
+function MainComponent() {
   const initialAnimesData = [
     {
       mal_id: "No Data",
@@ -46,6 +60,16 @@ function ContentPage() {
 
   const [animes, setAnimes] = useState(initialAnimesData);
   const [selectedAnime, setSelectedAnime] = useState(null);
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "instant" });
+      }
+    }
+  }, [hash]);
 
   const fetchAnime = async (query) => {
     try {
@@ -92,14 +116,13 @@ export default function App() {
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 4000);
-
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <>
+    <Router>
       {isLoading && <LoadingPage />}
       {!isLoading && <ContentPage />}
-    </>
+    </Router>
   );
 }
