@@ -66,7 +66,7 @@ function MainComponent() {
     if (hash) {
       const element = document.getElementById(hash.replace("#", ""));
       if (element) {
-        element.scrollIntoView({ behavior: "instant" });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [hash]);
