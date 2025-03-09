@@ -689,7 +689,7 @@ body {
   left: 50%;
   transform: translateX(-50%) scale(0.25);
   height: 4.5rem;
-  filter: brightness(0.25) contrast(0.85) grayscale(1);
+  filter: brightness(0.25) contrast(0.975) grayscale(1);
   opacity: 0;
   animation: seek 10s infinite;
   z-index: 2;
@@ -1199,6 +1199,22 @@ body {
 .details img {
   max-width: 150px;
   border-radius: 1rem 0;
+}
+
+.details img:hover {
+  animation: fadeout 1s ease infinite;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.7;
+  }
 }
 
 .details p:nth-child(1) {
@@ -2149,7 +2165,6 @@ body {
 
 .connection:hover .container,
 .informations:hover .container,
-.about:hover .about-container,
 .transitions:hover .container,
 .animations:hover .container,
 .music:hover .container,
@@ -2170,7 +2185,6 @@ body {
 
 .connection:hover button,
 .informations:hover button,
-.about:hover button,
 .transitions:hover button,
 .animations:hover button,
 .music:hover button,
@@ -2186,7 +2200,6 @@ body {
 .nav-bar .hamburger-menu:hover .icon-floating-button,
 .connection:hover .icon-floating-button,
 .informations:hover .icon-floating-button,
-.about:hover .icon-floating-button,
 .transitions:hover .icon-floating-button,
 .animations:hover .icon-floating-button,
 .music:hover .icon-floating-button,
@@ -2206,7 +2219,6 @@ body {
 .nav-bar .hamburger-menu:hover .description-floating-button,
 .connection:hover .description-floating-button,
 .informations:hover .description-floating-button,
-.about:hover .description-floating-button,
 .transitions:hover .description-floating-button,
 .animations:hover .description-floating-button,
 .music:hover .description-floating-button,
