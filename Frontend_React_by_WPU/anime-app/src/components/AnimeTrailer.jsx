@@ -158,7 +158,7 @@ export default function AnimeTrailer() {
                         src={`${animeData.trailer.embed_url}?autoplay=0&mute=0`}
                         title="Watch trailer on YouTube"
                         loading="lazy"
-                        referrerPolicy="no-referrer"
+                        referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen
                         style={{ border: "0" }}
                       ></iframe>
