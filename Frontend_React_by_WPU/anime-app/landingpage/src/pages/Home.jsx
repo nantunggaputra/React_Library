@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import Hero from "../components/Hero";
 import Service from "../components/Service";
+import Testimonials from "../components/Testimonials";
 
 function Home() {
   const { hash } = useLocation();
@@ -24,6 +25,9 @@ function Home() {
 
         {/* Service Section */}
         <Service />
+
+        {/* Testimonials Section */}
+        <Testimonials />
       </Fade>
     </section>
   );
