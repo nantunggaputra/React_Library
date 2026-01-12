@@ -19,13 +19,13 @@ function WeeBoo() {
 
   useEffect(() => {
     const titles = {
-      "/updates": "WeeBoo | My Anime Landing Page 0.3 Beta | Updates",
-      "/updates/": "WeeBoo | My Anime Landing Page 0.3 Beta | Updates",
-      "/help": "WeeBoo | My Anime Landing Page 0.3 Beta | Help",
-      "/help/": "WeeBoo | My Anime Landing Page 0.3 Beta | Help",
+      "/updates": "WeeBoo | My Anime Landing Page 0.5 Beta | Updates",
+      "/updates/": "WeeBoo | My Anime Landing Page 0.5 Beta | Updates",
+      "/help": "WeeBoo | My Anime Landing Page 0.5 Beta | Help",
+      "/help/": "WeeBoo | My Anime Landing Page 0.5 Beta | Help",
     };
 
-    const defaultTitle = "WeeBoo | My Anime Landing Page 0.3 Beta";
+    const defaultTitle = "WeeBoo | My Anime Landing Page 0.5 Beta";
     const newTitle = titles[location.pathname] || defaultTitle;
     document.title = newTitle;
   }, [location]);

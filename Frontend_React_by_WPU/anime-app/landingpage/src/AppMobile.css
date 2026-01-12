@@ -20,6 +20,38 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
+
+  /** Analytics */
+
+  .analytics-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .analytics-info {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .info-divider {
+    display: none;
+  }
+
+  /** Footer */
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .footer-newsletter {
+    max-width: 100%;
+  }
 }
 
 @media (width <= 768px) {
@@ -177,5 +209,248 @@
     font-size: 60px;
     top: 96px;
     right: 16px;
+  }
+
+  /** Analytics */
+
+  .analytics-section {
+    padding: 64px 28px;
+  }
+
+  .analytics-grid-background {
+    background-size: 30px 30px;
+  }
+
+  .analytics-header {
+    margin-bottom: 48px;
+  }
+
+  .analytics-badge {
+    font-size: 11px;
+    padding: 6px 14px;
+  }
+
+  .analytics-subtitle {
+    font-size: 14px;
+  }
+
+  .analytics-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .analytics-card {
+    padding: 28px 24px;
+  }
+
+  .analytics-icon {
+    width: 44px;
+    height: 44px;
+  }
+  .analytics-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .analytics-value {
+    font-size: 32px;
+  }
+  .analytics-value .suffix {
+    font-size: 24px;
+  }
+
+  .analytics-label {
+    font-size: 13px;
+  }
+
+  .analytics-footer {
+    margin-top: 48px;
+  }
+
+  .analytics-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-label {
+    font-size: 11px;
+  }
+
+  .info-value {
+    font-size: 14px;
+  }
+
+  /** Latest Update  */
+
+  .latest-update-section {
+    padding: 64px 28px 80px 28px;
+  }
+
+  .update-header {
+    margin-bottom: 60px;
+  }
+
+  .update-badge {
+    font-size: 11px;
+    padding: 8px 16px;
+  }
+  .update-badge svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .update-subtitle {
+    font-size: 14px;
+  }
+
+  .update-container {
+    max-width: 100%;
+  }
+
+  .update-timeline {
+    left: 20px;
+    transform: none;
+  }
+
+  .update-card {
+    padding: 24px 20px;
+    margin-left: 32px;
+  }
+
+  .update-card.latest::after {
+    top: -10px;
+    right: 20px;
+    font-size: 9px;
+    padding: 3px 10px;
+  }
+
+  .update-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .version-number {
+    font-size: 16px;
+    padding: 6px 14px;
+  }
+
+  .version-type {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .status-badge {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .update-date {
+    font-size: 12px;
+  }
+  .update-date svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .update-type-badge {
+    font-size: 10px;
+    padding: 6px 14px;
+  }
+
+  .change-header {
+    font-size: 12px;
+  }
+  .change-header svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .change-list li {
+    font-size: 13px;
+    padding-left: 16px;
+  }
+  .change-list li::before {
+    top: 8px;
+    width: 5px;
+    height: 5px;
+  }
+
+  /** Footer */
+  .footer {
+    padding: 60px 28px 0 28px;
+  }
+
+  .footer-container {
+    gap: 40px;
+    padding-bottom: 48px;
+  }
+
+  .footer-brand {
+    gap: 20px;
+  }
+
+  .footer-logo img {
+    width: 36px;
+    height: 36px;
+  }
+  .footer-logo h3 {
+    font-size: 20px;
+  }
+
+  .footer-tagline {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .footer-socials {
+    gap: 10px;
+  }
+
+  .social-link {
+    padding: 8px;
+  }
+  .social-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-column {
+    gap: 16px;
+  }
+
+  .footer-column-title {
+    font-size: 13px;
+  }
+
+  .footer-nav {
+    gap: 10px;
+  }
+  .footer-nav li a {
+    font-size: 14px;
+  }
+
+  .footer-newsletter {
+    gap: 16px;
+  }
+
+  .newsletter-title {
+    font-size: 16px;
+  }
+
+  .newsletter-description {
+    font-size: 13px;
+  }
+
+  .footer-copyright {
+    padding: 24px 0;
+  }
+  .footer-copyright p {
+    font-size: 12px;
   }
 }
