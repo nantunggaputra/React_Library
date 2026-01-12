@@ -4,6 +4,8 @@ import { Fade } from "react-awesome-reveal";
 import Hero from "../components/Hero";
 import Service from "../components/Service";
 import Testimonials from "../components/Testimonials";
+import Analytics from "../components/Analytics";
+import LatestUpdate from "../components/LatestUpdate";
 
 function Home() {
   const { hash } = useLocation();
@@ -28,6 +30,12 @@ function Home() {
 
         {/* Testimonials Section */}
         <Testimonials />
+
+        {/* Analytics Section */}
+        <Analytics />
+
+        {/* Latest Update Section */}
+        <LatestUpdate />
       </Fade>
     </section>
   );
