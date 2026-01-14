@@ -1300,7 +1300,8 @@
 
 /** Latest Update */
 
-.latest-update-section {
+.latest-update-section,
+.help-section {
   position: relative;
   padding: 96px 48px 120px 48px;
   background: linear-gradient(
@@ -1351,12 +1352,14 @@
   opacity: 0.03;
 }
 
-.update-header {
+.update-header,
+.help-header {
   margin-bottom: 80px;
   text-align: center;
 }
 
-.update-badge {
+.update-badge,
+.help-badge {
   margin: 0 auto 24px auto;
   padding: 10px 20px;
   width: max-content;
@@ -1372,16 +1375,23 @@
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
-.update-badge svg {
+.help-badge {
+  color: var(--color-red);
+  border: 1px solid var(--color-red);
+}
+.update-badge svg,
+.help-badge svg {
   width: 16px;
   height: 16px;
 }
 
-.update-title {
+.update-title,
+.help-title {
   margin: 0 auto 16px auto;
 }
 
-.update-subtitle {
+.update-subtitle,
+.help-subtitle {
   font-size: 16px;
   font-weight: 500;
   color: var(--color-light-4);

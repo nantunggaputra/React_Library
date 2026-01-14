@@ -282,24 +282,29 @@
 
   /** Latest Update  */
 
-  .latest-update-section {
+  .latest-update-section,
+  .help-section {
     padding: 64px 28px 80px 28px;
   }
 
-  .update-header {
+  .update-header,
+  .help-header {
     margin-bottom: 60px;
   }
 
-  .update-badge {
+  .update-badge,
+  .help-badge {
     font-size: 11px;
     padding: 8px 16px;
   }
-  .update-badge svg {
+  .update-badge svg,
+  .help-badge svg {
     width: 14px;
     height: 14px;
   }
 
-  .update-subtitle {
+  .update-subtitle,
+  .help-subtitle {
     font-size: 14px;
   }
 
