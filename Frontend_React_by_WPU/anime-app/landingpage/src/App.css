@@ -185,6 +185,39 @@
   }
 }
 
+@keyframes star-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  25%,
+  75% {
+    opacity: 1;
+  }
+}
+
 /* Desktop  */
 
 /* Components  */
@@ -947,16 +980,6 @@
   transform: scale(1.1);
 }
 
-@keyframes star-pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-
 .testimonial-review {
   font-size: 14px;
   font-weight: 500;
@@ -988,6 +1011,7 @@
     var(--color-dark) 50%,
     var(--color-dark-2) 100%
   );
+  cursor: default;
 }
 
 .analytics-grid-background {
@@ -1045,18 +1069,6 @@
   background: var(--color-green);
   border-radius: 50%;
   animation: pulse-dot 2s ease-in-out infinite;
-}
-
-@keyframes pulse-dot {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scale(0.8);
-  }
 }
 
 .analytics-title {
@@ -1298,6 +1310,7 @@
     var(--color-dark) 100%
   );
   overflow: hidden;
+  cursor: default;
 }
 
 .update-noise-background {
@@ -1663,12 +1676,352 @@
   border-radius: 50%;
 }
 
+/** Developers */
+
+.developers-section {
+  position: relative;
+  padding: 96px 48px 200px 48px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-dark-1) 0%,
+    var(--color-dark) 50%,
+    var(--color-dark-2) 100%
+  );
+  overflow: hidden;
+  cursor: default;
+}
+
+.developers-header {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.developers-badge {
+  margin: 0 auto 24px auto;
+  padding: 10px 20px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-blue-light);
+  background: var(--color-dark-3);
+  border: 1px solid var(--color-blue-light);
+  border-radius: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+.developers-badge svg {
+  width: 16px;
+  height: 16px;
+}
+
+.developers-title {
+  margin: 0 auto 16px auto;
+}
+
+.developers-subtitle {
+  margin: 0 auto;
+  max-width: 720px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--color-light-4);
+}
+
+.developers-container {
+  margin: 0 auto;
+  max-width: 800px;
+  position: relative;
+}
+
+.developer-card-wrapper {
+  position: sticky;
+  top: calc(100px + var(--card-index) * 24px);
+  margin-bottom: 40px;
+  z-index: calc(10 - var(--card-index));
+}
+
+.developer-card {
+  padding: 48px 40px;
+  background: var(--color-dark);
+  border: 1px solid var(--color-dark-4);
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+}
+.developer-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: var(--color-light);
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  z-index: -1;
+}
+.developer-card.active::before {
+  background: var(--color-blue-light);
+}
+.developer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px var(--color-dark-5);
+}
+.developer-card:hover::before {
+  opacity: 0.2;
+}
+
+.developer-card.active {
+  background: var(--color-dark-2);
+  border-color: var(--color-blue-light);
+}
+
+.developer-card.active .developer-name-null {
+  display: none;
+}
+
+.developer-card-header {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.developer-badge {
+  padding: 6px 16px;
+  font-size: 10px;
+  font-weight: 800;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.developer-badge.active {
+  color: var(--color-dark);
+  background: var(--color-blue-light);
+}
+.developer-badge.open {
+  color: var(--color-orange);
+  background: var(--color-dark-3);
+  border: 1px solid var(--color-orange);
+}
+
+.developer-avatar-section {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.developer-avatar {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+.developer-avatar.active {
+  border: 4px solid var(--color-blue-light);
+  box-shadow: 0 0 40px var(--color-blue-light);
+}
+.developer-avatar.open {
+  border: 4px solid var(--color-dark-4);
+  background: var(--color-dark-3);
+}
+.developer-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.developer-card:hover .developer-avatar.active {
+  box-shadow: 0 0 60px var(--color-blue-light);
+  transform: scale(1.05);
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light-4);
+}
+.avatar-placeholder svg {
+  width: 64px;
+  height: 64px;
+}
+
+.developer-cta-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-orange);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.developer-info {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.developer-name {
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--color-light);
+}
+
+.developer-name-null {
+  animation: blink 0.8s normal infinite;
+}
+
+.developer-role {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-light-4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.developer-location {
+  margin: 0 auto;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-light-4);
+}
+.developer-location svg {
+  width: 16px;
+  height: 16px;
+}
+
+.developer-bio {
+  margin-bottom: 32px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+  text-align: center;
+  color: var(--color-light-3);
+}
+
+.developer-section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-light-4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skill-badge {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-light);
+  background: var(--color-dark-3);
+  border: 1px solid var(--color-dark-4);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.skill-badge:hover {
+  border-color: var(--color-blue-light);
+  box-shadow: 0 0 16px var(--color-blue-light);
+  transform: translateY(-2px);
+}
+
+.interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.interest-badge {
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-red);
+  background: var(--color-dark-3);
+  border: 1px solid var(--color-dark-4);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.interest-badge svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--color-red);
+}
+.interest-badge:hover {
+  border-color: var(--color-red);
+  box-shadow: 0 0 16px var(--color-red);
+  transform: translateY(-2px);
+}
+
+.developer-socials {
+  margin-top: 32px;
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  border-top: 1px solid var(--color-dark-4);
+}
+
+.developer-socials .social-link {
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light-4);
+  background: var(--color-dark-3);
+  border: 1px solid var(--color-dark-4);
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+.developer-socials .social-link svg {
+  width: 20px;
+  height: 20px;
+}
+.developer-socials .social-link:hover {
+  color: var(--color-light);
+  border-color: var(--color-blue-light);
+  box-shadow: 0 0 20px var(--color-blue-light);
+  transform: translateY(-2px);
+}
+
+.developer-cta {
+  margin-top: 32px;
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--color-dark-4);
+}
+
 /** Footer  */
 
 .footer {
   position: relative;
   padding: 80px 48px 0 48px;
   background: var(--color-dark);
+  cursor: default;
 }
 
 .footer-gradient-line {
@@ -1681,7 +2034,6 @@
     to right,
     transparent 0%,
     var(--color-blue-light) 20%,
-    var(--color-orange) 50%,
     var(--color-red) 80%,
     transparent 100%
   );

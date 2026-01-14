@@ -6,6 +6,7 @@ import Service from "../components/Service";
 import Testimonials from "../components/Testimonials";
 import Analytics from "../components/Analytics";
 import LatestUpdate from "../components/LatestUpdate";
+import Developers from "../components/Developers";
 
 function Home() {
   const { hash } = useLocation();
@@ -36,6 +37,9 @@ function Home() {
 
         {/* Latest Update Section */}
         <LatestUpdate />
+
+        {/* Developers Section */}
+        <Developers />
       </Fade>
     </section>
   );

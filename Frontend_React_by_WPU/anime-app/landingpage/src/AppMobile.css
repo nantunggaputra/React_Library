@@ -376,6 +376,94 @@
     height: 5px;
   }
 
+  /** Developers */
+
+  .developers-section {
+    padding: 64px 28px 120px 28px;
+  }
+
+  .developers-header {
+    margin-bottom: 60px;
+  }
+
+  .developers-badge {
+    font-size: 11px;
+    padding: 8px 16px;
+  }
+
+  .developers-subtitle {
+    font-size: 14px;
+  }
+
+  .developers-container {
+    max-width: 100%;
+  }
+
+  .developer-card-wrapper {
+    top: calc(80px + var(--card-index) * 16px);
+    margin-bottom: 24px;
+  }
+
+  .developer-card {
+    padding: 32px 24px;
+  }
+
+  .developer-badge {
+    font-size: 9px;
+    padding: 5px 12px;
+  }
+
+  .developer-avatar {
+    width: 120px;
+    height: 120px;
+  }
+  .developer-avatar.active {
+    border: 3px solid var(--color-blue-light);
+  }
+
+  .avatar-placeholder svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .developer-cta-text {
+    font-size: 22px;
+  }
+
+  .developer-name {
+    font-size: 24px;
+  }
+
+  .developer-role {
+    font-size: 14px;
+  }
+
+  .developer-location {
+    font-size: 13px;
+  }
+
+  .developer-bio {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 11px;
+  }
+
+  .skill-badge,
+  .interest-badge {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .developer-socials .social-link {
+    padding: 10px;
+  }
+  .developer-socials .social-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
   /** Footer */
   .footer {
     padding: 60px 28px 0 28px;
