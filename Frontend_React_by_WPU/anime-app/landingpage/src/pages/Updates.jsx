@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
+import LatestUpdate from "../components/LatestUpdate";
 
 function Updates() {
   const { hash } = useLocation();
@@ -16,7 +17,10 @@ function Updates() {
 
   return (
     <section id="updates" className="updates">
-      <Fade delay={0} duration={1000} triggerOnce></Fade>
+      <Fade delay={0} duration={1000} triggerOnce>
+        {/* Latest Update Section */}
+        <LatestUpdate />
+      </Fade>
     </section>
   );
 }

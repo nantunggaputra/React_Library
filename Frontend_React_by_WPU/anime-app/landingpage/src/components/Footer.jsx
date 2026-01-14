@@ -1,7 +1,7 @@
 import { Fade } from "react-awesome-reveal";
 import { NavLink } from "react-router-dom";
 import { Mail, Linkedin, GitHub, Twitter } from "react-feather";
-import { SiBluesky } from "@icons-pack/react-simple-icons";
+import { SiStackoverflow, SiBluesky } from "@icons-pack/react-simple-icons";
 import AnimatedCtaButton from "./AnimatedCtaButton";
 
 function Footer() {
@@ -36,31 +36,37 @@ function Footer() {
     {
       name: "Email",
       icon: Mail,
-      url: "#https://nantunggaputra-anime-app.vercel.app/landingpage/",
+      url: "mailto:anggunnantunggaputra@gmail.com",
       color: "blue",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "#https://linkedin.com",
+      url: "https://id.linkedin.com/in/nantungga-putra-451779116",
       color: "blue",
     },
     {
       name: "GitHub",
       icon: GitHub,
-      url: "#https://github.com",
+      url: "https://github.com/nantunggaputra",
+      color: "white",
+    },
+    {
+      name: "Stackoverflow",
+      icon: SiStackoverflow,
+      url: "https://stackoverflow.com",
       color: "white",
     },
     {
       name: "X",
       icon: Twitter,
-      url: "#https://x.com",
+      url: "https://x.com/nantunggaputra",
       color: "blue",
     },
     {
       name: "Bluesky",
       icon: SiBluesky,
-      url: "#https://bsky.app",
+      url: "https://bsky.app",
       color: "blue",
     },
   ];
@@ -92,8 +98,8 @@ function Footer() {
                     <a
                       key={index}
                       href={social.url}
-                      // target="_blank"
-                      // rel="noopener noreferrer"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="social-link"
                       aria-label={social.name}
                     >
@@ -154,7 +160,7 @@ function Footer() {
                 Subscribe to WeeBoo&apos;s newsletter
               </h4>
               <p className="newsletter-description">
-                Don&apos;t miss out! Get an email whenever we post, no spam.
+                Don&apos;t miss out. Get an email whenever wee post, no spam.
               </p>
               <NavLink to="/">
                 <AnimatedCtaButton text="Subscribe Now" />
