@@ -35,22 +35,22 @@ export default function Header() {
             <a className="website">Event</a>
             <a className="website">Forum</a>
             <a className="website">Website</a>
-            <a href="./landingpage/#home" className="landingpage">
+            <a href="./landingpage/" className="landingpage">
               Landing Page
             </a>
-            <a href="./landingpage/updates/#updates" className="landingpage">
+            <a href="./landingpage/" className="landingpage">
               Updates
             </a>
-            <a href="./landingpage/help/#help" className="landingpage">
+            <a href="./landingpage/" className="landingpage">
               Help
             </a>
             <span>{countryCode || "IP"}</span>
           </div>
           <div className="right-menu">
-            <a href="./landingpage/demo/#demo" className="landingpage">
+            <a href="./landingpage/" className="landingpage">
               <button>Login</button>
             </a>
-            <a href="./landingpage/demo/#demo" className="landingpage">
+            <a href="./landingpage/" className="landingpage">
               <button>Sign Up</button>
             </a>
           </div>
