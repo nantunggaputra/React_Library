@@ -4,10 +4,11 @@
 
 Wee currently support the following versions with security updates:
 
-| Version           | Supported          |
-| ----------------- | ------------------ |
-| > v0.1.9.003-beta | :white_check_mark: |
-| < v0.1.9.003-beta | :x:                |
+| Version                           | Supported          |
+| --------------------------------- | ------------------ |
+| > v0.1.9.006-beta                 | :white_check_mark: |
+| v0.1.9.003-beta - v0.1.9.006-beta | :white_check_mark: |
+| < v0.1.9.003-beta                 | :x:                |
 
 ## Reporting a Vulnerability
 
