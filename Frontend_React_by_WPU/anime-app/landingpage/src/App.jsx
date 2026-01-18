@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Updates from "./pages/Updates";
 import Help from "./pages/Help";
 import NotFound from "./pages/NotFound";
+import Demo from "./pages/Demo";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -19,13 +20,15 @@ function WeeBoo() {
 
   useEffect(() => {
     const titles = {
-      "/updates": "WeeBoo | My Anime Landing Page 0.5 Beta | Updates",
-      "/updates/": "WeeBoo | My Anime Landing Page 0.5 Beta | Updates",
-      "/help": "WeeBoo | My Anime Landing Page 0.5 Beta | Help",
-      "/help/": "WeeBoo | My Anime Landing Page 0.5 Beta | Help",
+      "/updates": "WeeBoo | My Anime Landing Page 0.6 Beta | Updates",
+      "/updates/": "WeeBoo | My Anime Landing Page 0.6 Beta | Updates",
+      "/help": "WeeBoo | My Anime Landing Page 0.6 Beta | Help",
+      "/help/": "WeeBoo | My Anime Landing Page 0.6 Beta | Help",
+      "/demo": "WeeBoo | My Anime Landing Page 0.6 Beta | Demo",
+      "/demo/": "WeeBoo | My Anime Landing Page 0.6 Beta | Demo",
     };
 
-    const defaultTitle = "WeeBoo | My Anime Landing Page 0.5 Beta";
+    const defaultTitle = "WeeBoo | My Anime Landing Page 0.6 Beta";
     const newTitle = titles[location.pathname] || defaultTitle;
     document.title = newTitle;
   }, [location]);
@@ -38,6 +41,7 @@ function WeeBoo() {
           <Route exact path="/" component={Home} />
           <Route exact path="/updates" component={Updates} />
           <Route exact path="/help" component={Help} />
+          <Route exact path="/demo" component={Demo} />
           <Route component={NotFound} />
         </Switch>
       </main>
