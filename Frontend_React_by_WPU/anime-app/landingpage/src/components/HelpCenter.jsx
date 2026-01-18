@@ -74,7 +74,7 @@ const helpArticles = [
     icon: Film,
     title: "Exploring Studio Masterpieces",
     content:
-      "Discover iconic works from renowned studios like Studio Ghibli, Kyoto Animation, Ufotable, MAPPA, and Production I.G. Each studio has a unique style and storytelling approach. Browse curated collections to explore their best works.",
+      "Discover iconic works from renowned studios like Studio Ghibli, Kyoto Animation, Ufotable, MAPPA, Bones, and Production I.G. Each studio has a unique style and storytelling approach. Browse curated collections to explore their best works.",
   },
 
   // ACCOUNT & PERSONALIZATION
@@ -150,7 +150,7 @@ const helpArticles = [
     icon: Settings,
     title: "Browser Compatibility",
     content:
-      "WeeBoo works best on modern browsers: Chrome 90+, Firefox 88+, Safari 14+, and Edge 90+. We recommend keeping your browser updated for the best experience. Mobile browsers on iOS and Android are fully supported.",
+      "WeeBoo works best on modern browsers: Chrome 90+, Firefox 88+, Safari 14+, and Edge 90+. Wee recommend keeping your browser updated for the best experience. Mobile browsers on iOS and Android are fully supported.",
   },
   {
     id: 17,
@@ -158,7 +158,7 @@ const helpArticles = [
     icon: Settings,
     title: "Reporting Bugs or Issues",
     content:
-      "Found a bug? Report it via our GitHub repository or contact support. Include: browser version, steps to reproduce, screenshots if applicable, and expected vs actual behavior. We review all reports and aim to fix issues within 48 hours.",
+      "Found a bug? Report it via our GitHub repository or contact support. Include: browser version, steps to reproduce, screenshots if applicable, and expected vs actual behavior. Wee review all reports and aim to fix issues within 48 hours.",
   },
 
   // FAQ
@@ -192,7 +192,7 @@ const helpArticles = [
     icon: HelpCircle,
     title: "How to Contact Support?",
     content:
-      "Reach us via email, join our Telegram community, submit issues on GitHub, or use the contact form in the footer. We typically respond within 24 hours. For urgent issues, use email with 'URGENT' in the subject line.",
+      "Reach us via email, join our Telegram community, submit issues on GitHub, or use the contact form in the footer. Wee typically respond within 24 hours. For urgent issues, use email with 'URGENT' in the subject line.",
   },
   {
     id: 22,
@@ -200,7 +200,7 @@ const helpArticles = [
     icon: HelpCircle,
     title: "Privacy and Data Security",
     content:
-      "Your privacy is our priority. We collect minimal data: email and password (encrypted), anime preferences and ratings, and usage analytics (anonymized). We never sell your data. Read our full Privacy Policy for details. You can request data deletion anytime.",
+      "Your privacy is our priority. Wee collect minimal data: email and password (encrypted), anime preferences and ratings, and usage analytics (anonymized). Wee never sell your data. Read our full Privacy Policy for details. You can request data deletion anytime.",
   },
   {
     id: 23,

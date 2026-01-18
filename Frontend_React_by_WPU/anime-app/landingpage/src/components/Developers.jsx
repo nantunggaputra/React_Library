@@ -176,7 +176,7 @@ function Developers() {
 
                     {/* Skills */}
                     <div className="developer-section">
-                      <h4 className="section-title">TECHNOLOGIES</h4>
+                      <h4 className="developer-section-title">TECHNOLOGIES</h4>
                       <div className="skills-list">
                         {dev.skills.map((skill, idx) => (
                           <span key={idx} className="skill-badge">
@@ -188,7 +188,7 @@ function Developers() {
 
                     {/* Interests */}
                     <div className="developer-section">
-                      <h4 className="section-title">INTERESTS</h4>
+                      <h4 className="developer-section-title">INTERESTS</h4>
                       <div className="interests-list">
                         {dev.interests.map((interest, idx) => (
                           <span key={idx} className="interest-badge">
