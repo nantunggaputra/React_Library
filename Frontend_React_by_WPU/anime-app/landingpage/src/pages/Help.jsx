@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Book } from "react-feather";
 import AnimatedTypingText from "../components/AnimatedTypingText";
+import HelpCenter from "../components/HelpCenter";
 
 function Help() {
   const { hash } = useLocation();
@@ -38,6 +39,8 @@ function Help() {
               </p>
             </Fade>
           </div>
+          {/* Help Center Section */}
+          <HelpCenter />
         </section>
       </Fade>
     </section>

@@ -9,26 +9,37 @@ function Footer() {
 
   const footerLinks = {
     general: [
-      { name: "Home", path: "/" },
-      { name: "Blog", path: "/" },
-      { name: "Projects", path: "/" },
-      { name: "Shorts", path: "/" },
-      { name: "About", path: "/" },
+      { name: "Landing Page", path: "/#home" },
+      { name: "Updates", path: "/updates/#updates" },
+      { name: "Help", path: "/help/#help" },
+      { name: "Login", path: "/demo/#demo" },
+      { name: "Sign Up", path: "/demo/#demo" },
     ],
     theApp: [
-      { name: "Bucket List", path: "/" },
-      { name: "Uses", path: "/" },
-      { name: "Side Quests", path: "/" },
-      { name: "Attribution", path: "/" },
-      { name: "Statistics", path: "/" },
-      { name: "Guest Book", path: "/" },
+      { name: "App", path: "../" },
+      { name: "Blog", path: "../" },
+      { name: "Event", path: "../" },
+      { name: "Forum", path: "../" },
+      { name: "Website", path: "../" },
     ],
     resources: [
-      { name: "Book Notes", path: "/" },
-      { name: "Starter Templates", path: "/" },
-      { name: "RSS", path: "/" },
-      { name: "Mentorship", path: "/" },
-      { name: "Analytics", path: "/" },
+      {
+        name: "Founder",
+        path: "https://nantunggaputra.github.io/HTML/#home",
+      },
+      { name: "QR Code", path: "https://nantunggaputra.github.io/HTML/#qr" },
+      {
+        name: "Portfolio",
+        path: "https://nantunggaputra.github.io/HTML/#portfolio",
+      },
+      {
+        name: "Clients",
+        path: "https://nantunggaputra.github.io/HTML/#clients",
+      },
+      {
+        name: "Call to Action",
+        path: "https://nantunggaputra.github.io/HTML/#cta",
+      },
     ],
   };
 
@@ -132,7 +143,7 @@ function Footer() {
                 <ul className="footer-nav">
                   {footerLinks.theApp.map((link, index) => (
                     <li key={index}>
-                      <NavLink to={link.path}>{link.name}</NavLink>
+                      <a href={link.path}>{link.name}</a>
                     </li>
                   ))}
                 </ul>
@@ -145,7 +156,7 @@ function Footer() {
                 <ul className="footer-nav">
                   {footerLinks.resources.map((link, index) => (
                     <li key={index}>
-                      <NavLink to={link.path}>{link.name}</NavLink>
+                      <a href={link.path}>{link.name}</a>
                     </li>
                   ))}
                 </ul>
@@ -162,7 +173,7 @@ function Footer() {
               <p className="newsletter-description">
                 Don&apos;t miss out. Get an email whenever wee post, no spam.
               </p>
-              <NavLink to="/">
+              <NavLink to="/#home">
                 <AnimatedCtaButton text="Subscribe Now" />
               </NavLink>
             </Fade>

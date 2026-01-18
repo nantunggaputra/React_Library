@@ -39,8 +39,12 @@ function Header() {
           </nav>
         </div>
         <div className="auth-buttons">
-          <button className="btn btn-ghost">Login</button>
-          <button className="btn btn-primary">Sign Up</button>
+          <NavLink to="/demo/#demo">
+            <button className="btn btn-ghost">Login</button>
+          </NavLink>
+          <NavLink to="/demo/#demo">
+            <button className="btn btn-primary">Sign Up</button>
+          </NavLink>
         </div>
       </div>
     </header>

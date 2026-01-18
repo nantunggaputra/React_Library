@@ -451,7 +451,7 @@
     font-size: 14px;
   }
 
-  .section-title {
+  .developer-section-title {
     font-size: 11px;
   }
 
@@ -467,6 +467,113 @@
   .developer-socials .social-link svg {
     width: 18px;
     height: 18px;
+  }
+
+  /** Help Center  */
+
+  .help-center {
+    padding: 4px 28px 4px 28px;
+  }
+
+  .help-search-section {
+    margin-bottom: 24px;
+  }
+
+  .help-search-input {
+    padding: 14px 16px 14px 48px;
+    font-size: 14px;
+  }
+
+  .search-icon {
+    left: 16px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .help-categories {
+    margin-bottom: 24px;
+    gap: 8px;
+  }
+
+  .category-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .help-results {
+    margin-bottom: 20px;
+  }
+  .help-results p {
+    font-size: 13px;
+  }
+
+  .help-articles {
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .article-header {
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  .article-title-wrapper {
+    gap: 12px;
+  }
+
+  .article-icon {
+    padding: 10px;
+  }
+  .article-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .article-category {
+    font-size: 10px;
+  }
+
+  .article-title {
+    font-size: 14px;
+  }
+
+  .expand-btn {
+    padding: 6px;
+  }
+  .expand-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .article-content {
+    padding: 0 20px 20px 20px;
+  }
+  .article-content p {
+    padding-top: 16px;
+    font-size: 13px;
+  }
+
+  .help-pagination {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .pagination-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  .pagination-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .page-number {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .pagination-dots {
+    font-size: 13px;
   }
 
   /** Footer */
